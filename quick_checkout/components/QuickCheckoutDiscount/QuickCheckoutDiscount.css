@@ -1,0 +1,73 @@
+.DiscountForm {
+    display: flex;
+  }
+
+.DiscountFormContainer--Collapsed {
+  color: #0C92F2;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.DiscountForm__Title {
+  text-decoration: underline;
+}
+
+.DiscountForm__success {
+  display: flex;
+  background-color: #F7FEF4;
+  align-items: center;
+  height: 60px;
+}
+
+.DiscountForm__success--left {
+  background: #6FF03B;
+  width: 4px;
+  height: 100%;
+  display: inline-block;
+}
+
+.DiscountForm__success--message {
+  margin-left: 0.6em;
+}
+
+.SpacingDiv {
+  display: inline-block;
+}
+  
+  .DiscountForm .stx-input {
+    flex: 2;
+  }
+  
+  .DiscountForm .stx-input input {
+    line-height: 30px;
+  }
+  
+  .DiscountForm button.stx-button .stx-button__text {
+    text-transform: capitalize;
+   }
+  
+  
+  .DiscountForm button.stx-button {
+    flex: 0.5
+  }
+  
+  .Summary__DiscountForm .DiscountForm__error {
+    color: #FF1A2D;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .DiscountForm {
+      flex-direction: column;
+    }
+  
+    .DiscountForm .stx-input {
+      flex: 1;
+      margin: 0 0.25rem 10px 0.25rem;
+  
+    }
+  
+    .DiscountForm button.stx-button {
+      flex: 1
+    }
+  }
+  

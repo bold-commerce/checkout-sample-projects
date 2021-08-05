@@ -1,0 +1,95 @@
+.SummaryBlock.Summary__Breakdown {
+    font-size: 14px;
+  }
+  
+  .Summary__Subtotal,
+  .Summary__Discount,
+  .Summary__Taxes,
+  .Summary__Shipping,
+  .Summary__Total,
+  .Summary__Payments,
+  .Summary__Balance {
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Summary__Discount,
+  .Summary__Payments {
+    flex-direction: column;
+  }
+  
+  .Summary__Discount .Summary__Discount--Labels,
+  .Summary__Payments .Summary__Payments--Labels {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .SummaryItem__Value,
+  .SummaryItem__Label, .Summary__Breakdown .stx-price__amount {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6)
+  }
+  
+  .Summary__Breakdown .stx-price__amount {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .Summary__Breakdown .Summary__Total .stx-price__amount {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .Discount__Applied,
+  .Payment__Applied {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Discount__Applied .Discount__Remove,
+  .Payment__Applied .Payment__Remove {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Discount__Applied .stx-price__amount,
+  .Payment__Applied .stx-price__amount {
+    font-size: 14px;
+  }
+  
+  .Discount__Applied .Discount__Remove .stx-button__text {
+    background: #c4c4c4;
+    color: #DADADA;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.Summary__Subtotal--Title,  .Summary__Taxes--Title, .Summary__Shipping--Title {
+    font-weight: 700;
+    color: black;
+}
+
+.Summay__Total--Title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25rem;
+}
+
+
+
+.SummaryBlock.Summary__Total::after {
+    content: none;
+}
