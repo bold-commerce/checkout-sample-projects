@@ -2,8 +2,8 @@ import React, {
     useEffect, useState, useCallback, useMemo
   } from 'react';
   
-  import { useCheckoutStore, LineItems, OrderProcessed, CheckoutStep, OrderProcessing, Accordion, MinimizedEmail, ShippingAddress, MinimizedShippingAddress, MinimizedShippingMethod, PaymentMethod, BillingAddress, CheckoutButton  } from '@boldcommerce/checkout-react-components';
-  import { QuickCheckoutSummary, QuickCheckoutBreakdown, QuickCheckoutEmail, QuickCheckoutShippingLinesWrapper, QuickCheckoutDiscount } from '../components';
+  import { useCheckoutStore, LineItems, OrderProcessed, OrderProcessing, Accordion, ShippingAddress, PaymentMethod, BillingAddress, CheckoutButton  } from '@boldcommerce/checkout-react-components';
+  import { QuickCheckoutSummary, QuickCheckoutBreakdown, QuickCheckoutEmail, QuickCheckoutShippingLinesWrapper, QuickCheckoutDiscount, CheckoutStep, MinimizedEmail, MinimizedShippingAddress, MinimizedShippingMethod } from '../components';
   import Button from '@boldcommerce/stacks-ui/lib/components/button/Button';
   
   const QuickCheckout = ({ closeQuickCheckout }) => {

@@ -3,3 +3,7 @@ export * from './QuickCheckoutSummary';
 export * from './QuickCheckoutEmail';
 export * from './QuickCheckoutDiscount';
 export * from './QuickCheckoutShippingLinesWrapper';
+export * from './MinimizedEmail';
+export * from './MinimizedShippingAddress';
+export * from './MinimizedShippingMethod';
+export * from './CheckoutStep';

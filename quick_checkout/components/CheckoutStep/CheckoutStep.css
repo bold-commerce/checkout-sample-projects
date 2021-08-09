@@ -1,0 +1,39 @@
+.stx-button.CheckoutStep__NextBtn {
+    height: 40px;
+    width: 100%;
+    background-color: #4E4E4E;
+    color: white;
+    font-weight: 700p;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .CheckoutStep__ChangeBtn {
+    float: right;
+    color: #0C92F2;
+  }
+  
+  .CheckoutStep__NotYou {
+    float: right;
+  }
+  
+  .CheckoutStep__FieldSetInfoContainer {
+    border-top: 1px solid #D2D2D2;
+  }
+  
+  .CheckoutStep__Title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .CheckoutStep__FieldSetInfo {
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+  }
+  
+  .CheckoutStep__FieldSetInfo .stx-price__amount {
+    font-size: 12px;
+    font-weight: 400;
+  }
