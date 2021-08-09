@@ -7,3 +7,6 @@ This is a collection of pre-built checkout templates using the [checkout-react-c
   
 **[Single Page Collapsed](single_page_collapsed)**
 * This is a single page checkout template that has the order breakdown listed in a collapsable menu that sticks to the bottom of the page.
+
+**[Quick Checkout](quick_checkout)**
+* This is a quick checkout template that presents the checkout inside of a modal.
