@@ -22,7 +22,7 @@ const SinglePageLayout = ({ orderStatus }) => {
   );
 
   return (
-    <div className="Checkout">
+    <>
       {
         (isProcessing && <OrderProcessing />) || (
           <>
@@ -37,7 +37,7 @@ const SinglePageLayout = ({ orderStatus }) => {
           </>
         )
       }
-    </div>
+    </>
   );
 };
 
