@@ -32,7 +32,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@boldcommerce/checkout-react-components": "^3.0.0",
+    "@boldcommerce/checkout-react-components": "^3.3.0",
     "@boldcommerce/stacks-ui": "^1.2.0",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
