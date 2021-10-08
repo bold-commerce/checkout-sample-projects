@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
-import { SinglePageLayout } from './components';
+import { OneClickLayout } from './components';
 import '@boldcommerce/checkout-react-components/dist/styles.css'
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
       storeIdentifier={window.checkout.storeIdentifier}
       apiBase="https://api.staging.boldcommerce.com/checkout/storefront"
     >
-      <SinglePageLayout />
+      <OneClickLayout />
     </CheckoutProvider>
   );
 };

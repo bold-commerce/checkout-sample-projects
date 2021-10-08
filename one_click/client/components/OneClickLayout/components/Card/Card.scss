@@ -1,0 +1,63 @@
+.Card {
+  --color-primary: #0A75C2;
+  display: grid;
+  gap: 8px;
+  border-bottom: 1px solid;
+  padding: 16px 0;
+  border-color: rgba(0, 0, 0, 0.4);
+  grid-template: "title overview" auto
+                 "description action" auto
+                 "content content" auto
+                / 1fr 1fr;
+
+
+  &__Title {
+    grid-area: title;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: underline;
+
+    a {
+      color: var(--color-primary);    }
+  }
+
+  &__Overview {
+    grid-area: overview;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  &__Description {
+    grid-area: description;
+    display: flex;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__Action {
+    grid-area: action;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--color-primary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__Content {
+    grid-area: content;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
