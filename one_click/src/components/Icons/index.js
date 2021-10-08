@@ -1,0 +1,6 @@
+export { default as ChevronRight } from './ChevronRight'
+export { default as TimesCircle } from './TimesCircle'
+export { default as ArrowRight } from './ArrowRight'
+export { default as CaretRight } from './CaretRight'
+export { default as Times } from './Times'
+export { default as Plus } from './Plus'

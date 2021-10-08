@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirmation renders Confirmation component 1`] = `
+<DocumentFragment>
+  <div
+    class="Sidebar ConfirmationPage"
+  >
+    <div
+      class="Header"
+    >
+      <h1
+        class="Header__Title"
+      >
+        app.test
+      </h1>
+      <button
+        aria-label="Close"
+        class="Header__Times"
+      >
+        <svg
+          aria-labelledby="button"
+          fill="none"
+          height="20"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.8"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="ThankYou"
+    >
+      Thank you!
+    </div>
+    <div
+      class="confirmation-order"
+    >
+      <h2>
+        Your order is confirmed
+      </h2>
+      <div
+        class="confirmation-order-accepted"
+      >
+        We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.
+      </div>
+    </div>
+    <div
+      class="confirmation-information"
+    >
+      <h2>
+        Customer information
+      </h2>
+      <h3>
+        Shipping address
+      </h3>
+      <p>
+        John Doe
+      </p>
+      <p>
+        123 Fake Street
+      </p>
+      <p />
+      <p>
+        Winnipeg MB R3T 1B8
+      </p>
+      <p>
+        Canada
+      </p>
+      <h3>
+        Billing address
+      </h3>
+      <p>
+        John Doe
+      </p>
+      <p>
+        123 Fake Street
+      </p>
+      <p />
+      <p>
+        Winnipeg MB R3T 1B8
+      </p>
+      <p>
+        Canada
+      </p>
+      <h3>
+        Shipping method
+      </h3>
+      <p>
+        Standard
+      </p>
+      <h3>
+        Payment method
+      </h3>
+      <p>
+        visa
+      </p>
+    </div>
+    <div
+      class="confirmation-help"
+    >
+      <p>
+        Need help? 
+        <a
+          href="#"
+        >
+          Contact us
+        </a>
+      </p>
+       
+    </div>
+    <div
+      class="confirmation-continue"
+    >
+      <a
+        class="confirmation-continue-button stx-button"
+        href="/"
+      >
+        Continue shopping
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

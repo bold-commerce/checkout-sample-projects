@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingAddressItem renders ShippinAddressItem component 1`] = `
+<DocumentFragment>
+  <li>
+    <div
+      class="RadioItem"
+    >
+      <input
+        id="address_undefined"
+        name="shipping_address"
+        type="radio"
+      />
+      <label
+        class="RadioItem__Content"
+        for="address_undefined"
+      >
+        <p>
+          John Doe
+        </p>
+        <p>
+          123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
+        </p>
+        <p>
+          204-123-4567
+        </p>
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddressItem renders ShippinAddressItem component disabled 1`] = `
+<DocumentFragment>
+  <li>
+    <div
+      class="RadioItem"
+    >
+      <input
+        disabled=""
+        id="address_undefined"
+        name="shipping_address"
+        type="radio"
+      />
+      <label
+        class="RadioItem__Content"
+        for="address_undefined"
+      >
+        <p>
+          John Doe
+        </p>
+        <p>
+          123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
+        </p>
+        <p>
+          204-123-4567
+        </p>
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddressItem renders ShippinAddressItem component with onChange 1`] = `
+<DocumentFragment>
+  <li>
+    <div
+      class="RadioItem"
+    >
+      <input
+        id="address_undefined"
+        name="shipping_address"
+        type="radio"
+      />
+      <label
+        class="RadioItem__Content"
+        for="address_undefined"
+      >
+        <p>
+          John Doe
+        </p>
+        <p>
+          123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
+        </p>
+        <p>
+          204-123-4567
+        </p>
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;

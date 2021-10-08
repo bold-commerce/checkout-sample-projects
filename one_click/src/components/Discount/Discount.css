@@ -1,0 +1,53 @@
+.DiscountForm {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.DiscountForm .stx-field,
+.DiscountForm .stx-field--with-input .stx-input {
+  margin-bottom: 0;
+  max-height: 42px;
+}
+
+.DiscountForm .stx-input input {
+  line-height: 30px;
+}
+
+.DiscountForm button.stx-button {
+  margin: 0;
+}
+
+.DiscountForm button.stx-button .stx-button__text {
+  text-transform: capitalize;
+}
+
+.Summary__DiscountForm .DiscountForm__error {
+  color: #ff1a2d;
+}
+
+.DiscountLink {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 2px 0 24px 0;
+}
+
+.DiscountLink button {
+  text-decoration: underline    ;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0a75c2;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.DiscountLink button svg {
+  margin: 0 8px -2px 0;
+}
+
+.DiscountForm__Message {
+  grid-column: span 2;
+}

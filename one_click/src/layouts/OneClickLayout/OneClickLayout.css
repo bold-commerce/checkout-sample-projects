@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+*.stx-button:focus,
+*.stx-input--has-focus,
+*.stx-select--has-focus{
+  box-shadow: none;
+  outline: #2175c2 auto 2px;
+}
+
+*:focus-visible {
+  outline: #2175c2 auto 2px;
+  outline-offset: 4px;
+}
+
+.stx-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+#checkout-app {
+  display: grid;
+  justify-items: center;
+}
+
+.Checkout__Main {
+  max-width: 480px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: clip;
+}
+
+.Checkout__Form {
+  position: relative;
+  height: 100%;
+  transition: all 0.6s;
+  overflow-x: hidden;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0px rgba(0,0,0,0.25);
+}
+
+.FieldSet {
+  margin: 16px 0;
+  padding: 0;
+}
+
+.FieldSet__Header {
+  margin-bottom: 8px;
+}
+
+.FieldSet__Heading {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.FieldGroup {
+  display: grid;
+  row-gap: 8px;
+}
+
+.Field {
+  flex: 1;
+}
+
+.SelectField {
+  display: block;
+  cursor: pointer;
+}
+
+.SummaryBlock {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+h1.Section__Title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.Billing,
+.Shipping,
+.Summary {
+  width: 100%;
+}
+
+.Sidebar {
+  transition: all 0.6s;
+  padding: 16px 32px;
+}
+
+.IndexGuest .Header,
+.Billing .Header {
+  border: none;
+}
+
+.IndexGuest a {
+  color: #0a75c2;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+
+.IndexGuest .stx-select__select-element,
+.IndexGuest .stx-input {
+  border-radius: 4px;
+}
+
+.IndexGuest a:visited {
+  color: #0a75c2;
+}
+
+.IndexGuest__Customer,
+.IndexGuest__ShippingAddress,
+.IndexGuest__ShippingMethod,
+.IndexGuest__Payment,
+.IndexGuest__Footer {
+  padding: 16px 0;
+}
+
+.IndexGuest__Summary {
+  margin: 0 -32px;
+  padding: 16px 0;
+  background-color: #fafafa;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color:rgba(0, 0, 0, 0.4);
+}
+
+.IndexGuest__Title,
+.IndexGuest__Summary__Btn h2,
+.IndexGuest__Summary .stx-price__amount,
+.IndexGuest__ShippingMethod .FieldSet__Heading {
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  margin: 0;
+}
+
+.IndexGuest__Summary__Btn {
+  display: flex;
+  border: none;
+  background-color: unset;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.IndexGuest__Summary__Btn svg {
+  overflow: initial;
+  margin: 0 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.IndexGuest__Summary__Btn h2 {
+  width: 100%;
+  text-align: left;
+}
+
+.IndexGuest__Summary__Btn .stx-price {
+  margin-right: 32px;
+}
+
+.IndexGuest__Title,
+.IndexGuest__ShippingMethod .FieldSet__Header {
+  margin-bottom: 14px;
+}
+
+.IndexGuest__Customer {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.IndexGuest__Customer .stx-field--with-input {
+  margin: 8px 0;
+}
+
+.IndexGuest__Customer .stx-input {
+  height: 2.25rem;
+  padding: 0 0.5rem;
+}
+
+.IndexGuest__Customer .stx-checkbox-field__checkbox {
+  height: 16px;
+  width: 16px;
+}
+.IndexGuest__Customer .stx-checkbox-field__field {
+  padding-left: 26px;
+}
+
+.IndexGuest__Billing__Btn {
+  width: 100%;
+  padding: 12px 0;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #0a75c2;
+}
+
+.IndexGuest__Billing__Btn:disabled,
+.Billing-CheckoutButton:disabled {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.IndexGuest__Footer {
+  display: grid;
+  row-gap: 32px;
+}
+
+.IndexGuest__Rights {
+  border-top: 1px solid #d9d9d9;
+  padding-top: 32px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.IndexGuest__Footer .CheckoutButton__Container { 
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .Sidebar {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .Billing,
+  .Shipping,
+  .Summary {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .Sidebar--Show {
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+
+  .Sidebar--Hide {
+    transform: translate(100%, 0);
+    visibility: hidden;
+  }
+
+  .IndexPage--Hide {
+    transform: translate(-100%, 0);
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .Checkout__Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Checkout__Form {
+    transition: all 0.6s;
+    overflow-y: hidden;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .IndexPage--Hide {
+    opacity: 0;
+    display: none;
+  }
+
+  .IndexPage--Show {
+    opacity: 1;
+    display: block;
+  }
+
+  .Sidebar--Hide {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  .Sidebar--Show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}

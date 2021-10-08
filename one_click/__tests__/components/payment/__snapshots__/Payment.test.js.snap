@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Payment renders PaymentMethod component showing payment method 1`] = `
+<DocumentFragment>
+  <div
+    class="Payment"
+  >
+    <section
+      class="hidden FieldSet FieldSet--PaymentMethod"
+    >
+      <div
+        class="FieldSet__Content"
+      >
+        <iframe
+          data-bold-pigi-iframe="true"
+          src="test.url"
+          title="payments"
+        />
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <div
+          class="DiscountLink"
+        >
+          <button
+            aria-label="add discount code"
+          >
+            <svg
+              aria-labelledby="button"
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.3335 2.66667C7.3335 2.29848 7.63197 2 8.00016 2C8.36835 2 8.66683 2.29848 8.66683 2.66667V13.3333C8.66683 13.7015 8.36835 14 8.00016 14C7.63197 14 7.3335 13.7015 7.3335 13.3333V2.66667Z"
+                fill="#0A75C2"
+              />
+              <path
+                d="M2.66667 8.66665C2.29848 8.66665 2 8.36817 2 7.99998C2 7.63179 2.29848 7.33331 2.66667 7.33331H13.3333C13.7015 7.33331 14 7.63179 14 7.99998C14 8.36817 13.7015 8.66665 13.3333 8.66665H2.66667Z"
+                fill="#0A75C2"
+              />
+            </svg>
+            Discount code
+          </button>
+        </div>
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <section
+          class="FieldSet FieldSet--BillingAddress"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3
+              class="Billing__Title"
+            >
+              Billing address
+            </h3>
+          </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="stx-field stx-checkbox-field__field RadioButton"
+            >
+              <div
+                class="stx-checkbox-field__div"
+              >
+                <span
+                  class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                >
+                  <input
+                    checked=""
+                    class="stx-checkbox__input"
+                    id="stxField1"
+                    name="billing-address"
+                    type="checkbox"
+                    value="SAME_AS_SHIPPING_ADDRESS"
+                  />
+                  <span
+                    class="stx-checkbox__mount"
+                  />
+                </span>
+                <label
+                  class="stx-checkbox-field__label"
+                  for="stxField1"
+                >
+                  Same as shipping address
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Payment renders PaymentMethod component without showing payment method 1`] = `
+<DocumentFragment>
+  <div
+    class="Payment"
+  >
+    <section
+      class="hidden FieldSet FieldSet--PaymentMethod"
+    >
+      <div
+        class="FieldSet__Content"
+      >
+        <iframe
+          data-bold-pigi-iframe="true"
+          src="test.url"
+          title="payments"
+        />
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <div
+          class="DiscountLink"
+        >
+          <button
+            aria-label="add discount code"
+          >
+            <svg
+              aria-labelledby="button"
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.3335 2.66667C7.3335 2.29848 7.63197 2 8.00016 2C8.36835 2 8.66683 2.29848 8.66683 2.66667V13.3333C8.66683 13.7015 8.36835 14 8.00016 14C7.63197 14 7.3335 13.7015 7.3335 13.3333V2.66667Z"
+                fill="#0A75C2"
+              />
+              <path
+                d="M2.66667 8.66665C2.29848 8.66665 2 8.36817 2 7.99998C2 7.63179 2.29848 7.33331 2.66667 7.33331H13.3333C13.7015 7.33331 14 7.63179 14 7.99998C14 8.36817 13.7015 8.66665 13.3333 8.66665H2.66667Z"
+                fill="#0A75C2"
+              />
+            </svg>
+            Discount code
+          </button>
+        </div>
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <section
+          class="FieldSet FieldSet--BillingAddress"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3
+              class="Billing__Title"
+            >
+              Billing address
+            </h3>
+          </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="stx-field stx-checkbox-field__field RadioButton"
+            >
+              <div
+                class="stx-checkbox-field__div"
+              >
+                <span
+                  class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                >
+                  <input
+                    checked=""
+                    class="stx-checkbox__input"
+                    id="stxField2"
+                    name="billing-address"
+                    type="checkbox"
+                    value="SAME_AS_SHIPPING_ADDRESS"
+                  />
+                  <span
+                    class="stx-checkbox__mount"
+                  />
+                </span>
+                <label
+                  class="stx-checkbox-field__label"
+                  for="stxField2"
+                >
+                  Same as shipping address
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,28 @@
+button.back-btn {
+  position: relative;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: transparent;
+  color: #0069ed;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-top: 16px;
+}
+
+button.back-btn::before {
+  position: relative;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.75em;
+  width: 0.75em;
+  transform: rotate(-135deg);
+  margin: 0 5px;
+}

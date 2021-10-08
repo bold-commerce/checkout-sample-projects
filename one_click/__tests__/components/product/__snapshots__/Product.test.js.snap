@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product renders Product component 1`] = `
+<DocumentFragment>
+  <div
+    class="CartItem__ImageDescriptionWrapper"
+  >
+    <div
+      class="CartItem__ProductImageWrapper"
+    >
+      <div
+        class="stx-image"
+      >
+        <div
+          class="stx-image--content"
+        >
+          <div
+            class="stx-image--holder"
+          >
+            <img
+              alt="Product A"
+              class="stx-image--image"
+              src="https://via.placeholder.com/150"
+              title="Product A"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__ProductDetails"
+    >
+      <div
+        class="stx-details"
+      >
+        <div
+          class="stx-details__title"
+        >
+          Product A
+        </div>
+        <div
+          class="stx-details__description"
+        >
+          <div>
+            Test description goes here
+          </div>
+        </div>
+      </div>
+      <div />
+    </div>
+  </div>
+</DocumentFragment>
+`;

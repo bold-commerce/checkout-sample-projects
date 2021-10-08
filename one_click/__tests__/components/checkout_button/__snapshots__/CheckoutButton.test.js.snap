@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutButton renders CheckoutButton component 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutButton__Container"
+  >
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
+    >
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CheckoutButton renders CheckoutButton component that is disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutButton__Container"
+  >
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
+    >
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CheckoutButton renders CheckoutButton component that is loading 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutButton__Container"
+  >
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
+    >
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CheckoutButton renders CheckoutButton component with an error message 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutButton__Container"
+  >
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
+    >
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CheckoutButton renders CheckoutButton with a class name 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutButton__Container"
+  >
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button test_class"
+    >
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

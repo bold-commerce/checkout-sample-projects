@@ -1,0 +1,28 @@
+.processing {
+    &-page {
+        padding: 16px 32px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-spinner {
+        width: 32px;
+        height: 32px;
+    }
+
+    &-title {
+        color: rgba(0, 0, 0, 0.4);
+        padding: 24px 0px 16px 0px;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+    }
+
+    &-content {
+        color: rbga(0, 0, 0, 0.65);
+        padding: 16px 0px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

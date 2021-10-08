@@ -1,0 +1,483 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineItems renders LineItems component with editable quantity 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title"
+                class="stx-image--image"
+                src=""
+                title="Test title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            <div>
+              Size Large
+            </div>
+            <div>
+              Colour Blue
+            </div>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          aria-label="product quantity"
+          class="ProductQuantity"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $14.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 2, Revenge of the title"
+                class="stx-image--image"
+                src=""
+                title="Test title 2, Revenge of the title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 2, Revenge of the title
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            <div>
+              Number Two
+            </div>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          aria-label="product quantity"
+          class="ProductQuantity"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $32.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 3, the search for more money"
+                class="stx-image--image"
+                src=""
+                title="Test title 3, the search for more money"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 3, the search for more money
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          aria-label="product quantity"
+          class="ProductQuantity"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $123.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LineItems renders read only LineItems component 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title"
+                class="stx-image--image"
+                src=""
+                title="Test title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            <div>
+              Size Large
+            </div>
+            <div>
+              Colour Blue
+            </div>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          aria-label="product quantity"
+          class="ProductQuantity"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $14.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 2, Revenge of the title"
+                class="stx-image--image"
+                src=""
+                title="Test title 2, Revenge of the title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 2, Revenge of the title
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            <div>
+              Number Two
+            </div>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          aria-label="product quantity"
+          class="ProductQuantity"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $32.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 3, the search for more money"
+                class="stx-image--image"
+                src=""
+                title="Test title 3, the search for more money"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 3, the search for more money
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          aria-label="product quantity"
+          class="ProductQuantity"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $123.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
