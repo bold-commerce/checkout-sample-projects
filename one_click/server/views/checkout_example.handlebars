@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example Checkout</title>
+    <link rel="stylesheet" href="/css/checkout.css">
+    <script>
+      window.checkout = {
+        publicOrderId: '{{publicOrderId}}',
+        jwtToken: '{{jwtToken}}',
+        storeIdentifier: '{{storeIdentifier}}',
+        applicationState: {{{applicationState}}},
+        initialData: {{{initialData}}},
+        environment: '{{{environment}}}'
+      };
+    </script>
+  </head>
+  <body>
+    <div id="checkout-app"></div>
+    <script src="/js/checkout.js"></script>
+  </body>
+</html>
