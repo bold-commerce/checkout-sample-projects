@@ -1,5 +1,6 @@
 import React  from 'react';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import './Card.scss';
 
 /**
@@ -39,6 +40,17 @@ const Card = ({title, description, component, overview, action, children}) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  title: PropTypes.string,
+  component: PropTypes.string,
+  overview: PropTypes.string,
+  description: PropTypes.string,
+  action: PropTypes.shape({
+    label: PropTypes.string,
+    onClick: PropTypes.func
+  })
 };
 
 export default Card;
