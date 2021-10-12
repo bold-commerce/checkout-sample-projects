@@ -1,3 +1,4 @@
+import { CheckoutButton } from '../CheckoutButton';
 import React  from 'react';
 import Card from '../Card';
 
@@ -28,6 +29,7 @@ const IndexPage = () => {
       >
             <div>Billing address same as shipping address.</div>
       </Card>
+      <CheckoutButton className={"CheckoutButton"}/>
     </>
   )
 };
