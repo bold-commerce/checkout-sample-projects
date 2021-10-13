@@ -38,26 +38,23 @@
 }
 
 .CartItem__ProductImageWrapper {
-  padding: 5px;
+  width: 72px;
+  height: 72px;
+  padding: 3.6px;
   border: 1px solid #6b6b6b;
   position: relative;
+}
+.CartItem__ImageDescriptionWrapper .stx-image--holder {
+  padding: 0;
+}
+
+.CartItem__ImageDescriptionWrapper .stx-image {
+  border: none;
 }
 
 @media screen and (max-width: 599px) {
   .CartItem__ProductImageWrapper {
     padding: 3px;
-  }
-}
-
-.CartItem__ProductImageWrapper .stx-image {
-  width: 90px;
-  height: 90px;
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem__ProductImageWrapper .stx-image {
-    width: 54px;
-    height: 54px;
   }
 }
 
@@ -70,7 +67,7 @@
 .CartItem .CartItem__ProductQuantityWrapper,
 .CartItem .CartItem__ProductPrice {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -89,28 +86,19 @@
 }
 
 .CartItem .CartItem__ProductDetails .stx-details__description {
-  font-size: 16px;
-  line-height: 19px;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem .CartItem__ProductDetails .stx-details__description {
-    font-size: 12px;
-    line-height: 14px;
-  }
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .CartItem .CartItem__ProductDetails .stx-details__title {
-  font-size: 20px;
-  line-height: 24px;
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem .CartItem__ProductDetails .stx-details__title {
-    font-size: 14px;
-    line-height: 17px;
-  }
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .CartItem .CartItem__ProductDetails a {
@@ -140,6 +128,14 @@
   min-width: 65px;
 }
 
+.CartItem__ProductPrice .stx-price__amount {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
 @media screen and (max-width: 599px) {
   .CartItem__ProductPrice .stx-price__amount {
     margin: unset;
@@ -163,9 +159,11 @@
 }
 
 .ProductQuantity {
-  width: 40px;
+  width: 25px;
   height: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #a9a9a9;
+  border-radius: 12px;
+  color: #ffffff;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
