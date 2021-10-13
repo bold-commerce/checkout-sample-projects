@@ -1,7 +1,6 @@
 import React from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
 import { OneClickLayout } from './components';
-import '@boldcommerce/checkout-react-components/dist/styles.css'
 
 const App = () => {
   return (
