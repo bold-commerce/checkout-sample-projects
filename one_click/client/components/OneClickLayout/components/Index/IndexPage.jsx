@@ -1,10 +1,12 @@
 import { CheckoutButton } from '../CheckoutButton';
 import React  from 'react';
 import Card from '../Card';
+import { LineItems } from '../LineItems';
 
 const IndexPage = () => {
   return (
     <>
+      <LineItems />
       <Card
         title={"Summary"}
         component={"/summary"}

@@ -85,18 +85,8 @@ body {
 .SummaryBlock {
   position: relative;
   padding: 20px 0;
-}
-
-.SummaryBlock::after {
-  content: '';
-  display: block;
-  background: rgba(0, 0, 0, 0.0001);
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 body {

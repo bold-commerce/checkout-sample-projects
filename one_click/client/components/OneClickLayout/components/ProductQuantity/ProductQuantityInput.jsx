@@ -41,34 +41,8 @@ const ProductQuantity = ({
 
   return (
     <div className="CartItem__ProductQuantityWrapper">
-      <div className="ProductQuantity__Decrement">
-        {!readOnly && (
-          <Button
-            // eslint-disable-next-line react/no-children-prop
-            children="-"
-            disabled={typeof value === 'string' || value <= 1}
-            onClick={decrement}
-          />
-        )}
-      </div>
-      <div className={classnames('ProductQuantity', { 'ProductQuantity--read-only': readOnly })}>
-        <Input
-          readOnly={readOnly}
-          type="number"
-          value={value}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-      </div>
-      <div className="ProductQuantity__Increment">
-        {!readOnly && (
-          <Button
-            // eslint-disable-next-line react/no-children-prop
-            children="+"
-            disabled={typeof value === 'string'}
-            onClick={increment}
-          />
-        )}
+      <div className="ProductQuantity">
+        {value}
       </div>
     </div>
   );

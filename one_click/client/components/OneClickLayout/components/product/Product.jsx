@@ -23,22 +23,11 @@ const Product = ({
           title={title}
           description={description}
         />
-        {
-          !readOnly
-                      && (
-                        <Button
-                          secondary
-                          onClick={() => onRemove(lineItemKey)}
-                        >
-                          Remove
-                        </Button>
-                      )
-        }
       </div>
     </div>
     <div className="CartItem__QuantityPriceWrapper">
       <ProductQuantityInput
-        readOnly={readOnly}
+        readOnly={true}
         defaultValue={quantity}
         onChange={(value) => onQuantityChange(lineItemKey, value)}
       />
