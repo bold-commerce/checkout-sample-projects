@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { Input, Button } from '@boldcommerce/stacks-ui';
-import classnames from 'classnames';
+
 
 const ProductQuantity = ({
   defaultValue,
