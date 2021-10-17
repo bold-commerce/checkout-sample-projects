@@ -1,22 +1,22 @@
 import React from 'react';
 import { MemoryRouter as Router, Route } from "react-router-dom";
-import IndexPage from './components/Index';
 import PropTypes from 'prop-types';
 import {
   OrderProcessing, OrderProcessed, ShippingAddress, BillingAddress, useCheckoutStore
 } from '@boldcommerce/checkout-react-components';
+import IndexPage from './components/Index';
+import CheckoutForm from './components/CheckoutForm';
 import './OneClickLayout.css';
 
 const OneClickLayout = ({ orderStatus }) => {
   const isProcessing = orderStatus === 'processing';
   const processed = orderStatus === 'completed';
 
-  const CheckoutForm = (
+  const CheckoutFormContainer = (
     <>
       <Router>
         <Route exact path="/" component={IndexPage} />
-        <Route exact path="/shipping" component={ShippingAddress} />
-        <Route exact path="/billing" component={BillingAddress} />
+        <CheckoutForm />
       </Router>
     </>
   );
@@ -28,7 +28,7 @@ const OneClickLayout = ({ orderStatus }) => {
           <>
             <div className="Checkout__Main">
               {
-                processed ? <OrderProcessed /> : CheckoutForm
+                processed ? <OrderProcessed /> : CheckoutFormContainer
               }
             </div>
           </>
