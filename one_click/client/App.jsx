@@ -10,7 +10,7 @@ const App = () => {
       publicOrderId={window.checkout.publicOrderId}
       token={window.checkout.jwtToken}
       storeIdentifier={window.checkout.storeIdentifier}
-      apiBase="https://api.staging.boldcommerce.com/checkout/storefront"
+      apiBase="https://api.boldcommerce.com/checkout/storefront"
     >
       <OneClickLayout />
     </CheckoutProvider>
