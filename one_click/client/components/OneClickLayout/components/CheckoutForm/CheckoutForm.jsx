@@ -1,9 +1,8 @@
 import React  from 'react';
 import { Route, useLocation, Switch } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import {
-  ShippingAddress, BillingAddress
-} from '@boldcommerce/checkout-react-components';
+import { BillingAddress } from '@boldcommerce/checkout-react-components';
+import { Shipping } from '../Shipping';
 
 const CheckoutForm = () => {
   const location = useLocation();
@@ -16,7 +15,7 @@ const CheckoutForm = () => {
           key={location.key}
         >
           <Switch location={location}>
-            <Route exact path="/shipping" component={ShippingAddress} />
+            <Route exact path="/shipping" component={Shipping} />
             <Route exact path="/billing" component={BillingAddress} />
           </Switch>
         </CSSTransition>
