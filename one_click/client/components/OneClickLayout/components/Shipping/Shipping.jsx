@@ -1,16 +1,18 @@
-import { useLoadingStatus, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import React from 'react';
+import { useLoadingStatus, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
+import ShippingLines from '../ShippingLines/ShippingLines';
+import './Shipping.css';
 
 const Shipping = () => {
   const { savedAddresses, shippingAddress, submitShippingAddress } = useShippingAddress();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
-
   const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching';
 
   return (
     <div className="Shipping">
+      <h1 className="Section__Title">Shipping</h1>
       <BackButton />
       <section className="Shipping__ShippingAddress">
         <h3>Shipping address</h3>
@@ -21,9 +23,7 @@ const Shipping = () => {
           disabled={isSetting}
         />
       </section>
-      <section className="Shipping__ShippingLines">
-        <h3>Shipping method</h3>
-      </section>
+      <ShippingLines />
     </div>
   );
 };

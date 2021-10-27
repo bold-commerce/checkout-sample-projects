@@ -1,0 +1,94 @@
+.FieldSet--Address {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.FieldSet--Address .stx-field {
+  margin-bottom: 0;
+}
+
+.FieldSet--Address .stx-select__select-element {
+  line-height: initial;
+  height: 2.25rem;
+}
+
+.FieldSet--Address .stx-field.Field {
+  padding: 0;
+}
+
+.FieldSet--Address .stx-input.Field {
+  padding: 5px;
+  margin: 0;
+}
+
+.FieldSet--Address .stx-field__message {
+  white-space: nowrap;
+}
+
+.FieldSet--Address .stx-input.stx-input--alert {
+  margin-bottom: 0.25rem;
+}
+
+.FieldSet--Address .stx-field--with-input .stx-input {
+  height: 2.25rem;
+  padding: 0 0.5rem;
+}
+
+.FieldSet--Address .stx-field.Field--FirstName,
+.FieldSet--Address .stx-field.Field--LastName {
+  flex: 1;
+}
+
+.Field--Address {
+  flex: 2;
+}
+
+.Field--Address2 {
+  flex: 1;
+}
+
+.Field--Company,
+.Field--City,
+.Field--Country,
+.Field--Postal_Code,
+.Field--Phone,
+.Field--Province {
+  flex: 1;
+}
+
+@media screen and (max-width: 599px) {
+  .FieldSet--Address .FieldGroup {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .FieldSet--Address .Field {
+    margin: 5px;
+  }
+
+  .FieldSet--Address .SelectField {
+    margin: 5px;
+    width: 97%;
+  }
+}
+
+.stx-field--alert .stx-field__message {
+  margin: 0 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.FieldGroup.FieldGroup__Country {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+@media screen and (min-width: 599px) {
+  .FieldGroup.FieldGroup__Country {
+    grid-auto-flow: rows;
+  }
+}
