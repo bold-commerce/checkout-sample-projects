@@ -22,7 +22,9 @@ app.get('/init', async (req, res) => {
     cart_items: [{
       sku,
       quantity: 2,
-      line_item_key: "12345",
+      "platform_id": 39459641884739,
+      "line_item_key": "39459641884739:ddd1399553d2dedd0c6ab9d9abbc089e",
+
     }],
   };
 

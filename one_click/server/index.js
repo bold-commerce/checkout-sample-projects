@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
   // TODO: Change to dynamic cart data
   const body = {
     "customer": {
-      "platform_id": "123",
+      "platform_id": "39459641884739",
       "platform_customer_id": "123",
       "email_address": "john.doe@email.com",
       "saved_addresses": [
@@ -55,13 +55,13 @@ app.get('/', async (req, res) => {
       ],
     },
     "cart_items": [{
-      "sku": "ABS",
-      "quantity": 1,
-      "line_item_key": "abc123"
+      "platform_id": "39459641884739",
+      "line_item_key": "39459641884739:ddd1399553d2dedd0c6ab9d9abbc089e",
+      "quantity": 1
     }],
   };
 
-  const checkout = await fetch(`https://api.boldcommerce.com/checkout/orders/${process.env.SHOP_IDENTIFIER}/init`, {
+  const checkout = await fetch(`https://api.staging.boldcommerce.com/checkout/orders/${process.env.SHOP_IDENTIFIER}/init`, {
     headers: {
       Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
       'Content-Type': 'application/json',

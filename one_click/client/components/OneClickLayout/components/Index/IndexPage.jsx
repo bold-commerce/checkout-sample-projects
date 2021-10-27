@@ -29,7 +29,7 @@ const IndexPage = () => {
         component={"/payment"}
         description={"Visa **** 1234"}
       >
-            <div>Billing address same as shipping address.</div>
+        <div>Billing address same as shipping address.</div>
       </Card>
       <CheckoutButton className={"CheckoutButton"}/>
     </>
