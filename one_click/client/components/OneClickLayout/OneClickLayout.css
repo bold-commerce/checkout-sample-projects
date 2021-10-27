@@ -68,8 +68,8 @@ body {
 }
 
 .Field {
-  padding: 5px;
   margin: 0 5px;
+  flex: 1;
 }
 
 .SelectField {
@@ -114,4 +114,14 @@ body {
   opacity: 0;
   transform: scale(0, 1);
   transition: opacity 150ms, transform 150ms;
+}
+
+h1.Section__Title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.9);
 }
