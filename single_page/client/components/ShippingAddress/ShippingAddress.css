@@ -1,0 +1,13 @@
+.RadioButton.RadioButton__AddressInfoContainer {
+  height: 101px;
+  border: unset;
+  border-top: 1px solid #D2D2D2D2;
+  background: none;
+}
+
+.RadioButton.RadioButton__NewAddressContainer {
+  height: 50px;
+  border: unset;
+  border-top: 1px solid #D2D2D2D2;
+  background: none;
+}
