@@ -26,11 +26,11 @@ const Product = ({
       </div>
     </div>
     <div className="CartItem__QuantityPriceWrapper">
-      <ProductQuantityInput
-        readOnly={true}
-        defaultValue={quantity}
-        onChange={(value) => onQuantityChange(lineItemKey, value)}
-      />
+      <div className="CartItem__ProductQuantityWrapper">
+        <div className="ProductQuantity">
+          {quantity}
+        </div>
+      </div>
       <div className="CartItem__ProductPrice">
         <Price amount={totalPrice} />
       </div>

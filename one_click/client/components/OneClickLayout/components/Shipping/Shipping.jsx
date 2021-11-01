@@ -27,7 +27,6 @@ const Shipping = () => {
         <ShippingAddressList
           addresses={savedAddresses}
           onChange={(address) => handleSubmit(address)}
-          // onChange={(address) => submitShippingAddress(address)}
           selectedAddress={shippingAddress.id}
           disabled={isSetting}
         />
