@@ -1,0 +1,86 @@
+.Inventory__Message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+
+    position: static;
+    border: 1px solid rgba(0,0, 0, 0.2);
+    line-height: 20px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.Inventory__Title {
+    order: 0;
+    align-self: stretch;
+    align-items: center;
+    color:rgba(0, 0, 0, 0.9);
+    flex-grow: 0;
+    margin: 16px 0px;
+    font-size: 18px;
+}
+
+.Inventory__Description {
+    font-size: 14px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.65);
+
+}
+
+.SoldOut {
+    color: #B4002B;
+    border: 1px solid #B4002B;
+    background-color: #FFEBF0;
+    padding: 4px 8px;
+}
+
+.Arrow {
+    margin: 0px 8px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: x-large;
+}
+
+.InventoryItem {
+    display: flex;
+}
+.InventoryItem__ProductDetails {
+    padding: 0 20px;
+    width: 100%;
+}
+
+.InventoryItem__ProductQuantityWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.InventoryItem__ProductImageWrapper {
+    width: 72px;
+    height: 72px;
+    padding: 3.6px;
+    position: relative;
+}
+
+.InventoryItem__RemoveItem {
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.65);
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: 800;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+}
+
+.ReturnLink {
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+    padding-top: 16px;
+}

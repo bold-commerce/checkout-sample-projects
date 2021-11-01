@@ -26,8 +26,10 @@ const OneClickLayout = ({ orderStatus, orderErrors }) => {
           <>
             <div className="Checkout__Main">
               {
-                Object.keys(orderErrors).some((errorKey) => orderErrors[errorKey] !== null) && 
-               <Message type="alert">An error with your order has occured, please try again</Message>
+                orderErrors['order'] && 
+                <Message type="alert">
+                  An error with your order has occured, please try again
+                </Message>
               }
               {
                 processed ? <OrderProcessed /> : CheckoutFormContainer

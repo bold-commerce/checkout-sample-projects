@@ -4,8 +4,9 @@ import {
   Button,
   Message,
 } from '@boldcommerce/stacks-ui';
-import { useCheckoutStore, usePaymentIframe } from '@boldcommerce/checkout-react-components';
+import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
 import './CheckoutButton.css';
+import { useInventory } from '../../../../hooks';
 
 const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage }) => (
   <>
@@ -34,8 +35,14 @@ const CheckoutButtonContainer = ({ className }) => {
   const checkoutButtonDisabled = state.loadingStatus.isLoading || hasErrors;
 
   const { processPaymentIframe } = usePaymentIframe();
+  const checkInventory = useInventory();
+  const { lineItems } = useLineItems();
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
-  const onClick = processing ? null : processPaymentIframe;
+  const handleCheckout = () => {
+    checkInventory(lineItems);
+    processPaymentIframe();
+  };
+  const onClick = processing ? null : handleCheckout;
 
   return <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing} className={className} errorMessage={orderErrorMessage} />;
 };

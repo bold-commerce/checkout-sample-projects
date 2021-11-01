@@ -55,9 +55,17 @@ app.get('/', async (req, res) => {
       ],
     },
     "cart_items": [{
-      "platform_id": "39459641884739",
-      "line_item_key": "39459641884739:ddd1399553d2dedd0c6ab9d9abbc089e",
-      "quantity": 1
+      "sku": "ABS",
+      "quantity": 1,
+      "line_item_key": "abc123"
+    },{    
+      "sku":"DPB",
+      "quantity": 3,
+      "line_item_key": "Double PB"
+    },{
+      "sku":"OCG",
+      "quantity": 40,
+      "line_item_key": "GG"
     }],
   };
 
@@ -84,6 +92,24 @@ app.get('/', async (req, res) => {
     applicationState: JSON.stringify(application_state),
     initialData: JSON.stringify(initial_data),
   });
+});
+
+app.get('/inventory', async ( req, res ) => {
+  const invRequest = await fetch(`https://api.boldcommerce.com/products/v2/shops/${process.env.SHOP_IDENTIFIER}/products?filter=in(platform_id:${req.query.ids})`, {
+  headers: {
+      Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+      'Content-Type': 'application/json'
+    },
+    method: 'GET'
+  })
+  const invResult = await invRequest.json();
+  const invList = invResult.data.map((item) => {
+      return { id:    item.platform_id,
+               stock: item.inventory_quantity,
+               name:  item.name 
+             }
+    });
+  return res.json(invList);
 });
 
 app.listen(port, () => {
