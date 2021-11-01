@@ -1,12 +1,6 @@
-# Checkout React Templates
+# Checkout Example Projects
 This is a collection of pre-built checkout templates using the [checkout-react-components](https://www.npmjs.com/package/@boldcommerce/checkout-react-components) library.
 
-## Templates
+## Examples
 **[Single Page](single_page)**
 * This is a single page checkout template that has the order breakdown listed in a sidebar on desktop
-  
-**[Single Page Collapsed](single_page_collapsed)**
-* This is a single page checkout template that has the order breakdown listed in a collapsable menu that sticks to the bottom of the page.
-
-**[Quick Checkout](quick_checkout)**
-* This is a quick checkout template that presents the checkout inside of a modal.

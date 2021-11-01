@@ -1,0 +1,34 @@
+.FieldSet--CustomerInformation {
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.FieldSet--CustomerInformation .FieldSet__Header {
+  margin-bottom: 10px;
+}
+
+.Field--Email {
+  flex: 1;
+}
+
+.Field--Email .InputField.Field--Email {
+  width: auto;
+}
+
+.stx-field.InputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.stx-input.InputField {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.FieldSet--CustomerInformation .stx-field--alert .stx-field__message {
+  margin: 0 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}

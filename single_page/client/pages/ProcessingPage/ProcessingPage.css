@@ -1,0 +1,23 @@
+.Checkout__Processing {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 30px;
+}
+
+.Checkout__Processing h1 {
+  margin: 26px 0 32px 0;
+  color: rgba(0,0,0,0.4);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.Checkout__Processing p {
+  font-size: 14px;
+  color: rgba(0,0,0,0.65);
+  line-height: 20px;
+}
