@@ -7,3 +7,16 @@
 .FieldSet--PaymentMethod .FieldSet__Content iframe .ToggleField__Input:checked {
   box-shadow: 0 0 0 5px #0099cc inset;
 }
+
+/* .FieldSet--PaymentMethod .FieldSet__Content {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+} */
+
+section.FieldSet.FieldSet--PaymentMethod {
+  margin: 0;
+}
+
+section.FieldSet.FieldSet--PaymentMethod .FieldSet__Content {
+  margin-bottom: 16px;
+}
