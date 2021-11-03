@@ -1,0 +1,44 @@
+.FieldSet--BillingAddress .RadioButton .stx-field {
+  position: unset;
+}
+.FieldSet--BillingAddress .RadioButton .stx-radio {
+  position: unset;
+}
+
+.FieldSet--BillingAddress {
+  display: flex;
+  flex-direction: column;
+}
+
+.FieldSet--BillingAddress .RadioButton {
+  border: 1px solid #D9D9D9;
+  margin-bottom: 0;
+  height: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.FieldSet--BillingAddress .FieldSet--Address {
+  background: #FAFAFB;
+  padding: 24px;
+  border: 1px solid #D9D9D9;
+}
+
+.FieldSet--BillingAddress .RadioButton .stx-radio-field__label {
+  position: absolute;
+    left: 0;
+    height: 100%;
+    top: 0;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+}
