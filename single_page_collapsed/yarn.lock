@@ -1136,10 +1136,10 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@boldcommerce/checkout-react-components@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@boldcommerce/checkout-react-components/-/checkout-react-components-3.3.0.tgz#d03a41d278d08d467e7fec3752ad7686f887d9ec"
-  integrity sha512-eRUqYEk79XLhihw+9lqIwkL+CEhRl8Wfav8/2RnuoBLaZYZEdr75t2gDo9pe7SRCA/Wvy0sIk9B7yCMuw7WwBQ==
+"@boldcommerce/checkout-react-components@^3.3.4":
+  version "3.3.4"
+  resolved "https://registry.yarnpkg.com/@boldcommerce/checkout-react-components/-/checkout-react-components-3.3.4.tgz#bbc2a0128b584dafa8a08414566cc79bc9cb2be7"
+  integrity sha512-AeX3DLo4fFoIEjRL1auCCdS0E960jRpzA2KQUA577TPvPql7xIvdGNkxGc8FQc4xUcJSwZStyCmbV7eJw+bQUw==
   dependencies:
     "@boldcommerce/stacks-ui" "^1.0.2"
     classnames "^2.2.6"
