@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import RadioField from '@boldcommerce/stacks-ui/lib/components/radiofield/RadioField';
+import CheckboxField from '@boldcommerce/stacks-ui/lib/components/CheckboxField/CheckboxField';
 import { Address } from '../Address';
 import { useBillingAddress, useCountryInfo } from '@boldcommerce/checkout-react-components';
 import './BillingAddress.css';
@@ -37,21 +37,13 @@ export const BillingAddress = ({
         <h3>Billing address</h3>
       </div>
       <div className="FieldSet__Content">
-        <RadioField
+        <CheckboxField
           label="Same as shipping address"
           name="billing-address"
           className="RadioButton"
           value="SAME_AS_SHIPPING_ADDRESS"
           checked={billingSameAsShipping}
-          onChange={() => setBillingSameAsShipping(true)}
-        />
-        <RadioField
-          label="Use a different billing address"
-          name="billing-address"
-          className="RadioButton"
-          value="DIFFERENT_BILLING_ADDRESS"
-          checked={!billingSameAsShipping}
-          onChange={() => setBillingSameAsShipping(false)}
+          onChange={() => setBillingSameAsShipping(!billingSameAsShipping)}
         />
         { billingSameAsShipping ? null
           : (

@@ -67,8 +67,6 @@ const ShippingLinesContainer = () => {
     showShippingLines, shippingLinesFetching, shippingLinesLoadingStatus, shippingLines, selectedShippingLineIndex, setSelectedShippingLine,
   } = useShippingLines();
 
-  console.log({ showShippingLines, shippingLines, selectedShippingLineIndex });
-
   return (
     <MemoizedShippingLines
       showShippingLines={showShippingLines}
