@@ -63,17 +63,15 @@ body {
 }
 
 .FieldGroup {
-  margin: 5px 0;
   display: flex;
+  gap: 8px;
 }
 
 .Field {
-  margin: 0 5px;
   flex: 1;
 }
 
 .SelectField {
-  margin: 0 5px;
   display: block;
   cursor: pointer;
 }

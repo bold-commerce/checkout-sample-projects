@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 8px;
 }
 
 .FieldSet--Address .stx-field {
@@ -61,10 +62,6 @@
   .FieldSet--Address .FieldGroup {
     flex-direction: column;
     margin: 0;
-  }
-
-  .FieldSet--Address .Field {
-    margin: 5px;
   }
 
   .FieldSet--Address .SelectField {
