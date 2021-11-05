@@ -11,5 +11,9 @@ This project is a starting point for a single page layout. This project uses [No
 - Run `yarn` or `npm install`
 - Run `yarn dev` or `npm run dev` to start both the Node.js server and the webpack watcher.
 
+## Production Build
+- Run `yarn build`
+- Run `yarn start`. This will run the node server on port 3000
+
 ## Additional Notes
 This is only meant to be a starting point project. You will need to edit `server/index.js` to authenticate logged in users with your given platform and initialize your checkout with dynamic data.
