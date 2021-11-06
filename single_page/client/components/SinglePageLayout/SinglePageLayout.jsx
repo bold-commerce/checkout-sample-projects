@@ -4,6 +4,7 @@ import { ShippingAddress } from '../ShippingAddress';
 import { OrderErrors } from '../OrderErrors';
 import { BillingAddress } from '../BillingAddress';
 import './SinglePageLayout.css';
+import { ShippingLines } from '../ShippingLines';
 
 const SinglePageLayout = () => {
   return (
@@ -13,6 +14,7 @@ const SinglePageLayout = () => {
         <Customer />
         <ShippingAddress />
         <BillingAddress />
+        <ShippingLines />
       </div>
     </div>
   );

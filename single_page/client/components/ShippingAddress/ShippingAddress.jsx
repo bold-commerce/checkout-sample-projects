@@ -1,20 +1,21 @@
-import React, { memo, useCallback, useEffect, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { useCountryInfo, useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { Address } from '../Address';
-import { SavedAddressList } from '../SavedAddressList';
+import SavedAddressList from './SavedAddressList';
 import './ShippingAddress.css';
 
 const ShippingAddress = () => {
-  const { data, submitShippingAddress } = useShippingAddress();
+  const { data, submitShippingAddress } = useShippingAddress(['first_name', 'last_name']);
   const { data: savedAddresses } = useSavedAddresses();
   const { data: loadingStatus } = useLoadingStatus();
+  const disabled = loadingStatus.shippingAddress === 'setting';
 
   return (
     <MemoizedShippingAddress
       shippingAddress={data}
       submitAddress={submitShippingAddress}
       savedAddresses={savedAddresses}
-      disabled={loadingStatus.isLoading}
+      disabled={disabled}
     />
   );
 };
@@ -50,7 +51,10 @@ const MemoizedShippingAddress = memo(({
       setErrors(null);
     } catch(e) {
       setErrors(e.body.errors);
-      setAddress(shippingAddress);
+      // If there is a server error, reset shipping address
+      if (e.body.errors[0].field === 'order') {
+        setAddress(shippingAddress);
+      }
     }
   }, [shippingAddress]);
 

@@ -1,6 +1,6 @@
 import RadioField from '@boldcommerce/stacks-ui/lib/components/radiofield/RadioField';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { SavedAddress } from '../SavedAddress';
+import SavedAddress from './SavedAddress';
 
 const SavedAddressList = ({ savedAddresses, selectedAddress, disabled, onChange }) => {
   const [prevAddress, setPrevAddress] = useState(null);
