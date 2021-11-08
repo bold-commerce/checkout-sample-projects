@@ -1,3 +1,1 @@
-import CheckoutForm from './CheckoutForm';
-
-export default CheckoutForm;
+export { default as CheckoutForm } from './CheckoutForm'

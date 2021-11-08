@@ -2,9 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LineItem from './LineItem';
-import {
-  useLineItems
-} from '@boldcommerce/checkout-react-components';
+import { useLineItems } from '@boldcommerce/checkout-react-components';
 
 export const LineItems = ({
   readOnly,

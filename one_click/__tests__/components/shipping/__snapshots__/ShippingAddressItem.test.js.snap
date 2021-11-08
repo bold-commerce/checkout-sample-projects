@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingAddressItem renders ShippinAddressItem component 1`] = `
+<DocumentFragment>
+  <li>
+    <div
+      class="RadioItem"
+    >
+      <input
+        id="address_undefined"
+        name="shipping_address"
+        type="radio"
+      />
+      <label
+        class="RadioItem__Content"
+        for="address_undefined"
+      >
+        <p>
+          John Doe
+        </p>
+        <p>
+          , , Winnipeg, Manitoba, , Canada
+        </p>
+        <p />
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddressItem renders ShippinAddressItem component disabled 1`] = `
+<DocumentFragment>
+  <li>
+    <div
+      class="RadioItem"
+    >
+      <input
+        disabled=""
+        id="address_undefined"
+        name="shipping_address"
+        type="radio"
+      />
+      <label
+        class="RadioItem__Content"
+        for="address_undefined"
+      >
+        <p>
+          John Doe
+        </p>
+        <p>
+          , , Winnipeg, Manitoba, , Canada
+        </p>
+        <p />
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddressItem renders ShippinAddressItem component with onChange 1`] = `
+<DocumentFragment>
+  <li>
+    <div
+      class="RadioItem"
+    >
+      <input
+        id="address_undefined"
+        name="shipping_address"
+        type="radio"
+      />
+      <label
+        class="RadioItem__Content"
+        for="address_undefined"
+      >
+        <p>
+          John Doe
+        </p>
+        <p>
+          , , Winnipeg, Manitoba, , Canada
+        </p>
+        <p />
+      </label>
+    </div>
+  </li>
+</DocumentFragment>
+`;
