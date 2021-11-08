@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton renders BackButton component 1`] = `
+<DocumentFragment>
+  <div>
+    <a
+      href="/"
+    >
+      <button
+        class="back-btn"
+        type="button"
+      >
+        Back
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;

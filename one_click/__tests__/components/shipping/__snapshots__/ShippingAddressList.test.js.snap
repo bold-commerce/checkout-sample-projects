@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingAddressList renders ShippingAddressList component disabled 1`] = `
+<DocumentFragment>
+  <ul
+    class="AddressList"
+  >
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          disabled=""
+          id="address_1"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_1"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          disabled=""
+          id="address_2"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_2"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          disabled=""
+          id="address_3"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_3"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          disabled=""
+          id="address_0"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_0"
+        >
+          <p>
+            Use new address
+          </p>
+        </label>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddressList renders ShippingAddressList component with addresses 1`] = `
+<DocumentFragment>
+  <ul
+    class="AddressList"
+  >
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_1"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_1"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_2"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_2"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_3"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_3"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_0"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_0"
+        >
+          <p>
+            Use new address
+          </p>
+        </label>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddressList renders ShippingAddressList component with onChange 1`] = `
+<DocumentFragment>
+  <ul
+    class="AddressList"
+  >
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_1"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_1"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_2"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_2"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_3"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_3"
+        >
+          <p>
+            John Doe
+          </p>
+          <p>
+            , , Winnipeg, Manitoba, , Canada
+          </p>
+          <p />
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="RadioItem"
+      >
+        <input
+          id="address_0"
+          name="shipping_address"
+          type="radio"
+        />
+        <label
+          class="RadioItem__Content"
+          for="address_0"
+        >
+          <p>
+            Use new address
+          </p>
+        </label>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

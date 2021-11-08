@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingLines renders ShippingLines component 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--ShippingMethod"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <div
+        class="FieldSet__Heading"
+      >
+        Shipping method
+      </div>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <div
+        class="RadioButton"
+      >
+        <div
+          class="stx-field stx-field--with-radio-field RadioField"
+        >
+          <div
+            class="stx-radio-field"
+          >
+            <span
+              class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+            >
+              <input
+                aria-checked="true"
+                aria-disabled="false"
+                checked=""
+                class="stx-radio__input"
+                id="stxField1"
+                name="shipping-method"
+                role="radio"
+                type="radio"
+                value=""
+              />
+              <span
+                class="stx-radio__box"
+              />
+            </span>
+            <label
+              class="stx-radio-field__label"
+              for="stxField1"
+            >
+              Standard Shipping
+            </label>
+          </div>
+        </div>
+        <div
+          class="stx-price ShippingMethod__Price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$20.00
+          </p>
+        </div>
+      </div>
+      <div
+        class="RadioButton"
+      >
+        <div
+          class="stx-field stx-field--with-radio-field RadioField"
+        >
+          <div
+            class="stx-radio-field"
+          >
+            <span
+              class="stx-radio stx-radio-field__radio"
+            >
+              <input
+                aria-checked="false"
+                aria-disabled="false"
+                class="stx-radio__input"
+                id="stxField2"
+                name="shipping-method"
+                role="radio"
+                type="radio"
+                value=""
+              />
+              <span
+                class="stx-radio__box"
+              />
+            </span>
+            <label
+              class="stx-radio-field__label"
+              for="stxField2"
+            >
+              Expedited Shipping
+            </label>
+          </div>
+        </div>
+        <div
+          class="stx-price ShippingMethod__Price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$40.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ShippingLines renders ShippingLines component when shipping lines should be hidden 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--ShippingMethod"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <h3
+        class="FieldSet__Heading"
+      >
+        Shipping method
+      </h3>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <div
+        class="FieldSet--EmptyState"
+      >
+        <svg
+          fill="none"
+          height="29"
+          viewBox="0 0 28 29"
+          width="28"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="#C4C4C4"
+            height="5"
+            rx="2.5"
+            width="28"
+          />
+          <rect
+            fill="#C4C4C4"
+            height="5"
+            rx="2.5"
+            width="28"
+            y="8"
+          />
+          <rect
+            fill="#C4C4C4"
+            height="5"
+            rx="2.5"
+            width="28"
+            y="16"
+          />
+          <rect
+            fill="#C4C4C4"
+            height="5"
+            rx="2.5"
+            width="28"
+            y="24"
+          />
+          <circle
+            cx="2.5"
+            cy="10.5"
+            fill="white"
+            r="1.5"
+          />
+          <circle
+            cx="2.5"
+            cy="2.5"
+            fill="white"
+            r="1.5"
+          />
+          <circle
+            cx="2.5"
+            cy="18.5"
+            fill="white"
+            r="1.5"
+          />
+          <circle
+            cx="2.5"
+            cy="26.5"
+            fill="white"
+            r="1.5"
+          />
+        </svg>
+        To view shipping options, complete filling in your address
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ShippingLines renders ShippingLines component while shipping lines are being set 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--ShippingMethod"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <div
+        class="FieldSet__Heading"
+      >
+        Shipping method
+      </div>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <div
+        class="RadioButton"
+      >
+        <div
+          class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+        >
+          <div
+            class="stx-radio-field"
+          >
+            <span
+              class="stx-radio stx-radio--is-disabled stx-radio--is-checked stx-radio-field__radio"
+            >
+              <input
+                aria-checked="true"
+                aria-disabled="true"
+                checked=""
+                class="stx-radio__input"
+                disabled=""
+                id="stxField3"
+                name="shipping-method"
+                role="radio"
+                type="radio"
+                value=""
+              />
+              <span
+                class="stx-radio__box"
+              />
+            </span>
+            <label
+              class="stx-radio-field__label"
+              for="stxField3"
+            >
+              Standard Shipping
+            </label>
+          </div>
+        </div>
+        <div
+          class="stx-price ShippingMethod__Price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$20.00
+          </p>
+        </div>
+      </div>
+      <div
+        class="RadioButton"
+      >
+        <div
+          class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+        >
+          <div
+            class="stx-radio-field"
+          >
+            <span
+              class="stx-radio stx-radio--is-disabled stx-radio-field__radio"
+            >
+              <input
+                aria-checked="false"
+                aria-disabled="true"
+                class="stx-radio__input"
+                disabled=""
+                id="stxField4"
+                name="shipping-method"
+                role="radio"
+                type="radio"
+                value=""
+              />
+              <span
+                class="stx-radio__box"
+              />
+            </span>
+            <label
+              class="stx-radio-field__label"
+              for="stxField4"
+            >
+              Expedited Shipping
+            </label>
+          </div>
+        </div>
+        <div
+          class="stx-price ShippingMethod__Price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$40.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ShippingLines renders ShippingLines component while shipping lines are fetching 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--ShippingMethod"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <div
+        class="FieldSet__Heading"
+      >
+        Shipping method
+      </div>
+    </div>
+    <div
+      class="FieldSet--LoadingState"
+    >
+      <span
+        class="stx-loading-spinner"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

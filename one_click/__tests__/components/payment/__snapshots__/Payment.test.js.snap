@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Payment renders PaymentMethod component showing payment method 1`] = `
+<DocumentFragment>
+  <div
+    class="Payment"
+  >
+    <div>
+      <a
+        href="/"
+      >
+        <button
+          class="back-btn"
+          type="button"
+        >
+          Back
+        </button>
+      </a>
+    </div>
+    <section
+      class="FieldSet FieldSet--PaymentMethod"
+    >
+      <div
+        class="FieldSet__Header"
+      >
+        <div
+          class="FieldSet__Heading"
+        >
+          Payment methods
+        </div>
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <div
+          class="FieldSet--EmptyState"
+        >
+          <svg
+            fill="none"
+            height="29"
+            viewBox="0 0 28 29"
+            width="28"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+            />
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+              y="8"
+            />
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+              y="16"
+            />
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+              y="24"
+            />
+            <circle
+              cx="2.5"
+              cy="10.5"
+              fill="white"
+              r="1.5"
+            />
+            <circle
+              cx="2.5"
+              cy="2.5"
+              fill="white"
+              r="1.5"
+            />
+            <circle
+              cx="2.5"
+              cy="18.5"
+              fill="white"
+              r="1.5"
+            />
+            <circle
+              cx="2.5"
+              cy="26.5"
+              fill="white"
+              r="1.5"
+            />
+          </svg>
+          To view payment options, complete filling in your address
+        </div>
+        <iframe
+          data-bold-pigi-iframe="true"
+          src=""
+          style="height: 0px; display: none;"
+          title="payments"
+        />
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Payment renders PaymentMethod component without showing payment method 1`] = `
+<DocumentFragment>
+  <div
+    class="Payment"
+  >
+    <div>
+      <a
+        href="/"
+      >
+        <button
+          class="back-btn"
+          type="button"
+        >
+          Back
+        </button>
+      </a>
+    </div>
+    <section
+      class="FieldSet FieldSet--PaymentMethod"
+    >
+      <div
+        class="FieldSet__Header"
+      >
+        <div
+          class="FieldSet__Heading"
+        >
+          Payment methods
+        </div>
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <div
+          class="FieldSet--EmptyState"
+        >
+          <svg
+            fill="none"
+            height="29"
+            viewBox="0 0 28 29"
+            width="28"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+            />
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+              y="8"
+            />
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+              y="16"
+            />
+            <rect
+              fill="#C4C4C4"
+              height="5"
+              rx="2.5"
+              width="28"
+              y="24"
+            />
+            <circle
+              cx="2.5"
+              cy="10.5"
+              fill="white"
+              r="1.5"
+            />
+            <circle
+              cx="2.5"
+              cy="2.5"
+              fill="white"
+              r="1.5"
+            />
+            <circle
+              cx="2.5"
+              cy="18.5"
+              fill="white"
+              r="1.5"
+            />
+            <circle
+              cx="2.5"
+              cy="26.5"
+              fill="white"
+              r="1.5"
+            />
+          </svg>
+          To view payment options, complete filling in your address
+        </div>
+        <iframe
+          data-bold-pigi-iframe="true"
+          src=""
+          style="height: 0px; display: none;"
+          title="payments"
+        />
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage renders IndexPage component 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title"
+                class="stx-image--image"
+                src=""
+                title="Test title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$14.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 2, Revenge of the title"
+                class="stx-image--image"
+                src=""
+                title="Test title 2, Revenge of the title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 2, Revenge of the title
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$32.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 3, the search for more money"
+                class="stx-image--image"
+                src=""
+                title="Test title 3, the search for more money"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 3, the search for more money
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          3
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$123.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    >
+      <a
+        href="/summary"
+      >
+        Summary
+      </a>
+    </div>
+    <div
+      class="Card__Overview"
+    >
+      $23.80
+    </div>
+    <div
+      class="Card__Description"
+    />
+    <div
+      class="Card__Action"
+    />
+    <div
+      class="Card__Content"
+    />
+  </div>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    >
+      <a
+        href="/shipping"
+      >
+        Shipping
+      </a>
+    </div>
+    <div
+      class="Card__Overview"
+    />
+    <div
+      class="Card__Description"
+    >
+      Jane Doe
+    </div>
+    <div
+      class="Card__Action"
+    />
+    <div
+      class="Card__Content"
+    >
+      <div>
+        1234 Somewhere Street, Winnipeg, Manitoba, A1B 2C3, Canada
+      </div>
+      <div>
+        Canada Post Expedited Parcel — $7.00
+      </div>
+    </div>
+  </div>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    >
+      <a
+        href="/payment"
+      >
+        Payment
+      </a>
+    </div>
+    <div
+      class="Card__Overview"
+    />
+    <div
+      class="Card__Description"
+    >
+      Visa **** 1234
+    </div>
+    <div
+      class="Card__Action"
+    />
+    <div
+      class="Card__Content"
+    >
+      <div>
+        Billing address same as shipping address.
+      </div>
+    </div>
+  </div>
+  <button
+    aria-busy="false"
+    aria-disabled="false"
+    class="stx-button CheckoutButton"
+  >
+    <span
+      class="stx-button__text"
+    >
+      Complete Order
+    </span>
+    <span
+      class="stx-loading-spinner stx-button__spinner"
+    />
+  </button>
+</DocumentFragment>
+`;
