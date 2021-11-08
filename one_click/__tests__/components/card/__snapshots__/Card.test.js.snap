@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders Card component 1`] = `
+<DocumentFragment>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    />
+    <div
+      class="Card__Overview"
+    />
+    <div
+      class="Card__Description"
+    />
+    <div
+      class="Card__Action"
+    />
+    <div
+      class="Card__Content"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card renders Card component with action 1`] = `
+<DocumentFragment>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    />
+    <div
+      class="Card__Overview"
+    />
+    <div
+      class="Card__Description"
+    />
+    <div
+      class="Card__Action"
+    >
+      Action Label
+    </div>
+    <div
+      class="Card__Content"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card renders Card component with child component 1`] = `<DocumentFragment />`;

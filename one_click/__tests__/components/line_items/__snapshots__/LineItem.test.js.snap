@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineItem renders LineItem component with editable quantity 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Product A"
+                class="stx-image--image"
+                src="https://via.placeholder.com/150"
+                title="Product A"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Product A
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            Test description right here
+          </div>
+        </div>
+        <button
+          aria-busy="false"
+          aria-disabled="false"
+          class="stx-button stx-button--secondary"
+        >
+          <span
+            class="stx-button__text"
+          >
+            Remove
+          </span>
+          <span
+            class="stx-loading-spinner stx-button__spinner"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity__Decrement"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button"
+          >
+            <span
+              class="stx-button__text"
+            >
+              -
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+        <div
+          class="ProductQuantity"
+        >
+          <div
+            class="stx-input"
+          >
+            <input
+              aria-readonly="false"
+              class="stx-input__input-element"
+              type="number"
+              value="2"
+            />
+          </div>
+        </div>
+        <div
+          class="ProductQuantity__Increment"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button"
+          >
+            <span
+              class="stx-button__text"
+            >
+              +
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$199.98
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LineItem renders read only LineItem component 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Product A"
+                class="stx-image--image"
+                src="https://via.placeholder.com/150"
+                title="Product A"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Product A
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            Test description right here
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity__Decrement"
+        />
+        <div
+          class="ProductQuantity ProductQuantity--read-only"
+        >
+          <div
+            class="stx-input stx-input--is-read-only"
+          >
+            <input
+              aria-readonly="true"
+              class="stx-input__input-element"
+              readonly=""
+              type="number"
+              value="2"
+            />
+          </div>
+        </div>
+        <div
+          class="ProductQuantity__Increment"
+        />
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$199.98
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

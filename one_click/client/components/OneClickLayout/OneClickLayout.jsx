@@ -2,8 +2,8 @@ import React from 'react';
 import { MemoryRouter as Router, Route } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import IndexPage from './components/Index';
-import CheckoutForm from './components/CheckoutForm';
+import { IndexPage } from './components/Index';
+import { CheckoutForm } from './components/CheckoutForm';
 import './OneClickLayout.css';
 
 const OneClickLayout = ({ orderStatus }) => {

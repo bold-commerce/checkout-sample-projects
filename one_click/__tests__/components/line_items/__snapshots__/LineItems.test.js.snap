@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineItems renders LineItems component with editable quantity 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test Product A"
+                class="stx-image--image"
+                src="https://via.placeholder.com/150"
+                title="Test Product A"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test Product A
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$59.98
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test Product B"
+                class="stx-image--image"
+                src="https://via.placeholder.com/150"
+                title="Test Product B"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test Product B
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          4
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$79.96
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LineItems renders read only LineItems component 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test Product A"
+                class="stx-image--image"
+                src="https://via.placeholder.com/150"
+                title="Test Product A"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test Product A
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          2
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$59.98
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test Product B"
+                class="stx-image--image"
+                src="https://via.placeholder.com/150"
+                title="Test Product B"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test Product B
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          4
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$79.96
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Product from '../product/Product';
+import Product from '../Product/Product';
 
 const LineItem = ({
   title,
