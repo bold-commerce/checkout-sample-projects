@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "client": "webpack --watch",
-    "server": "nodemon ./server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "NODE_ENV=production webpack --mode=production",
+    "client:watch": "webpack --watch --config webpack.dev.js",
+    "server:watch": "nodemon ./server/index.js",
+    "dev": "concurrently \"npm run server:watch\" \"npm run client:watch\"",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "start": "node ./server/index.js"
   },
   "devDependencies": {
@@ -30,7 +30,8 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.47.0",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "@boldcommerce/checkout-react-components": "^3.3.4",
