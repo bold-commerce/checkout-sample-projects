@@ -1,8 +1,7 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useShippingLines, useLoadingStatus, useErrors, useShippingAddress } from '@boldcommerce/checkout-react-components';
-import EmptyShippingLines from './EmptyShippingLines';
 import { LoadingState } from '../LoadingState';
-import ShippingLineList from './ShippingLineList';
+import { ShippingLineList, EmptyShippingLines } from './components';
 import { Message } from '@boldcommerce/stacks-ui';
 import './ShippingLines.css';
 

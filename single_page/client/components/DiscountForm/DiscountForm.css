@@ -1,0 +1,41 @@
+.DiscountForm {
+  display: flex;
+}
+
+.DiscountForm .stx-field {
+  flex: 2;
+  margin: 0;
+}
+
+.DiscountForm .stx-field input {
+  line-height: 30px;
+}
+
+.DiscountForm button.stx-button .stx-button__text {
+  text-transform: capitalize;
+}
+
+.DiscountForm button.stx-button {
+  flex: 0.5;
+  height: 42px;
+}
+
+.Summary__DiscountForm .DiscountForm__error {
+  color: #FF1A2D;
+}
+
+@media screen and (max-width: 599px) {
+  .DiscountForm {
+    flex-direction: column;
+  }
+
+  .DiscountForm .stx-field {
+    flex: 1;
+    margin: 0 0.25rem 10px 0.25rem;
+
+  }
+
+  .DiscountForm button.stx-button {
+    flex: 1
+  }
+}

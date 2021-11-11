@@ -3,8 +3,9 @@ import { Customer } from '../Customer';
 import { ShippingAddress } from '../ShippingAddress';
 import { OrderErrors } from '../OrderErrors';
 import { BillingAddress } from '../BillingAddress';
-import './SinglePageLayout.css';
 import { ShippingLines } from '../ShippingLines';
+import OrderSummary from '../OrderSummary/OrderSummary';
+import './SinglePageLayout.css';
 
 const SinglePageLayout = () => {
   return (
@@ -15,6 +16,9 @@ const SinglePageLayout = () => {
         <ShippingAddress />
         <BillingAddress />
         <ShippingLines />
+      </div>
+      <div className="Checkout__Sidebar">
+        <OrderSummary readOnly={false} />
       </div>
     </div>
   );

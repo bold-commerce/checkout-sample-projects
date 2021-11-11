@@ -1,7 +1,8 @@
 import React, { memo, useCallback, useState } from 'react';
 import { useCountryInfo, useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { Address } from '../Address';
-import SavedAddressList from './SavedAddressList';
+import { SavedAddressList } from './components';
+import { CheckoutSection } from '../CheckoutSection';
 import './ShippingAddress.css';
 
 const ShippingAddress = () => {
@@ -59,38 +60,34 @@ const MemoizedShippingAddress = memo(({
   }, [shippingAddress]);
 
   return (
-    <>
-      <section className="FieldSet FieldSet--ShippingMethod">
-        <div className="FieldSet__Header">
-          <div className="FieldSet__Heading">Shipping address</div>
-        </div>
-        <div className="FieldSet__Content">
-          <SavedAddressList
-            savedAddresses={savedAddresses}
-            selectedAddress={address?.id}
-            onChange={updateSelectedShippingAddress}
-            disabled={disabled}
-          />
-          { (address?.id === undefined || address?.id === null) && (
-            <Address
-              address={address}
-              onChange={(data) => setAddress((prevAddress) => ({
-                ...prevAddress,
-                ...data,
-              }))}
-              errors={errors}
-              countries={countries}
-              provinces={provinces}
-              showPostalCode={showPostalCode}
-              showProvince={showProvince}
-              provinceLabel={provincePlaceholder}
-              submit={() => updateSelectedShippingAddress(address)}
-              requiredAddressFields={requiredAddressFields}
-            />
-          )}
-        </div>
-      </section>
-    </>
+    <CheckoutSection
+      className="FieldSet--ShippingMethod"
+      title="Shipping address"
+    >
+      <SavedAddressList
+        savedAddresses={savedAddresses}
+        selectedAddress={address?.id}
+        onChange={updateSelectedShippingAddress}
+        disabled={disabled}
+      />
+      { (address?.id === undefined || address?.id === null) && (
+        <Address
+          address={address}
+          onChange={(data) => setAddress((prevAddress) => ({
+            ...prevAddress,
+            ...data,
+          }))}
+          errors={errors}
+          countries={countries}
+          provinces={provinces}
+          showPostalCode={showPostalCode}
+          showProvince={showProvince}
+          provinceLabel={provincePlaceholder}
+          submit={() => updateSelectedShippingAddress(address)}
+          requiredAddressFields={requiredAddressFields}
+        />
+      )}
+    </CheckoutSection>
   );
 });
 
