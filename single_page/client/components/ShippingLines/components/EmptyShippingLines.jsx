@@ -1,5 +1,5 @@
 import React from 'react';
-import EmptyState from '../EmptyState/EmptyState';
+import { EmptyState } from '../../EmptyState';
 
 const EmptyShippingLines = () => (
   <div className="FieldSet__Content">

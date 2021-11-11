@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import EmptyStateIcon from './EmptyStateIcon';
+import { EmptyStateIcon } from './components';
 import './EmptyState.css';
 
 const EmptyState = ({ title }) => (

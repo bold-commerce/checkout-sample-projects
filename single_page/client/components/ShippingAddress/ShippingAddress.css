@@ -11,3 +11,11 @@
   border-top: 1px solid #D2D2D2D2;
   background: none;
 }
+
+.CheckoutStep__FieldSetInfo {
+  display: block;
+}
+
+.CheckoutStep__FieldSetInfo--Secondary {
+  color: rgba(0, 0, 0, 0.65);
+}

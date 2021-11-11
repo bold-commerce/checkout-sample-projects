@@ -1,6 +1,6 @@
 import { useBillingAddress, useBillingSameAsShipping, useCountryInfo } from '@boldcommerce/checkout-react-components';
 import React, { memo, useCallback, useState } from 'react';
-import BillingSameAsShipping from './BillingSameAsShipping';
+import { BillingSameAsShipping } from './components';
 import { Address } from '../Address';
 import './BillingAddress.css';
 

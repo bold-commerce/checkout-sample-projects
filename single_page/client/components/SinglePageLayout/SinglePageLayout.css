@@ -24,12 +24,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
 }
+
 .Checkout {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   position: relative;
   max-width: 1500px;
+}
+
+.Checkout__Sidebar {
+  width: 38%;
+  padding: 35px;
+  border-left: 1px solid #d9d9d9;
 }
 
 @media only screen and (min-width: 1200px) {
