@@ -69,7 +69,7 @@ app.get('/', async (req, res) => {
     }],
   };
 
-  const checkout = await fetch(`https://api.staging.boldcommerce.com/checkout/orders/${process.env.SHOP_IDENTIFIER}/init`, {
+  const checkout = await fetch(`https://api.boldcommerce.com/checkout/orders/${process.env.SHOP_IDENTIFIER}/init`, {
     headers: {
       Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
       'Content-Type': 'application/json',
