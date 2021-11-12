@@ -22,7 +22,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
         }
     }),
     usePaymentIframe: () => ({ })
-}))
+}));
 
 describe('IndexPage', () => {
     test('renders IndexPage component', () => {

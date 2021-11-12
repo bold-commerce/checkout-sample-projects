@@ -4,10 +4,19 @@ import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
 import './Shipping.css';
+import { useCallback } from 'react';
 
 const Shipping = () => {
   const { savedAddresses, shippingAddress, submitShippingAddress } = useShippingAddress();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
+  const handleSubmit = useCallback(async (address) => {
+    try {
+      const response = await submitShippingAddress(address);
+    }
+    catch(e) {
+    }
+  }, []);
+
   const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching';
 
   return (
@@ -18,7 +27,7 @@ const Shipping = () => {
         <h3>Shipping address</h3>
         <ShippingAddressList
           addresses={savedAddresses}
-          onChange={(address) => submitShippingAddress(address)}
+          onChange={(address) => handleSubmit(address)}
           selectedAddress={shippingAddress.id}
           disabled={isSetting}
         />

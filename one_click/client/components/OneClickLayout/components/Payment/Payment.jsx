@@ -6,7 +6,7 @@ import { usePaymentMethod } from '@boldcommerce/checkout-react-components';
 import PaymentIframe from './PaymentIframe';
 import './Payment.css';
 
-const PaymentMethod = ({ showPaymentMethod }) => {
+export const PaymentMethod = ({ showPaymentMethod }) => {
   if (showPaymentMethod) {
     return (
       <div className="Payment">

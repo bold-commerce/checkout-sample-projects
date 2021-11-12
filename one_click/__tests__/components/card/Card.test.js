@@ -1,8 +1,7 @@
 import React from "react";
 import Card from '../../../client/components/OneClickLayout/components/Card'
 import { render } from '@testing-library/react';
-import { Router } from "express";
-import { createMemoryHistory } from 'history'
+import { MemoryRouter } from "react-router";
 
 describe('Card', () => {
     test('renders Card component', () => {
@@ -20,19 +19,16 @@ describe('Card', () => {
     });
 
     test('renders Card component with child component', () => {
-        const history = createMemoryHistory();
-        // This <Card> component requires to be wrapped in <Router> because it contains <Link>
         const { asFragment } = render(
-            <Router history={history}>
-                <Card 
-                    title={null} 
-                    description={null} 
-                    component="/shipping"
-                    overview={null} 
-                    action={null} 
-                    children={null} 
-                    />
-            </Router>    
+            <Card 
+                title={null} 
+                description={null} 
+                component="/shipping"
+                overview={null} 
+                action={null} 
+                children={null} 
+            />,
+            {wrapper: MemoryRouter}
         );
         expect(asFragment()).toMatchSnapshot();
     });

@@ -1,33 +1,24 @@
 import React from "react";
 import CheckoutForm from '../../../client/components/OneClickLayout/components/CheckoutForm/CheckoutForm'
 import { render } from '@testing-library/react';
-import { Router } from "express";
-import { createMemoryHistory } from 'history'
 import { MemoryRouter } from "react-router";
+import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers'
 
-jest.mock('react-router-dom', () => ({
-    ...jest.requireActual("react-router"),
-    useLocation: () => ({
-        hash: "",
-        key: "testkey",
-        pathname: "/",
-        search: "",
-        state: undefined
+jest.mock('@boldcommerce/checkout-react-components', () => ({
+    ...jest.requireActual('@boldcommerce/checkout-react-components'),
+    useLineItems: () => ({
+        lineItems: MOCKexampleLineItems,
+        updateLineItemQuantity: (() => {}),
+        removeLineItems: (() => {})
     })
-}));
+}))
 
 describe('CheckoutForm', () => {
-    test('renders CheckoutForm', () => {        
-        // const history = createMemoryHistory();
-        // history.push("/");
-        // <CheckoutForm> requires to be wrapped in <Router> because it contains useLocation
+    test('renders CheckoutForm', () => {
         const { asFragment } = render(
             <CheckoutForm />,
-            {wrapper: MemoryRouter});
-            // <Router history={history}>
-                // <CheckoutForm />
-            // </Router>
-        //);
+            {wrapper: MemoryRouter}
+        );
         expect(asFragment()).toMatchSnapshot();
     });
 });

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Button, Price, Details, Image,
+  Price, Details, Image,
 } from '@boldcommerce/stacks-ui';
-import ProductQuantityInput from '../ProductQuantity/ProductQuantityInput';
 import './Product.css';
 
 const Product = ({
@@ -26,11 +25,11 @@ const Product = ({
       </div>
     </div>
     <div className="CartItem__QuantityPriceWrapper">
-      <ProductQuantityInput
-        readOnly={true}
-        defaultValue={quantity}
-        onChange={(value) => onQuantityChange(lineItemKey, value)}
-      />
+      <div className="CartItem__ProductQuantityWrapper">
+        <div className="ProductQuantity">
+          {quantity}
+        </div>
+      </div>
       <div className="CartItem__ProductPrice">
         <Price amount={totalPrice} />
       </div>

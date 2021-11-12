@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from '@testing-library/react';
 import { CheckoutButton } from '../../../client/components/OneClickLayout/components/CheckoutButton'
+import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
@@ -14,7 +15,10 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             loadingStatus: { isLoading: false }
         }
     }),
-    usePaymentIframe: () => ({ })
+    usePaymentIframe: () => ({ }),
+    useLineItems: () => ({
+        lineItems: MOCKexampleLineItems
+    })
 }))
 
 describe('CheckoutButton', () => {
