@@ -13,6 +13,7 @@ describe('Product', () => {
             description="Test description goes here"
             onQuantityChange={() => {}}
             totalPrice={19998}
+            onRemove= {() => {}}
         />
         );
         expect(asFragment()).toMatchSnapshot();

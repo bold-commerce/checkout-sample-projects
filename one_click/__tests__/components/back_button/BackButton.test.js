@@ -5,7 +5,6 @@ import { MemoryRouter } from "react-router";
 
 describe('BackButton', () => {
     test('renders BackButton component', () => {
-        // <BackButton> requires a wrapper because it contains <Link>
         const { asFragment } = render(
             <BackButton />,
             {wrapper: MemoryRouter}

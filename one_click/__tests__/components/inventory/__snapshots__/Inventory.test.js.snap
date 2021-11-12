@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inventory renders Inventory component 1`] = `
+<DocumentFragment>
+  <div
+    class="Inventory__Main"
+  >
+    <div
+      class="Inventory__Message"
+    >
+      <div
+        class="Inventory__Title"
+      >
+        Inventory issues
+      </div>
+      <div
+        class="Inventory__Description"
+      >
+        Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience.
+      </div>
+    </div>
+    <div
+      class="SummaryBlock InventoryItem"
+    >
+      <div
+        class="InventoryItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 2, Revenge of the title"
+                class="stx-image--image"
+                src=""
+                title="Test title 2, Revenge of the title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="InventoryItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 2, Revenge of the title
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            Test title 2, Revenge of the title
+          </div>
+        </div>
+        <div
+          class="InventoryItem__ProductQuantityWrapper"
+        >
+          <div
+            class="ProductQuantity"
+          >
+            2
+          </div>
+          <div
+            class="Arrow"
+          >
+            →
+          </div>
+          <div
+            class="ProductQuantity"
+          >
+            1
+          </div>
+        </div>
+      </div>
+      <div
+        class="InventoryItem__RemoveItemWrapper"
+      >
+        <button
+          class="InventoryItem__RemoveItem"
+        >
+          X
+        </button>
+      </div>
+    </div>
+    <div
+      class="SummaryBlock InventoryItem"
+    >
+      <div
+        class="InventoryItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 3, the search for more money"
+                class="stx-image--image"
+                src=""
+                title="Test title 3, the search for more money"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="InventoryItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 3, the search for more money
+          </div>
+          <div
+            class="stx-details__description"
+          >
+            Test title 3, the search for more money
+          </div>
+        </div>
+        <div
+          class="InventoryItem__ProductQuantityWrapper"
+        >
+          <div
+            class="SoldOut"
+          >
+            Sold Out
+          </div>
+        </div>
+      </div>
+      <div
+        class="InventoryItem__RemoveItemWrapper"
+      />
+    </div>
+    <div
+      class="Inventory__footer"
+    >
+      <a
+        class="ReturnLink"
+        href="/"
+      >
+        Return to cart
+      </a>
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button CheckoutButton"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Continue with changes
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

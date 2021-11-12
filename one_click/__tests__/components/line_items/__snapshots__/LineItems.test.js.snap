@@ -21,10 +21,10 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
               class="stx-image--holder"
             >
               <img
-                alt="Test Product A"
+                alt="Test title"
                 class="stx-image--image"
-                src="https://via.placeholder.com/150"
-                title="Test Product A"
+                src=""
+                title="Test title"
               />
             </div>
           </div>
@@ -39,7 +39,80 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
           <div
             class="stx-details__title"
           >
-            Test Product A
+            Test title
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$14.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 2, Revenge of the title"
+                class="stx-image--image"
+                src=""
+                title="Test title 2, Revenge of the title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 2, Revenge of the title
           </div>
           <div
             class="stx-details__description"
@@ -69,7 +142,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$59.98
+            CA$32.00
           </p>
         </div>
       </div>
@@ -94,10 +167,10 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
               class="stx-image--holder"
             >
               <img
-                alt="Test Product B"
+                alt="Test title 3, the search for more money"
                 class="stx-image--image"
-                src="https://via.placeholder.com/150"
-                title="Test Product B"
+                src=""
+                title="Test title 3, the search for more money"
               />
             </div>
           </div>
@@ -112,7 +185,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
           <div
             class="stx-details__title"
           >
-            Test Product B
+            Test title 3, the search for more money
           </div>
           <div
             class="stx-details__description"
@@ -129,7 +202,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
         <div
           class="ProductQuantity"
         >
-          4
+          3
         </div>
       </div>
       <div
@@ -142,7 +215,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$79.96
+            CA$123.00
           </p>
         </div>
       </div>
@@ -172,10 +245,10 @@ exports[`LineItems renders read only LineItems component 1`] = `
               class="stx-image--holder"
             >
               <img
-                alt="Test Product A"
+                alt="Test title"
                 class="stx-image--image"
-                src="https://via.placeholder.com/150"
-                title="Test Product A"
+                src=""
+                title="Test title"
               />
             </div>
           </div>
@@ -190,7 +263,80 @@ exports[`LineItems renders read only LineItems component 1`] = `
           <div
             class="stx-details__title"
           >
-            Test Product A
+            Test title
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="CartItem__QuantityPriceWrapper"
+    >
+      <div
+        class="CartItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          1
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$14.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="SummaryBlock CartItem"
+  >
+    <div
+      class="CartItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="CartItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test title 2, Revenge of the title"
+                class="stx-image--image"
+                src=""
+                title="Test title 2, Revenge of the title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CartItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test title 2, Revenge of the title
           </div>
           <div
             class="stx-details__description"
@@ -220,7 +366,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$59.98
+            CA$32.00
           </p>
         </div>
       </div>
@@ -245,10 +391,10 @@ exports[`LineItems renders read only LineItems component 1`] = `
               class="stx-image--holder"
             >
               <img
-                alt="Test Product B"
+                alt="Test title 3, the search for more money"
                 class="stx-image--image"
-                src="https://via.placeholder.com/150"
-                title="Test Product B"
+                src=""
+                title="Test title 3, the search for more money"
               />
             </div>
           </div>
@@ -263,7 +409,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
           <div
             class="stx-details__title"
           >
-            Test Product B
+            Test title 3, the search for more money
           </div>
           <div
             class="stx-details__description"
@@ -280,7 +426,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
         <div
           class="ProductQuantity"
         >
-          4
+          3
         </div>
       </div>
       <div
@@ -293,7 +439,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$79.96
+            CA$123.00
           </p>
         </div>
       </div>

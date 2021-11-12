@@ -5,8 +5,9 @@ import { MemoryRouter } from "react-router";
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
+    usePaymentMethod: () => ({ showPaymentMethod: true }),
     usePaymentIframe: () => ({
-        paymentIframeLoadingStatus: 'fetching',
+        paymentIframeLoadingStatus: '',
         paymentIframeUrl: '',
         paymentIframeHeight: 0,
         paymentIframeOnLoaded: (() => {})

@@ -84,3 +84,19 @@ export const exampleLineItems = [
 ]
 
 export const exampleLineItem = exampleLineItems[0];
+
+export const exampleInventory = [
+    {
+        id: "2",
+        stock: 3,
+        name: "Test title"
+    },{
+        id: "4",
+        stock: 1,
+        name: "Test title 2, Revenge of the title"
+    },{
+        id: "6",
+        stock: 0,
+        name: "Test title 3, the search for more money"
+    }    
+]

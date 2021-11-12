@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
 import { OneClickLayout } from './components';
 

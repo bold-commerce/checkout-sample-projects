@@ -50,4 +50,30 @@ exports[`Card renders Card component with action 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card renders Card component with child component 1`] = `<DocumentFragment />`;
+exports[`Card renders Card component with child component 1`] = `
+<DocumentFragment>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    >
+      <a
+        href="/shipping"
+      />
+    </div>
+    <div
+      class="Card__Overview"
+    />
+    <div
+      class="Card__Description"
+    />
+    <div
+      class="Card__Action"
+    />
+    <div
+      class="Card__Content"
+    />
+  </div>
+</DocumentFragment>
+`;

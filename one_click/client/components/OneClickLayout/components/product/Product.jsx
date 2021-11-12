@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Button, Price, Details, Image,
+  Price, Details, Image,
 } from '@boldcommerce/stacks-ui';
-import ProductQuantityInput from '../ProductQuantity/ProductQuantityInput';
 import './Product.css';
 
 const Product = ({

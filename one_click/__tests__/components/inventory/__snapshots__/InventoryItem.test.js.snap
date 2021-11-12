@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InventoryItem renders InventoryItem component with no stock 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock InventoryItem"
+  >
+    <div
+      class="InventoryItem__ProductImageWrapper"
+    >
+      <div
+        class="stx-image"
+      >
+        <div
+          class="stx-image--content"
+        >
+          <div
+            class="stx-image--holder"
+          >
+            <img
+              alt="Test Title"
+              class="stx-image--image"
+              src=""
+              title="Test Title"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="InventoryItem__ProductDetails"
+    >
+      <div
+        class="stx-details stx-details--left"
+      >
+        <div
+          class="stx-details__title"
+        >
+          Test Title
+        </div>
+        <div
+          class="stx-details__description"
+        >
+          Test description
+        </div>
+      </div>
+      <div
+        class="InventoryItem__ProductQuantityWrapper"
+      >
+        <div
+          class="SoldOut"
+        >
+          Sold Out
+        </div>
+      </div>
+    </div>
+    <div
+      class="InventoryItem__RemoveItemWrapper"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InventoryItem renders InventoryItem component with stock 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock InventoryItem"
+  >
+    <div
+      class="InventoryItem__ProductImageWrapper"
+    >
+      <div
+        class="stx-image"
+      >
+        <div
+          class="stx-image--content"
+        >
+          <div
+            class="stx-image--holder"
+          >
+            <img
+              alt="Test Title"
+              class="stx-image--image"
+              src=""
+              title="Test Title"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="InventoryItem__ProductDetails"
+    >
+      <div
+        class="stx-details stx-details--left"
+      >
+        <div
+          class="stx-details__title"
+        >
+          Test Title
+        </div>
+        <div
+          class="stx-details__description"
+        >
+          Test description
+        </div>
+      </div>
+      <div
+        class="InventoryItem__ProductQuantityWrapper"
+      >
+        <div
+          class="ProductQuantity"
+        >
+          3
+        </div>
+        <div
+          class="Arrow"
+        >
+          →
+        </div>
+        <div
+          class="ProductQuantity"
+        >
+          1
+        </div>
+      </div>
+    </div>
+    <div
+      class="InventoryItem__RemoveItemWrapper"
+    >
+      <button
+        class="InventoryItem__RemoveItem"
+      >
+        X
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
