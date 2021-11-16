@@ -2,12 +2,12 @@ import React from "react";
 import TimesCircle from "../Icons/TimesCirlce";
 import { Price } from "@boldcommerce/stacks-ui/lib";
 
-const SummaryItem = ({ title, value, removable, removeItem }) => {
+const SummaryItem = ({ title, value, removeItem }) => {
     return (    
         <div className="summary-line-child" >
             <div className="summary-child-title">
                 { title }
-                { removable &&
+                { removeItem &&
                 <button
                     className="summary-child-remove"
                     onClick={() => removeItem(title)}

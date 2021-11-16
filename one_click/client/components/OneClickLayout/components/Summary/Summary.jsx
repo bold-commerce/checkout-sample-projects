@@ -28,7 +28,7 @@ const Summary = () => {
         discountItems = <SummaryItem 
                             title={discountCode}
                             value={(discountTotal * -1)}
-                            removable removeItem={removeDiscount}
+                            removeItem={removeDiscount}
                         />;
     }
 
@@ -36,7 +36,7 @@ const Summary = () => {
         taxItems = taxes.map( (taxline) => {
             return(                
                 <SummaryItem
-                key={taxline.name}
+                    key={taxline.name}
                     title={taxline.name}
                     value={taxline.value}
                 />

@@ -10,4 +10,4 @@ const CaretRight = () => {
     )
 }
 
-export default CaretRight;
+export default React.memo(CaretRight);

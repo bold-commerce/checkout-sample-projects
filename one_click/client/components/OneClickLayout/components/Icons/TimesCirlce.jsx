@@ -12,4 +12,4 @@ const TimesCircle = () => {
     );
 }
 
-export default TimesCircle;
+export default React.memo(TimesCircle);
