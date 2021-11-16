@@ -39,6 +39,7 @@ body {
   position: relative;
   max-width: 480px;
   background: #ffffff;
+  width: 100%;
 }
 
 .Checkout__Summary,

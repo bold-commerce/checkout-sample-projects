@@ -1,0 +1,86 @@
+.Summary__ {
+    &Total {
+        color: rgba(0, 0, 0, .9);
+        line-height: 20px;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+
+        & > div {
+            margin-left: 24px;
+        }
+    }
+}
+
+.summary-line {
+    flex-direction: column;
+    padding-top: 8px;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, .65);
+    
+    &:first-child {
+        padding-top: 0px;
+    }
+
+    &-child,
+    &-title,
+    &-head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-icon {
+        width: 24px;
+        height: 20px;
+    }
+
+    &-content {
+        margin-left: 24px;
+    }
+
+    &-child {
+        padding-top: 8px;
+    }
+}
+
+.summary-child {
+
+    &-remove {
+        padding-left: 8px;
+    }
+
+    &-title {
+        display: flex;
+    }
+}
+
+button.summary-btn,
+button.summary-child-remove {
+    border: none;
+    display: inherit;
+    justify-content: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+
+.stx-price__amount {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: rgba(0, 0, 0, .65);
+}
+
+.summary-total-price > .stx-price__amount {
+    color: rgba(0, 0, 0, .9);
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
