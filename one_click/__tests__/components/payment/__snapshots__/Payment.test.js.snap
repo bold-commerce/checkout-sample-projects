@@ -106,28 +106,97 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
 
 exports[`Payment renders PaymentMethod component without showing payment method 1`] = `
 <DocumentFragment>
-  <section
-    class="FieldSet FieldSet--PaymentMethod"
+  <div
+    class="Payment"
   >
-    <div
-      class="FieldSet__Header"
+    <h1
+      class="Section__Title"
+    >
+      Payment
+    </h1>
+    <div>
+      <a
+        href="/"
+      >
+        <button
+          class="back-btn"
+          type="button"
+        >
+          Back
+        </button>
+      </a>
+    </div>
+    <section
+      class="FieldSet FieldSet--PaymentMethod"
     >
       <div
-        class="FieldSet__Heading"
+        class="FieldSet__Content"
       >
-        Payment methods
+        <iframe
+          data-bold-pigi-iframe="true"
+          src=""
+          style="height: 0px;"
+          title="payments"
+        />
       </div>
-    </div>
-    <div
-      class="FieldSet__Content"
-    >
-      <iframe
-        data-bold-pigi-iframe="true"
-        src=""
-        style="height: 0px;"
-        title="payments"
-      />
-    </div>
-  </section>
+      <div
+        class="FieldSet__Content"
+      >
+        <div
+          class="DiscountLink"
+        >
+          Discount code
+        </div>
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <section
+          class="FieldSet FieldSet--BillingAddress"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3>
+              Billing address
+            </h3>
+          </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="stx-field stx-checkbox-field__field RadioButton"
+            >
+              <div
+                class="stx-checkbox-field__div"
+              >
+                <span
+                  class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                >
+                  <input
+                    checked=""
+                    class="stx-checkbox__input"
+                    id="stxField1"
+                    name="billing-address"
+                    type="checkbox"
+                    value="SAME_AS_SHIPPING_ADDRESS"
+                  />
+                  <span
+                    class="stx-checkbox__mount"
+                  />
+                </span>
+                <label
+                  class="stx-checkbox-field__label"
+                  for="stxField1"
+                >
+                  Same as shipping address
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
 </DocumentFragment>
 `;
