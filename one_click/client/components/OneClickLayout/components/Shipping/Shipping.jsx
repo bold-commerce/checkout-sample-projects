@@ -4,7 +4,6 @@ import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
 import './Shipping.css';
-import { useCallback } from 'react';
 
 const Shipping = () => {
   const { savedAddresses, shippingAddress, submitShippingAddress } = useShippingAddress();

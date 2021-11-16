@@ -5,6 +5,11 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
   <div
     class="Payment"
   >
+    <h1
+      class="Section__Title"
+    >
+      Payment
+    </h1>
     <div>
       <a
         href="/"
@@ -20,15 +25,6 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
     <section
       class="FieldSet FieldSet--PaymentMethod"
     >
-      <div
-        class="FieldSet__Header"
-      >
-        <div
-          class="FieldSet__Heading"
-        >
-          Payment methods
-        </div>
-      </div>
       <div
         class="FieldSet__Content"
       >
