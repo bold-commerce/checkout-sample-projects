@@ -2,6 +2,10 @@ import React from "react";
 import { render } from '@testing-library/react';
 import { PaymentMethod } from '../../../client/components/OneClickLayout/components/Payment/Payment'
 import { MemoryRouter } from "react-router";
+import { 
+    countries as MOCKcountries,
+    exampleAddress as MOCKexampleAddress
+} from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
@@ -10,6 +14,20 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
         paymentIframeUrl: '',
         paymentIframeHeight: 0,
         paymentIframeOnLoaded: (() => {})
+    }),
+    useDiscount: () => ({
+        discountApplied: false,
+        discountCode: "",
+        discountErrors: null,
+        applyDiscount: (() => {})
+    }),
+    useBillingAddress: () => ({
+        billingAddress: MOCKexampleAddress,
+        countryInfo: MOCKcountries,
+        billingAddressErrors: null,
+        billingSameAsShipping: true,
+        submitBillingAddress: (() => {}),
+        setBillingSameAsShipping: (() => {})
     })
 }))
 
