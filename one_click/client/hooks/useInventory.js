@@ -10,7 +10,7 @@ const useInventory = () => {
           return item.product_data.product_id;
         })
         
-        const response = await fetch(`https://bold-benp.bold.ninja/inventory?ids=${lineIds.join(',')}`);
+        const response = await fetch(`/inventory?ids=${lineIds.join(',')}`);
         const inventory = await response.json();
 
         lineItems.map((item) => {
