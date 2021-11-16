@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Discount renders Discount component closed 1`] = `
+<DocumentFragment>
+  <div
+    class="DiscountLink"
+  >
+    Discount code
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Discount renders Discount component opened 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock Summary__DiscountForm"
+  >
+    <div
+      class="DiscountForm"
+    >
+      <div
+        class="stx-input"
+      >
+        <input
+          class="stx-input__input-element"
+          placeholder="Enter discount code"
+          type="text"
+          value="ExampleDiscount"
+        />
+      </div>
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button stx-button--primary"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Apply
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Discount renders Discount component opened 2`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock Summary__DiscountForm"
+  >
+    <div
+      class="DiscountForm"
+    >
+      <div
+        class="stx-input stx-input--alert"
+      >
+        <input
+          class="stx-input__input-element"
+          messagetext="Invalid example discount"
+          placeholder="Enter discount code"
+          type="text"
+          value="ExampleDiscount"
+        />
+      </div>
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button stx-button--primary"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Apply
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+    <div
+      class="DiscountForm__error"
+    >
+      Invalid example discount
+    </div>
+  </div>
+</DocumentFragment>
+`;
