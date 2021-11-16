@@ -1,5 +1,5 @@
 import { useBillingAddress, useBillingSameAsShipping, useCountryInfo } from '@boldcommerce/checkout-react-components';
-import React, { memo, useCallback, useState } from 'react';
+import React, { memo, useCallback, useEffect, useState } from 'react';
 import { BillingSameAsShipping } from './components';
 import { Address } from '../Address';
 import './BillingAddress.css';
@@ -24,7 +24,7 @@ const MemoizedBillingAddress = memo(({
   submitAddress,
   setBillingSameAsShipping,
 }) => {
-  const [address, setAddress] = useState(billingAddress);
+  const [address, setAddress] = useState(null);
   const { data } = useCountryInfo(address);
   const {
     countries,
@@ -43,6 +43,10 @@ const MemoizedBillingAddress = memo(({
     provincePlaceholder = 'state/territory';
   }
 
+  useEffect(() => {
+    setAddress(billingAddress);
+  }, [billingAddress])
+
   const updateBillingAddress = useCallback(async (currentAddress) => {
     setAddress(currentAddress);
     try {
@@ -50,7 +54,10 @@ const MemoizedBillingAddress = memo(({
       setErrors(null);
     } catch(e) {
       setErrors(e.body.errors);
-      setAddress(billingAddress);
+      // If there is a server error, reset billing address
+      if (e.body.errors[0].field === 'order') {
+        setAddress(billingAddress);
+      }
     }
   }, [billingAddress]);
 
@@ -62,10 +69,20 @@ const MemoizedBillingAddress = memo(({
       setErrors(null);
     } catch(e) {
       setErrors(e.body.errors);
-      setSameAsShipping(billingSameAsShipping);
+      // If there is a server error, reset billing same as shipping
+      if (e.body.errors[0].field === 'order') {
+        setSameAsShipping(billingSameAsShipping);
+      }
     }
     setLoading(false);
   }, [billingSameAsShipping]);
+
+  const handleChange = useCallback((data) => {
+    setAddress({
+      ...address,
+      ...data
+    });
+  }, [address]);
 
   return (
     <section className="FieldSet FieldSet--BillingAddress">
@@ -81,10 +98,7 @@ const MemoizedBillingAddress = memo(({
         { !billingSameAsShipping && (
           <Address
             address={address}
-            onChange={(data) => setAddress((prevAddress) => ({
-              ...prevAddress,
-              ...data,
-            }))}
+            onChange={handleChange}
             errors={errors}
             countries={countries}
             provinces={provinces}

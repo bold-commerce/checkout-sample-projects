@@ -4,6 +4,7 @@ import { CheckoutSection } from '../CheckoutSection';
 import { LineItems } from '../LineItems';
 import { DiscountForm } from '../DiscountForm';
 import { OrderSummaryBreakdown } from '.';
+import './OrderSummary.css';
 
 const OrderSummary = ({ readOnly }) => {
   return (

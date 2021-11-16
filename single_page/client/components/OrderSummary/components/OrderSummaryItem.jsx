@@ -1,6 +1,7 @@
 import Price from '@boldcommerce/stacks-ui/lib/components/price/Price';
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const OrderSummaryItem = ({
   title,
@@ -11,7 +12,7 @@ const OrderSummaryItem = ({
   if (!amount) return null;
 
   return (
-    <div className="OrderSummaryItem">
+    <div className={classNames('OrderSummaryItem', description ? 'OrderSummaryItem--removable' : '')}>
       <span className="OrderSummaryItem__Title">{title}</span>
       {description ? (
         <div className="OrderSummaryItem__Description">

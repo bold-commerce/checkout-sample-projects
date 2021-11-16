@@ -57,6 +57,10 @@ app.get('/', async (req, res) => {
       sku: "ABS",
       quantity: 1,
       line_item_key: "abc123"
+    }, {
+      sku: "ABS",
+      quantity: 2,
+      line_item_key: "def356"
     }],
   };
 

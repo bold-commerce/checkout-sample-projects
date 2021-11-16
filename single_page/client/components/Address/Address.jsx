@@ -22,43 +22,45 @@ const Address = ({
 
   const handleSubmit = useCallback(() => {
     if (address && address.country_code) {
+      console.log('handleSubmit', address);
       submit();
     }
   }, [
-    address.country_code,
-    address.province_code,
-    address.postal_code,
+    address?.country_code,
+    address?.province_code,
+    address?.postal_code,
     showProvince,
     showPostalCode,
-    address.first_name,
-    address.last_name,
-    address.business_name,
-    address.address_line_1,
-    address.address_line_2,
-    address.city,
-    address.phone_number,
-    address.id,
+    address?.first_name,
+    address?.last_name,
+    address?.business_name,
+    address?.address_line_1,
+    address?.address_line_2,
+    address?.city,
+    address?.phone_number,
+    address?.id,
     submit,
   ]);
 
   // Submit address if user has stopped typing
   useEffect(() => {
     const postalCodeTimeout = setTimeout(() => {
+      console.log('timeout', address);
       handleSubmit();
     }, 2000);
     return () => clearTimeout(postalCodeTimeout);
   }, [
-    address.first_name,
-    address.last_name,
-    address.business_name,
-    address.address_line_1,
-    address.address_line_2,
-    address.city,
-    address.country_code,
-    address.province_code,
-    address.postal_code,
-    address.phone_number,
-    address.id,
+    address?.first_name,
+    address?.last_name,
+    address?.business_name,
+    address?.address_line_1,
+    address?.address_line_2,
+    address?.city,
+    address?.country_code,
+    address?.province_code,
+    address?.postal_code,
+    address?.phone_number,
+    address?.id,
   ]);
 
   return (
