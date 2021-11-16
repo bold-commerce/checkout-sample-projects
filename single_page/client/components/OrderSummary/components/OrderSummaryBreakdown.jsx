@@ -45,32 +45,30 @@ const MemoizedOrderSummaryBreakdown = memo(({
   return (
     <div className="OrderSummary__Breakdown">
       <div className="Breakdown__Section">
-        <div className="Breakdown__Section__Group">
-          <OrderSummaryItem
-            title="Subtotal"
-            amount={subTotal}
-          />
-          <OrderSummaryItem
-            title="Discount"
-            amount={discountTotal}
-            description={`Discount code: ${discountCode}`}
-            onRemove={handleRemoveDiscount}
-          />
-          <OrderSummaryItem
-            title="Shipping"
-            amount={shippingTotal}
-          />
-          <OrderSummaryItem
-            title="Taxes"
-            amount={taxesTotal}
-          />
-        </div>
-        <div className="Breakdown__Section__Group">
+        <OrderSummaryItem
+          title="Subtotal"
+          amount={subTotal}
+        />
+        <OrderSummaryItem
+          title="Discount"
+          amount={-discountTotal}
+          description={`Discount code: ${discountCode}`}
+          onRemove={handleRemoveDiscount}
+        />
+        <OrderSummaryItem
+          title="Shipping"
+          amount={shippingTotal}
+        />
+        <OrderSummaryItem
+          title="Taxes"
+          amount={taxesTotal}
+        />
+      </div>
+      <div className="Breakdown__Section Breakdown__Section--Total">
         <OrderSummaryItem
           title="Total"
           amount={total}
         />
-        </div>
       </div>
     </div>
   )

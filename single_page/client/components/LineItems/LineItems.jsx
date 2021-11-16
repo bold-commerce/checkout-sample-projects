@@ -38,7 +38,11 @@ const MemoizedLineItems = memo(({
     />
   ));
 
-  return lineItemList;
+  return (
+    <div className="LineItemList">
+      {lineItemList}
+    </div>
+  );
 });
 
 LineItems.propTypes = {

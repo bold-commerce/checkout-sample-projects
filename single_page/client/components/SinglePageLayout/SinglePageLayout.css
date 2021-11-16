@@ -25,9 +25,18 @@ body {
   margin: 0;
 }
 
+html, body, #checkout-app, .Checkout {
+  min-height: 100vh;
+}
+
+#checkout-app {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .Checkout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0 auto;
   position: relative;
   max-width: 1500px;
@@ -37,12 +46,20 @@ body {
   width: 38%;
   padding: 35px;
   border-left: 1px solid #d9d9d9;
+  position: relative;
+  background: #fafafa;
 }
 
-@media only screen and (min-width: 1200px) {
-  .Checkout {
-    flex-direction: row;
-  }
+.Checkout__Sidebar:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300%;
+  background: inherit;
+  height: 100%;
+  display: block;
+  content: '';
+  z-index: -1;
 }
 
 .Checkout__Summary,
@@ -82,31 +99,12 @@ body {
   cursor: pointer;
 }
 
-.Checkout__Summary {
-  background: #fafafb;
-}
+@media only screen and (max-width: 1200px) {
+  .Checkout__Sidebar {
+    width: 100%;
+  }
 
-.SummaryBlock {
-  position: relative;
-  padding: 20px 0;
-}
-
-.SummaryBlock::after {
-  content: '';
-  display: block;
-  background: rgba(0, 0, 0, 0.0001);
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
+  .Checkout {
+    flex-direction: column;
+  }
 }
