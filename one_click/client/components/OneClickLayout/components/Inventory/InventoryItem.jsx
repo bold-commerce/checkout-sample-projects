@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Details, Image } from "@boldcommerce/stacks-ui/lib";
 import './Inventory.css'
+import { ArrowRight, TimesCircle } from "../Icons";
 
 const InventoryItem = ({
     title, description, orderQty, stockQty, onRemove, image
@@ -27,7 +28,11 @@ const InventoryItem = ({
                         <div className="ProductQuantity"> 
                             {orderQty} 
                         </div>
-                        <div className="Arrow" style={{padding:'5'}}>→</div>
+                        <div 
+                            className="Arrow"
+                        >
+                            <ArrowRight />
+                        </div>
                         <div className="ProductQuantity">
                             {stockQty}
                         </div>
@@ -37,7 +42,12 @@ const InventoryItem = ({
         </div>
         <div className="InventoryItem__RemoveItemWrapper">
             {stockQty !== 0 &&
-            <button className="InventoryItem__RemoveItem" onClick={onRemove}>X</button>
+            <button 
+                className="InventoryItem__RemoveItem" 
+                onClick={onRemove}
+            >
+                <TimesCircle />
+            </button>
             }
         </div>
     </div>

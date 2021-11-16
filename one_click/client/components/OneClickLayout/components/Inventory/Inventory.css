@@ -65,17 +65,10 @@
 }
 
 .InventoryItem__RemoveItem {
-    width: 25px;
-    height: 25px;
-    border-radius: 12px;
-    border: 2px solid rgba(0, 0, 0, 0.65);
-    color: rgba(0, 0, 0, 0.65);
-    font-weight: 800;
-    font-size: 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: inherit;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: inherit; 
 }
 
 .ReturnLink {

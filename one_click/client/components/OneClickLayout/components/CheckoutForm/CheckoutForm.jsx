@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { useLocation, useHistory} from 'react-router';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { BillingAddress, useCheckoutStore, useLineItems } from '@boldcommerce/checkout-react-components';
+import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
 import { useAnalytics, useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
@@ -50,6 +51,7 @@ const CheckoutForm = () => {
         >
           <Switch location={location}>
             <Route exact path="/processing" component={ProcessingOrder} />
+            <Route exact path="/summary" component={Summary} />
             <Route exact path="/billing" component={BillingAddress} />
             <Route exact path="/inventory" component={Inventory} />
             <Route exact path="/shipping" component={Shipping} />
