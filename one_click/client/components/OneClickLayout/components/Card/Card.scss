@@ -2,9 +2,7 @@
   --color-primary: #0A75C2;
   display: grid;
   gap: 8px;
-  border-bottom: 1px solid;
   padding: 16px 0;
-  border-color: rgba(0, 0, 0, 0.4);
   grid-template: "title overview" auto
                  "description action" auto
                  "content content" auto
@@ -19,7 +17,7 @@
     line-height: 20px;
     text-decoration-line: underline;
 
-    a {
+    a, span {
       color: var(--color-primary);    }
   }
 
@@ -60,4 +58,12 @@
     line-height: 20px;
     color: rgba(0, 0, 0, 0.65);
   }
+
+  &:not(.Card--Payment){
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+}
+.hidden {
+  display: none;
 }

@@ -5,7 +5,6 @@ import QuickCheckout from './components/QuickCheckoutLayout/QuickCheckoutLayout'
 import LoadingSpinner from '@boldcommerce/stacks-ui/lib/components/loadingspinner/LoadingSpinner';
 
 const App = () => {
-  console.log('hello');
   const [open, setOpen] = useState(false);
   const [data, setData] = useState(null);
 
@@ -56,11 +55,11 @@ const App = () => {
         <div className="bold-oneclick-heading">Store name</div>
         <div className="circle-times-close-button" onClick={closeQuickCheckout}>&#8855;</div>
       </div>
-        { data ? 
+        { data ?
           <CheckoutProvider token={data.jwt_token} publicOrderId={data.public_order_id} applicationState={data.application_state} storeIdentifier={data.store_identifier} initialData={data.initial_data}>
             <QuickCheckout closeQuickCheckout={closeQuickCheckout} />
           </CheckoutProvider>
-          : 
+          :
           <div className="bold-oneclick-inner__loading"><LoadingSpinner /></div>
         }
       </div>

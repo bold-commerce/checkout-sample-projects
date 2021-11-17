@@ -1,3 +1,7 @@
+.CheckoutButton__Container {
+  border-top: 1px solid;
+  border-color: rgba(0, 0, 0, 0.4);
+}
 .CheckoutButton {
   color: white;
   width: 100%;

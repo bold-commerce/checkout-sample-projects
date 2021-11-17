@@ -11,9 +11,11 @@ import { useInventory } from '../../../../hooks';
 const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage }) => (
   <>
     { errorMessage ? <Message type="alert">{ errorMessage }</Message> : null }
-    <Button onClick={onClick} disabled={disabled} loading={loading} className={className}>
-      Complete Order
-    </Button>
+    <div className="CheckoutButton__Container">
+      <Button onClick={onClick} disabled={disabled} loading={loading} className={className}>
+        Complete Order
+      </Button>
+    </div>
   </>
 );
 

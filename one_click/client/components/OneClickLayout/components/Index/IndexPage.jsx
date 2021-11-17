@@ -1,4 +1,3 @@
-import { CheckoutButton } from '../CheckoutButton';
 import React  from 'react';
 import Card from '../Card';
 import { LineItems } from '../LineItems';
@@ -26,12 +25,12 @@ const IndexPage = () => {
       </Card>
       <Card
         title={"Payment"}
-        component={"/payment"}
         description={"Visa **** 1234"}
+        type={"paymentCard"}
       >
         <div>Billing address same as shipping address.</div>
       </Card>
-      <CheckoutButton className={"CheckoutButton"}/>
+
     </>
   )
 };
