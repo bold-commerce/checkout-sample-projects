@@ -18,10 +18,17 @@ export const Discount = ({
       setOpen(true);
     }, []);
 
+    const submitDiscount = async () => {
+      try {
+        await applyDiscount(discount);
+      } catch(e) {
+          console.error(e);
+      }
+  };
+
   if (!open) return (
     <div className="DiscountLink" onClick={openModal}>Discount code</div>
   );
-
   return (
     <div className="SummaryBlock Summary__DiscountForm">
       <div className="DiscountForm">
@@ -37,7 +44,7 @@ export const Discount = ({
         <Button
           primary={discountApplied || discount.length > 0}
           disabled={discount.length === 0 || discountApplied}
-          onClick={() => applyDiscount(discount)}
+          onClick={() => submitDiscount(discount)}
         >
           Apply
         </Button>

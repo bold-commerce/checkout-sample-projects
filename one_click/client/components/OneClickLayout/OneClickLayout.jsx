@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MemoryRouter as Router, Route } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { IndexPage } from './components/Index';
 import { CheckoutForm } from './components/CheckoutForm';
+import { PaymentMethod } from './components/Payment';
+import { LayoutContext } from './context/LayoutContext';
+import { CheckoutButton } from './components/CheckoutButton';
 import './OneClickLayout.css';
 import Message from '@boldcommerce/stacks-ui/lib/components/message/Message';
 
 const OneClickLayout = ({ orderStatus, orderErrors }) => {
   const isProcessing = orderStatus === 'processing';
   const processed = orderStatus === 'completed';
+  const [openModal, setOpenModal] = useState(false);
+
   const CheckoutFormContainer = (
     <>
       <Router>
         <Route exact path="/" component={IndexPage} />
+        <Route path="/" component={PaymentMethod} />
         <CheckoutForm />
+        <CheckoutButton className={"CheckoutButton"}/>
       </Router>
     </>
   );
 
   return (
-    <>
+    <LayoutContext.Provider value={{openModal, setOpenModal}}>
       {
         (isProcessing && <OrderProcessing />) || (
           <>
@@ -38,7 +45,7 @@ const OneClickLayout = ({ orderStatus, orderErrors }) => {
           </>
         )
       }
-    </>
+    </LayoutContext.Provider>
   );
 };
 

@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import EmptyState from '../EmptyState/EmptyState';
-import { BackButton } from '../BackButton';
+import { useLocation } from 'react-router-dom';
 import { usePaymentMethod } from '@boldcommerce/checkout-react-components';
 import { BillingAddress } from '../BillingAddress';
 import { Discount } from '../Discount';
 import PaymentIframe from './PaymentIframe';
+import { LayoutContext } from '../../context/LayoutContext';
+
+import classnames from 'classnames';
 import './Payment.css';
 
-export const PaymentMethod = ({ showPaymentMethod }) => {
+const PaymentMethod = ({ showPaymentMethod }) => {
+  const location = useLocation();
+  const hidePaymentComponent = !(location.pathname === "/");
+  const { openModal } = useContext(LayoutContext);
+
   if (showPaymentMethod) {
     return (
-      <div className="Payment">
-        <h1 className="Section__Title">Payment</h1>
-        <BackButton />
-        <section className="FieldSet FieldSet--PaymentMethod">
+      <div className='Payment'>
+        <section className={classnames(
+          {'hidden': hidePaymentComponent || !openModal,
+          'FieldSet FieldSet--PaymentMethod': true
+        })}>
           <div className="FieldSet__Content">
             <EmptyState title="To view payment options, complete filling in your address" />
             <PaymentIframe key="paymentIframe" hide />
@@ -25,21 +33,22 @@ export const PaymentMethod = ({ showPaymentMethod }) => {
   }
 
   return (
-    <div className="Payment">
-      <h1 className="Section__Title">Payment</h1>
-      <BackButton />
-      <section className="FieldSet FieldSet--PaymentMethod">
-        <div className="FieldSet__Content">
-          <PaymentIframe key="paymentIframe" />
-        </div>
-        <div className="FieldSet__Content">
-          <Discount />
-        </div>
-        <div className="FieldSet__Content">
-          <BillingAddress />
-        </div>
-      </section>
-    </div>
+      <div className='Payment'>
+        <section className={classnames(
+          {'hidden': hidePaymentComponent || !openModal,
+          'FieldSet FieldSet--PaymentMethod': true
+        })}>
+          <div className="FieldSet__Content">
+            <PaymentIframe key="paymentIframe" />
+          </div>
+          <div className="FieldSet__Content">
+            <Discount />
+          </div>
+          <div className="FieldSet__Content">
+            <BillingAddress />
+          </div>
+        </section>
+      </div>
   );
 };
 
