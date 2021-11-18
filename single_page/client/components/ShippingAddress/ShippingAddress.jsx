@@ -1,22 +1,23 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useCountryInfo, useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { Address } from '../Address';
 import { SavedAddressList } from './components';
 import { CheckoutSection } from '../CheckoutSection';
 import './ShippingAddress.css';
 
-const ShippingAddress = () => {
-  const { data, submitShippingAddress } = useShippingAddress(['first_name', 'last_name']);
+const ShippingAddress = ({ applicationLoading }) => {
+  const { data: shippingAddress, submitShippingAddress } = useShippingAddress(['first_name', 'last_name']);
   const { data: savedAddresses } = useSavedAddresses();
   const { data: loadingStatus } = useLoadingStatus();
-  const disabled = loadingStatus.shippingAddress === 'setting';
+  const setting = loadingStatus.shippingAddress === 'setting';
 
   return (
     <MemoizedShippingAddress
-      shippingAddress={data}
+      shippingAddress={shippingAddress}
       submitAddress={submitShippingAddress}
       savedAddresses={savedAddresses}
-      disabled={disabled}
+      setting={setting}
+      applicationLoading={applicationLoading}
     />
   );
 };
@@ -25,7 +26,8 @@ const MemoizedShippingAddress = memo(({
   shippingAddress,
   submitAddress,
   savedAddresses,
-  disabled,
+  setting,
+  applicationLoading,
   requiredAddressFields,
 }) => {
   const [address, setAddress] = useState(shippingAddress);
@@ -44,6 +46,10 @@ const MemoizedShippingAddress = memo(({
   if (provinceLabel === 'state_territory') {
     provincePlaceholder = 'state/territory';
   }
+
+  useEffect(() => {
+    setAddress(shippingAddress);
+  }, [shippingAddress.id]);
 
   const updateSelectedShippingAddress = useCallback(async (currentAddress) => {
     setAddress(currentAddress);
@@ -66,11 +72,11 @@ const MemoizedShippingAddress = memo(({
     >
       <SavedAddressList
         savedAddresses={savedAddresses}
-        selectedAddress={address?.id}
+        selectedAddress={applicationLoading ? savedAddresses[0].id : address?.id}
         onChange={updateSelectedShippingAddress}
-        disabled={disabled}
+        disabled={applicationLoading || setting}
       />
-      { (address?.id === undefined || address?.id === null) && (
+      { !applicationLoading && (address?.id === undefined || address?.id === null) && (
         <Address
           address={address}
           onChange={(data) => setAddress((prevAddress) => ({

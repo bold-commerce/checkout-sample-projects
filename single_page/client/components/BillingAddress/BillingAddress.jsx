@@ -3,8 +3,9 @@ import React, { memo, useCallback, useEffect, useState } from 'react';
 import { BillingSameAsShipping } from './components';
 import { Address } from '../Address';
 import './BillingAddress.css';
+import { CheckoutSection } from '../CheckoutSection';
 
-const BillingAddress = () => {
+const BillingAddress = ({ applicationLoading }) => {
   const { data, submitBillingAddress } = useBillingAddress();
   const { data: sameAsShipping, setBillingSameAsShipping } = useBillingSameAsShipping();
 
@@ -14,6 +15,7 @@ const BillingAddress = () => {
       billingSameAsShipping={sameAsShipping}
       submitAddress={submitBillingAddress}
       setBillingSameAsShipping={setBillingSameAsShipping}
+      applicationLoading={applicationLoading}
     />
   );
 };
@@ -23,6 +25,7 @@ const MemoizedBillingAddress = memo(({
   billingSameAsShipping,
   submitAddress,
   setBillingSameAsShipping,
+  applicationLoading,
 }) => {
   const [address, setAddress] = useState(null);
   const { data } = useCountryInfo(address);
@@ -85,31 +88,29 @@ const MemoizedBillingAddress = memo(({
   }, [address]);
 
   return (
-    <section className="FieldSet FieldSet--BillingAddress">
-      <div className="FieldSet__Header">
-        <div className="FieldSet__Heading">Billing address</div>
-      </div>
-      <div className="FieldSet__Content">
-        <BillingSameAsShipping
-          billingSameAsShipping={sameAsShipping}
-          setBillingSameAsShipping={updateBillingSameAsShipping}
-          disabled={loading}
+    <CheckoutSection
+      className="FieldSet--BillingAddress"
+      title="Billing address"
+    >
+      <BillingSameAsShipping
+        billingSameAsShipping={sameAsShipping}
+        setBillingSameAsShipping={updateBillingSameAsShipping}
+        disabled={loading || applicationLoading}
+      />
+      { !billingSameAsShipping && (
+        <Address
+          address={address}
+          onChange={handleChange}
+          errors={errors}
+          countries={countries}
+          provinces={provinces}
+          showPostalCode={showPostalCode}
+          showProvince={showProvince}
+          provinceLabel={provincePlaceholder}
+          submit={() => updateBillingAddress(address)}
         />
-        { !billingSameAsShipping && (
-          <Address
-            address={address}
-            onChange={handleChange}
-            errors={errors}
-            countries={countries}
-            provinces={provinces}
-            showPostalCode={showPostalCode}
-            showProvince={showProvince}
-            provinceLabel={provincePlaceholder}
-            submit={() => updateBillingAddress(address)}
-          />
-        )}
-      </div>
-    </section>
+      )}
+    </CheckoutSection>
   );
 });
 

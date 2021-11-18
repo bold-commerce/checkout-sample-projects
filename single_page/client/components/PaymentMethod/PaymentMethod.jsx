@@ -5,13 +5,13 @@ import { EmptyState } from '../EmptyState';
 import { LoadingState } from '../LoadingState';
 import './PaymentMethod.css';
 
-const PaymentMethod = () => {
+const PaymentMethod = ({ applicationLoading }) => {
   const { data: shippingAddress } = useShippingAddress();
   const { data: billingAddress } = useBillingAddress();
   const { data: billingSameAsShipping } = useBillingSameAsShipping();
   const { data: paymentIframe, loadingStatus, paymentIframeOnLoaded } = usePaymentIframe();
 
-  const loading = loadingStatus !== 'fulfilled';
+  const loading = loadingStatus !== 'fulfilled' || applicationLoading;
 
   return <MemoizedPaymentMethod
     billingAddress={billingAddress}

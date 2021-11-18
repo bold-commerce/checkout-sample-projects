@@ -5,7 +5,7 @@ import { ShippingLineList, EmptyShippingLines } from './components';
 import { Message } from '@boldcommerce/stacks-ui';
 import './ShippingLines.css';
 
-const ShippingLines = () => {
+const ShippingLines = ({ applicationLoading }) => {
   const { data, updateShippingLine, getShippingLines } = useShippingLines();
   const { data: shippingAddress } = useShippingAddress(); 
   const { data: loadingStatus } = useLoadingStatus();
@@ -14,7 +14,7 @@ const ShippingLines = () => {
   const selectedCountryCode = shippingAddress?.country_code;
   const shippingAddressLoadingStatus = loadingStatus.shippingAddress;
   const showShippingLines = selectedCountryCode && !shippingAddressErrors && shippingAddressLoadingStatus !== 'incomplete';
-  const loading = loadingStatus.shippingAddress === 'setting' || loadingStatus.shippingLines === 'fetching';
+  const loading = loadingStatus.shippingAddress === 'setting' || loadingStatus.shippingLines === 'fetching' || applicationLoading;
 
   return (
     <MemoizedShippingLines

@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const handlebars = require('express-handlebars');
 const createCheckout = require('./helpers/createCheckout');
-const addDefaultAddress = require('./helpers/addDefaultAddress');
 
 const app = express();
 app.engine('handlebars', handlebars());
@@ -71,13 +70,6 @@ app.get('/', async (req, res) => {
     const jwtToken = checkout.data.jwt_token;
     const publicOrderId = checkout.data.public_order_id;
     let applicationState = checkout.data.application_state;
-
-    // Pre-select first saved address
-    if (applicationState.customer.saved_addresses.length > 0) {
-      const defaultAddress = applicationState.customer.saved_addresses[0];
-      const checkoutWithAddress = await addDefaultAddress(defaultAddress, jwtToken, publicOrderId);
-      applicationState = checkoutWithAddress.data.application_state;
-    }
 
     res.render('checkout_example', {
       layout: false,
