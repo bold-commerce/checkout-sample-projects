@@ -13,7 +13,8 @@ import Message from '@boldcommerce/stacks-ui/lib/components/message/Message';
 const OneClickLayout = ({ orderStatus, orderErrors }) => {
   const isProcessing = orderStatus === 'processing';
   const processed = orderStatus === 'completed';
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
+
 
   const CheckoutFormContainer = (
     <>
@@ -33,7 +34,7 @@ const OneClickLayout = ({ orderStatus, orderErrors }) => {
           <>
             <div className="Checkout__Main">
               {
-                orderErrors['order'] && 
+                orderErrors['order'] &&
                 <Message type="alert">
                   An error with your order has occured, please try again
                 </Message>
