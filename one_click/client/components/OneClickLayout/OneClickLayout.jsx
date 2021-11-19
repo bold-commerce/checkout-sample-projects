@@ -7,8 +7,8 @@ import { CheckoutForm } from './components/CheckoutForm';
 import { PaymentMethod } from './components/Payment';
 import { LayoutContext } from './context/LayoutContext';
 import { CheckoutButton } from './components/CheckoutButton';
+import { Message} from '@boldcommerce/stacks-ui';
 import './OneClickLayout.css';
-import Message from '@boldcommerce/stacks-ui/lib/components/message/Message';
 
 const OneClickLayout = ({ orderStatus, orderErrors }) => {
   const isProcessing = orderStatus === 'processing';
