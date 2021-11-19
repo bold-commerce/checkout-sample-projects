@@ -1,21 +1,57 @@
-.RadioButton.RadioButton__AddressInfoContainer {
-  height: 101px;
-  border: unset;
-  border-top: 1px solid #D2D2D2D2;
-  background: none;
-}
-
-.RadioButton.RadioButton__NewAddressContainer {
-  height: 50px;
-  border: unset;
-  border-top: 1px solid #D2D2D2D2;
-  background: none;
-}
-
-.CheckoutStep__FieldSetInfo {
+.FieldSet--ShippingAddress .CheckoutStep__FieldSetInfo {
   display: block;
 }
 
-.CheckoutStep__FieldSetInfo--Secondary {
+.FieldSet--ShippingAddress .CheckoutStep__FieldSetInfo--Secondary {
   color: rgba(0, 0, 0, 0.65);
+}
+
+.FieldSet--ShippingAddress .RadioButton {
+  border: 1px solid #D9D9D9;
+  margin-bottom: 0;
+  min-height: 60px;
+  padding: 10px 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+
+.FieldSet--ShippingAddress .RadioButton .stx-radio-field__label {
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.FieldSet--ShippingAddress .RadioButton .stx-field {
+  position: unset;
+}
+
+.FieldSet--ShippingAddress .RadioButton .stx-radio {
+  position: unset;
+}
+
+.FieldSet--ShippingAddress .RadioButton .stx-radio-field {
+  display: flex;
+  align-items: center;
+}
+
+.FieldSet--ShippingAddress .RadioField {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.FieldSet--AddressNew {
+  background: #fafafb;
+  border: 1px solid #d9d9d9;
+  padding: 20px;
 }

@@ -10,10 +10,6 @@
   margin: 0;
 }
 
-.DiscountForm .stx-field input {
-  line-height: 30px;
-}
-
 .DiscountForm button.stx-button .stx-button__text {
   text-transform: capitalize;
 }

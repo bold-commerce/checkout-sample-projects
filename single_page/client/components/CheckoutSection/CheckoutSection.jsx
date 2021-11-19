@@ -5,7 +5,7 @@ const CheckoutSection = ({ children, title, className }) => {
   return (
     <section className={`FieldSet ${className}`}>
       <div className="FieldSet__Header">
-        <div className="FieldSet__Heading">{ title }</div>
+        <h3 className="FieldSet__Heading">{ title }</h3>
       </div>
       <div className="FieldSet__Content">
         { children }

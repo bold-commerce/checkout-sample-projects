@@ -4,6 +4,7 @@ import { Address } from '../Address';
 import { SavedAddressList } from './components';
 import { CheckoutSection } from '../CheckoutSection';
 import './ShippingAddress.css';
+import { useAnalytics, useErrorLogging } from '../../hooks';
 
 const ShippingAddress = ({ applicationLoading }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress(['first_name', 'last_name']);
@@ -30,6 +31,9 @@ const MemoizedShippingAddress = memo(({
   applicationLoading,
   requiredAddressFields,
 }) => {
+  const [loading, setLoading] = useState(false);
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
   const [address, setAddress] = useState(shippingAddress);
   const { data } = useCountryInfo(address);
   const {
@@ -53,31 +57,36 @@ const MemoizedShippingAddress = memo(({
 
   const updateSelectedShippingAddress = useCallback(async (currentAddress) => {
     setAddress(currentAddress);
+    setLoading(true);
     try {
       await submitAddress(currentAddress);
+      trackEvent('set_shipping_address');
       setErrors(null);
     } catch(e) {
+      logError('shipping_address', e);
       setErrors(e.body.errors);
       // If there is a server error, reset shipping address
       if (e.body.errors[0].field === 'order') {
         setAddress(shippingAddress);
       }
     }
+    setLoading(false);
   }, [shippingAddress]);
 
   return (
     <CheckoutSection
-      className="FieldSet--ShippingMethod"
+      className="FieldSet--ShippingAddress"
       title="Shipping address"
     >
       <SavedAddressList
         savedAddresses={savedAddresses}
         selectedAddress={applicationLoading ? savedAddresses[0].id : address?.id}
         onChange={updateSelectedShippingAddress}
-        disabled={applicationLoading || setting}
+        disabled={loading || applicationLoading || setting}
       />
       { !applicationLoading && (address?.id === undefined || address?.id === null) && (
         <Address
+          className={savedAddresses ? 'FieldSet--AddressNew' : ''}
           address={address}
           onChange={(data) => setAddress((prevAddress) => ({
             ...prevAddress,

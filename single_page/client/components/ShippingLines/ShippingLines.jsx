@@ -4,6 +4,7 @@ import { LoadingState } from '../LoadingState';
 import { ShippingLineList, EmptyShippingLines } from './components';
 import { Message } from '@boldcommerce/stacks-ui';
 import './ShippingLines.css';
+import { useAnalytics, useErrorLogging } from '../../hooks';
 
 const ShippingLines = ({ applicationLoading }) => {
   const { data, updateShippingLine, getShippingLines } = useShippingLines();
@@ -36,6 +37,8 @@ const MemoizedShippingLines = memo(({
   showShippingLines,
   appLoading,
 }) => {
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
   const [shippingLineIndex, setShippingLineIndex] = useState(selectedShippingLine);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -44,8 +47,10 @@ const MemoizedShippingLines = memo(({
     if (showShippingLines) {
       try {
         await getShippingLines();
+        trackEvent('set_shipping_line');
         setErrors(null);
       } catch(e) {
+        logError('shipping_lines', e);
         setErrors(e.body.errors);
       }
     }
@@ -99,7 +104,7 @@ const MemoizedShippingLines = memo(({
         errors && <Message type="alert">{ errors[0].message }</Message>
       }
       <div className="FieldSet__Header">
-        <div className="FieldSet__Heading">Shipping method</div>
+        <h2 className="FieldSet__Heading">Shipping method</h2>
       </div>
       { content }
     </section>

@@ -5,23 +5,16 @@ import classNames from 'classnames';
 
 const OrderSummaryItem = ({
   title,
-  description,
   amount,
-  onRemove,
+  lines,
 }) => {
-  if (!amount) return null;
+  console.log(lines);
 
   return (
-    <div className={classNames('OrderSummaryItem', description ? 'OrderSummaryItem--removable' : '')}>
+    <div className={classNames('OrderSummaryItem', lines ? 'OrderSummaryItem--removable' : '')}>
       <span className="OrderSummaryItem__Title">{title}</span>
-      {description ? (
-        <div className="OrderSummaryItem__Description">
-          <button className="OrderSummaryItem__Action" type="button" onClick={onRemove}>x</button>
-          <span className="OrderSummaryItem__Label">{description}</span>
-          <span className="OrderSummaryItem__Amount">(<Price amount={amount}/>)</span>
-        </div>
-      ) : (
-        <span className="OrderSummaryItem__Amount"><Price amount={amount}/></span>
+      { lines ? lines : (
+        amount > 0 && <span className="OrderSummaryItem__Amount">(<Price amount={amount}/>)</span>
       )}
     </div>
   );
@@ -29,9 +22,8 @@ const OrderSummaryItem = ({
 
 OrderSummaryItem.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string,
   amount: PropTypes.number,
-  onRemove: PropTypes.func,
+  lines: PropTypes.node,
 };
 
 export default OrderSummaryItem;

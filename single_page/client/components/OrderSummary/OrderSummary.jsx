@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { CheckoutSection } from '../CheckoutSection';
 import { LineItems } from '../LineItems';
 import { DiscountForm } from '../DiscountForm';
-import { OrderSummaryBreakdown } from '.';
+import { OrderSummaryBreakdown, OrderSummaryCollapseButton } from '.';
 import './OrderSummary.css';
 
-const OrderSummary = ({ readOnly }) => {
+const OrderSummary = ({ readOnly, summaryOpen, onCollapse }) => {
   return (
-    <CheckoutSection
-      className="FieldSet--OrderSummary"
-      title="Order Summary"
-    >
-      <LineItems readOnly={readOnly} />
-      <DiscountForm />
-      <OrderSummaryBreakdown />
-    </CheckoutSection>
+    <>
+      <OrderSummaryCollapseButton onClick={onCollapse} summaryOpen={summaryOpen} />
+      <div id="OrderSummary" className="OrderSummary">
+        <CheckoutSection
+          className="FieldSet--OrderSummary"
+          title="Order Summary"
+        >
+          <LineItems readOnly={readOnly} />
+          { !readOnly && <DiscountForm /> }
+          <OrderSummaryBreakdown />
+        </CheckoutSection>
+      </div>
+    </>
   );
 };
 

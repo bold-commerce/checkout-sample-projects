@@ -4,6 +4,7 @@ import { BillingSameAsShipping } from './components';
 import { Address } from '../Address';
 import './BillingAddress.css';
 import { CheckoutSection } from '../CheckoutSection';
+import { useAnalytics, useErrorLogging } from '../../hooks';
 
 const BillingAddress = ({ applicationLoading }) => {
   const { data, submitBillingAddress } = useBillingAddress();
@@ -27,6 +28,8 @@ const MemoizedBillingAddress = memo(({
   setBillingSameAsShipping,
   applicationLoading,
 }) => {
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
   const [address, setAddress] = useState(null);
   const { data } = useCountryInfo(address);
   const {
@@ -55,8 +58,11 @@ const MemoizedBillingAddress = memo(({
     try {
       await submitAddress(currentAddress);
       setErrors(null);
+      trackEvent('set_billing_address');
     } catch(e) {
       setErrors(e.body.errors);
+      logError('billing_address', e);
+
       // If there is a server error, reset billing address
       if (e.body.errors[0].field === 'order') {
         setAddress(billingAddress);
@@ -70,8 +76,11 @@ const MemoizedBillingAddress = memo(({
     try {
       await setBillingSameAsShipping(value);
       setErrors(null);
+      trackEvent('set_billing_address');
     } catch(e) {
       setErrors(e.body.errors);
+      logError('billing_address', e);
+
       // If there is a server error, reset billing same as shipping
       if (e.body.errors[0].field === 'order') {
         setSameAsShipping(billingSameAsShipping);

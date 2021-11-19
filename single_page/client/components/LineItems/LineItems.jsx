@@ -1,8 +1,9 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useLineItems } from '@boldcommerce/checkout-react-components';
 import { LineItem } from './components';
 import './LineItems.css';
+import { useErrorLogging } from '../../hooks';
 
 const LineItems = ({ readOnly = false }) => {
   const { data, updateLineItemQuantity, removeLineItem } = useLineItems();
@@ -23,6 +24,23 @@ const MemoizedLineItems = memo(({
   onRemove,
   readOnly,
 }) => {
+  const logError = useErrorLogging();
+  const handleUpdate = useCallback(async (lineItemKey, value) => {
+    try {
+      await onUpdate(lineItemKey, value);
+    } catch(e) {
+      logError('line_items', e);
+    }
+  }, []);
+
+  const handleRemove = useCallback(async (lineItemKey) => {
+    try {
+      await onRemove(lineItemKey);
+    } catch(e) {
+      logError('line_items', e);
+    }
+  });
+
   const lineItemList = lineItems.map((item) => (
     <LineItem
       title={item.product_data.title}
@@ -31,8 +49,8 @@ const MemoizedLineItems = memo(({
       price={item.product_data.price}
       totalPrice={item.product_data.total_price}
       lineItemKey={item.product_data.line_item_key}
-      onChange={(lineItemKey, value) => onUpdate(lineItemKey, value)}
-      onRemove={(lineItemKey) => onRemove(lineItemKey)}
+      onChange={(lineItemKey, value) => handleUpdate(lineItemKey, value)}
+      onRemove={(lineItemKey) => handleRemove(lineItemKey)}
       readOnly={readOnly}
       key={item.product_data.line_item_key}
     />

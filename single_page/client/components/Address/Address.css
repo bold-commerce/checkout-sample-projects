@@ -8,10 +8,6 @@
   margin-bottom: 0;
 }
 
-.FieldSet--Address .stx-select__select-element {
-  line-height: initial;
-}
-
 .FieldSet--Address .stx-field.Field {
   padding: 0;
 }

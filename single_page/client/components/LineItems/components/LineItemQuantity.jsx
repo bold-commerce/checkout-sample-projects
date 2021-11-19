@@ -45,13 +45,17 @@ const LineItemQuantity = ({
         )}
       </div>
       <div className={classNames('LineItemQuantity', { 'LineItemQuantity--read-only': readOnly })}>
-        <Input
-          readOnly={readOnly}
-          type="number"
-          value={value}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
+        {
+          readOnly ? <span className="LineItemQuantity__ReadOnlyValue">{value}</span> : (
+            <Input
+              readOnly={readOnly}
+              type="number"
+              value={value}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+          )
+        }
       </div>
       <div className="LineItemQuantity__Increment">
         {!readOnly && (

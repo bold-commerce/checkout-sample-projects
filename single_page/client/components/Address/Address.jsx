@@ -2,6 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { InputField, SelectField } from '@boldcommerce/stacks-ui/';
 import './Address.css';
+import classNames from 'classnames';
 
 const Address = ({
   address,
@@ -14,6 +15,7 @@ const Address = ({
   provinceLabel,
   submit,
   requiredAddressFields,
+  className,
 }) => {
   const countryList = countries.map((countryItem) => <option value={countryItem.iso_code} key={countryItem.iso_code}>{countryItem.name}</option>);
   const provinceList = provinces.map((provinceItem) => <option value={provinceItem.iso_code} key={provinceItem.iso_code}>{provinceItem.name}</option>);
@@ -22,7 +24,6 @@ const Address = ({
 
   const handleSubmit = useCallback(() => {
     if (address && address.country_code) {
-      console.log('handleSubmit', address);
       submit();
     }
   }, [
@@ -45,7 +46,6 @@ const Address = ({
   // Submit address if user has stopped typing
   useEffect(() => {
     const postalCodeTimeout = setTimeout(() => {
-      console.log('timeout', address);
       handleSubmit();
     }, 2000);
     return () => clearTimeout(postalCodeTimeout);
@@ -64,7 +64,7 @@ const Address = ({
   ]);
 
   return (
-    <div className="FieldSet--Address">
+    <div className={classNames('FieldSet--Address' , className)}>
       <div className="FieldGroup">
         <InputField
           placeholder={hasRequiredFields && requiredAddressFields.includes('first_name') ? 'First name' : 'First name (optional)'}

@@ -1,4 +1,4 @@
-import { useBillingAddress, useBillingSameAsShipping, usePaymentIframe, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { useBillingAddress, useBillingSameAsShipping, useCheckoutStore, usePaymentIframe, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import React, { memo, useEffect, useState } from 'react';
 import { CheckoutSection } from '../CheckoutSection';
 import { EmptyState } from '../EmptyState';
@@ -6,12 +6,13 @@ import { LoadingState } from '../LoadingState';
 import './PaymentMethod.css';
 
 const PaymentMethod = ({ applicationLoading }) => {
+  const { state } = useCheckoutStore();
   const { data: shippingAddress } = useShippingAddress();
   const { data: billingAddress } = useBillingAddress();
   const { data: billingSameAsShipping } = useBillingSameAsShipping();
   const { data: paymentIframe, loadingStatus, paymentIframeOnLoaded } = usePaymentIframe();
-
-  const loading = loadingStatus !== 'fulfilled' || applicationLoading;
+  const orderStatus = state.orderInfo.orderStatus;
+  const loading = (loadingStatus !== 'fulfilled' && orderStatus !== 'authorizing') || applicationLoading;
 
   return <MemoizedPaymentMethod
     billingAddress={billingAddress}

@@ -1,11 +1,12 @@
-import { useCheckoutStatus, useCheckoutStore, usePaymentIframe } from '@boldcommerce/checkout-react-components';
+import { useCheckoutStore, usePaymentIframe } from '@boldcommerce/checkout-react-components';
 import { Button } from '@boldcommerce/stacks-ui';
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
+import { useAnalytics, useErrorLogging } from '../../hooks';
+import './CheckoutButton.css';
 
 const CheckoutButton = () => {
   const { processPaymentIframe } = usePaymentIframe();
   const { state } = useCheckoutStore();
-  const { state: statusState } = useCheckoutStatus();
   const { orderStatus } = state.orderInfo;
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
 
@@ -13,7 +14,7 @@ const CheckoutButton = () => {
     <MemoizedCheckoutButton
       onConfirm={processPaymentIframe}
       processing={processing}
-      appLoading={statusState.loadingStatus.isLoading}
+      appLoading={state.loadingStatus.isLoading}
     />
   );
 };
@@ -23,10 +24,23 @@ const MemoizedCheckoutButton = memo(({
   processing,
   appLoading,
 }) => {
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
+
+  const handleProcessPayment = useCallback(async () => {
+    trackEvent('click_complete_order');
+    try {
+      await onConfirm();
+    } catch(e) {
+      logError('process_order', e);
+    }
+  }, []);
+
   return (
     <Button
       type="button"
-      onClick={onConfirm}
+      className="Checkout__ConfirmButton"
+      onClick={handleProcessPayment}
       loading={processing}
       disabled={processing || appLoading}
     >
