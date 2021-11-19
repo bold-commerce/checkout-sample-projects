@@ -1,24 +1,44 @@
 import React, { useEffect }  from 'react';
-import { Route, useLocation, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { useLocation, useHistory} from 'react-router';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { BillingAddress, useLineItems } from '@boldcommerce/checkout-react-components';
+import { BillingAddress, useCheckoutStore, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Shipping } from '../Shipping';
 import { useAnalytics, useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
+import { ProcessingOrder } from '../Processing';
 
 const CheckoutForm = () => {
   const { lineItems } = useLineItems();
+  const { state } = useCheckoutStore();
+  const orderStatus = state.orderInfo.orderStatus;
   const location = useLocation();
   const track = useAnalytics();
   const checkInventory = useInventory();
+  const history = useHistory();
 
+  const getInventory = async () => {
+    const inventory = await checkInventory(lineItems);
+    if (inventory) {
+      history.push('/inventory', inventory)
+    }
+  }
+  
   useEffect(() => {
     track(location.pathname);
   }, [location.pathname]);
 
   useEffect(() => {
-    checkInventory(lineItems);
-  }, [])
+    getInventory();
+  }, []);
+
+  useEffect(() => {
+    if (orderStatus === 'processing') {
+      history.push('/processing');
+    } else if (orderStatus === 'complete') {
+      history.push(`/confirmation?public_order_id=${state.publicOrderId}`);
+    }
+  }, [orderStatus]);
 
   return (
     <>
@@ -29,9 +49,10 @@ const CheckoutForm = () => {
           key={location.key}
         >
           <Switch location={location}>
-            <Route exact path="/shipping" component={Shipping} />
+            <Route exact path="/processing" component={ProcessingOrder} />
             <Route exact path="/billing" component={BillingAddress} />
             <Route exact path="/inventory" component={Inventory} />
+            <Route exact path="/shipping" component={Shipping} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
