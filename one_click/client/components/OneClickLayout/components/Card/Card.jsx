@@ -35,7 +35,7 @@ const Card = ({title, description, component, overview, action, children, type})
       <div className="Card__Title">
         {paymentCard ?
           <span onClick={() => setOpenModal(s => !s) }>{title}</span>
-        : <Link to={component}>{title}</Link>
+        : (title ? <Link to={component}>{title}</Link> : null)
         }
       </div>
       {(!paymentCard || !openModal) && (

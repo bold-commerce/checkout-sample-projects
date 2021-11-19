@@ -1,8 +1,11 @@
 import React  from 'react';
 import Card from '../Card';
 import { LineItems } from '../LineItems';
+import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
+
 
 const IndexPage = () => {
+  const { state } = useCheckoutStore();
   return (
     <>
       <LineItems />
@@ -11,6 +14,12 @@ const IndexPage = () => {
         component={"/summary"}
         overview={"$23.80"}
       />
+      { state.applicationState?.customer?.email_address && (
+        <Card
+        description={state.applicationState.customer.email_address}
+        action={{label: "Not you?"}}
+      />
+      )}
       <Card
         title={"Shipping"}
         component={"/shipping"}
