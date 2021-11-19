@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useLocation } from 'react-router';
+import { useLocation, useHistory } from 'react-router';
 import {
   Button,
   Message,
@@ -35,6 +35,7 @@ const CheckoutButtonContainer = ({ className }) => {
   const { processPaymentIframe } = usePaymentIframe();
   const checkInventory = useInventory();
   const { lineItems } = useLineItems();
+  const history = useHistory();
 
   const orderErrorMessage = state.errors.order?.public_order_id;
 
@@ -46,9 +47,13 @@ const CheckoutButtonContainer = ({ className }) => {
   const missingAddress = Object.values(state.applicationState.addresses).some(x => x === null || x.length === 0);
   const checkoutButtonDisabled = state.loadingStatus.isLoading || hasErrors ||  missingAddress;
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
-  const handleCheckout = () => {
-    checkInventory(lineItems);
-    processPaymentIframe();
+  const handleCheckout = async() => {
+    const inventoryIssues = await checkInventory(lineItems);
+    if (!inventoryIssues) {
+      processPaymentIframe();
+    } else {
+      history.push('/inventory', inventoryIssues);
+    }
   };
   const onClick = processing ? null : handleCheckout;
 
