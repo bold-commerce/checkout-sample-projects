@@ -1,4 +1,4 @@
-import { useBillingAddress, useBillingSameAsShipping, useCheckoutStore, usePaymentIframe, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { useBillingAddress, useBillingSameAsShipping, useCheckoutStore, usePaymentIframe, useShippingAddress, useShippingLines } from '@boldcommerce/checkout-react-components';
 import React, { memo, useEffect, useState } from 'react';
 import { CheckoutSection } from '../CheckoutSection';
 import { EmptyState } from '../EmptyState';
@@ -11,12 +11,16 @@ const PaymentMethod = ({ applicationLoading }) => {
   const { data: billingAddress } = useBillingAddress();
   const { data: billingSameAsShipping } = useBillingSameAsShipping();
   const { data: paymentIframe, loadingStatus, paymentIframeOnLoaded } = usePaymentIframe();
+  const { data } = useShippingLines();
+  const shippingLines = data.shippingLines;
+  console.log({ data, shippingLines });
   const orderStatus = state.orderInfo.orderStatus;
   const loading = (loadingStatus !== 'fulfilled' && orderStatus !== 'authorizing') || applicationLoading;
 
   return <MemoizedPaymentMethod
     billingAddress={billingAddress}
     shippingAddress={shippingAddress}
+    shippingLines={shippingLines}
     billingSameAsShipping={billingSameAsShipping}
     paymentIframeUrl={paymentIframe.url}
     paymentIframeHeight={paymentIframe.height}
@@ -28,6 +32,7 @@ const PaymentMethod = ({ applicationLoading }) => {
 const MemoizedPaymentMethod = memo(({
   billingAddress,
   shippingAddress,
+  shippingLines,
   billingSameAsShipping,
   paymentIframeUrl,
   paymentIframeHeight,
@@ -40,6 +45,8 @@ const MemoizedPaymentMethod = memo(({
     if (billingSameAsShipping && Array.isArray(shippingAddress)) {
       setDisabled(true);
     } else if (!billingSameAsShipping && Array.isArray(billingAddress)) {
+      setDisabled(true);
+    } else if (shippingLines.length === 0) {
       setDisabled(true);
     } else {
       setDisabled(false);

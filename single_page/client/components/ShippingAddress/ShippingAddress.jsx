@@ -86,7 +86,7 @@ const MemoizedShippingAddress = memo(({
       />
       { !applicationLoading && (address?.id === undefined || address?.id === null) && (
         <Address
-          className={savedAddresses ? 'FieldSet--AddressNew' : ''}
+          className={(savedAddresses && savedAddresses.length > 0) ? 'FieldSet--AddressNew' : ''}
           address={address}
           onChange={(data) => setAddress((prevAddress) => ({
             ...prevAddress,

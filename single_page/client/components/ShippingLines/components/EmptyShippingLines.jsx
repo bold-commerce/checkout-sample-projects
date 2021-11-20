@@ -1,9 +1,9 @@
 import React from 'react';
 import { EmptyState } from '../../EmptyState';
 
-const EmptyShippingLines = () => (
+const EmptyShippingLines = ({ content }) => (
   <div className="FieldSet__Content">
-    <EmptyState title="To view shipping options, complete filling in your address" />
+    <EmptyState title={content} />
   </div>
 );
 

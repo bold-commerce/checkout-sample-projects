@@ -84,23 +84,24 @@ html, body, #checkout-app, .Checkout {
 }
 
 .FieldGroup {
-  margin: 5px 0;
   display: flex;
 }
 
 .Field {
   padding: 5px;
-  margin: 0 5px;
 }
 
 .SelectField {
-  margin: 0 5px;
   display: block;
   cursor: pointer;
 }
 
 .stx-field input, .stx-field select {
   line-height: 30px;
+}
+
+.CollapseButton {
+  display: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -115,9 +116,9 @@ html, body, #checkout-app, .Checkout {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     padding: 0;
-    transform: translate(0, calc(100vh - 100px));
+    transform: translate(0, calc(100% - 100px));
     transition: all 0.4s ease-in-out;
     border: none;
     z-index: 100;
@@ -140,6 +141,12 @@ html, body, #checkout-app, .Checkout {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: inherit;
+  }
+
+  .CollapseButton .stx-price__amount {
+    font-size: 14px;
+    font-weight: normal;
   }
 
   .Checkout__Sidebar.Checkout__Sidebar--Open {
@@ -160,5 +167,40 @@ html, body, #checkout-app, .Checkout {
 
   .CollapseButton__description {
     text-align: right;
+  }
+
+  .CollapseButton svg {
+    margin-right: 10px;
+    transition: all 0.2s linear;
+    transform: rotate(0deg);
+  }
+
+  .CollapseButton__title {
+    display: flex;
+    align-items: center;
+  }
+
+  .Checkout__Sidebar--Open .CollapseButton svg {
+    transform: rotate(180deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .CollapseButton {
+    height: 65px;
+    min-height: 65px;
+    font-size: 14px;
+  }
+
+  .Checkout__Sidebar {
+    transform: translate(0, calc(100% - 65px));
+  }
+
+  .Checkout__Main {
+    padding-bottom: 100px;
+  }
+
+  .Checkout__ConfirmButton {
+    width: 100%;
   }
 }

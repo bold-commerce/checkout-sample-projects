@@ -34,7 +34,7 @@ const MemoizedCheckoutButton = memo(({
     } catch(e) {
       logError('process_order', e);
     }
-  }, []);
+  }, [logError, trackEvent, onConfirm]);
 
   return (
     <Button

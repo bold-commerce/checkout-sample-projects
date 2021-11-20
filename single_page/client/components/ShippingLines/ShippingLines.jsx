@@ -88,7 +88,9 @@ const MemoizedShippingLines = memo(({
   if (appLoading) {
     content = <LoadingState />;
   } else if (!showShippingLines) {
-    content = <EmptyShippingLines />;
+    content = <EmptyShippingLines content="To view shipping options, complete filling in your address" />;
+  } else if (shippingLines.length === 0) {
+    content = <EmptyShippingLines content="No available shipping options for your shipping address" />;
   } else {
     content = <ShippingLineList 
       shippingLines={shippingLines}

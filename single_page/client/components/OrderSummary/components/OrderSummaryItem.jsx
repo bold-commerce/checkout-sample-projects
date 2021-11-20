@@ -8,8 +8,6 @@ const OrderSummaryItem = ({
   amount,
   lines,
 }) => {
-  console.log(lines);
-
   return (
     <div className={classNames('OrderSummaryItem', lines ? 'OrderSummaryItem--removable' : '')}>
       <span className="OrderSummaryItem__Title">{title}</span>

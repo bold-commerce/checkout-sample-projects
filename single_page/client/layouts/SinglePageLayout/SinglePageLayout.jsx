@@ -16,7 +16,9 @@ const SinglePageLayout = () => {
   const orderStatus = state.orderInfo.orderStatus;
 
   useEffect(() => {
-    if (orderStatus === 'processing') {
+    if (orderStatus === 'error') {
+      navigate('/');
+    } else if (orderStatus === 'processing') {
       navigate('/processing');
     } else if (orderStatus === 'completed') {
       navigate(`/confirmation?public_order_id=${state.publicOrderId}`);
