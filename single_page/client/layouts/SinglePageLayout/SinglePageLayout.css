@@ -104,6 +104,12 @@ html, body, #checkout-app, .Checkout {
   display: none;
 }
 
+.Checkout__ConfirmButton {
+  background: #4e4e4e;
+  color: #fff;
+  margin: 0;
+}
+
 @media only screen and (max-width: 1200px) {
   .Checkout {
     flex-direction: column;

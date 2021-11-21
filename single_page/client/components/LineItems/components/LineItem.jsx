@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Price, Details, Image } from '@boldcommerce/stacks-ui';
 import LineItemQuantity from './LineItemQuantity';
+import ArrowRightIcon from './ArrowRightIcon';
+import LineItemInventoryAdjustment from './LineItemInventoryAdjustment';
 
+// TODO: Implement sold out if originalQuantity is 0
 const LineItem = ({
   title,
   image,
   quantity,
+  originalQuantity,
   totalPrice,
   lineItemKey,
   description,
@@ -39,11 +43,21 @@ const LineItem = ({
       </div>
     </div>
     <div className="LineItem__QuantityPriceWrapper">
-      <LineItemQuantity
-        readOnly={readOnly}
-        defaultValue={quantity}
-        onChange={(value) => onChange(lineItemKey, value)}
-      />
+      {
+        originalQuantity ? (
+          <LineItemInventoryAdjustment
+            originalQuantity={originalQuantity}
+            quantity={quantity}
+            readOnly={readOnly}
+          />
+        ) : (
+          <LineItemQuantity
+            readOnly={readOnly}
+            defaultValue={quantity}
+            onChange={(value) => onChange(lineItemKey, value)}
+          />
+        )
+      }
       <div className="LineItem__ProductPrice">
         <Price amount={totalPrice} />
       </div>

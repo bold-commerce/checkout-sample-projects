@@ -153,6 +153,27 @@
   width: 24px;
 }
 
+.LineItem__QuantityAdjustmentWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.LineItem__QuantityAdjustmentWrapper .LineItemQuantity__Decrement, .LineItem__QuantityAdjustmentWrapper .LineItemQuantity__Increment {
+  display: none;
+}
+
+.LineItem__SoldOut {
+  background: #ffebf0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #b4002b;
+  border: 1px solid #b4002b;
+}
+
 @media screen and (max-width: 599px) {
   .LineItem__ImageDescriptionWrapper {
     flex: 1.5;

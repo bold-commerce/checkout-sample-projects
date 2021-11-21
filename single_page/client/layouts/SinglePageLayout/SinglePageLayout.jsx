@@ -9,6 +9,7 @@ import { IndexPage } from '../../pages/IndexPage';
 import { ProcessingPage } from '../../pages/ProcessingPage';
 import { ConfirmationPage } from '../../pages/ConfirmationPage';
 import './SinglePageLayout.css';
+import { InventoryIssuesPage } from '../../pages/InventoryIssuesPage';
 
 const SinglePageLayout = () => {
   const { state } = useCheckoutStore();
@@ -31,6 +32,7 @@ const SinglePageLayout = () => {
         <Route path="/" element={<IndexPage />}/>
         <Route path="/processing" element={<ProcessingPage />}/>
         <Route path="/confirmation" element={<ConfirmationPage />}/>
+        <Route path="/inventory_issues" element={<InventoryIssuesPage />} />
       </Routes>
     </div>
   );

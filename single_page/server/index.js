@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const handlebars = require('express-handlebars');
 const createCheckout = require('./helpers/createCheckout');
+const getVariants = require('./helpers/getVariants');
 const resumeCheckout = require('./helpers/resumeCheckout');
 
 const app = express();
@@ -10,8 +11,6 @@ app.set('view engine', 'handlebars');
 app.set('views','./server/views');
 app.use(express.static('public'));
 const port = 3000;
-
-// TODO: Implement resume checkout for thank you pages and abandon checkouts
 
 app.get('/', async (req, res) => {
   let publicOrderId = req.query.public_order_id;
@@ -58,14 +57,15 @@ app.get('/', async (req, res) => {
       ],
     },
     cart_items: [{
-      sku: "ABS",
+      platform_id: "66",
       quantity: 1,
       line_item_key: "abc123"
     }, {
-      sku: "ABS",
+      platform_id: "66",
       quantity: 2,
-      line_item_key: "def356"
+      line_item_key: "def345"
     }],
+    resumable_link: process.env.ABANDONED_CART_URL,
   };
 
   try {
@@ -90,6 +90,7 @@ app.get('/', async (req, res) => {
       initialData: JSON.stringify(initialData),
     });
   } catch(e) {
+    res.status(e.status || 500);
     res.json({
       message: e.message,
     });
@@ -97,6 +98,10 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/processing', (req, res) => {
+  res.redirect('/');
+});
+
+app.get('/inventory_issues', (req, res) => {
   res.redirect('/');
 });
 
@@ -118,9 +123,31 @@ app.get('/confirmation', async (req, res) => {
       initialData: JSON.stringify(initialData),
     });
   } catch(e) {
+    res.status(e.status || 500);
     res.json({
       message: e.message,
     });
+  }
+});
+
+app.get('/validate_inventory', async (req, res) => {
+  const variants = req.query.variants;
+
+  try {
+    const response = await getVariants(variants);
+    res.json({
+      inventory: response.data.map((variant) => {
+        return {
+          platform_id: variant.platform_id,
+          inventory_quantity: variant.inventory_quantity,
+        };
+      })
+    });
+  } catch(e) {
+    res.status(e.status || 500);
+    res.json({
+      message: e.message,
+    })
   }
 });
 

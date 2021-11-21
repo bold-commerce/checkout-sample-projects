@@ -1,14 +1,12 @@
 const fetch = require('node-fetch');
-const ResponseError = require('./responseError');
+const { default: ResponseError } = require('./responseError');
 
-async function createCheckout(body) {
-  const response = await fetch(`https://api.boldcommerce.com/checkout/orders/${process.env.SHOP_IDENTIFIER}/init`, {
+async function getVariants(variants) {
+  const response = await fetch(`https://api.boldcommerce.com/products/v2/shops/${process.env.SHOP_IDENTIFIER}/variants?filter=in(platform_id:${variants})`, {
     headers: {
       Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
       'Content-Type': 'application/json',
     },
-    method: 'POST',
-    body: JSON.stringify(body),
   });
 
   if (response.status !== 200) {
@@ -18,4 +16,4 @@ async function createCheckout(body) {
   return await response.json();
 }
 
-module.exports = createCheckout;
+module.exports = getVariants;

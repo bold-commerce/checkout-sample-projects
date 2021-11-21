@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const ResponseError = require('./responseError');
 
 async function resumeCheckout(publicOrderId) {
   const response = await fetch(`https://api.boldcommerce.com/checkout/orders/${process.env.SHOP_IDENTIFIER}/resume`, {
@@ -13,7 +14,7 @@ async function resumeCheckout(publicOrderId) {
   });
 
   if (response.status !== 200) {
-    throw new Error(response.statusText);
+    throw new ResponseError(response.statusText, response.status);
   }
 
   return await response.json();

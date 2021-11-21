@@ -13,7 +13,6 @@ const PaymentMethod = ({ applicationLoading }) => {
   const { data: paymentIframe, loadingStatus, paymentIframeOnLoaded } = usePaymentIframe();
   const { data } = useShippingLines();
   const shippingLines = data.shippingLines;
-  console.log({ data, shippingLines });
   const orderStatus = state.orderInfo.orderStatus;
   const loading = (loadingStatus !== 'fulfilled' && orderStatus !== 'authorizing') || applicationLoading;
 

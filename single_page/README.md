@@ -17,3 +17,6 @@ This project is a starting point for a single page layout. This project uses [No
 
 ## Additional Notes
 This is only meant to be a starting point project. You will need to edit `server/index.js` to authenticate logged in users with your given platform and initialize your checkout with dynamic data.
+
+
+## TODO: Add information about useAnalytics and useErrorLogging hooks
