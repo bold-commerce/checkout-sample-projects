@@ -1,6 +1,6 @@
 export const testApplicationState = {
   customer: {
-    platform_id: null, public_id: '123456789', first_name: '', last_name: '', email_address: 'john.doe@email.com', saved_addresses: [],
+    platform_id: null, public_id: '123456789', first_name: 'John', last_name: 'Doe', email_address: 'john.doe@email.com', saved_addresses: [],
   },
   addresses: {
     shipping: {
