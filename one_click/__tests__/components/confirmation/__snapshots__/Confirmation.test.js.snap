@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirmation renders Confirmation component 1`] = `
+<DocumentFragment>
+  <div
+    class="ConfirmationPage"
+  >
+    <h1>
+      Thank you, John!
+    </h1>
+    <div
+      class="confirmation-order"
+    >
+      <h2>
+        Your order is confirmed
+      </h2>
+      <div
+        class="confirmation-order-accepted"
+      >
+        We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.
+      </div>
+    </div>
+    <div
+      class="confirmation-information"
+    >
+      <h2>
+        Customer information
+      </h2>
+      <h3>
+        Shipping addrees
+      </h3>
+      <p>
+        John Doe
+      </p>
+      <p>
+        123 Fake Street
+      </p>
+      <p>
+        Winnipeg MB R3T 1B8
+      </p>
+      <p>
+        Canada
+      </p>
+      <h3>
+        Billing address
+      </h3>
+      <p>
+        John Doe
+      </p>
+      <p>
+        123 Fake Street
+      </p>
+      <p>
+        Winnipeg MB R3T 1B8
+      </p>
+      <p>
+        Canada
+      </p>
+      <h3>
+        Shipping method
+      </h3>
+      <p>
+        Standard
+      </p>
+      <h3>
+        Payment method
+      </h3>
+      <p>
+        visa
+      </p>
+    </div>
+    <div
+      class="confirmation-help"
+    >
+      <p>
+        Need help? 
+        <a
+          href="#"
+        >
+          Contact us
+        </a>
+      </p>
+    </div>
+    <a
+      href="/"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button confirmation-continue"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Continue shopping
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </a>
+  </div>
+</DocumentFragment>
+`;

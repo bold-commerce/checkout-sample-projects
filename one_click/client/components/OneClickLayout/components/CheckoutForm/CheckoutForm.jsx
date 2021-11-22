@@ -5,6 +5,7 @@ import { BillingAddress, useLineItems } from '@boldcommerce/checkout-react-compo
 import { Shipping } from '../Shipping';
 import { useAnalytics, useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
+import { Confirmation } from '../Confirmation';
 
 const CheckoutForm = () => {
   const { lineItems } = useLineItems();
@@ -32,6 +33,7 @@ const CheckoutForm = () => {
             <Route exact path="/shipping" component={Shipping} />
             <Route exact path="/billing" component={BillingAddress} />
             <Route exact path="/inventory" component={Inventory} />
+            <Route exact path="/confirmation" component={Confirmation} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

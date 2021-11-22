@@ -1,6 +1,6 @@
-const testApplicationState = {
+export const testApplicationState = {
   customer: {
-    platform_id: null, public_id: '123456789', first_name: '', last_name: '', email_address: 'john.doe@email.com', saved_addresses: [],
+    platform_id: null, public_id: '123456789', first_name: 'John', last_name: 'Doe', email_address: 'john.doe@email.com', saved_addresses: [],
   },
   addresses: {
     shipping: {
@@ -31,5 +31,3 @@ const testApplicationState = {
     selected_shipping: { id: '0', description: 'Standard', amount: 1000 }, available_shipping_lines: [{ id: '0', description: 'Standard', amount: 1000 }, { id: '1', description: 'Expedited', amount: 1125 }], taxes: [], discounts: [],
   },
 };
-
-export default testApplicationState;
