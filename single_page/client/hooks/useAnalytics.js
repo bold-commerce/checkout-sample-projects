@@ -1,6 +1,6 @@
 const useAnalytics = () => {
-  const trackEvent = (eventName) => {
-    switch(eventName) {
+  const trackEvent = (eventType) => {
+    switch(eventType) {
       case 'landing_page':
         // Landing page events
         break;

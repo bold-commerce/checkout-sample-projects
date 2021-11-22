@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Price, Details, Image } from '@boldcommerce/stacks-ui';
 import LineItemQuantity from './LineItemQuantity';
-import ArrowRightIcon from './ArrowRightIcon';
 import LineItemInventoryAdjustment from './LineItemInventoryAdjustment';
 
-// TODO: Implement sold out if originalQuantity is 0
 const LineItem = ({
   title,
   image,

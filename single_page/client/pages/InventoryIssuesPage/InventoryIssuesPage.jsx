@@ -6,7 +6,6 @@ import { useErrorLogging } from '../../hooks';
 import './InventoryIssuesPage.css';
 import { Button } from '@boldcommerce/stacks-ui';
 
-// TODO: Complete inventory issues page
 const InventoryIssuesPage = () => {
   const location = useLocation();
   const navigate = useNavigate();

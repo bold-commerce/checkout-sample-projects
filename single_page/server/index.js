@@ -61,7 +61,7 @@ app.get('/', async (req, res) => {
       quantity: 1,
       line_item_key: "abc123"
     }, {
-      platform_id: "66",
+      platform_id: "73",
       quantity: 2,
       line_item_key: "def345"
     }],

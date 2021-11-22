@@ -1072,13 +1072,6 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.3.1":
-  version "7.15.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
-  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
 "@babel/runtime@^7.7.6":
   version "7.16.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
@@ -1150,18 +1143,16 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@boldcommerce/checkout-react-components@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@boldcommerce/checkout-react-components/-/checkout-react-components-3.3.4.tgz#bbc2a0128b584dafa8a08414566cc79bc9cb2be7"
-  integrity sha512-AeX3DLo4fFoIEjRL1auCCdS0E960jRpzA2KQUA577TPvPql7xIvdGNkxGc8FQc4xUcJSwZStyCmbV7eJw+bQUw==
+"@boldcommerce/checkout-react-components@^4.0.0-beta-20211122":
+  version "4.0.0-beta-20211122"
+  resolved "https://registry.yarnpkg.com/@boldcommerce/checkout-react-components/-/checkout-react-components-4.0.0-beta-20211122.tgz#76c2ea304085c569a15afebf35aded8c08bd36be"
+  integrity sha512-spslyhvIKhzb0PNqClupM51Hrf8ZPiVuHVW9xxRyw1rUxnpsJGb2pdxH334ExAFKBWNnGndFubrbX3J9sEw2ig==
   dependencies:
-    "@boldcommerce/stacks-ui" "^1.0.2"
     classnames "^2.2.6"
     jest-config "^27.0.6"
     prop-types "^15.7.2"
-    react-spring "^8.0.27"
 
-"@boldcommerce/stacks-ui@^1.0.2", "@boldcommerce/stacks-ui@^1.2.0":
+"@boldcommerce/stacks-ui@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@boldcommerce/stacks-ui/-/stacks-ui-1.2.0.tgz#b051f38da3325244b1141d2bf7ec480f323738fd"
   integrity sha512-qjiT+5RYxT8ZPXYuPBca++KsELjpUwRXJ05V7rw98+gFU9xHxs2FdUuN4YrqveXZ61vJbHPOby1MXv3sEEv8FA==
@@ -6341,7 +6332,7 @@ prop-types-extra@^1.1.1:
     react-is "^16.3.2"
     warning "^4.0.0"
 
-prop-types@^15.5.8, prop-types@^15.7.2:
+prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -6488,14 +6479,6 @@ react-router@6.0.2:
   integrity sha512-8/Wm3Ed8t7TuedXjAvV39+c8j0vwrI5qVsYqjFr5WkJjsJpEvNSoLRUbtqSEYzqaTUj1IV+sbPJxvO+accvU0Q==
   dependencies:
     history "^5.1.0"
-
-react-spring@^8.0.27:
-  version "8.0.27"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
-  integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    prop-types "^15.5.8"
 
 react@^17.0.2:
   version "17.0.2"
