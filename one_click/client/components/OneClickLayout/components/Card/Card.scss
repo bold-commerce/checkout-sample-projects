@@ -8,6 +8,12 @@
                  "content content" auto
                 / 1fr 1fr;
 
+  & .stx-price__amount {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
 
   &__Title {
     grid-area: title;
@@ -29,6 +35,7 @@
     font-size: 16px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.9);
+
   }
 
   &__Description {
@@ -57,6 +64,12 @@
     font-size: 14px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.65);
+
+    & .card-shipping-content {
+      display: flex;
+      color:rgba(0, 0, 0, 0.9);
+      padding-top: 8px;
+    }
   }
 
   &:not(.Card--Payment){

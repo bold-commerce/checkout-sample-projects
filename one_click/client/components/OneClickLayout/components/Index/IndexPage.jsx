@@ -2,48 +2,65 @@ import React  from 'react';
 import Card from '../Card';
 import { LineItems } from '../LineItems';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import { Price } from '@boldcommerce/stacks-ui/lib';
 
 
 const IndexPage = () => {
   const { state } = useCheckoutStore();
+  const { order_total, customer, addresses, shipping } = state.applicationState;
+  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
+  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
+  console.log(addresses);
   return (
     <>
       <LineItems />
-      {
-        // TODO: Remove hardcoded value
-      }
       <Card
         title={"Summary"}
         component={"/summary"}
-        overview={"$23.80"}
+        overview={<Price amount={order_total} />}
       />
-      { state.applicationState?.customer?.email_address && (
+      { customer?.email_address && (
         <Card
-          description={state.applicationState.customer.email_address}
+          description={customer.email_address}
           action={{label: "Not you?"}}
         />
       )}
       <Card
         title={"Shipping"}
         component={"/shipping"}
-        description={"Jane Doe"}
+        description={addresses.shipping.first_name ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
       >
-        {
-          <>
-            <div>1234 Somewhere Street, Winnipeg, Manitoba, A1B 2C3, Canada</div>
-            <div>Canada Post Expedited Parcel — $7.00</div>
-          </>
-        }
-      </Card>
-      {
-        // TODO: Remove hardcoded value
+      { 
+        shipping.selected_shipping &&
+        <>
+        <div>
+          {`${shippingAddressLines}, 
+            ${addresses.shipping.city},
+            ${addresses.shipping.province},
+            ${addresses.shipping.postal_code},
+            ${addresses.shipping.country}
+          `}
+        </div>
+        <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
+        </>
       }
+      </Card>
       <Card
         title={"Payment"}
-        description={"Visa **** 1234"}
         type={"paymentCard"}
       >
-        <div>Billing address same as shipping address.</div>
+      {
+        state.orderInfo.billingSameAsShipping ? 
+        <div>Billing address same as shipping address</div> :
+        <div>
+          {`${billingAddressLines}, 
+            ${addresses.billing.city},
+            ${addresses.billing.province},
+            ${addresses.billing.postal_code},
+            ${addresses.billing.country}
+          `}
+          </div>
+      }
       </Card>
 
     </>

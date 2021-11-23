@@ -2,8 +2,8 @@ import React from 'react';
 import { RadioItem } from '../RadioItem';
 
 const ShippingAddressItem = ({ address, onChange, selectedAddress, disabled }) => {
-  const { address1, address2, city, province, zip, country, phone, first_name, last_name } = address;
-  const addressArray = [address1, address2, city, province, zip, country];
+  const { address_line_1, address_line_2, city, province, postal_code, country, phone_number, first_name, last_name } = address;
+  const addressArray = [address_line_1, address_line_2, city, province, postal_code, country];
   const addressCombined = addressArray.filter((addressString) => addressString !== '').join(', ');
 
   return (
@@ -17,7 +17,7 @@ const ShippingAddressItem = ({ address, onChange, selectedAddress, disabled }) =
       >
         <p>{`${first_name} ${last_name}`}</p>
         <p>{addressCombined}</p>
-        <p>{phone}</p>
+        <p>{phone_number}</p>
       </RadioItem>
     </li>
   )
