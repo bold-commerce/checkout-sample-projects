@@ -10,13 +10,14 @@ export const BillingAddress = ({
   billingAddress, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, onChange, requiredAddressFields,
 }) => {
   const [address, setAddress] = useState(billingAddress);
-  const {
+  const { data } = useCountryInfo(address);
+  const{
     countries,
     provinces,
     showProvince,
     showPostalCode,
     provinceLabel,
-  } = useCountryInfo(address);
+  } = data;
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
 
@@ -27,10 +28,10 @@ export const BillingAddress = ({
     provincePlaceholder = 'state/territory';
   }
 
-  const handleSubmit = async (data) => {
+  const handleSubmit = async(data) => {
     setLoading(true);
     try {
-      await submitBillingAddress(data)
+      await submitBillingAddress(data);
       setErrors(null);
     } catch(e) {
       setErrors(e.body.errors);
@@ -38,7 +39,7 @@ export const BillingAddress = ({
     setLoading(false);
   };
 
-  const handleSetBillingSameAsShipping = (data) => {
+  const handleSetBillingSameAsShipping = async(data) => {
     setLoading(true);
     try {
       await setBillingSameAsShipping(data)

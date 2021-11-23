@@ -4,22 +4,14 @@ import { RadioItem } from '../RadioItem';
 import { Address } from '../Address';
 
 const NewShippingAddress = ({ selected, onChange, disabled, defaultAddress }) => {
-  const {
-    shippingAddress, countryInfo, shippingAddressErrors, submitShippingAddress,
-  } = useShippingAddress();
+  const { data: shippingAddress, errors, submitShippingAddress } = useShippingAddress();
   const [address, setAddress] = useState(shippingAddress);
-  const {
-    countries,
-    provinces,
-    showProvince,
-    showPostalCode,
-    provinceLabel,
-  } = useCountryInfo(countryInfo, address);
+  const { data: countryInfo } = useCountryInfo(address);
 
-  let provincePlaceholder = provinceLabel;
+  let provincePlaceholder = countryInfo.provinceLabel;
 
   // TODO: replace with languages config file
-  if (provinceLabel === 'state_territory') {
+  if (countryInfo.provinceLabel === 'state_territory') {
     provincePlaceholder = 'state/territory';
   }
 
@@ -42,15 +34,15 @@ const NewShippingAddress = ({ selected, onChange, disabled, defaultAddress }) =>
           <div className="RadioButton RadioButton__NewAddressContainer">
             <Address
               address={address}
-              onChange={(data) => setAddress((prevAddress) => ({
+              onChange={(d) => setAddress((prevAddress) => ({
                 ...prevAddress,
-                ...data,
+                ...d,
               }))}
-              errors={shippingAddressErrors}
-              countries={countries}
-              provinces={provinces}
-              showPostalCode={showPostalCode}
-              showProvince={showProvince}
+              errors={errors}
+              countries={countryInfo.countries}
+              provinces={countryInfo.provinces}
+              showPostalCode={countryInfo.showPostalCode}
+              showProvince={countryInfo.showProvince}
               submit={() => submitShippingAddress(address)}
               provinceLabel={provincePlaceholder}
             />

@@ -15,7 +15,7 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
   const location = useLocation();
   const hidePaymentComponent = !(location.pathname === "/");
   const { openModal } = useContext(LayoutContext);
-  const disabled = !Array.isArray(billingAddress) && shippingLines.length !== 0;
+  const disabled = Array.isArray(billingAddress) && shippingLines.length === 0;
 
   if (disabled) {
     return (

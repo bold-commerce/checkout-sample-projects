@@ -1,12 +1,13 @@
 import React, { useCallback } from 'react';
-import { useLoadingStatus, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { useCheckoutStore, useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
 import './Shipping.css';
 
 const Shipping = () => {
-  const { savedAddresses, shippingAddress, submitShippingAddress } = useShippingAddress();
+  const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
+  const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
   const handleSubmit = useCallback(async (address) => {
     try {
@@ -27,7 +28,7 @@ const Shipping = () => {
         <ShippingAddressList
           addresses={savedAddresses}
           onChange={(address) => handleSubmit(address)}
-          selectedAddress={shippingAddress.id}
+          selectedAddress={shippingAddress?.id}
           disabled={isSetting}
         />
       </section>

@@ -7,8 +7,8 @@ import { CheckoutButton, useShippingLines, useDiscount, useCheckoutStore } from 
 import './Summary.scss';
 
 const Summary = () => {
-    const { selectedShippingAmount, selectedShippingDescription } = useShippingLines();
-    const { discountCode, discountTotal, removeDiscount, discountApplied } = useDiscount();
+    const { data: shipping } = useShippingLines();
+    const { data: discount, removeDiscount } = useDiscount();
     const { state } = useCheckoutStore();
     const orderTotals =  state.orderTotals;
     const taxes = state.applicationState.taxes;
@@ -17,17 +17,17 @@ const Summary = () => {
     let discountItems = null;
     let taxItems = null;
     
-    if ( selectedShippingDescription && selectedShippingAmount){
+    if ( shipping.selectedShippingDescription && shipping.selectedShippingAmount){
         shippingItems = <SummaryItem
-                            title={selectedShippingDescription}
-                            value={selectedShippingAmount}
+                            title={shipping.selectedShippingDescription}
+                            value={shipping.selectedShippingAmount}
                         />;
     }
 
-    if (discountApplied) {
+    if (discount.discountApplied) {
         discountItems = <SummaryItem 
-                            title={discountCode}
-                            value={(discountTotal * -1)}
+                            title={discount.discountCode}
+                            value={(discount.discountTotal * -1)}
                             removeItem={removeDiscount}
                         />;
     }
@@ -56,18 +56,18 @@ const Summary = () => {
                     />
                     <SummaryLine
                         title="Shipping"
-                        value={selectedShippingAmount}
+                        value={shipping.shippingLines.selectedShippingAmount}
                         items={shippingItems}
                     />
                     
                     <SummaryLine
                         title="Discount"
-                        value={( discountApplied ? discountTotal * -1 : undefined )}
+                        value={( discount.discountApplied ? discount.discountTotal * -1 : undefined )}
                         items={discountItems}
                     />
                     <SummaryLine
                         title="Taxes"
-                        value={( orderTotals.taxesTotal === 0 ? undefined : orderTotals.taxesTotal )}
+                        value={( orderTotals.taxesTotal !== 0 ? orderTotals.taxesTotal : undefined )}
                         items={taxItems}
                     />
                 </div>                
@@ -75,7 +75,6 @@ const Summary = () => {
                     <div>Total</div>
                     <Price className="summary-total-price" amount={orderTotals.total} />
                 </div>
-                <CheckoutButton className={"CheckoutButton"}/>
             </section>
         </div>
     );

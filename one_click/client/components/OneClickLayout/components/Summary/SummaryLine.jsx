@@ -4,7 +4,6 @@ import { CaretRight } from "../Icons";
 
 const SummaryLine = ({ title, value, items }) => {
     const [hidden, setHidden] = useState(true);
-
     if (!items || items.length < 1) {
         return (
             <div className="summary-line" >

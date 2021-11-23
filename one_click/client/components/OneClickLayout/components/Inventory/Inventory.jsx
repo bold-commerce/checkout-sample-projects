@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import InventoryItem from "./InventoryItem";
 import { useHistory, useLocation } from "react-router";
 import { Button } from "@boldcommerce/stacks-ui"
@@ -7,7 +7,8 @@ import { useLineItems } from "@boldcommerce/checkout-react-components";
 import './Inventory.css';
 
 export const Inventory = () => {
-    const { lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
+    const { data: lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
+    const [loading, setLoading] = useState(false);
     const history = useHistory();
     const location = useLocation();
     const inventory = location.state;
@@ -31,6 +32,7 @@ export const Inventory = () => {
     })
 
     async function handleUpdateQuantities() {
+        setLoading(true);
         const results = [];
 
         for (let i = 0; i < lineItems.length; i++) {
@@ -45,7 +47,7 @@ export const Inventory = () => {
         }
 
         await Promise.all(results);
-
+        setLoading(false);
         history.push("/");
     }
 
@@ -62,7 +64,11 @@ export const Inventory = () => {
             {invItems}
             <div className="Inventory__footer">
                 <Link className="ReturnLink" to="/">Return to cart</Link>
-                <Button onClick={handleUpdateQuantities} className="CheckoutButton">
+                <Button
+                onClick={handleUpdateQuantities}
+                className="CheckoutButton" 
+                disabled={loading} 
+                >
                     Continue with changes
                 </Button>
             </div>

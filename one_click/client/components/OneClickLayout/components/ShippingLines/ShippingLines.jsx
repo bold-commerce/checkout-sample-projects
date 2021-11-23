@@ -5,7 +5,7 @@ import RadioField from '@boldcommerce/stacks-ui/lib/components/radiofield/RadioF
 import { Price } from '@boldcommerce/stacks-ui';
 import EmptyState from '../EmptyState/EmptyState';
 import LoadingState from '../LoadingState/LoadingState';
-import { useShippingLines } from '@boldcommerce/checkout-react-components';
+import { useCheckoutStore, useShippingLines } from '@boldcommerce/checkout-react-components';
 import './ShippingLines.css';
 
 export const ShippingLines = ({
@@ -63,18 +63,19 @@ ShippingLines.propTypes = {
 const MemoizedShippingLines = React.memo(ShippingLines);
 
 const ShippingLinesContainer = () => {
-  const {
-    showShippingLines, shippingLinesFetching, shippingLinesLoadingStatus, shippingLines, selectedShippingLineIndex, setSelectedShippingLine,
-  } = useShippingLines();
+  const { data, loadingStatus, errors, updateShippingLine,  } = useShippingLines();
+  const { shippingLines, selectedShippingLineIndex } = data;
+  const { state } = useCheckoutStore();
+  const country_code = state?.applicationState?.addresses?.shipping?.country_code;
 
   return (
     <MemoizedShippingLines
-      showShippingLines={showShippingLines}
-      shippingLinesFetching={shippingLinesFetching}
-      shippingLinesLoadingStatus={shippingLinesLoadingStatus}
+      showShippingLines={ country_code && loadingStatus !== 'incomplete' && !errors }
+      shippingLinesFetching={ loadingStatus === 'fetching' }
+      shippingLinesLoadingStatus={loadingStatus}
       shippingLines={shippingLines}
       selectedShippingLineIndex={selectedShippingLineIndex}
-      setSelectedShippingLine={setSelectedShippingLine}
+      setSelectedShippingLine={updateShippingLine}
     />
   );
 };
