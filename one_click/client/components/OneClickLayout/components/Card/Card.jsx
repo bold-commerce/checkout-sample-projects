@@ -12,7 +12,7 @@ import { LayoutContext } from '../../context/LayoutContext';
  *  title?: string;
  *  description?: string;
  *  component?: string;
- *  overview?: string;
+ *  overview?: node;
  *  childComponent?: string;
  *  action?: {{
  *   label: string;
@@ -60,7 +60,7 @@ const Card = ({title, description, component, overview, action, children, type})
 Card.propTypes = {
   title: PropTypes.string,
   component: PropTypes.string,
-  overview: PropTypes.string,
+  overview: PropTypes.node,
   description: PropTypes.string,
   action: PropTypes.shape({
     label: PropTypes.string,

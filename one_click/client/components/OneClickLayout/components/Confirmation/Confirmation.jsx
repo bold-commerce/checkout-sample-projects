@@ -6,11 +6,11 @@ import './Confirmation.css'
 
 const Confirmation = () => {
     const { state } = useCheckoutStore();
-    const info = state.applicationState;
+    const { addresses, customer, payments, shipping} = state.applicationState;
 
     return(
         <div className='ConfirmationPage'>
-            <h1>Thank you{ info.customer.first_name && ', ' + info.customer.first_name }!</h1>
+            <h1>Thank you{ customer.first_name && ', ' + customer.first_name }!</h1>
             <div className='confirmation-order'>
                 <h2>Your order is confirmed</h2>
                 <div className='confirmation-order-accepted'>We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.</div>
@@ -18,32 +18,26 @@ const Confirmation = () => {
             <div className='confirmation-information'>
                 <h2>Customer information</h2>
                 <h3>Shipping addrees</h3>
-                <p>{info.addresses.shipping.first_name} {info.addresses.shipping.last_name}</p>
-                <p>{info.addresses.shipping.address_line_1}</p>
-                {
-                    info.addresses.shipping.address_line_2 &&
-                    <p>{info.addresses.shipping.address_line_2}</p>
-                }
-                <p>{info.addresses.shipping.city} {info.addresses.shipping.province_code} {info.addresses.shipping.postal_code}</p>
-                <p>{info.addresses.shipping.country}</p>
+                <p>{addresses.shipping.first_name} {addresses.shipping.last_name}</p>
+                <p>{addresses.shipping.address_line_1}</p>
+                <p>{addresses.shipping.address_line_2}</p>
+                <p>{addresses.shipping.city} {addresses.shipping.province_code} {addresses.shipping.postal_code}</p>
+                <p>{addresses.shipping.country}</p>
+
                 <h3>Billing address</h3>
-                <p>{info.addresses.billing.first_name} {info.addresses.billing.last_name}</p>
-                <p>{info.addresses.billing.address_line_1}</p>
-                {
-                    info.addresses.billing.address_line_2 &&
-                    <p>{info.addresses.billing.address_line_2}</p>
-                }
-                <p>{info.addresses.billing.city} {info.addresses.billing.province_code} {info.addresses.billing.postal_code}</p>
-                <p>{info.addresses.billing.country}</p>
+                <p>{addresses.billing.first_name} {addresses.billing.last_name}</p>
+                <p>{addresses.billing.address_line_1}</p>
+                <p>{addresses.billing.address_line_2}</p>
+                <p>{addresses.billing.city} {addresses.billing.province_code} {addresses.billing.postal_code}</p>
+                <p>{addresses.billing.country}</p>
+
                 <h3>Shipping method</h3>
-                {
-                    info.shipping.selected_shipping &&
-                    <p>{info.shipping.selected_shipping.description}</p>
-                }
+                <p>{shipping.selected_shipping.description}</p>
+
                 <h3>Payment method</h3>
                 {
-                    info.payments &&
-                    info.payments.map( (payment) => {
+                    payments &&
+                    payments.map( (payment) => {
                         return <p key={payment.id} >{payment.brand}</p>
                     })
                 }
