@@ -1,29 +1,34 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { Input, Button } from '@boldcommerce/stacks-ui';
+import { InputField, Button } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
 
 export const Discount = ({
-  discountApplied, discountCode, discountErrors, applyDiscount,
+  discountApplied, discountCode, applyDiscount,
 }) => {
   const [discount, setDiscount] = useState(discountCode);
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState(null);
 
-    /**
-    * Opens the discount modal
-    */
-     const openModal = useCallback(() => {
-      setOpen(true);
-    }, []);
+  /**
+  * Opens the discount modal
+  */
+  const openModal = useCallback(() => {
+    setOpen(true);
+  }, []);
 
-    const submitDiscount = async () => {
-      try {
-        await applyDiscount(discount);
-      } catch(e) {
-          console.error(e);
-      }
+  const submitDiscount = async () => {
+    setLoading(true);
+    try {
+      await applyDiscount(discount);
+      setErrors(null);
+    } catch(e) {
+      setErrors(e.body.errors);
+    }
+    setLoading(false);
   };
 
   if (!open) return (
@@ -32,32 +37,24 @@ export const Discount = ({
   return (
     <div className="SummaryBlock Summary__DiscountForm">
       <div className="DiscountForm">
-        <Input
+        <InputField
           type="text"
           placeholder="Enter discount code"
           value={discount}
-          messagetext={discountErrors && discountErrors.discounts}
-          messageType={discountErrors && 'alert'}
+          messageText={errors && errors[0].message}
+          messageType={errors && 'alert'}
           onChange={(e) => setDiscount(e.target.value)}
-          disabled={discountApplied}
+          disabled={discountApplied || loading}
         />
         <Button
           primary={discountApplied || discount.length > 0}
-          disabled={discount.length === 0 || discountApplied}
+          disabled={discount.length === 0 || discountApplied || loading}
+          loading={loading}
           onClick={() => submitDiscount(discount)}
         >
           Apply
         </Button>
       </div>
-      {
-        discountErrors && discountErrors.discounts && (
-          <div className="DiscountForm__error">
-            {
-              discountErrors.discounts
-            }
-          </div>
-        )
-      }
     </div>
   );
 };
@@ -72,15 +69,12 @@ Discount.propTypes = {
 const MemoizedDiscount = React.memo(Discount);
 
 const DiscountContainer = () => {
-  const {
-    discountApplied, discountCode, discountErrors, applyDiscount,
-  } = useDiscount();
+  const { data, applyDiscount } = useDiscount();
 
   return (
     <MemoizedDiscount
-      discountApplied={discountApplied}
-      discountCode={discountCode}
-      discountErrors={discountErrors}
+      discountApplied={data.discountApplied}
+      discountCode={data.discountCode}
       applyDiscount={applyDiscount}
     />
   );

@@ -40,15 +40,13 @@ PaymentIframe.propTypes = {
 const MemoizedPaymentIframe = React.memo(PaymentIframe);
 
 const PaymentIframeContainer = ({ hide }) => {
-  const {
-    paymentIframeLoadingStatus, paymentIframeUrl, paymentIframeHeight, paymentIframeOnLoaded,
-  } = usePaymentIframe();
+  const { data, loadingStatus, paymentIframeOnLoaded } = usePaymentIframe();
 
   return (
     <MemoizedPaymentIframe
-      paymentIframeLoadingStatus={paymentIframeLoadingStatus}
-      paymentIframeUrl={paymentIframeUrl}
-      paymentIframeHeight={paymentIframeHeight}
+      paymentIframeLoadingStatus={loadingStatus}
+      paymentIframeUrl={data.url}
+      paymentIframeHeight={data.height}
       paymentIframeOnLoaded={paymentIframeOnLoaded}
       hide={hide}
     />

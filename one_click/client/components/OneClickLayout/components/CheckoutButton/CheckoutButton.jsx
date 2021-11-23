@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useLocation, useHistory } from 'react-router';
 import {
@@ -30,11 +30,12 @@ CheckoutButton.propTypes = {
 
 const CheckoutButtonContainer = ({ className }) => {
   const { state } = useCheckoutStore();
+  const [loading, setLoading] = useState();
   const location = useLocation();
   const { orderStatus } = state.orderInfo;
   const { processPaymentIframe } = usePaymentIframe();
   const checkInventory = useInventory();
-  const { lineItems } = useLineItems();
+  const { data: lineItems } = useLineItems();
   const history = useHistory();
 
   const orderErrorMessage = state.errors.order?.public_order_id;
@@ -48,16 +49,23 @@ const CheckoutButtonContainer = ({ className }) => {
   const checkoutButtonDisabled = state.loadingStatus.isLoading || hasErrors ||  missingAddress;
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
   const handleCheckout = async() => {
-    const inventoryIssues = await checkInventory(lineItems);
-    if (!inventoryIssues) {
-      processPaymentIframe();
-    } else {
-      history.push('/inventory', inventoryIssues);
+    setLoading(true);
+    try {
+      const inventoryIssues = await checkInventory(lineItems);
+      if (!inventoryIssues) {
+        await processPaymentIframe();
+        setLoading(false);
+      } else {
+        setLoading(false);
+        history.push('/inventory', inventoryIssues);
+      }
+    } catch(e) {  
+      setLoading(false);
     }
   };
   const onClick = processing ? null : handleCheckout;
 
-  return inventoryLocation ? null : <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing} className={className} errorMessage={orderErrorMessage} />;
+  return inventoryLocation ? null : <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
 };
 
 export default CheckoutButtonContainer;

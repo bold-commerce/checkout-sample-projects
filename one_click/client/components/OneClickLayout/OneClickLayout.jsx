@@ -15,7 +15,6 @@ const OneClickLayout = ({ orderStatus, orderErrors }) => {
   const processed = orderStatus === 'completed';
   const [openModal, setOpenModal] = useState(true);
 
-
   const CheckoutFormContainer = (
     <>
       <Router>

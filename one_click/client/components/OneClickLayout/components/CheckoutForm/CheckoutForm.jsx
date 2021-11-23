@@ -11,7 +11,7 @@ import { ProcessingOrder } from '../Processing';
 import { Confirmation } from '../Confirmation';
 
 const CheckoutForm = () => {
-  const { lineItems } = useLineItems();
+  const { data: lineItems } = useLineItems();
   const { state } = useCheckoutStore();
   const orderStatus = state.orderInfo.orderStatus;
   const location = useLocation();

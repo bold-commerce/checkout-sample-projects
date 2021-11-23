@@ -1,13 +1,13 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import CheckboxField from '@boldcommerce/stacks-ui/lib/components/CheckboxField/CheckboxField';
+import { CheckboxField } from '@boldcommerce/stacks-ui';
 import { Address } from '../Address';
-import { useBillingAddress, useCountryInfo } from '@boldcommerce/checkout-react-components';
+import { useBillingAddress, useBillingSameAsShipping, useCountryInfo } from '@boldcommerce/checkout-react-components';
 import './BillingAddress.css';
 
 export const BillingAddress = ({
-  billingAddress, countryInfo, billingAddressErrors, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, onChange, requiredAddressFields,
+  billingAddress, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, onChange, requiredAddressFields,
 }) => {
   const [address, setAddress] = useState(billingAddress);
   const {
@@ -16,7 +16,9 @@ export const BillingAddress = ({
     showProvince,
     showPostalCode,
     provinceLabel,
-  } = useCountryInfo(countryInfo, address);
+  } = useCountryInfo(address);
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState(null);
 
   let provincePlaceholder = provinceLabel;
 
@@ -25,11 +27,27 @@ export const BillingAddress = ({
     provincePlaceholder = 'state/territory';
   }
 
-  useEffect(() => {
-    if (onChange) {
-      onChange(address);
+  const handleSubmit = async (data) => {
+    setLoading(true);
+    try {
+      await submitBillingAddress(data)
+      setErrors(null);
+    } catch(e) {
+      setErrors(e.body.errors);
     }
-  }, [address]);
+    setLoading(false);
+  };
+
+  const handleSetBillingSameAsShipping = (data) => {
+    setLoading(true);
+    try {
+      await setBillingSameAsShipping(data)
+      setErrors(null);
+    } catch(e) {
+      setErrors(e.body.errors);
+    }
+    setLoading(false);
+  };
 
   return (
     <section className="FieldSet FieldSet--BillingAddress">
@@ -43,7 +61,8 @@ export const BillingAddress = ({
           className="RadioButton"
           value="SAME_AS_SHIPPING_ADDRESS"
           checked={billingSameAsShipping}
-          onChange={() => setBillingSameAsShipping(!billingSameAsShipping)}
+          disabled={loading}
+          onChange={() => handleSetBillingSameAsShipping(!billingSameAsShipping)}
         />
         { billingSameAsShipping ? null
           : (
@@ -53,13 +72,13 @@ export const BillingAddress = ({
                 ...prevAddress,
                 ...data,
               }))}
-              errors={billingAddressErrors}
+              errors={errors}
               countries={countries}
               provinces={provinces}
               showPostalCode={showPostalCode}
               showProvince={showProvince}
               provinceLabel={provincePlaceholder}
-              submit={() => submitBillingAddress(address)}
+              submit={() => handleSubmit(address)}
               requiredAddressFields={requiredAddressFields}
             />
           )}
@@ -81,19 +100,15 @@ BillingAddress.propTypes = {
 
 const MemoizedBillingAddress = React.memo(BillingAddress);
 
-const BillingAddressContainer = ({ onChange, requiredAddressFields }) => {
-  const {
-    billingAddress, countryInfo, billingAddressErrors, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping,
-  } = useBillingAddress(requiredAddressFields);
+const BillingAddressContainer = ({ requiredAddressFields }) => {
+  const { data: billingAddress, submitBillingAddress } = useBillingAddress();
+  const { data: billingSameAsShipping, setBillingSameAsShipping } = useBillingSameAsShipping(); 
 
   return (
     <MemoizedBillingAddress
       billingAddress={billingAddress}
-      countryInfo={countryInfo}
-      billingAddressErrors={billingAddressErrors}
       billingSameAsShipping={billingSameAsShipping}
-      onChange={onChange}
-      submitBillingAddress={onChange || submitBillingAddress}
+      submitBillingAddress={submitBillingAddress}
       setBillingSameAsShipping={setBillingSameAsShipping}
       requiredAddressFields={requiredAddressFields}
     />
@@ -101,7 +116,6 @@ const BillingAddressContainer = ({ onChange, requiredAddressFields }) => {
 };
 
 BillingAddressContainer.propTypes = {
-  onChange: PropTypes.func,
   requiredAddressFields: PropTypes.array,
 };
 
