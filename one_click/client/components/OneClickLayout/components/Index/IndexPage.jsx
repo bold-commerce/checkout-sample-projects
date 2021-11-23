@@ -9,6 +9,9 @@ const IndexPage = () => {
   return (
     <>
       <LineItems />
+      {
+        // TODO: Remove hardcoded value
+      }
       <Card
         title={"Summary"}
         component={"/summary"}
@@ -32,6 +35,9 @@ const IndexPage = () => {
           </>
         }
       </Card>
+      {
+        // TODO: Remove hardcoded value
+      }
       <Card
         title={"Payment"}
         description={"Visa **** 1234"}

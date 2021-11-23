@@ -59,6 +59,8 @@ export const Address = ({
     address.id,
   ]);
 
+  const errorMap = errors?.reduce((errors, error) => ({ ...errors, [error.field]: error.message }), {})
+
   return (
     <div className="FieldSet--Address">
       <div className="FieldGroup">
@@ -68,8 +70,8 @@ export const Address = ({
           name="first_name"
           className="Field Field--FirstName"
           value={address?.first_name ?? ''}
-          messageType={errors && errors?.first_name && 'alert' || ''}
-          messageText={errors && errors?.first_name && 'Enter a first name' || ''}
+          messageType={errors && errorMap?.first_name && 'alert' || ''}
+          messageText={errors && errorMap?.first_name && 'Enter a first name' || ''}
           onChange={(e) => onChange({
             first_name: e.target.value,
           })}
@@ -80,8 +82,8 @@ export const Address = ({
           name="last_name"
           className="Field Field--LastName"
           value={address?.last_name ?? ''}
-          messageType={errors && errors?.last_name && 'alert' || ''}
-          messageText={errors && errors?.last_name && 'Enter a last name' || ''}
+          messageType={errors && errorMap?.last_name && 'alert' || ''}
+          messageText={errors && errorMap?.last_name && 'Enter a last name' || ''}
           onChange={(e) => onChange({
             last_name: e.target.value,
           })}
@@ -94,8 +96,8 @@ export const Address = ({
           name="business_name"
           className="Field Field--Company"
           value={address?.business_name ?? ''}
-          messageType={errors && errors?.business_name && 'alert' || ''}
-          messageText={errors && errors?.business_name && 'Enter a company name' || ''}
+          messageType={errors && errorMap?.business_name && 'alert' || ''}
+          messageText={errors && errorMap?.business_name && 'Enter a company name' || ''}
           onChange={(e) => onChange({
             business_name: e.target.value,
           })}
@@ -108,8 +110,8 @@ export const Address = ({
           name="address_line_1"
           className="Field Field--Address"
           value={address?.address_line_1 ?? ''}
-          messageType={errors && errors?.address && 'alert' || ''}
-          messageText={errors && errors?.address && 'Enter an address' || ''}
+          messageType={errors && errorMap?.address && 'alert' || ''}
+          messageText={errors && errorMap?.address && 'Enter an address' || ''}
           onChange={(e) => onChange({
             address_line_1: e.target.value,
           })}
@@ -131,8 +133,8 @@ export const Address = ({
           type="text"
           name="city"
           value={address?.city ?? ''}
-          messageType={errors && errors?.city && 'alert' || ''}
-          messageText={errors && errors?.city && 'Enter a city' || ''}
+          messageType={errors && errorMap?.city && 'alert' || ''}
+          messageText={errors && errorMap?.city && 'Enter a city' || ''}
           className="Field Field--City"
           onChange={(e) => onChange({
             city: e.target.value,
@@ -144,8 +146,8 @@ export const Address = ({
           placeholder="Select a country"
           className="SelectField Field--Country"
           value={address?.country_code ?? ''}
-          messageType={errors && errors?.country && 'alert' || ''}
-          messageText={errors && errors?.country && 'Select a country' || ''}
+          messageType={errors && errorMap?.country && 'alert' || ''}
+          messageText={errors && errorMap?.country && 'Select a country' || ''}
           onChange={(e) => onChange({
             country_code: e.target.value,
           })}
@@ -161,8 +163,8 @@ export const Address = ({
               }
               className="SelectField Field--Province"
               value={address?.province_code ?? ''}
-              messageType={errors && errors?.province && 'alert' || ''}
-              messageText={errors && errors?.province && 'Select a province or state' || ''}
+              messageType={errors && errorMap?.province && 'alert' || ''}
+              messageText={errors && errorMap?.province && 'Select a province or state' || ''}
               onChange={(e) => onChange({
                 province_code: e.target.value,
               })}
@@ -178,8 +180,8 @@ export const Address = ({
               type="text"
               name="postal"
               className="Field Field--Postal_Code"
-              messageType={errors && errors?.postal_code && 'alert' || ''}
-              messageText={errors && errors?.postal_code}
+              messageType={errors && errorMap?.postal_code && 'alert' || ''}
+              messageText={errors && errorMap?.postal_code}
               value={address?.postal_code ?? ''}
               onChange={(e) => onChange({
                 postal_code: e.target.value,
@@ -194,8 +196,8 @@ export const Address = ({
           name="phone_number"
           className="Field Field--Phone"
           value={address?.phone_number ?? ''}
-          messageType={errors && errors?.phone_number && 'alert' || ''}
-          messageText={errors && errors?.phone_number && 'Enter a phone number' || ''}
+          messageType={errors && errorMap?.phone_number && 'alert' || ''}
+          messageText={errors && errorMap?.phone_number && 'Enter a phone number' || ''}
           onChange={(e) => onChange({
             phone_number: e.target.value,
           })}

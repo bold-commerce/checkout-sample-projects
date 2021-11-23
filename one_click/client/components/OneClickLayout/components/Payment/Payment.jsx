@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import EmptyState from '../EmptyState/EmptyState';
 import { useLocation } from 'react-router-dom';
-import { usePaymentMethod } from '@boldcommerce/checkout-react-components';
+import { useBillingAddress, useShippingLines } from '@boldcommerce/checkout-react-components';
 import { BillingAddress } from '../BillingAddress';
 import { Discount } from '../Discount';
 import PaymentIframe from './PaymentIframe';
@@ -11,12 +11,13 @@ import { LayoutContext } from '../../context/LayoutContext';
 import classnames from 'classnames';
 import './Payment.css';
 
-const PaymentMethod = ({ showPaymentMethod }) => {
+const PaymentMethod = ({ billingAddress, shippingLines }) => {
   const location = useLocation();
   const hidePaymentComponent = !(location.pathname === "/");
   const { openModal } = useContext(LayoutContext);
+  const disabled = !Array.isArray(billingAddress) && shippingLines.length !== 0;
 
-  if (showPaymentMethod) {
+  if (disabled) {
     return (
       <div className='Payment'>
         <section className={classnames(
@@ -59,9 +60,11 @@ PaymentMethod.propTypes = {
 const MemoizedPaymentMethod = React.memo(PaymentMethod);
 
 const PaymentMethodContainer = () => {
-  const { showPaymentMethod } = usePaymentMethod();
+  const { data: billingAddress } = useBillingAddress();
+  const { data } = useShippingLines(); 
+  const { shippingLines } = data;
 
-  return <MemoizedPaymentMethod showPaymentMethod={showPaymentMethod} />;
+  return <MemoizedPaymentMethod shippingLines={shippingLines} billingAddress={billingAddress} />;
 };
 
 export default PaymentMethodContainer;
