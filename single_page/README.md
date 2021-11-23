@@ -18,7 +18,7 @@ This project uses the following resources and toolkits:
 2. Create an account and an API access token in the Bold Account Center using the instructions in the [Quick Start](https://developer.boldcommerce.com/default/guides/getting-started/quick-start). 
 3. Duplicate `.env.example` and rename it to `.env`.
 4. Populate the `.env` file with your API access token, shop identifier, and abandoned checkout url.
-5. In server/index.js, locate the `exampleBody` variable. Change the `platform_id` to be a `platform_id` that exists in your product catalog for the store that Checkout is integrated with.
+5. In `server/index.js`, locate the `exampleBody` variable. Change the `platform_id` to be a `platform_id` that exists in your product catalog for the store that Checkout is integrated with.
 6. Run `yarn` or `npm install`.
 7. Run `yarn dev` or `npm run dev` to start both the Node.js server and the webpack watcher.
 
