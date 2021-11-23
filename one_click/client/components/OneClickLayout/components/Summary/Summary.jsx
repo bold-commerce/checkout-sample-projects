@@ -3,7 +3,7 @@ import SummaryLine from './SummaryLine';
 import SummaryItem from './SummaryItem';
 import { Price } from '@boldcommerce/stacks-ui/lib';
 import { BackButton } from '../BackButton';
-import { CheckoutButton, useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import './Summary.scss';
 
 const Summary = () => {
