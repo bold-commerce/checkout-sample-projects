@@ -4,7 +4,7 @@ This project is intended to demonstrate the abilities of a headless checkout usi
 ## About
 This project uses the following resources and toolkits:
 | Client | Server |
-|---     |---     |
+| :---   | :---   |
 | [React](https://reactjs.org/), including [stacks-ui](https://www.npmjs.com/package/@boldcommerce/stacks-ui) component library and [checkout-react-components](https://www.npmjs.com/package/@boldcommerce/checkout-react-components) component library | [Node.js](https://nodejs.org/) |
 | [Webpack](https://webpack.js.org/) | [Express](https://expressjs.com/) |
 | | [Handlebars](https://handlebarsjs.com/) |
