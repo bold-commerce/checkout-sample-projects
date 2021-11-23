@@ -65,7 +65,7 @@ app.get('/', async (req, res) => {
       quantity: 2,
       line_item_key: "def345"
     }],
-    resumable_link: process.env.ABANDONED_CART_URL,
+    resumable_link: process.env.ABANDONED_CHECKOUT_URL,
   };
 
   try {
