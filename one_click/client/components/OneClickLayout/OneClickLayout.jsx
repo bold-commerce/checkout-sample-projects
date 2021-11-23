@@ -8,11 +8,11 @@ import { PaymentMethod } from './components/Payment';
 import { LayoutContext } from './context/LayoutContext';
 import { CheckoutButton } from './components/CheckoutButton';
 import { Message} from '@boldcommerce/stacks-ui';
+import { ProcessingOrder } from '../OneClickLayout/components/Processing'
 import './OneClickLayout.css';
 
 const OneClickLayout = ({ orderStatus, orderErrors }) => {
   const isProcessing = orderStatus === 'processing';
-  const processed = orderStatus === 'completed';
   const [openModal, setOpenModal] = useState(true);
 
   const CheckoutFormContainer = (
@@ -29,7 +29,7 @@ const OneClickLayout = ({ orderStatus, orderErrors }) => {
   return (
     <LayoutContext.Provider value={{openModal, setOpenModal}}>
       {
-        (isProcessing && <OrderProcessing />) || (
+        (isProcessing && <ProcessingOrder />) || (
           <>
             <div className="Checkout__Main">
               {
@@ -39,7 +39,7 @@ const OneClickLayout = ({ orderStatus, orderErrors }) => {
                 </Message>
               }
               {
-                processed ? <OrderProcessed /> : CheckoutFormContainer
+                CheckoutFormContainer
               }
             </div>
           </>

@@ -40,8 +40,11 @@ const CheckoutButtonContainer = ({ className }) => {
 
   const orderErrorMessage = state.errors.order?.public_order_id;
 
-  // Don't show the checkout button on the inventory issues page
+  // Don't show the checkout button on the inventory issues, processing, or confirmation page.
   const inventoryLocation = location.pathname === '/inventory';
+  const processingPage = location.pathname === '/processing';
+  const orderComplete = location.pathname === '/confirmation';
+  const hideButton = (inventoryLocation || processingPage || orderComplete);
 
   // don't disable checkout button if only error is order error
   const hasErrors = Object.keys(state.errors).some((errorKey) => errorKey != 'order' && state.errors[errorKey] != null);
@@ -65,7 +68,7 @@ const CheckoutButtonContainer = ({ className }) => {
   };
   const onClick = processing ? null : handleCheckout;
 
-  return inventoryLocation ? null : <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
+  return hideButton ? null : <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
 };
 
 export default CheckoutButtonContainer;

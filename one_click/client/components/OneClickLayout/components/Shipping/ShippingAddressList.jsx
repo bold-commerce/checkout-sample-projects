@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { RadioItem } from '../RadioItem';
 import NewShippingAddress from './NewShippingAddress';
 import ShippingAddressItem from './ShippingAddressItem';
 

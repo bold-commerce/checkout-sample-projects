@@ -44,12 +44,12 @@ const Confirmation = () => {
                 {
                     info.payments &&
                     info.payments.map( (payment) => {
-                        return <p>{payment.brand}</p>
+                        return <p key={payment.id} >{payment.brand}</p>
                     })
                 }
             </div>
             <div className='confirmation-help'>
-                <p>Need help? <a href='#'>Contact us</a></p>
+                <p>Need help? <a href='#'>Contact us</a></p> { /* TODO: get correct contact us link */}
             </div>
             <Link to='/'><Button className='confirmation-continue'>Continue shopping</Button></Link>
         </div>

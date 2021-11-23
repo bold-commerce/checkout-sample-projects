@@ -19,9 +19,9 @@ const IndexPage = () => {
       />
       { state.applicationState?.customer?.email_address && (
         <Card
-        description={state.applicationState.customer.email_address}
-        action={{label: "Not you?"}}
-      />
+          description={state.applicationState.customer.email_address}
+          action={{label: "Not you?"}}
+        />
       )}
       <Card
         title={"Shipping"}

@@ -37,7 +37,7 @@ const CheckoutForm = () => {
   useEffect(() => {
     if (orderStatus === 'processing') {
       history.push('/processing');
-    } else if (orderStatus === 'complete') {
+    } else if (orderStatus === 'completed') {
       history.push(`/confirmation?public_order_id=${state.publicOrderId}`);
     }
   }, [orderStatus]);
