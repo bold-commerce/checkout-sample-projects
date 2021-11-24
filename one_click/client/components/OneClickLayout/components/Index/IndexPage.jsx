@@ -9,6 +9,7 @@ import { Header } from '../Header';
 import { AppContext } from '../../context/AppContext';
 import { PaymentMethod } from '../Payment';
 import { CheckoutButton } from '../CheckoutButton';
+import { useAnalytics } from '../../../../hooks';
 
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
@@ -18,7 +19,8 @@ const IndexPage = ({ onSectionChange, show }) => {
   const { submitShippingAddress } = useShippingAddress();
   const [loading, setLoading] = useState(false);
   const { websiteName } = useContext(AppContext);
-  
+  const trackEvent = useAnalytics();
+
   const setDefaultAddress = useCallback(async () => {
     setLoading(true);
     try {
@@ -34,6 +36,8 @@ const IndexPage = ({ onSectionChange, show }) => {
     if(addresses.shipping.length == 0 && customer.saved_addresses.length > 0){
       setDefaultAddress();
     }
+
+    trackEvent('landing_page');
   }, []);
 
   return (

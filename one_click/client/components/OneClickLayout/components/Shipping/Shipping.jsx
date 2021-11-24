@@ -5,17 +5,23 @@ import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
 import { Header } from '../Header';
 import classNames from 'classnames';
+import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Shipping.css';
 
 const Shipping = ({ show, onBack }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
+
   const handleSubmit = useCallback(async (address) => {
     try {
       await submitShippingAddress(address);
+      trackEvent('set_shipping_address');
     }
     catch(e) {
+      logError('shipping_address', e);
     }
   }, []);
 

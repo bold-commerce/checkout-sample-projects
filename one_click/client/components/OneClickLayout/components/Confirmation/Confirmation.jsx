@@ -1,12 +1,18 @@
+import React, { useEffect } from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import Button from '@boldcommerce/stacks-ui/lib/components/button/Button';
-import React from 'react';
+import { Button } from '@boldcommerce/stacks-ui';
 import { Link } from 'react-router-dom';
+import { useAnalytics } from '../../../../hooks';
 import './Confirmation.css'
 
 const Confirmation = () => {
     const { state } = useCheckoutStore();
     const { addresses, customer, payments, shipping} = state.applicationState;
+    const trackEvent = useAnalytics();
+
+    useEffect(() => {
+      trackEvent('thank_you');
+    }, []);
 
     return(
         <div className='Sidebar ConfirmationPage'>

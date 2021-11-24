@@ -5,6 +5,7 @@ import { CheckboxField } from '@boldcommerce/stacks-ui';
 import { Address } from '../Address';
 import { useBillingAddress, useBillingSameAsShipping, useCountryInfo } from '@boldcommerce/checkout-react-components';
 import './BillingAddress.css';
+import { useAnalytics, useErrorLogging } from '../../../../hooks';
 
 export const BillingAddress = ({
   billingAddress, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, requiredAddressFields,
@@ -20,6 +21,8 @@ export const BillingAddress = ({
   } = data;
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
 
   let provincePlaceholder = provinceLabel;
 
@@ -33,7 +36,9 @@ export const BillingAddress = ({
     try {
       await submitBillingAddress(data);
       setErrors(null);
+      trackEvent('set_billing_address');
     } catch(e) {
+      logError('billing_address', e);
       setErrors(e.body.errors);
     }
     setLoading(false);
@@ -44,7 +49,9 @@ export const BillingAddress = ({
     try {
       await setBillingSameAsShipping(data)
       setErrors(null);
+      trackEvent('set_billing_same_as_shipping');
     } catch(e) {
+      logError('billing_same_as_shipping', e);
       setErrors(e.body.errors);
     }
     setLoading(false);
