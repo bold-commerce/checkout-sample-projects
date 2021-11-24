@@ -1,16 +1,28 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import RadioField from '@boldcommerce/stacks-ui/lib/components/radiofield/RadioField';
-import { Price } from '@boldcommerce/stacks-ui';
+import { useCheckoutStore, useShippingLines } from '@boldcommerce/checkout-react-components';
+import { RadioField, Price } from '@boldcommerce/stacks-ui';
 import EmptyState from '../EmptyState/EmptyState';
 import LoadingState from '../LoadingState/LoadingState';
-import { useCheckoutStore, useShippingLines } from '@boldcommerce/checkout-react-components';
+import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './ShippingLines.css';
 
 export const ShippingLines = ({
   showShippingLines, shippingLinesFetching, shippingLinesLoadingStatus, shippingLines, selectedShippingLineIndex, setSelectedShippingLine,
 }) => {
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
+
+  const handleShippingLineChange = async (index) => {
+    try {
+      await setSelectedShippingLine(index);
+      trackEvent('set_shipping_line');
+    } catch(e) {
+      logError('shipping_line', e);
+    }
+  };
+
   if (!showShippingLines) {
     return (
       <section className="FieldSet FieldSet--ShippingMethod">
@@ -39,7 +51,7 @@ export const ShippingLines = ({
                     checked={selectedShippingLineIndex === parseInt(method.id, 10)}
                     className="RadioField"
                     disabled={shippingLinesLoadingStatus === 'setting'}
-                    onChange={() => setSelectedShippingLine(index)}
+                    onChange={() => handleShippingLineChange(index)}
                   />
                   <Price className="ShippingMethod__Price" amount={method.amount} />
                 </div>

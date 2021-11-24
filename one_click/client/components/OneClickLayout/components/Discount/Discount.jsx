@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { InputField, Button } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
+import { useAnalytics, useErrorLogging } from '../../../../hooks';
 
 export const Discount = ({
   discountApplied, discountCode, applyDiscount,
@@ -12,6 +13,8 @@ export const Discount = ({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
 
   /**
   * Opens the discount modal
@@ -25,8 +28,10 @@ export const Discount = ({
     try {
       await applyDiscount(discount);
       setErrors(null);
+      trackEvent('apply_discount_code');
     } catch(e) {
       setErrors(e.body.errors);
+      logError('discount_code', e);
     }
     setLoading(false);
   };

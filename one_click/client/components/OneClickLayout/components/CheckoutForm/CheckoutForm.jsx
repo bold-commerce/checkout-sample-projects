@@ -15,7 +15,6 @@ const CheckoutForm = () => {
   const { state } = useCheckoutStore();
   const orderStatus = state.orderInfo.orderStatus;
   const location = useLocation();
-  const track = useAnalytics();
   const checkInventory = useInventory();
   const history = useHistory();
 
@@ -25,10 +24,6 @@ const CheckoutForm = () => {
       history.push('/inventory', inventory)
     }
   }
-  
-  useEffect(() => {
-    track(location.pathname);
-  }, [location.pathname]);
 
   useEffect(() => {
     getInventory();

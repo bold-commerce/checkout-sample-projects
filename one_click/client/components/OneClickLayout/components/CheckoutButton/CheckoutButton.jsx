@@ -6,7 +6,7 @@ import {
   Message,
 } from '@boldcommerce/stacks-ui';
 import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
-import { useInventory } from '../../../../hooks';
+import { useAnalytics, useErrorLogging, useInventory } from '../../../../hooks';
 import './CheckoutButton.css';
 
 const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage }) => (
@@ -37,6 +37,8 @@ const CheckoutButtonContainer = ({ className }) => {
   const checkInventory = useInventory();
   const { data: lineItems } = useLineItems();
   const history = useHistory();
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
 
   const orderErrorMessage = state.errors.order?.public_order_id;
 
@@ -53,6 +55,7 @@ const CheckoutButtonContainer = ({ className }) => {
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
   const handleCheckout = async() => {
     setLoading(true);
+    trackEvent('click_complete_order');
     try {
       const inventoryIssues = await checkInventory(lineItems);
       if (!inventoryIssues) {
@@ -64,6 +67,7 @@ const CheckoutButtonContainer = ({ className }) => {
       }
     } catch(e) {  
       setLoading(false);
+      logError('checkout_button', e);
     }
   };
   const onClick = processing ? null : handleCheckout;

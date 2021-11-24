@@ -1,19 +1,25 @@
 import React, { useCallback } from 'react';
-import { useCheckoutStore, useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
+import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Shipping.css';
 
 const Shipping = () => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
+
   const handleSubmit = useCallback(async (address) => {
     try {
-      const response = await submitShippingAddress(address);
+      await submitShippingAddress(address);
+      trackEvent('set_shipping_address');
     }
     catch(e) {
+      logError('shipping_address', e);
     }
   }, []);
 

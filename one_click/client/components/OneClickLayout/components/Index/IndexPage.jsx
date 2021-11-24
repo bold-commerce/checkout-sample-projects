@@ -1,11 +1,18 @@
-import React  from 'react';
+import React, { useEffect }  from 'react';
+import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import Card from '../Card';
 import { LineItems } from '../LineItems';
-import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import { useAnalytics } from '../../../../hooks';
 
 
 const IndexPage = () => {
   const { state } = useCheckoutStore();
+  const trackEvent = useAnalytics();
+
+  useEffect(() => {
+    trackEvent('landing_page');
+  }, []);
+
   return (
     <>
       <LineItems />
