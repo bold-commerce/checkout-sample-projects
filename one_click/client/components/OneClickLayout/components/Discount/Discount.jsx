@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { InputField, Button, Message } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
+import { useAnalytics, useErrorLogging } from '../../../../hooks';
 
 export const Discount = ({
   discountApplied, discountCode, applyDiscount, removeDiscount
@@ -11,8 +12,9 @@ export const Discount = ({
   const [discount, setDiscount] = useState(discountCode);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState(null);
   const [status, setStatus] = useState({});
+  const trackEvent = useAnalytics();
+  const logError = useErrorLogging();
 
   /**
   * Opens the discount modal
@@ -37,10 +39,12 @@ export const Discount = ({
               }
             }
           });
+          trackEvent('apply_discount_code');
       } catch(e) {
         setStatus({
           errors: e.body.errors,
-        })
+        });
+        logError('discount_code', e);
       }
       setLoading(false);
   };
@@ -48,14 +52,15 @@ export const Discount = ({
   const removeAndSubmitDiscount = async (discount) => {
     setLoading(true);
     try {
-
       await removeDiscount(discount);
       // TODO: check if the discount was removed
       submitDiscount(discount, discountStatus='existing');
+      trackEvent('apply_discount_code');
     } catch(e) {
       setStatus({
         errors: e.body.errors,
       })
+      logError('discount_code', e);
     }
     setLoading(false);
 };
