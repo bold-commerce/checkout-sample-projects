@@ -1,15 +1,36 @@
-import React  from 'react';
+import React, { useCallback, useEffect, useState }  from 'react';
 import Card from '../Card';
 import { LineItems } from '../LineItems';
-import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import { useCheckoutStore, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { Price } from '@boldcommerce/stacks-ui/lib';
+import LoadingState from '../LoadingState/LoadingState';
 
 
 const IndexPage = () => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
-  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
+  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shipping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
   const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
+  const { submitShippingAddress } = useShippingAddress();
+  const [loading, setLoading] = useState(false);
+  
+  const setDefaultAddress = useCallback(async () => {
+    setLoading(true);
+    try {
+      await submitShippingAddress(state.applicationState.customer.saved_addresses[0]);
+    } catch(e) {
+      setLoading(false);
+    }
+    setLoading(false);
+  }, [state]);
+
+  useEffect(() => {
+    //if customer hasn't set a shipping address yet and they have a saved shipping address, set the shipping address to the first one. 
+    if(addresses.shipping.length == 0 && state.applicationState.customer.saved_addresses.length > 0){
+      setDefaultAddress();
+    }
+  }, []);
+
   return (
     <>
       <LineItems />
@@ -27,9 +48,10 @@ const IndexPage = () => {
       <Card
         title={"Shipping"}
         component={"/shipping"}
-        description={addresses.shipping.first_name ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
+        description={ !loading ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : ''}
       >
-      { 
+      { (loading && <LoadingState/>) || 
+      ( 
         shipping.selected_shipping &&
         <>
         <div>
@@ -42,7 +64,7 @@ const IndexPage = () => {
         </div>
         <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
         </>
-      }
+      )}
       </Card>
       <Card
         title={"Payment"}
