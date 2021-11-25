@@ -1,0 +1,21 @@
+.FieldSet.InventoryIssues__Section {
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 16px 0;
+}
+
+.Checkout__InventoryIssues {
+  width: 100%;
+  padding: 35px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.Checkout__ConfirmButton {
+  background: #4e4e4e;
+  color: #fff;
+}
+
+.InventoryIssues__Section p {
+  color: rgba(0,0,0,0.65);
+}

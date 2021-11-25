@@ -1,0 +1,66 @@
+.OrderSummaryItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  align-items: center;
+}
+
+.OrderSummaryItem__Title {
+  color: #737373;
+}
+
+.OrderSummaryItem__Amount {
+  color: #3A3A3A;
+}
+
+.OrderSummaryItem--removable {
+  display: block;
+}
+
+.OrderSummaryItem__Description {
+  display: flex;
+  margin-top: 10px;
+}
+
+.OrderSummaryItem__Label {
+  flex: 1;
+  color: #737373;
+}
+
+.OrderSummaryItem__Amount {
+  display: flex;
+  color: #3A3A3A;
+  align-items: center;
+}
+
+.OrderSummaryItem__Amount .stx-price__amount {
+  font-size: inherit;
+  color: inherit;
+}
+
+.Breakdown__Section {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.Breakdown__Section.Breakdown__Section--Total .OrderSummaryItem__Title {
+  font-size: 16px;
+}
+
+.Breakdown__Section.Breakdown__Section--Total .OrderSummaryItem__Amount {
+  font-size: 24px;
+}
+
+.OrderSummaryItem__Action {
+  border: none;
+  background: none;
+  height: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  margin-right: 5px;
+}
