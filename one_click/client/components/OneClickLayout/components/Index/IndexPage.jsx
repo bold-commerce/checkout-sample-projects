@@ -17,7 +17,7 @@ const IndexPage = () => {
   const setDefaultAddress = useCallback(async () => {
     setLoading(true);
     try {
-      await submitShippingAddress(state.applicationState.customer.saved_addresses[0]);
+      await submitShippingAddress(customer.saved_addresses[0]);
     } catch(e) {
       setLoading(false);
     }
@@ -26,7 +26,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     //if customer hasn't set a shipping address yet and they have a saved shipping address, set the shipping address to the first one. 
-    if(addresses.shipping.length == 0 && state.applicationState.customer.saved_addresses.length > 0){
+    if(addresses.shipping.length == 0 && customer.saved_addresses.length > 0){
       setDefaultAddress();
     }
   }, []);
