@@ -1,14 +1,18 @@
 import React, { useCallback, useContext, useEffect, useState }  from 'react';
 import Card from '../Card';
+import classNames from 'classnames';
+import { Price } from '@boldcommerce/stacks-ui/lib';
 import { LineItems } from '../LineItems';
 import { useCheckoutStore, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { Price } from '@boldcommerce/stacks-ui/lib';
 import LoadingState from '../LoadingState/LoadingState';
 import { Header } from '../Header';
 import { AppContext } from '../../context/AppContext';
+import { PaymentMethod } from '../Payment';
+import { CheckoutButton } from '../CheckoutButton';
 
 
-const IndexPage = () => {
+const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
   const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shipping.address_line_1}, ${addresses.shipping.address_line_2}` : addresses.shipping.address_line_1;
@@ -35,11 +39,12 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <div className="IndexPage">
+    <div className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName}/>
       <LineItems />
       <Card
         title={"Summary"}
+        handleClick={() => onSectionChange('summary')}
         component={"/summary"}
         overview={<Price amount={order_total} />}
       />
@@ -51,8 +56,8 @@ const IndexPage = () => {
       )}
       <Card
         title={"Shipping"}
-        component={"/shipping"}
-        description={ !loading ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : ''}
+        handleClick={() => onSectionChange('shipping')}
+        description={!loading ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
       >
       { (loading && <LoadingState/>) || 
       ( 
@@ -87,7 +92,8 @@ const IndexPage = () => {
           </div>
       }
       </Card>
-
+      <PaymentMethod />
+      <CheckoutButton className="CheckoutButton"/>
     </div>
   )
 };

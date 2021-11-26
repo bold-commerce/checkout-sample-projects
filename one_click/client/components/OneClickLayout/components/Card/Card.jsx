@@ -22,7 +22,7 @@ import { LayoutContext } from '../../context/LayoutContext';
  * }} props
  * @returns
  */
-const Card = ({title, description, component, overview, action, children, type}) => {
+const Card = ({title, description, handleClick, overview, action, children, type}) => {
 
   const {openModal, setOpenModal} = useContext(LayoutContext);
   const paymentCard = type === 'paymentCard';
@@ -35,7 +35,7 @@ const Card = ({title, description, component, overview, action, children, type})
       <div className="Card__Title">
         {paymentCard ?
           <span onClick={() => setOpenModal(s => !s) }>{title}</span>
-        : (title ? <Link to={component}>{title}</Link> : null)
+        : (title ? <button type="button" onClick={handleClick}>{title}</button> : null)
         }
       </div>
       {(!paymentCard || !openModal) && (
@@ -59,7 +59,7 @@ const Card = ({title, description, component, overview, action, children, type})
 
 Card.propTypes = {
   title: PropTypes.string,
-  component: PropTypes.string,
+  onChangeSection: PropTypes.func,
   overview: PropTypes.node,
   description: PropTypes.string,
   action: PropTypes.shape({

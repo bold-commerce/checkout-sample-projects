@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import './BackButton.css';
 
-const BackButton = () => {
+const BackButton = ({ onClick }) => {
   return (
     <div>
-      <Link to="/">
-        <button className="back-btn" type="button">Back</button>
-      </Link>
+      <button className="back-btn" type="button" onClick={onClick}>Back</button>
     </div>
   );
 };

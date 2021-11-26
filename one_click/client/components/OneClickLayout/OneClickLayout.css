@@ -27,33 +27,22 @@ body {
 
 #checkout-app {
   display: grid;
-  /* place-items: center; */
-  margin-top: 10%;
   justify-items: center;
   width: 100vw;
   height: 100vh;
 }
 
-.Checkout {
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 auto;
-  position: relative;
-  max-width: 480px;
-  background: #ffffff;
-  width: 100%;
-}
-
-.Checkout__Main {
-  position: relative;
-}
-
-.Checkout__Summary,
 .Checkout__Main {
   max-width: 480px;
   width: 100%;
-  flex: 1;
-  padding: 16px, 32px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: clip;
+}
+
+.Checkout__Form {
+  position: relative;
+  height: 100%;
 }
 
 .FieldSet {
@@ -66,9 +55,10 @@ body {
 }
 
 .FieldSet__Heading {
-  font-size: 20px;
-  line-height: 30px;
-  padding: 0 5px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .FieldGroup {
@@ -83,10 +73,6 @@ body {
 .SelectField {
   display: block;
   cursor: pointer;
-}
-
-.Checkout__Summary {
-  background: #fafafb;
 }
 
 .SummaryBlock {
@@ -114,85 +100,29 @@ h1.Section__Title {
   color: rgba(0, 0, 0, 0.9);
 }
 
-.Checkout__Form > div > div {
+.Shipping,
+.Summary {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+}
+
+.Sidebar {
+  transition: all 0.6s;
+  padding: 16px 32px;
   height: 100%;
-  overflow-x: hidden; /* ?h?o?w? ?w?o?r?k? */
+  overflow-y: scroll;
 }
 
-.fade-enter {
-  transform: translate(100%, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.fade-enter-active {
+.Sidebar--Show {
   transform: translate(0, 0);
-  transition: transform 1500ms linear;
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-}
-.fade-exit {
-  transform: translate(0, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.fade-exit-active {
-  transform: translate(100%, 0);
-  transition: transform 1500ms linear;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
- 
-.IndexPage.fade-enter {
-  position: static;
+.Sidebar--Hide {
+  transform: translate(100%, 0);
+}
+
+.IndexPage--Hide {
   transform: translate(-100%, 0);
 }
-
-.IndexPage.fade-enter-active {
-  transform: translate(0%, 0);
-  transition: transform 1500ms linear;
-  position: static;
-}
-
-
-.IndexPage.fade-exit {
-  transform: translate(0, 0);
-  position: static;
-}
-
-.IndexPage.fade-exit-active {
-  transform: translate(-100%, 0);
-  transition: transform 1500ms linear;  
-  position: static;
-
-}
-
-/* 
-THE OLD STUFF
-
-.fade-enter {
-  opacity: 0;
-  transform: scale(0, 1);
-  transform-origin: right;
-}
-.fade-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 150ms, transform 150ms;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transform: scale(0, 1);
-  transition: opacity 150ms, transform 150ms;
-}
-
-*/
