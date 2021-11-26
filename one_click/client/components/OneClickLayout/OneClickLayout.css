@@ -27,7 +27,9 @@ body {
 
 #checkout-app {
   display: grid;
-  place-items: center;
+  /* place-items: center; */
+  margin-top: 10%;
+  justify-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -42,12 +44,16 @@ body {
   width: 100%;
 }
 
+.Checkout__Main {
+  position: relative;
+}
+
 .Checkout__Summary,
 .Checkout__Main {
   max-width: 480px;
   width: 100%;
   flex: 1;
-  padding: 32px;
+  padding: 16px, 32px;
 }
 
 .FieldSet {
@@ -98,6 +104,78 @@ body {
   margin: 0;
 }
 
+h1.Section__Title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.Checkout__Form > div > div {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* ?h?o?w? ?w?o?r?k? */
+}
+
+.fade-enter {
+  transform: translate(100%, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fade-enter-active {
+  transform: translate(0, 0);
+  transition: transform 1500ms linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+.fade-exit {
+  transform: translate(0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fade-exit-active {
+  transform: translate(100%, 0);
+  transition: transform 1500ms linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+ 
+.IndexPage.fade-enter {
+  position: static;
+  transform: translate(-100%, 0);
+}
+
+.IndexPage.fade-enter-active {
+  transform: translate(0%, 0);
+  transition: transform 1500ms linear;
+  position: static;
+}
+
+
+.IndexPage.fade-exit {
+  transform: translate(0, 0);
+  position: static;
+}
+
+.IndexPage.fade-exit-active {
+  transform: translate(-100%, 0);
+  transition: transform 1500ms linear;  
+  position: static;
+
+}
+
+/* 
+THE OLD STUFF
+
 .fade-enter {
   opacity: 0;
   transform: scale(0, 1);
@@ -117,12 +195,4 @@ body {
   transition: opacity 150ms, transform 150ms;
 }
 
-h1.Section__Title {
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 36px;
-  color: rgba(0, 0, 0, 0.9);
-}
+*/

@@ -35,7 +35,7 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="IndexPage">
       <Header title={websiteName}/>
       <LineItems />
       <Card
@@ -88,7 +88,7 @@ const IndexPage = () => {
       }
       </Card>
 
-    </>
+    </div>
   )
 };
 
