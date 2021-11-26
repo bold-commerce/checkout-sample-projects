@@ -9,6 +9,7 @@ import { useAnalytics, useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
 import { ProcessingOrder } from '../Processing';
 import { Confirmation } from '../Confirmation';
+import { IndexPage } from '../Index';
 
 const CheckoutForm = () => {
   const { data: lineItems } = useLineItems();
@@ -18,6 +19,7 @@ const CheckoutForm = () => {
   const track = useAnalytics();
   const checkInventory = useInventory();
   const history = useHistory();
+  console.log(location)
 
   const getInventory = async () => {
     const inventory = await checkInventory(lineItems);
@@ -43,23 +45,24 @@ const CheckoutForm = () => {
   }, [orderStatus]);
 
   return (
-    <>
+    <div className="Checkout__Form">
       <TransitionGroup>
         <CSSTransition
-          timeout={150}
+          timeout={1500}
           classNames="fade"
           key={location.key}
         >
           <Switch location={location}>
+            <Route exact path="/confirmation" component={Confirmation} />
             <Route exact path="/processing" component={ProcessingOrder} />
-            <Route exact path="/summary" component={Summary} />
             <Route exact path="/inventory" component={Inventory} />
             <Route exact path="/shipping" component={Shipping} />
-            <Route exact path="/confirmation" component={Confirmation} />
+            <Route exact path="/" component={IndexPage} />
+            <Route exact path="/summary" component={Summary} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>
-    </>
+    </div>
   )};
 
 
