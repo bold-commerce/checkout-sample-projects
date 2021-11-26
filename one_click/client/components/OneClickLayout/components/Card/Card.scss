@@ -24,7 +24,16 @@
     text-decoration-line: underline;
 
     a, span {
-      color: var(--color-primary);    }
+      color: var(--color-primary);    
+    }
+
+    button {
+      color: var(--color-primary);
+      font: inherit;
+      text-decoration: inherit;
+      border: none;
+      background-color: unset;
+    }
   }
 
   &__Overview {

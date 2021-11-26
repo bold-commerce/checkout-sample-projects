@@ -6,7 +6,7 @@ import {
 import './Product.css';
 
 const Product = ({
-  title, image, quantity, lineItemKey, description, onQuantityChange, totalPrice, onRemove, readOnly = false,
+  title, image, quantity, description, totalPrice,
 }) => (
   <>
     <div className="CartItem__ImageDescriptionWrapper">

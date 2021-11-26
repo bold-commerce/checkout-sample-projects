@@ -1,7 +1,6 @@
-import React, { useEffect }  from 'react';
+import React, { useEffect, useState }  from 'react';
 import { Route, Switch } from "react-router-dom";
 import { useLocation, useHistory} from 'react-router';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useCheckoutStore, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
@@ -19,7 +18,7 @@ const CheckoutForm = () => {
   const track = useAnalytics();
   const checkInventory = useInventory();
   const history = useHistory();
-  console.log(location)
+  const [openSection, setOpenSection] = useState(null);
 
   const getInventory = async () => {
     const inventory = await checkInventory(lineItems);
@@ -38,6 +37,7 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     if (orderStatus === 'processing') {
+      setOpenSection(null);
       history.push('/processing');
     } else if (orderStatus === 'completed') {
       history.push(`/confirmation?public_order_id=${state.publicOrderId}`);
@@ -46,22 +46,16 @@ const CheckoutForm = () => {
 
   return (
     <div className="Checkout__Form">
-      <TransitionGroup>
-        <CSSTransition
-          timeout={1500}
-          classNames="fade"
-          key={location.key}
-        >
-          <Switch location={location}>
-            <Route exact path="/confirmation" component={Confirmation} />
-            <Route exact path="/processing" component={ProcessingOrder} />
-            <Route exact path="/inventory" component={Inventory} />
-            <Route exact path="/shipping" component={Shipping} />
-            <Route exact path="/" component={IndexPage} />
-            <Route exact path="/summary" component={Summary} />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
+      <Switch location={location}>
+        <Route exact path="/confirmation" component={Confirmation} />
+        <Route exact path="/processing" component={ProcessingOrder} />
+        <Route exact path="/inventory" component={Inventory} />
+        <Route exact path="/">
+          <IndexPage onSectionChange={setOpenSection} show={openSection===null}/>
+        </Route>
+      </Switch>
+      <Shipping show={openSection==='shipping'} onBack={() => setOpenSection(null)} />
+      <Summary show={openSection==='summary'}  onBack={() => setOpenSection(null)} />
     </div>
   )};
 

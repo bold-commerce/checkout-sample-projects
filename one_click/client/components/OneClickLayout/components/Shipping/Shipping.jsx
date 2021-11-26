@@ -3,10 +3,11 @@ import { useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldco
 import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
-import './Shipping.css';
 import { Header } from '../Header';
+import classNames from 'classnames';
+import './Shipping.css';
 
-const Shipping = () => {
+const Shipping = ({ show, onBack }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
@@ -21,11 +22,11 @@ const Shipping = () => {
   const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching';
 
   return (
-    <div className="Shipping">
-      <Header title={"Shipping"}/>
-      <BackButton />
+    <div className={classNames('Sidebar Shipping', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
+      <Header title={"Shipping"} />
+      <BackButton onClick={onBack} />
       <section className="Shipping__ShippingAddress">
-        <h3>Shipping address</h3>
+        <h3 className="FieldSet__Heading">Shipping address</h3>
         <ShippingAddressList
           addresses={savedAddresses}
           onChange={(address) => handleSubmit(address)}

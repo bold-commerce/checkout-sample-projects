@@ -1,3 +1,7 @@
+.Inventory__Main {
+    padding: 16px 32px;
+}
+
 .Inventory__Message {
     display: flex;
     flex-direction: column;

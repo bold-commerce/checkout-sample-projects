@@ -26,5 +26,5 @@ button.back-btn::before {
   width: 0.75em;
   vertical-align: middle;
   transform: rotate(-135deg);
-  margin-right: 10px;
+  margin: 0 5px;
 }
