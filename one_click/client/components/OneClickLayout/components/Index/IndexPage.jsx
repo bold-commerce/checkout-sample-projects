@@ -22,7 +22,7 @@ const IndexPage = () => {
       setLoading(false);
     }
     setLoading(false);
-  }, [state]);
+  }, [customer.saved_addresses]);
 
   useEffect(() => {
     //if customer hasn't set a shipping address yet and they have a saved shipping address, set the shipping address to the first one. 
