@@ -1,6 +1,6 @@
 .ConfirmationPage {
     display: grid;
-    gap: 16px
+    gap: 16px;
 }
 
 .ConfirmationPage h1 {

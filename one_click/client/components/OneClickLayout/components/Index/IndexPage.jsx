@@ -1,20 +1,24 @@
 import React  from 'react';
 import Card from '../Card';
-import { LineItems } from '../LineItems';
-import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import classNames from 'classnames';
 import { Price } from '@boldcommerce/stacks-ui/lib';
+import { LineItems } from '../LineItems';
+import { PaymentMethod } from '../Payment';
+import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import { CheckoutButton } from '../CheckoutButton';
 
 
-const IndexPage = () => {
+const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
-  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
-  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
+  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shipping.address_line_1}, ${addresses.shipping.address_line_2}` : addresses.shipping.address_line_1;
+  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${addresses.billing.address_line_2}` : addresses.billing.address_line_1;
   return (
-    <div className="IndexPage">
+    <div className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <LineItems />
       <Card
         title={"Summary"}
+        handleClick={() => onSectionChange('summary')}
         component={"/summary"}
         overview={<Price amount={order_total} />}
       />
@@ -26,7 +30,7 @@ const IndexPage = () => {
       )}
       <Card
         title={"Shipping"}
-        component={"/shipping"}
+        handleClick={() => onSectionChange('shipping')}
         description={addresses.shipping.first_name ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
       >
       { 
@@ -61,7 +65,8 @@ const IndexPage = () => {
           </div>
       }
       </Card>
-
+      <PaymentMethod />
+      <CheckoutButton className="CheckoutButton"/>
     </div>
   )
 };

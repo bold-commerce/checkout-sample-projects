@@ -25,7 +25,7 @@ export const ShippingLines = ({
   return (
     <section className="FieldSet FieldSet--ShippingMethod">
       <div className="FieldSet__Header">
-        <div className="FieldSet__Heading">Shipping method</div>
+        <h3 className="FieldSet__Heading">Shipping method</h3>
       </div>
       {
         shippingLinesFetching ? <LoadingState />

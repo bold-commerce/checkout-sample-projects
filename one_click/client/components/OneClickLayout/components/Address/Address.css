@@ -58,18 +58,6 @@
   flex: 1;
 }
 
-@media screen and (max-width: 599px) {
-  .FieldSet--Address .FieldGroup {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .FieldSet--Address .SelectField {
-    margin: 5px;
-    width: 97%;
-  }
-}
-
 .stx-field--alert .stx-field__message {
   margin: 0 5px;
   font-style: normal;
@@ -80,12 +68,4 @@
 
 .FieldGroup.FieldGroup__Country {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-@media screen and (min-width: 599px) {
-  .FieldGroup.FieldGroup__Country {
-    grid-auto-flow: rows;
-  }
 }

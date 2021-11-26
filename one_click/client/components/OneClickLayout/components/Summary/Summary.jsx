@@ -5,8 +5,10 @@ import { Price } from '@boldcommerce/stacks-ui/lib';
 import { BackButton } from '../BackButton';
 import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import './Summary.scss';
+import classNames from 'classnames';
+import { CheckoutButton } from '../CheckoutButton';
 
-const Summary = () => {
+const Summary = ({ show, onBack }) => {
     const { data: shipping } = useShippingLines();
     const { data: discount, removeDiscount } = useDiscount();
     const { state } = useCheckoutStore();
@@ -45,9 +47,9 @@ const Summary = () => {
     }
 
     return(
-        <div className="Summary">
+        <div className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
             <h1 className="Section__Title">Summary</h1>
-            <BackButton />
+            <BackButton onClick={onBack} />
             <section className="Summary__OrderSummary">
                 <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">
                     <SummaryLine
@@ -76,6 +78,7 @@ const Summary = () => {
                     <Price className="summary-total-price" amount={orderTotals.total} />
                 </div>
             </section>
+            <CheckoutButton className="CheckoutButton" />
         </div>
     );
 };
