@@ -10,6 +10,7 @@ import { LayoutContext } from '../../context/LayoutContext';
 
 import classnames from 'classnames';
 import './Payment.css';
+import { CheckoutButton } from '../CheckoutButton';
 
 const PaymentMethod = ({ billingAddress, shippingLines }) => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
   }
 
   return (
+    <>
       <div className='Payment'>
         <section className={classnames(
           {'hidden': hidePaymentComponent || !openModal,
@@ -50,6 +52,8 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
           </div>
         </section>
       </div>
+      <CheckoutButton className={"CheckoutButton"}/>
+    </>
   );
 };
 

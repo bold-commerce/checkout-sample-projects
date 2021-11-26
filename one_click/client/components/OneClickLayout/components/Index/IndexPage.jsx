@@ -11,7 +11,7 @@ const IndexPage = () => {
   const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
   const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
   return (
-    <>
+    <div className="IndexPage">
       <LineItems />
       <Card
         title={"Summary"}
@@ -62,7 +62,7 @@ const IndexPage = () => {
       }
       </Card>
 
-    </>
+    </div>
   )
 };
 

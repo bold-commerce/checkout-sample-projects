@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useCheckoutStore, useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
@@ -11,7 +11,7 @@ const Shipping = () => {
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
   const handleSubmit = useCallback(async (address) => {
     try {
-      const response = await submitShippingAddress(address);
+      await submitShippingAddress(address);
     }
     catch(e) {
     }
