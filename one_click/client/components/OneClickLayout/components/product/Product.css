@@ -6,8 +6,8 @@
 }
 
 .CartItem {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
 }
 
 .CartItem__ImageDescriptionWrapper {
@@ -17,24 +17,10 @@
   align-items: flex-start;
 }
 
-@media screen and (max-width: 599px) {
-  .CartItem__ImageDescriptionWrapper {
-    flex: 1.5;
-  }
-}
-
 .CartItem__QuantityPriceWrapper {
   display: grid;
   grid-auto-flow: row;
   justify-content: end;
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem__QuantityPriceWrapper {
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-  }
 }
 
 .CartItem__ProductImageWrapper {
@@ -50,12 +36,6 @@
 
 .CartItem__ImageDescriptionWrapper .stx-image {
   border: none;
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem__ProductImageWrapper {
-    padding: 3px;
-  }
 }
 
 .CartItem__ProductImageWrapper .stx-image--content {
@@ -77,12 +57,6 @@
   justify-content: center;
   align-items: flex-start;
   padding: 0 20px;
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem .CartItem__ProductDetails {
-    padding: 0 10px;
-  }
 }
 
 .CartItem .CartItem__ProductDetails .stx-details__description {
@@ -107,13 +81,6 @@
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 599px) {
-  .CartItem .CartItem__ProductDetails a {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
 .CartItem .CartItem__ProductDetails .stx-button {
   padding: 0;
   margin: 7px 0 0 0;
@@ -134,16 +101,6 @@
   font-size: 16px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.65);
-}
-
-@media screen and (max-width: 599px) {
-  .CartItem__ProductPrice .stx-price__amount {
-    margin: unset;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-  }
 }
 
 .ProductQuantity__Decrement,

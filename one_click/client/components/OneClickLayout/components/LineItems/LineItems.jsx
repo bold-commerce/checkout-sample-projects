@@ -37,15 +37,12 @@ LineItems.propTypes = {
 
 const MemoizedLineItems = React.memo(LineItems);
 
-const LineItemsContainer = ({ readOnly }) => {
-  const { data: lineItems , updateLineItemQuantity, removeLineItem } = useLineItems();
+const LineItemsContainer = () => {
+  const { data: lineItems } = useLineItems();
 
   return (
     <MemoizedLineItems
       lineItems={lineItems}
-      updateLineItemQuantity={updateLineItemQuantity}
-      removeLineItem={removeLineItem}
-      readOnly={readOnly}
     />
   );
 };

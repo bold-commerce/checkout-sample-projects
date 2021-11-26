@@ -59,12 +59,12 @@ app.get('/', async (req, res) => {
       "quantity": 1,
       "line_item_key": "abc123"
     },{    
-    //   "sku":"DPB",
-    //   "quantity": 3,
-    //   "line_item_key": "Double PB"
-    // },{
+      "sku":"CGLD-MO",
+      "quantity": 3,
+      "line_item_key": "SOAP"
+    },{
       "sku":"OCG",
-      "quantity": 2,
+      "quantity": 20,
       "line_item_key": "GG"
     }],
   };

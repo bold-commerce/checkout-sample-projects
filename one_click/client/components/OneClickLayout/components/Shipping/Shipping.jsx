@@ -4,8 +4,9 @@ import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
 import './Shipping.css';
+import classNames from 'classnames';
 
-const Shipping = () => {
+const Shipping = ({ show, onBack }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
@@ -20,11 +21,11 @@ const Shipping = () => {
   const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching';
 
   return (
-    <div className="Shipping">
+    <div className={classNames('Sidebar Shipping', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
       <h1 className="Section__Title">Shipping</h1>
-      <BackButton />
+      <BackButton onClick={onBack} />
       <section className="Shipping__ShippingAddress">
-        <h3>Shipping address</h3>
+        <h3 className="FieldSet__Heading">Shipping address</h3>
         <ShippingAddressList
           addresses={savedAddresses}
           onChange={(address) => handleSubmit(address)}
