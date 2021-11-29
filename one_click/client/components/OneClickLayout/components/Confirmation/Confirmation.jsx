@@ -1,7 +1,7 @@
+import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import Button from '@boldcommerce/stacks-ui/lib/components/button/Button';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import './Confirmation.css'
 
 const Confirmation = () => {
@@ -9,7 +9,7 @@ const Confirmation = () => {
     const { addresses, customer, payments, shipping} = state.applicationState;
 
     return(
-        <div className='Sidebar ConfirmationPage'>
+        <div className='ConfirmationPage'>
             <h1>Thank you{ customer.first_name && ', ' + customer.first_name }!</h1>
             <div className='confirmation-order'>
                 <h2>Your order is confirmed</h2>

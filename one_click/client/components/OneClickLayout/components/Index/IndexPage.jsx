@@ -9,8 +9,6 @@ import LoadingState from '../LoadingState/LoadingState';
 import { Header } from '../Header';
 import { AppContext } from '../../context/AppContext';
 import { PaymentMethod } from '../Payment';
-import { CheckoutButton } from '../CheckoutButton';
-
 
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
@@ -37,6 +35,9 @@ const IndexPage = ({ onSectionChange, show }) => {
       setDefaultAddress();
     }
   }, []);
+
+  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
+  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
 
   return (
     <div className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
@@ -93,7 +94,6 @@ const IndexPage = ({ onSectionChange, show }) => {
       }
       </Card>
       <PaymentMethod />
-      <CheckoutButton className="CheckoutButton"/>
     </div>
   )
 };
