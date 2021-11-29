@@ -5,7 +5,7 @@ import { Price } from '@boldcommerce/stacks-ui/lib';
 import { LineItems } from '../LineItems';
 import { PaymentMethod } from '../Payment';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-
+import { CheckoutButton } from '../CheckoutButton';
 
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
@@ -65,6 +65,7 @@ const IndexPage = ({ onSectionChange, show }) => {
       }
       </Card>
       <PaymentMethod />
+      <CheckoutButton className="CheckoutButton" />
     </div>
   )
 };
