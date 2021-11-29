@@ -5,6 +5,7 @@ import { Price } from '@boldcommerce/stacks-ui/lib';
 import { BackButton } from '../BackButton';
 import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import './Summary.scss';
+import { Header } from '../Header';
 
 const Summary = () => {
     const { data: shipping } = useShippingLines();
@@ -46,7 +47,7 @@ const Summary = () => {
 
     return(
         <div className="Summary">
-            <h1 className="Section__Title">Summary</h1>
+            <Header title={"Summary"}/>
             <BackButton />
             <section className="Summary__OrderSummary">
                 <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">
