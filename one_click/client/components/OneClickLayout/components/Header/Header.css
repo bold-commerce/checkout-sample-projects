@@ -1,0 +1,24 @@
+.Header {
+    display: grid;
+    grid-template-columns: auto 50px;
+}
+
+.Header__Title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(0, 0, 0, 0.9); 
+}
+
+.Header__Times {
+    justify-self: end;
+    align-self: center;
+    border: none;
+    background-color: inherit;
+}
+
+.Shipping .Header, .Summary .Header{
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}

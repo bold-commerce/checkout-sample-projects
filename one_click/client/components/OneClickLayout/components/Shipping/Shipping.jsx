@@ -4,6 +4,7 @@ import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
 import ShippingLines from '../ShippingLines/ShippingLines';
 import './Shipping.css';
+import { Header } from '../Header';
 
 const Shipping = () => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
@@ -21,7 +22,7 @@ const Shipping = () => {
 
   return (
     <div className="Shipping">
-      <h1 className="Section__Title">Shipping</h1>
+      <Header title={"Shipping"}/>
       <BackButton />
       <section className="Shipping__ShippingAddress">
         <h3>Shipping address</h3>
