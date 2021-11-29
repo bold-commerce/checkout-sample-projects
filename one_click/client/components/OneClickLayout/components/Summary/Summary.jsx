@@ -9,7 +9,6 @@ import classNames from 'classnames';
 import { CheckoutButton } from '../CheckoutButton';
 import './Summary.scss';
 import classNames from 'classnames';
-import { CheckoutButton } from '../CheckoutButton';
 
 const Summary = ({ show, onBack }) => {
     const { data: shipping } = useShippingLines();
