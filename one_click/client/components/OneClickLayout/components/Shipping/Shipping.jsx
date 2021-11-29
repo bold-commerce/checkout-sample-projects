@@ -6,7 +6,6 @@ import ShippingLines from '../ShippingLines/ShippingLines';
 import { Header } from '../Header';
 import classNames from 'classnames';
 import './Shipping.css';
-import classNames from 'classnames';
 
 const Shipping = ({ show, onBack }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
