@@ -9,7 +9,7 @@ const Confirmation = () => {
     const { addresses, customer, payments, shipping} = state.applicationState;
 
     return(
-        <div className='ConfirmationPage'>
+        <div className='Sidebar ConfirmationPage'>
             <h1>Thank you{ customer.first_name && ', ' + customer.first_name }!</h1>
             <div className='confirmation-order'>
                 <h2>Your order is confirmed</h2>

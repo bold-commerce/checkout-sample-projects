@@ -1,16 +1,14 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import EmptyState from '../EmptyState/EmptyState';
-import { useLocation } from 'react-router-dom';
-import { useBillingAddress, useShippingLines } from '@boldcommerce/checkout-react-components';
-import { BillingAddress } from '../BillingAddress';
-import { Discount } from '../Discount';
-import PaymentIframe from './PaymentIframe';
-import { LayoutContext } from '../../context/LayoutContext';
-
 import classnames from 'classnames';
+import EmptyState from '../EmptyState/EmptyState';
+import PaymentIframe from './PaymentIframe';
+import { Discount } from '../Discount';
+import { useLocation } from 'react-router-dom';
+import { LayoutContext } from '../../context/LayoutContext';
+import { BillingAddress } from '../BillingAddress';
+import { useBillingAddress, useShippingLines } from '@boldcommerce/checkout-react-components';
 import './Payment.css';
-import { CheckoutButton } from '../CheckoutButton';
 
 const PaymentMethod = ({ billingAddress, shippingLines }) => {
   const location = useLocation();
@@ -52,7 +50,6 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
           </div>
         </section>
       </div>
-      <CheckoutButton className={"CheckoutButton"}/>
     </>
   );
 };

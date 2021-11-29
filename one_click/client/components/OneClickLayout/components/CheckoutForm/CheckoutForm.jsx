@@ -1,7 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { Route, Switch } from "react-router-dom";
 import { useLocation, useHistory} from 'react-router';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useCheckoutStore, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
@@ -39,6 +38,7 @@ const CheckoutForm = () => {
   useEffect(() => {
     if (orderStatus === 'processing') {
       history.push('/processing');
+      setOpenSection(null);
     } else if (orderStatus === 'completed') {
       history.push(`/confirmation?public_order_id=${state.publicOrderId}`);
     }
@@ -47,6 +47,7 @@ const CheckoutForm = () => {
   return (
     <div className="Checkout__Form">
       <Switch location={location}>
+        <Route exact path="/processing" component={ProcessingOrder} />
         <Route exact path="/confirmation" component={Confirmation} />
         <Route exact path="/inventory" component={Inventory} />
         <Route exact path="/">
