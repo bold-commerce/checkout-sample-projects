@@ -9,6 +9,7 @@ import LoadingState from '../LoadingState/LoadingState';
 import { Header } from '../Header';
 import { AppContext } from '../../context/AppContext';
 import { PaymentMethod } from '../Payment';
+import { CheckoutButton } from '../CheckoutButton';
 
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
@@ -94,6 +95,7 @@ const IndexPage = ({ onSectionChange, show }) => {
       }
       </Card>
       <PaymentMethod />
+      <CheckoutButton className="CheckoutButton" />
     </div>
   )
 };
