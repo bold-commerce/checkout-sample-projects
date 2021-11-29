@@ -1,12 +1,13 @@
 import React from 'react';
 import SummaryLine from './SummaryLine';
 import SummaryItem from './SummaryItem';
+import classNames from 'classnames';
 import { Price } from '@boldcommerce/stacks-ui/lib';
+import { Header } from '../Header';
 import { BackButton } from '../BackButton';
+import { CheckoutButton } from '../CheckoutButton';
 import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import './Summary.scss';
-import classNames from 'classnames';
-import { CheckoutButton } from '../CheckoutButton';
 
 const Summary = ({ show, onBack }) => {
     const { data: shipping } = useShippingLines();
@@ -48,7 +49,7 @@ const Summary = ({ show, onBack }) => {
 
     return(
         <div className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
-            <h1 className="Section__Title">Summary</h1>
+            <Header title={"Summary"}/>
             <BackButton onClick={onBack} />
             <section className="Summary__OrderSummary">
                 <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">

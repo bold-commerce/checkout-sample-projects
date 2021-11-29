@@ -1,10 +1,11 @@
 import React, { useCallback } from 'react';
-import { useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
-import { BackButton } from '../BackButton';
-import ShippingAddressList from './ShippingAddressList';
-import ShippingLines from '../ShippingLines/ShippingLines';
-import './Shipping.css';
 import classNames from 'classnames';
+import ShippingLines from '../ShippingLines/ShippingLines';
+import ShippingAddressList from './ShippingAddressList';
+import { Header } from '../Header';
+import { BackButton } from '../BackButton';
+import { useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import './Shipping.css';
 
 const Shipping = ({ show, onBack }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
@@ -22,7 +23,7 @@ const Shipping = ({ show, onBack }) => {
 
   return (
     <div className={classNames('Sidebar Shipping', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
-      <h1 className="Section__Title">Shipping</h1>
+      <Header title={"Shipping"}/>
       <BackButton onClick={onBack} />
       <section className="Shipping__ShippingAddress">
         <h3 className="FieldSet__Heading">Shipping address</h3>

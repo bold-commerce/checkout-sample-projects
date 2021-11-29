@@ -1,19 +1,45 @@
-import React  from 'react';
+import React, { useCallback, useContext, useEffect, useState }  from 'react';
 import Card from '../Card';
 import classNames from 'classnames';
+import LoadingState from '../LoadingState/LoadingState';
 import { Price } from '@boldcommerce/stacks-ui/lib';
 import { LineItems } from '../LineItems';
 import { PaymentMethod } from '../Payment';
-import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { CheckoutButton } from '../CheckoutButton';
+import { useCheckoutStore, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { Price } from '@boldcommerce/stacks-ui/lib';
+import { Header } from '../Header';
+import { AppContext } from '../../context/AppContext';
 
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
-  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
-  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
+  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shipping.address_line_1}, ${addresses.shipping.address_line_2}` : addresses.shipping.address_line_1;
+  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${addresses.billing.address_line_2}` : addresses.billing.address_line_1;
+  const { submitShippingAddress } = useShippingAddress();
+  const [loading, setLoading] = useState(false);
+  const { websiteName } = useContext(AppContext);
+  
+  const setDefaultAddress = useCallback(async () => {
+    setLoading(true);
+    try {
+      await submitShippingAddress(customer.saved_addresses[0]);
+    } catch(e) {
+      setLoading(false);
+    }
+    setLoading(false);
+  }, [customer.saved_addresses]);
+
+  useEffect(() => {
+    //if customer hasn't set a shipping address yet and they have a saved shipping address, set the shipping address to the first one. 
+    if(addresses.shipping.length == 0 && customer.saved_addresses.length > 0){
+      setDefaultAddress();
+    }
+  }, []);
+
   return (
     <div className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
+      <Header title={websiteName}/>
       <LineItems />
       <Card
         title={"Summary"}
@@ -32,7 +58,8 @@ const IndexPage = ({ onSectionChange, show }) => {
         handleClick={() => onSectionChange('shipping')}
         description={addresses.shipping.first_name ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
       >
-      { 
+      { (loading && <LoadingState/>) || 
+      ( 
         shipping.selected_shipping &&
         <>
         <div>
@@ -45,7 +72,7 @@ const IndexPage = ({ onSectionChange, show }) => {
         </div>
         <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
         </>
-      }
+      )}
       </Card>
       <Card
         title={"Payment"}
