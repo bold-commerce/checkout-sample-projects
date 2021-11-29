@@ -5,14 +5,13 @@ import { Price } from '@boldcommerce/stacks-ui/lib';
 import { LineItems } from '../LineItems';
 import { PaymentMethod } from '../Payment';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import { CheckoutButton } from '../CheckoutButton';
 
 
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
-  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shipping.address_line_1}, ${addresses.shipping.address_line_2}` : addresses.shipping.address_line_1;
-  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${addresses.billing.address_line_2}` : addresses.billing.address_line_1;
+  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shippping.address_line_1}, ${address.shipping.address_line_2}` : addresses.shipping.address_line_1;
+  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
   return (
     <div className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <LineItems />
@@ -66,7 +65,6 @@ const IndexPage = ({ onSectionChange, show }) => {
       }
       </Card>
       <PaymentMethod />
-      <CheckoutButton className="CheckoutButton"/>
     </div>
   )
 };
