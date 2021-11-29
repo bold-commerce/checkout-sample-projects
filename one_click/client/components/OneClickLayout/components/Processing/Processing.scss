@@ -1,11 +1,8 @@
 .processing {
     &-page {
-        padding: 16px 32px;
         align-items: center;
-        justify-content: center;
         display: flex;
         flex-direction: column;
-        height: 100%;
     }
 
     &-spinner {

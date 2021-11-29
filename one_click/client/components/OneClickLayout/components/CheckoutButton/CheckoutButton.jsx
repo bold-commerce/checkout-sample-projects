@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router';
-import { Button, Message } from '@boldcommerce/stacks-ui';
+import { useLocation, useHistory } from 'react-router';
+import {
+  Button,
+  Message,
+} from '@boldcommerce/stacks-ui';
 import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
 import { useInventory } from '../../../../hooks';
 import './CheckoutButton.css';
@@ -27,21 +30,27 @@ CheckoutButton.propTypes = {
 
 const CheckoutButtonContainer = ({ className }) => {
   const { state } = useCheckoutStore();
+  const [loading, setLoading] = useState();
+  const location = useLocation();
   const { orderStatus } = state.orderInfo;
   const { processPaymentIframe } = usePaymentIframe();
-  const { data: lineItems } = useLineItems();
-  const [loading, setLoading] = useState();
   const checkInventory = useInventory();
+  const { data: lineItems } = useLineItems();
   const history = useHistory();
 
   const orderErrorMessage = state.errors.order?.public_order_id;
+
+  // Don't show the checkout button on the inventory issues, processing, or confirmation page.
+  const inventoryLocation = location.pathname === '/inventory';
+  const processingPage = location.pathname === '/processing';
+  const orderComplete = location.pathname === '/confirmation';
+  const hideButton = (inventoryLocation || processingPage || orderComplete);
 
   // don't disable checkout button if only error is order error
   const hasErrors = Object.keys(state.errors).some((errorKey) => errorKey != 'order' && state.errors[errorKey] != null);
   const missingAddress = Object.values(state.applicationState.addresses).some(x => x === null || x.length === 0);
   const checkoutButtonDisabled = state.loadingStatus.isLoading || hasErrors ||  missingAddress;
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
-
   const handleCheckout = async() => {
     setLoading(true);
     try {
@@ -59,7 +68,7 @@ const CheckoutButtonContainer = ({ className }) => {
   };
   const onClick = processing ? null : handleCheckout;
 
-  return <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
+  return hideButton ? null : <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
 };
 
 export default CheckoutButtonContainer;
