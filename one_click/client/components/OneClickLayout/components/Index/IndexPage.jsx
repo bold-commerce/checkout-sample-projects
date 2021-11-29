@@ -1,9 +1,11 @@
-import React, { useCallback, useEffect, useState }  from 'react';
+import React, { useCallback, useContext, useEffect, useState }  from 'react';
 import Card from '../Card';
 import { LineItems } from '../LineItems';
 import { useCheckoutStore, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { Price } from '@boldcommerce/stacks-ui/lib';
 import LoadingState from '../LoadingState/LoadingState';
+import { Header } from '../Header';
+import { AppContext } from '../../context/AppContext';
 
 
 const IndexPage = () => {
@@ -13,6 +15,7 @@ const IndexPage = () => {
   const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${address.billing.address_line_2}` : addresses.billing.address_line_1;
   const { submitShippingAddress } = useShippingAddress();
   const [loading, setLoading] = useState(false);
+  const { websiteName } = useContext(AppContext);
   
   const setDefaultAddress = useCallback(async () => {
     setLoading(true);
@@ -33,6 +36,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <Header title={websiteName}/>
       <LineItems />
       <Card
         title={"Summary"}
