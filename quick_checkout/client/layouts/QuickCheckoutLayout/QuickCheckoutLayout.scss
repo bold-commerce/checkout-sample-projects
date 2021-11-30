@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.Checkout {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
+  background: #eceef0;
+  min-height: 100vh;
+}
+
+.stx-field.InputField {
+  display: flex;
+  flex-direction: column;
+}
+
+.stx-input.InputField {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.FieldSet__Label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 3px;
+  color: rgba(0,0,0,0.8);
+}
+
+.FieldSet__Label a {
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #0C92F2;
+}
+
+.FieldSet__Label a:hover {
+  text-decoration: underline;
+}
+
+.stx-field--with-input .stx-input {
+  margin: 0;
+  height: 36px;
+}
+
+.stx-field--with-input .stx-input input {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.stx-field--with-input .stx-input--has-focus {
+  box-shadow: 0px 0px 0px 2px #0a75c2 inset
+}
+
+.stx-field .stx-field__message {
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+
+.stx-field {
+  margin: 0;
+}
+
+.stx-field .stx-select {
+  margin: 0;
+}
+
+.FieldSet__Action {
+  font-size: 12px;
+  text-decoration: none;
+  color: #0C92F2;
+}
+
+.FieldSet__Action:hover {
+  text-decoration: underline;
+}
+
+.FieldSet__Heading {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 7px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.FieldSet--Address {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.FieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.FieldSet {
+  margin-bottom: 16px;
+}
+
+.FieldSet:last-child {
+  margin-bottom: 0;
+}
+
+.ButtonLinkWrapper {
+  text-decoration: none;
+}

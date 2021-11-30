@@ -17,45 +17,45 @@ app.get('/', async (req, res) => {
 
   // TODO: Change this to get data from request instead
   const exampleBody = {
-    customer: {
-      platform_id: "39459641884739",
-      platform_customer_id: "123",
-      email_address: "john.doe@email.com",
-      saved_addresses: [
-        {
-          id: 123,
-          first_name: "John",
-          last_name: "Doe",
-          business_name: "Bold",
-          address_line_1: "50 Fultz Boulevard",
-          address_line_2: "",
-          city: "Winnipeg",
-          province: "Manitoba",
-          country: "Canada",
-          postal_code: "R3Y 0L6",
-          phone_number: "+12042222222",
-          province_code: "MB",
-          country_code: "CA",
-          country_name: "Canada"
-        },
-        {
-          id: 456,
-          first_name: "Jane",
-          last_name: "Doe",
-          business_name: "Bold",
-          address_line_1: "100 Innovation Drive",
-          address_line_2: "",
-          city: "Winnipeg",
-          province: "Manitoba",
-          country: "Canada",
-          postal_code: "R3T 6A8",
-          phone_number: "+12042222222",
-          province_code: "MB",
-          country_code: "CA",
-          country_name: "Canada"
-        },
-      ],
-    },
+    // customer: {
+    //   platform_id: "39459641884739",
+    //   platform_customer_id: "123",
+    //   email_address: "john.doe@email.com",
+    //   saved_addresses: [
+    //     {
+    //       id: 123,
+    //       first_name: "John",
+    //       last_name: "Doe",
+    //       business_name: "Bold",
+    //       address_line_1: "50 Fultz Boulevard",
+    //       address_line_2: "",
+    //       city: "Winnipeg",
+    //       province: "Manitoba",
+    //       country: "Canada",
+    //       postal_code: "R3Y 0L6",
+    //       phone_number: "+12042222222",
+    //       province_code: "MB",
+    //       country_code: "CA",
+    //       country_name: "Canada"
+    //     },
+    //     {
+    //       id: 456,
+    //       first_name: "Jane",
+    //       last_name: "Doe",
+    //       business_name: "Bold",
+    //       address_line_1: "100 Innovation Drive",
+    //       address_line_2: "",
+    //       city: "Winnipeg",
+    //       province: "Manitoba",
+    //       country: "Canada",
+    //       postal_code: "R3T 6A8",
+    //       phone_number: "+12042222222",
+    //       province_code: "MB",
+    //       country_code: "CA",
+    //       country_name: "Canada"
+    //     },
+    //   ],
+    // },
     cart_items: [{
       platform_id: "66",
       quantity: 1,

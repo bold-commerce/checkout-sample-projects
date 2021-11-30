@@ -1,0 +1,25 @@
+.Header__ShopName {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.Checkout__Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  color: #0c92f2;
+}
+
+.Header__CloseButton {
+  background: none;
+  border: none;
+  height: 22px;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    height: 100%;
+    opacity: 0.8;
+  }
+}

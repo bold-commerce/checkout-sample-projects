@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { InputField, SelectField } from '@boldcommerce/stacks-ui/';
-import './Address.css';
 import classNames from 'classnames';
+import './Address.scss';
 
 const Address = ({
   address,
@@ -78,6 +78,8 @@ const Address = ({
             first_name: e.target.value,
           })}
         />
+      </div>
+      <div className="FieldGroup">
         <InputField
           placeholder={hasRequiredFields && requiredAddressFields.includes('last_name') ? 'Last name' : 'Last name (optional)'}
           type="text"
@@ -118,6 +120,8 @@ const Address = ({
             address_line_1: e.target.value,
           })}
         />
+      </div>
+      <div className="FieldGroup">
         <InputField
           placeholder="Apt, suite, etc."
           type="text"
@@ -156,13 +160,12 @@ const Address = ({
         >
           {countryList}
         </SelectField>
-        {
-          address?.country_code
-            && showProvince && (
+      </div>
+      { address?.country_code && (showProvince || showPostalCode ) && (
+        <div className="FieldGroup FieldGroup--Province-Postal">
+          {address?.country_code && showProvince && (
             <SelectField
-              placeholder={
-                `Select a ${provinceLabel}`
-              }
+              placeholder={`Select a ${provinceLabel}`}
               className="SelectField Field--Province"
               value={address?.province_code ?? ''}
               messageType={errors && errorMap?.province && 'alert' || ''}
@@ -173,10 +176,8 @@ const Address = ({
             >
               {provinceList}
             </SelectField>
-          )
-        }
-        {address?.country_code
-          && showPostalCode && (
+          )}
+          {address?.country_code && showPostalCode && (
             <InputField
               placeholder="Postal code / ZIP"
               type="text"
@@ -190,7 +191,8 @@ const Address = ({
               })}
             />
           )}
-      </div>
+        </div>
+      )}
       <div className="FieldGroup">
         <InputField
           placeholder={hasRequiredFields && requiredAddressFields.includes('phone_number') ? 'Phone' : 'Phone (optional)'}

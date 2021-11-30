@@ -12,3 +12,6 @@ export * from './OrderSummary';
 export * from './PaymentMethod';
 export * from './ShippingAddress';
 export * from './ShippingLines';
+export * from './Shipping';
+export * from './Billing';
+export * from './Header';

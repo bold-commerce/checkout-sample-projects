@@ -1,1 +1,1 @@
-export * from './SinglePageLayout';
+export * from './QuickCheckoutLayout';

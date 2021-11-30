@@ -15,20 +15,14 @@
   width: auto;
 }
 
-.stx-field.InputField {
-  display: flex;
-  flex-direction: column;
-}
-
-.stx-input.InputField {
-  padding: 5px;
-  margin: 0 5px;
-}
-
 .FieldSet--CustomerInformation .stx-field--alert .stx-field__message {
   margin: 0 5px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
+}
+
+.CheckoutStep--CustomerInformation {
+  margin-top: 32px;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
-import { SinglePageLayout } from './layouts';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
+import { QuickCheckoutLayout } from './layouts';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <MemoryRouter>
       <CheckoutProvider
         applicationState={window.checkout.applicationState}
         initialData={window.checkout.initialData}
@@ -14,9 +14,9 @@ const App = () => {
         storeIdentifier={window.checkout.storeIdentifier}
         apiBase="https://api.boldcommerce.com/checkout/storefront"
       >
-        <SinglePageLayout />
+        <QuickCheckoutLayout />
       </CheckoutProvider>
-    </BrowserRouter>
+    </MemoryRouter>
   );
 };
 

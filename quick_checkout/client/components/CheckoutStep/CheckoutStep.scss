@@ -1,0 +1,15 @@
+.CheckoutStep__Heading {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0,0,0,0.8);
+  margin-bottom: 16px;
+}
+
+.CheckoutStep__Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CheckoutStep.CheckoutStep--Shipping {
+  margin-top: 42px;
+}

@@ -1,10 +1,10 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useShippingLines, useLoadingStatus, useErrors, useShippingAddress } from '@boldcommerce/checkout-react-components';
+import { Message } from '@boldcommerce/stacks-ui';
 import { LoadingState } from '../LoadingState';
 import { ShippingLineList, EmptyShippingLines } from './components';
-import { Message } from '@boldcommerce/stacks-ui';
-import './ShippingLines.css';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import './ShippingLines.scss';
 
 const ShippingLines = ({ applicationLoading }) => {
   const { data, updateShippingLine, getShippingLines } = useShippingLines();

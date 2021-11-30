@@ -2,6 +2,7 @@ import { useDiscount } from '@boldcommerce/checkout-react-components';
 import { Button, InputField } from '@boldcommerce/stacks-ui';
 import React, { memo, useCallback, useState } from 'react';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import { ExpandIcon } from './components';
 import './DiscountForm.css';
 
 const DiscountForm = () => {
@@ -30,6 +31,7 @@ const MemoizedDiscountForm = memo(({
   const [discount, setDiscount] = useState(discountCode);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [collapsed, setCollapsed] = useState(discountApplied ? false : true);
 
   const handleApply = useCallback(async () => {
     setLoading(true);
@@ -45,6 +47,19 @@ const MemoizedDiscountForm = memo(({
     }
     setLoading(false);
   }, [discount, applyDiscount, logError, trackEvent]);
+
+  if (collapsed) {
+    return (
+      <div className="SummaryBlock Summary__DiscountForm">
+        <div className="DiscountForm">
+          <button className="DiscountForm__ExpandButton" onClick={() => setCollapsed(false)}>
+            <ExpandIcon />
+            <span className="ExpandButton__Text">Discount code</span>
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="SummaryBlock Summary__DiscountForm">

@@ -1,7 +1,7 @@
 .FieldSet--ShippingMethod .RadioButton {
   border: 1px solid #D9D9D9;
   margin-bottom: 0;
-  height: 60px;
+  height: 36px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -9,22 +9,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 10px;
   cursor: pointer;
   position: relative;
 }
 
 .FieldSet--ShippingMethod .RadioButton .stx-radio-field__label {
   position: absolute;
-    left: 0;
-    height: 100%;
-    top: 0;
-    padding-left: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 100%;
 }
 
 .FieldSet--ShippingMethod .RadioButton .stx-field {
@@ -48,4 +48,17 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
+}
+
+.FieldSet.FieldSet--ShippingMethod {
+  margin-top: 16px;
+}
+
+.FieldSet--ShippingMethod .FieldSet__Content {
+  background: #fff;
+}
+
+.FieldSet--ShippingMethod .stx-radio {
+  display: flex;
+  justify-content: center;
 }
