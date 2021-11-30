@@ -1,21 +1,36 @@
 import React from 'react';
 import ShippingAddressList from '../../../client/components/OneClickLayout/components/Shipping/ShippingAddressList';
 import { render } from '@testing-library/react';
+import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
 import {
     exampleAddress,
     exampleSavedAddresses,
-    countries as MOCKcountries, 
-    exampleSavedAddresses as MOCKexampleSavedAddresses
+    countries as MOCKcountries,
+    caProvinces as MOCKprovinces,
+    exampleAddress as MOCKexampleAddress
  } from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
+    useShippingLines: () => ({
+        data: MOCKexampleShippingState,
+        loadindStatus: 'fulfilled',
+        errors: [],
+        updateShippingLines: (() => {})
+    }),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
+    }),
     useShippingAddress: () => ({
-        countryInfo: MOCKcountries,
-        savedAddresses: MOCKexampleSavedAddresses,
-        shippingAddress: [],
-        shippingaddressErrors: null,
-        submitShippingaddress:(() => {})
+        data: MOCKexampleAddress,
+        errors: [],
+        submitShippingAdderess: (() => {})
     })
 }));
 

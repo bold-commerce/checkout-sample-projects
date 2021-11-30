@@ -3,11 +3,17 @@ import IndexPage from '../../../client/components/OneClickLayout/components/Inde
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
+import { testApplicationState as MOCKexampleapplicationState } from '../../utils/applicationStateHelper';
+import {
+    exampleAddress as MOCKexampleAddress,
+    countries as MOCKcountries
+} from '../../utils/addressHelpers';
+import { exampleShippingLines as MOCKexampleShippingLines } from '../../utils/shippingLinesHelper';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
     useLineItems: () => ({
-        lineItems: MOCKexampleLineItems,
+        data: MOCKexampleLineItems,
         updateLineItemQuantity: (() => {}),
         removeLineItem: (() => {})        
     }),
@@ -18,10 +24,47 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
                 orderStatus: ""
             },
             errors: { order: null },
-            loadingStatus: { isLoading: false }
+            loadingStatus: { isLoading: false },
+            applicationState: MOCKexampleapplicationState
         }
     }),
-    usePaymentIframe: () => ({ })
+    usePaymentIframe: () => ({
+        data: {
+            url: 'test.url',
+            loadingStatus: 'fulfilled',
+            paymentIframeOnLoaded: (() => {})
+        }
+    }),
+    useShippingLines: () => ({
+        data: MOCKexampleShippingLines
+    }),
+    useShippingAddress: () => ({
+        submitShippingAddress: (() => {})
+    }),
+    useBillingAddress: () => ({
+        data: MOCKexampleAddress
+    }),
+    useDiscount: () => ({
+        data: '?',
+        applyDiscount: (() => {})
+    }),
+    useBillingSameAsShipping: () => ({
+        data: true,
+        setBillingSameAsShipping: (() => {})
+    }),
+    useCountryInfo: () => ({
+        data: MOCKcountries
+    })
+})).mock('react', () => ({
+    ...jest.requireActual('react'),
+    useContext: () => ({
+        websiteName: 'TestSite'
+    })
+})).mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
+    useLocation: () => ({
+        pathname: '/' 
+    })
 }));
 
 describe('IndexPage', () => {

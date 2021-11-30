@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Summary renders Summary component 1`] = `
+<DocumentFragment>
+  <div
+    class="Sidebar Summary Sidebar--Hide"
+  >
+    <div
+      class="Header"
+    >
+      <h1
+        class="Header__Title"
+      >
+        Summary
+      </h1>
+      <button
+        class="Header__Times"
+      >
+        <svg
+          fill="none"
+          height="20"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.8"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div>
+      <button
+        class="back-btn"
+        type="button"
+      >
+        Back
+      </button>
+    </div>
+    <section
+      class="Summary__OrderSummary"
+    >
+      <div
+        class="Summary__Lines SummaryBlock"
+        data-allow-multiple="true"
+        id="accordianGroup"
+      >
+        <div
+          class="summary-line"
+        >
+          <div
+            class="summary-line-head"
+          >
+            <div
+              class="summary-line-title"
+            >
+              <div
+                class="summary-line-icon"
+              />
+              Subtotal
+            </div>
+            <div
+              class="stx-price summary-line-value stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$230.00
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="summary-line"
+        >
+          <div
+            class="summary-line-head"
+          >
+            <button
+              aria-controls="Line-Shipping"
+              aria-expanded="false"
+              class="summary-btn"
+              id="summary-line-Shipping"
+            >
+              <div
+                class="Accordion-title summary-line-title"
+              >
+                <div
+                  class="summary-line-icon"
+                  style="transform: rotate(0deg);"
+                >
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      opacity="0.8"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                        fill="black"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                Shipping
+              </div>
+              <div
+                class="stx-price summary-line-value stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$20.00
+                </p>
+              </div>
+            </button>
+          </div>
+          <div
+            aria-labelledby="summary-line-Shipping"
+            class="summary-line-content"
+            hidden=""
+            id="summary-line-Shipping-div"
+            role="region"
+          >
+            <div
+              class="summary-line-child"
+            >
+              <div
+                class="summary-child-title"
+              >
+                Standard Shipping
+              </div>
+              <div
+                class="stx-price summary-child-value stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$20.00
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="summary-line"
+        >
+          <div
+            class="summary-line-head"
+          >
+            <div
+              class="summary-line-title"
+            >
+              <div
+                class="summary-line-icon"
+              />
+              Discount
+            </div>
+          </div>
+        </div>
+        <div
+          class="summary-line"
+        >
+          <div
+            class="summary-line-head"
+          >
+            <button
+              aria-controls="Line-Taxes"
+              aria-expanded="false"
+              class="summary-btn"
+              id="summary-line-Taxes"
+            >
+              <div
+                class="Accordion-title summary-line-title"
+              >
+                <div
+                  class="summary-line-icon"
+                  style="transform: rotate(0deg);"
+                >
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      opacity="0.8"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                        fill="black"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                Taxes
+              </div>
+              <div
+                class="stx-price summary-line-value stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$12.00
+                </p>
+              </div>
+            </button>
+          </div>
+          <div
+            aria-labelledby="summary-line-Taxes"
+            class="summary-line-content"
+            hidden=""
+            id="summary-line-Taxes-div"
+            role="region"
+          >
+            <div
+              class="summary-line-child"
+            >
+              <div
+                class="summary-child-title"
+              >
+                GST
+              </div>
+              <div
+                class="stx-price summary-child-value stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$11.25
+                </p>
+              </div>
+            </div>
+            <div
+              class="summary-line-child"
+            >
+              <div
+                class="summary-child-title"
+              >
+                PST
+              </div>
+              <div
+                class="stx-price summary-child-value stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$15.75
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Summary__Total SummaryBlock"
+      >
+        <div>
+          Total
+        </div>
+        <div
+          class="stx-price summary-total-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            CA$242.00
+          </p>
+        </div>
+      </div>
+    </section>
+    <div
+      class="CheckoutButton__Container"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button CheckoutButton"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Complete Order
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

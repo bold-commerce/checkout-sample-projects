@@ -2,16 +2,89 @@ import React from "react";
 import CheckoutForm from '../../../client/components/OneClickLayout/components/CheckoutForm/CheckoutForm'
 import { render } from '@testing-library/react';
 import { MemoryRouter } from "react-router";
-import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers'
+import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
+import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
+import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
+import {
+    exampleAddress as MOCKexampleAddress,
+    countries as MOCKcountries,
+    caProvinces as MOCKprovinces,
+    exampleSavedAddresses as MOCKsavedAddresses
+} from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
+    useCheckoutStore: () => ({
+        state: {
+            orderInfo: {
+                billingSameAsShipping:true,
+                orderStatus: ""
+            },
+            errors: { order: null },
+            loadingStatus: { isLoading: false },
+            applicationState: MOCKapplicationState,
+            orderTotals: {
+                taxesTotal: 1200,
+                subTotal: 23000,
+                total: 24200
+            }
+        }
+    }),
     useLineItems: () => ({
-        lineItems: MOCKexampleLineItems,
-        updateLineItemQuantity: (() => {}),
-        removeLineItems: (() => {})
+        data: MOCKexampleLineItems
+    }),
+    useShippingLines: () => ({
+        data: MOCKexampleShippingState
+    }),
+    useShippingAddress: () => ({
+        data: MOCKexampleAddress,
+        submitShippingAdderess: (() => {})
+    }),
+    useBillingAddress: () => ({
+        data: MOCKexampleAddress
+    }),
+    usePaymentIframe: () => ({
+        data: {
+            url: 'test.url',
+            loadingStatus: 'fulfilled',
+            paymentIframeOnLoaded: (() => {})
+        }
+    }),
+    useDiscount: () => ({
+        data: '?',
+        applyDiscount : (() => {})
+    }),
+    useBillingSameAsShipping: () => ({
+        data: true,
+        setBillingSameAsShipping: (() => {})
+    }),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
+    }),
+    useSavedAddresses: () => ({
+        data: MOCKsavedAddresses
+    }),
+    useLoadingStatus: () => ({
+        shippingAddressLoadingStatus: 'complete',
+        shippingLinesLoadingStatus: 'complete'
     })
-}))
+})).mock('react', () => ({
+    ...jest.requireActual('react'),
+    useContext: () => ({
+        websiteName: 'TestSite'
+    })
+})).mock('react-router', () => ({
+    ...jest.requireActual('react-router'),
+    useLocation: () => ({
+        pathname: '/' 
+    })
+}));
 
 describe('CheckoutForm', () => {
     test('renders CheckoutForm', () => {

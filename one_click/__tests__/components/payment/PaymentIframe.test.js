@@ -2,15 +2,33 @@ import React from "react";
 import { render } from '@testing-library/react';
 import { PaymentIframe } from '../../../client/components/OneClickLayout/components/Payment'
 import { MemoryRouter } from "react-router";
+import {
+    caProvinces as MOCKprovinces,
+    countries as MOCKcountries
+} from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
     usePaymentMethod: () => ({ showPaymentMethod: true }),
     usePaymentIframe: () => ({
-        paymentIframeLoadingStatus: '',
-        paymentIframeUrl: '',
-        paymentIframeHeight: 0,
-        paymentIframeOnLoaded: (() => {})
+        data: {
+            url: 'test.url',
+            loadingStatus: 'fulfilled',
+            paymentIframeOnLoaded: (() => {})
+        }
+    }),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
+    }),
+    useBillingSameAsShipping: () => ({
+        data: true,
+        setBillingSameAsShipping: (() => {})
     })
 }))
 
