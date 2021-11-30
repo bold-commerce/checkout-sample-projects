@@ -1,4 +1,4 @@
-# Checkout Example Projects
+# Checkout Sample Projects
 This is a collection of pre-built checkout templates using the [checkout-react-components](https://www.npmjs.com/package/@boldcommerce/checkout-react-components) library.
 
 ## Examples
