@@ -197,10 +197,10 @@ exports[`Address renders Address component with errors 1`] = `
       class="FieldGroup"
     >
       <div
-        class="stx-field stx-field--alert stx-field--with-input Field Field--FirstName"
+        class="stx-field stx-field--with-input Field Field--FirstName"
       >
         <div
-          class="stx-input stx-input--alert"
+          class="stx-input"
         >
           <input
             class="stx-input__input-element"
@@ -211,17 +211,12 @@ exports[`Address renders Address component with errors 1`] = `
             value=""
           />
         </div>
-        <div
-          class="stx-field__message"
-        >
-          Enter a first name
-        </div>
       </div>
       <div
-        class="stx-field stx-field--alert stx-field--with-input Field Field--LastName"
+        class="stx-field stx-field--with-input Field Field--LastName"
       >
         <div
-          class="stx-input stx-input--alert"
+          class="stx-input"
         >
           <input
             class="stx-input__input-element"
@@ -232,21 +227,16 @@ exports[`Address renders Address component with errors 1`] = `
             value=""
           />
         </div>
-        <div
-          class="stx-field__message"
-        >
-          Enter a last name
-        </div>
       </div>
     </div>
     <div
       class="FieldGroup"
     >
       <div
-        class="stx-field stx-field--alert stx-field--with-input Field Field--Company"
+        class="stx-field stx-field--with-input Field Field--Company"
       >
         <div
-          class="stx-input stx-input--alert"
+          class="stx-input"
         >
           <input
             class="stx-input__input-element"
@@ -256,11 +246,6 @@ exports[`Address renders Address component with errors 1`] = `
             type="text"
             value=""
           />
-        </div>
-        <div
-          class="stx-field__message"
-        >
-          Enter a company name
         </div>
       </div>
     </div>
@@ -324,10 +309,10 @@ exports[`Address renders Address component with errors 1`] = `
       class="FieldGroup FieldGroup__Country"
     >
       <div
-        class="stx-field stx-field--alert stx-field--with-select SelectField Field--Country"
+        class="stx-field stx-field--with-select SelectField Field--Country"
       >
         <div
-          class="stx-select stx-select--with-placeholder stx-select--alert"
+          class="stx-select stx-select--with-placeholder"
         >
           <select
             class="stx-select__select-element"
@@ -365,21 +350,16 @@ exports[`Address renders Address component with errors 1`] = `
             </svg>
           </span>
         </div>
-        <div
-          class="stx-field__message"
-        >
-          Select a country
-        </div>
       </div>
     </div>
     <div
       class="FieldGroup"
     >
       <div
-        class="stx-field stx-field--alert stx-field--with-input Field Field--Phone"
+        class="stx-field stx-field--with-input Field Field--Phone"
       >
         <div
-          class="stx-input stx-input--alert"
+          class="stx-input"
         >
           <input
             class="stx-input__input-element"
@@ -389,11 +369,6 @@ exports[`Address renders Address component with errors 1`] = `
             type="tel"
             value=""
           />
-        </div>
-        <div
-          class="stx-field__message"
-        >
-          Enter a phone number
         </div>
       </div>
     </div>

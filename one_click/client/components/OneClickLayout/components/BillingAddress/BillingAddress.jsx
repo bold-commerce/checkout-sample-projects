@@ -7,7 +7,7 @@ import { useBillingAddress, useBillingSameAsShipping, useCountryInfo } from '@bo
 import './BillingAddress.css';
 
 export const BillingAddress = ({
-  billingAddress, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, onChange, requiredAddressFields,
+  billingAddress, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, requiredAddressFields,
 }) => {
   const [address, setAddress] = useState(billingAddress);
   const { data } = useCountryInfo(address);

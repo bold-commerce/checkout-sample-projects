@@ -1,25 +1,39 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { PaymentMethod } from '../../../client/components/OneClickLayout/components/Payment/Payment'
+import { PaymentMethod } from '../../../client/components/OneClickLayout/components/Payment'
 import { MemoryRouter } from "react-router";
+import { exampleShippingState as  MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
 import { 
     countries as MOCKcountries,
+    caProvinces as MOCKprovinces,
     exampleAddress as MOCKexampleAddress
 } from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
     usePaymentIframe: () => ({
-        paymentIframeLoadingStatus: '',
-        paymentIframeUrl: '',
-        paymentIframeHeight: 0,
-        paymentIframeOnLoaded: (() => {})
+        data: {
+            url: 'test.url',
+            loadingStatus: 'fulfilled',
+            paymentIframeOnLoaded: (() => {})
+        }
+    }),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
     }),
     useDiscount: () => ({
-        discountApplied: false,
-        discountCode: "",
-        discountErrors: null,
-        applyDiscount: (() => {})
+        data: {
+            discountApplied: false,
+            discountCode: "",
+            errors: null,
+            applyDiscount: (() => {})
+        }
     }),
     useBillingAddress: () => ({
         billingAddress: MOCKexampleAddress,
@@ -28,12 +42,20 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
         billingSameAsShipping: true,
         submitBillingAddress: (() => {}),
         setBillingSameAsShipping: (() => {})
+    }),
+    useShippingLines: () => ({
+        data: MOCKexampleShippingState
+    }),
+    useBillingSameAsShipping: () => ({
+        data: true,
+        setBillingSameAsShipping: (() => {})
     })
 }))
 
 describe('Payment', () => {
     test('renders PaymentMethod component showing payment method', () => {
-        const { asFragment } = render( <PaymentMethod showPaymentMethod />,
+        const { asFragment } = render(
+            <PaymentMethod showPaymentMethod />,
             {wrapper: MemoryRouter} );
         expect(asFragment()).toMatchSnapshot();
     });

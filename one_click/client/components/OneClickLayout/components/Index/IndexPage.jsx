@@ -7,7 +7,6 @@ import { LineItems } from '../LineItems';
 import { PaymentMethod } from '../Payment';
 import { CheckoutButton } from '../CheckoutButton';
 import { useCheckoutStore, useShippingAddress } from '@boldcommerce/checkout-react-components';
-import { Price } from '@boldcommerce/stacks-ui/lib';
 import { Header } from '../Header';
 import { AppContext } from '../../context/AppContext';
 

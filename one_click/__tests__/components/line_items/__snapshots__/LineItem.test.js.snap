@@ -47,20 +47,6 @@ exports[`LineItem renders LineItem component with editable quantity 1`] = `
             Test description right here
           </div>
         </div>
-        <button
-          aria-busy="false"
-          aria-disabled="false"
-          class="stx-button stx-button--secondary"
-        >
-          <span
-            class="stx-button__text"
-          >
-            Remove
-          </span>
-          <span
-            class="stx-loading-spinner stx-button__spinner"
-          />
-        </button>
       </div>
     </div>
     <div
@@ -70,54 +56,9 @@ exports[`LineItem renders LineItem component with editable quantity 1`] = `
         class="CartItem__ProductQuantityWrapper"
       >
         <div
-          class="ProductQuantity__Decrement"
-        >
-          <button
-            aria-busy="false"
-            aria-disabled="false"
-            class="stx-button"
-          >
-            <span
-              class="stx-button__text"
-            >
-              -
-            </span>
-            <span
-              class="stx-loading-spinner stx-button__spinner"
-            />
-          </button>
-        </div>
-        <div
           class="ProductQuantity"
         >
-          <div
-            class="stx-input"
-          >
-            <input
-              aria-readonly="false"
-              class="stx-input__input-element"
-              type="number"
-              value="2"
-            />
-          </div>
-        </div>
-        <div
-          class="ProductQuantity__Increment"
-        >
-          <button
-            aria-busy="false"
-            aria-disabled="false"
-            class="stx-button"
-          >
-            <span
-              class="stx-button__text"
-            >
-              +
-            </span>
-            <span
-              class="stx-loading-spinner stx-button__spinner"
-            />
-          </button>
+          2
         </div>
       </div>
       <div
@@ -195,26 +136,10 @@ exports[`LineItem renders read only LineItem component 1`] = `
         class="CartItem__ProductQuantityWrapper"
       >
         <div
-          class="ProductQuantity__Decrement"
-        />
-        <div
-          class="ProductQuantity ProductQuantity--read-only"
+          class="ProductQuantity"
         >
-          <div
-            class="stx-input stx-input--is-read-only"
-          >
-            <input
-              aria-readonly="true"
-              class="stx-input__input-element"
-              readonly=""
-              type="number"
-              value="2"
-            />
-          </div>
+          2
         </div>
-        <div
-          class="ProductQuantity__Increment"
-        />
       </div>
       <div
         class="CartItem__ProductPrice"

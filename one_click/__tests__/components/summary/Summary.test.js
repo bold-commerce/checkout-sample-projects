@@ -2,36 +2,49 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Summary } from '../../../client/components/OneClickLayout/components/Summary'
 import { MemoryRouter } from 'react-router';
+import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
+import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useShippingLines: () => ({
-        selectedShippingLineIndex: 0,
-        shippingLines: [],
-        showShippingLines: true
-    }),
-    useDiscount: () => ({
-        discountCode: 'TEST',
-        discountTotal: 1000,
-        removeDiscount: () => {},
-        discountApplied: true
-    }),
     useCheckoutStore: () => ({
         state: {
-            applicationState: MOCKapplicationState,
-            orderTotals: {
-                subtotal: 2222,
-                taxesTotal: 1200,
-                total: 2422
-            },
             orderInfo: {
                 billingSameAsShipping:true,
                 orderStatus: ""
             },
             errors: { order: null },
-            loadingStatus: { isLoading: false }
+            loadingStatus: { isLoading: false },
+            applicationState: MOCKapplicationState,
+            orderTotals: {
+                taxesTotal: 1200,
+                subTotal: 23000,
+                total: 24200
+            }
         }
+    }),
+    useShippingLines: () => ({
+        data: MOCKexampleShippingState
+    }),
+    useDiscount: () => ({
+        data: '?',
+        applyDiscount : (() => {})
+    }),
+    usePaymentIframe: () => ({
+        data: {
+            url: 'test.url',
+            loadingStatus: 'fulfilled',
+            paymentIframeOnLoaded: (() => {})
+        }
+    }),
+    useLineItems: () => ({
+        data: MOCKexampleLineItems
+    })
+})).mock('react', () => ({
+    ...jest.requireActual('react'),
+    useContext: () => ({
+        setShowCheckout: (() => {})
     })
 }));
 
