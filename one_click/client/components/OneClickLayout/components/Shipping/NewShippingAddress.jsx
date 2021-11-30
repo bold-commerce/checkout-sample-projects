@@ -18,7 +18,7 @@ const NewShippingAddress = ({ selected, onChange, disabled, defaultAddress }) =>
   const handleOnChange = useCallback((currentAddress) => {
     setAddress(currentAddress);
     onChange(currentAddress);
-  })
+  }, [])
 
   return (
     <li>
