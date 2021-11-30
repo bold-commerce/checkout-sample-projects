@@ -1,17 +1,18 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { InputField, Button } from '@boldcommerce/stacks-ui';
+import { InputField, Button, Message } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
 
 export const Discount = ({
-  discountApplied, discountCode, applyDiscount,
+  discountApplied, discountCode, applyDiscount, removeDiscount
 }) => {
   const [discount, setDiscount] = useState(discountCode);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState(null);
+  const [status, setStatus] = useState({});
 
   /**
   * Opens the discount modal
@@ -20,20 +21,49 @@ export const Discount = ({
     setOpen(true);
   }, []);
 
-  const submitDiscount = async () => {
+
+  const submitDiscount = async (discount, discountStatus = 'new') => {
+      setLoading(true);
+      try {
+          await applyDiscount(discount);
+          setStatus(() => {
+            return discountStatus === 'existing' ? {
+              info: {
+                message: 'The previous discount code was removed. Only one discount code may be applied at a time.',
+              }
+            } : {
+              success: {
+                message: 'Discount applied successfully',
+              }
+            }
+          });
+      } catch(e) {
+        setStatus({
+          errors: e.body.errors,
+        })
+      }
+      setLoading(false);
+  };
+
+  const removeAndSubmitDiscount = async (discount) => {
     setLoading(true);
     try {
-      await applyDiscount(discount);
-      setErrors(null);
+
+      await removeDiscount(discount);
+      // TODO: check if the discount was removed
+      submitDiscount(discount, discountStatus='existing');
     } catch(e) {
-      setErrors(e.body.errors);
+      setStatus({
+        errors: e.body.errors,
+      })
     }
     setLoading(false);
-  };
+};
 
   if (!open) return (
     <div className="DiscountLink" onClick={openModal}>Discount code</div>
   );
+
   return (
     <div className="SummaryBlock Summary__DiscountForm">
       <div className="DiscountForm">
@@ -41,19 +71,36 @@ export const Discount = ({
           type="text"
           placeholder="Enter discount code"
           value={discount}
-          messageText={errors && errors[0].message}
-          messageType={errors && 'alert'}
+          messageText={status.errors && status.errors[0].message}
+          messageType={status.errors && 'alert'}
           onChange={(e) => setDiscount(e.target.value)}
-          disabled={discountApplied || loading}
+          disabled={loading}
         />
         <Button
           primary={discountApplied || discount.length > 0}
-          disabled={discount.length === 0 || discountApplied || loading}
+          disabled={discount.length === 0 || loading}
           loading={loading}
-          onClick={() => submitDiscount(discount)}
+          onClick={() => {
+            if (discountApplied) {
+              removeAndSubmitDiscount(discount);
+            } else {
+              submitDiscount(discount);
+            }
+          }}
         >
           Apply
         </Button>
+        {
+          (status.success || status.info) && (
+            <Message
+              type={status.success ? 'success' : 'info'}
+              className="DiscountForm__Message"
+            >
+              {status?.success?.message || status?.info?.message}
+            </Message>
+          )
+        }
+
       </div>
     </div>
   );
@@ -64,18 +111,20 @@ Discount.propTypes = {
   discountCode: PropTypes.string,
   discountErrors: PropTypes.object,
   applyDiscount: PropTypes.func,
+  removeDiscount: PropTypes.func,
 };
 
 const MemoizedDiscount = React.memo(Discount);
 
 const DiscountContainer = () => {
-  const { data, applyDiscount } = useDiscount();
+  const { data, applyDiscount, removeDiscount } = useDiscount();
 
   return (
     <MemoizedDiscount
       discountApplied={data.discountApplied}
       discountCode={data.discountCode}
       applyDiscount={applyDiscount}
+      removeDiscount={removeDiscount}
     />
   );
 };

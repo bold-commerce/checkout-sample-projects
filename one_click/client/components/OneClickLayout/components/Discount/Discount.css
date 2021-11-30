@@ -1,40 +1,29 @@
 .DiscountForm {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
 }
 
-.DiscountForm .stx-input {
-  flex: 2;
+.DiscountForm .stx-field,
+.DiscountForm .stx-field--with-input .stx-input {
+  margin-bottom: 0;
+  max-height: 42px;
 }
 
 .DiscountForm .stx-input input {
   line-height: 30px;
 }
 
+.DiscountForm button.stx-button {
+  margin: 0;
+}
+
 .DiscountForm button.stx-button .stx-button__text {
   text-transform: capitalize;
 }
 
-.DiscountForm button.stx-button {
-  flex: 0.5;
-}
-
 .Summary__DiscountForm .DiscountForm__error {
   color: #ff1a2d;
-}
-
-@media screen and (max-width: 599px) {
-  .DiscountForm {
-    flex-direction: column;
-  }
-
-  .DiscountForm .stx-input {
-    flex: 1;
-    margin: 0 0.25rem 10px 0.25rem;
-  }
-
-  .DiscountForm button.stx-button {
-    flex: 1;
-  }
 }
 
 .DiscountLink {
@@ -56,4 +45,8 @@
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+.DiscountForm__Message {
+  grid-column: span 2;
 }
