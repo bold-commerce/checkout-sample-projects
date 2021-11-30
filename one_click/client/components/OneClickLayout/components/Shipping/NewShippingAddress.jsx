@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useCountryInfo, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { RadioItem } from '../RadioItem';
 import { Address } from '../Address';
@@ -15,13 +15,18 @@ const NewShippingAddress = ({ selected, onChange, disabled, defaultAddress }) =>
     provincePlaceholder = 'state/territory';
   }
 
+  const handleOnChange = useCallback((currentAddress) => {
+    setAddress(currentAddress);
+    onChange(currentAddress);
+  })
+
   return (
     <li>
       <RadioItem
         name="shipping_address"
         id={`address_0`}
         checked={selected}
-        onChange={() => onChange({
+        onChange={() => handleOnChange({
           ...defaultAddress,
           id: null,
         })}
