@@ -10,7 +10,7 @@ import {
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
     useLineItems: () => ({
-        lineItems: MOCKexampleLineItems,
+        data: MOCKexampleLineItems,
         updateLineItemQuantity: (() => {}),
         removeLineItems: (() => {})
     })

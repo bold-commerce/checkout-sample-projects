@@ -4,17 +4,25 @@ import { render } from '@testing-library/react';
 import { 
     exampleAddress,
     countries as MOCKcountries,
-    exampleSavedAddresses as MOCKexampleSavedAddresses
+    caProvinces as MOCKprovinces,
+    exampleAddress as MOCKexampleAddress
 } from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
     useShippingAddress: () => ({
-        countryInfo: MOCKcountries,
-        savedAddresses: MOCKexampleSavedAddresses,
-        shippingAddress: [],
-        shippingaddressErrors: null,
-        submitShippingaddress:(() => {})
+        data: MOCKexampleAddress,
+        errors: [],
+        sumbitShippingAddress: (() => {})
+    }),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
     })
 }));
 

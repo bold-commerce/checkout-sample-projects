@@ -1,7 +1,24 @@
 import React from "react";
 import { render } from '@testing-library/react';
 import { BillingAddress } from '../../../client/components/OneClickLayout/components/BillingAddress/BillingAddress';
-import { exampleAddress as MOCKexampleAddress } from '../../utils/addressHelpers';
+import {
+    exampleAddress as MOCKexampleAddress,
+    countries as MOCKcountries,
+    caProvinces as MOCKprovinces
+} from '../../utils/addressHelpers';
+
+jest.mock('@boldcommerce/checkout-react-components', () => ({
+    ...jest.requireActual('@boldcommerce/checkout-react-components'),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
+    })
+}))
 
 describe('BillingAddress', () => {
     test('render BillingAddress component with the same billing address', () => {

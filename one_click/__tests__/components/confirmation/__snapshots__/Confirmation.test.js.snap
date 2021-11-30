@@ -3,7 +3,7 @@
 exports[`Confirmation renders Confirmation component 1`] = `
 <DocumentFragment>
   <div
-    class="ConfirmationPage"
+    class="Sidebar ConfirmationPage"
   >
     <h1>
       Thank you, John!
@@ -35,6 +35,7 @@ exports[`Confirmation renders Confirmation component 1`] = `
       <p>
         123 Fake Street
       </p>
+      <p />
       <p>
         Winnipeg MB R3T 1B8
       </p>
@@ -50,6 +51,7 @@ exports[`Confirmation renders Confirmation component 1`] = `
       <p>
         123 Fake Street
       </p>
+      <p />
       <p>
         Winnipeg MB R3T 1B8
       </p>
@@ -80,6 +82,7 @@ exports[`Confirmation renders Confirmation component 1`] = `
           Contact us
         </a>
       </p>
+       
     </div>
     <a
       href="/"

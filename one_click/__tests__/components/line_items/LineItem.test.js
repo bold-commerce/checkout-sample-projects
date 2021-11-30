@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { LineItem } from '@boldcommerce/checkout-react-components';
+import { LineItem } from '../../../client/components/OneClickLayout/components/LineItems'
 
 describe('LineItem', () => {
   test('renders LineItem component with editable quantity', () => {

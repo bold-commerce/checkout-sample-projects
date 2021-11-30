@@ -2,95 +2,115 @@
 
 exports[`CheckoutButton renders CheckoutButton component 1`] = `
 <DocumentFragment>
-  <button
-    aria-busy="false"
-    aria-disabled="false"
-    class="stx-button"
+  <div
+    class="CheckoutButton__Container"
   >
-    <span
-      class="stx-button__text"
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
     >
-      Complete Order
-    </span>
-    <span
-      class="stx-loading-spinner stx-button__spinner"
-    />
-  </button>
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`CheckoutButton renders CheckoutButton component that is disabled 1`] = `
 <DocumentFragment>
-  <button
-    aria-busy="false"
-    aria-disabled="false"
-    class="stx-button"
+  <div
+    class="CheckoutButton__Container"
   >
-    <span
-      class="stx-button__text"
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
     >
-      Complete Order
-    </span>
-    <span
-      class="stx-loading-spinner stx-button__spinner"
-    />
-  </button>
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`CheckoutButton renders CheckoutButton component that is loading 1`] = `
 <DocumentFragment>
-  <button
-    aria-busy="false"
-    aria-disabled="false"
-    class="stx-button"
+  <div
+    class="CheckoutButton__Container"
   >
-    <span
-      class="stx-button__text"
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
     >
-      Complete Order
-    </span>
-    <span
-      class="stx-loading-spinner stx-button__spinner"
-    />
-  </button>
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`CheckoutButton renders CheckoutButton component with an error message 1`] = `
 <DocumentFragment>
-  <button
-    aria-busy="false"
-    aria-disabled="false"
-    class="stx-button"
+  <div
+    class="CheckoutButton__Container"
   >
-    <span
-      class="stx-button__text"
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button"
     >
-      Complete Order
-    </span>
-    <span
-      class="stx-loading-spinner stx-button__spinner"
-    />
-  </button>
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`CheckoutButton renders CheckoutButton with a class name 1`] = `
 <DocumentFragment>
-  <button
-    aria-busy="false"
-    aria-disabled="false"
-    class="stx-button test_class"
+  <div
+    class="CheckoutButton__Container"
   >
-    <span
-      class="stx-button__text"
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button test_class"
     >
-      Complete Order
-    </span>
-    <span
-      class="stx-loading-spinner stx-button__spinner"
-    />
-  </button>
+      <span
+        class="stx-button__text"
+      >
+        Complete Order
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
 </DocumentFragment>
 `;

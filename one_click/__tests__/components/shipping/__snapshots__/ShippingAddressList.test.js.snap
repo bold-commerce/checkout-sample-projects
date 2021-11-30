@@ -23,9 +23,11 @@ exports[`ShippingAddressList renders ShippingAddressList component disabled 1`] 
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -47,9 +49,11 @@ exports[`ShippingAddressList renders ShippingAddressList component disabled 1`] 
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            456 Test Drive, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -71,9 +75,11 @@ exports[`ShippingAddressList renders ShippingAddressList component disabled 1`] 
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            789 Fake Crescent, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -123,9 +129,11 @@ exports[`ShippingAddressList renders ShippingAddressList component with addresse
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -146,9 +154,11 @@ exports[`ShippingAddressList renders ShippingAddressList component with addresse
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            456 Test Drive, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -169,9 +179,11 @@ exports[`ShippingAddressList renders ShippingAddressList component with addresse
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            789 Fake Crescent, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -220,9 +232,11 @@ exports[`ShippingAddressList renders ShippingAddressList component with onChange
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -243,9 +257,11 @@ exports[`ShippingAddressList renders ShippingAddressList component with onChange
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            456 Test Drive, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>
@@ -266,9 +282,11 @@ exports[`ShippingAddressList renders ShippingAddressList component with onChange
             John Doe
           </p>
           <p>
-            , , Winnipeg, Manitoba, , Canada
+            789 Fake Crescent, Winnipeg, Manitoba, R3A1B3, Canada
           </p>
-          <p />
+          <p>
+            204-123-4567
+          </p>
         </label>
       </div>
     </li>

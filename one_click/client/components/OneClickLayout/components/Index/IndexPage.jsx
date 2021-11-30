@@ -1,11 +1,10 @@
 import React, { useCallback, useContext, useEffect, useState }  from 'react';
 import Card from '../Card';
 import classNames from 'classnames';
-import { Price } from '@boldcommerce/stacks-ui/lib';
+import { Price } from '@boldcommerce/stacks-ui';
 import { LineItems } from '../LineItems';
 import { useCheckoutStore, useShippingAddress } from '@boldcommerce/checkout-react-components';
-import { Price } from '@boldcommerce/stacks-ui/lib';
-import LoadingState from '../LoadingState/LoadingState';
+import { LoadingState } from '../LoadingState';
 import { Header } from '../Header';
 import { AppContext } from '../../context/AppContext';
 import { PaymentMethod } from '../Payment';

@@ -59,7 +59,7 @@ const Summary = ({ show, onBack }) => {
                     />
                     <SummaryLine
                         title="Shipping"
-                        value={shipping.shippingLines.selectedShippingAmount}
+                        value={shipping.selectedShippingAmount}
                         items={shippingItems}
                     />
                     

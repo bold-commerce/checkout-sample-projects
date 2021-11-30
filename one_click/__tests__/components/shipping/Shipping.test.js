@@ -1,11 +1,14 @@
 import React from 'react';
 import Shipping from '../../../client/components/OneClickLayout/components/Shipping/Shipping';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
+import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
 import {
-    countries as MOCKcountries, 
+    countries as MOCKcountries,
+    caProvinces as MOCKprovinces,
+    exampleAddress as MOCKexampleAddress,
     exampleSavedAddresses as MOCKexampleSavedAddresses
  } from '../../utils/addressHelpers';
-import { MemoryRouter } from 'react-router';
 
  jest.mock('@boldcommerce/checkout-react-components', () => ({
      ...jest.requireActual('@boldcommerce/checkout-react-components'),
@@ -17,17 +20,32 @@ import { MemoryRouter } from 'react-router';
         shippingAddressLoadingStatus: "fulfilled",
         shippingLinesLoadingStatus: "fulfilled"
     }),
-    useShippingAddress: () => ({
-        countryInfo: MOCKcountries,
-        savedAddresses: MOCKexampleSavedAddresses,
-        shippingAddress: [],
-        shippingaddressErrors: null,
-        submitShippingaddress:(() => {})
-    }),
     useShippingLines: () => ({
-        selectedShippingLineIndex: 0,
-        shippingLines: [],
-        showShippingLines: true
+        data: MOCKexampleShippingState,
+        loadindStatus: 'fulfilled',
+        errors: [],
+        updateShippingLines: (() => {})
+    }),
+    useCountryInfo: () => ({
+        data: {
+            countries: MOCKcountries,
+            provinceLabel: "province",
+            provinces: MOCKprovinces,
+            showPostalCode: true,
+            showProvince: true
+        }
+    }),
+    useSavedAddresses: () => ({
+        data: MOCKexampleSavedAddresses
+    }),
+    useShippingAddress: () => ({
+        data: MOCKexampleAddress,
+        submitShippingAdderess: (() => {})
+    })
+})).mock('react', () => ({
+    ...jest.requireActual('react'),
+    useContext: () => ({
+        setShowCheckout: (() => {})
     })
 }));
 

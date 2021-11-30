@@ -301,14 +301,12 @@ export const emptyAddress = {
   phone_number: '',
 };
 
-export const addressErrors = {
-  first_name: 'First name is required',
-  last_name: 'Last name is required',
-  address_line_1: 'Address Line 1 is required',
-  address_line_2: 'Address Line 2 is required',
-  country: 'Country is required',
-  province: 'Province is required',
-  postal_code: 'Postal Code is required',
-  business_name: 'Company name is required',
-  phone_number: 'Phone number is required',
-};
+export const addressErrors = [
+  {
+      "message": "The postal code provided is not valid.",
+      "type": "order",
+      "field": "postal_code",
+      "severity": "validation",
+      "sub_type": "shipping_address"
+  }
+];

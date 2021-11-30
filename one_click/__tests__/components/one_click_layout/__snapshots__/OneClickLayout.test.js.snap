@@ -6,331 +6,1386 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
     class="Checkout__Main"
   >
     <div
-      class="SummaryBlock CartItem"
+      class="Checkout__Form"
     >
       <div
-        class="CartItem__ImageDescriptionWrapper"
+        class="Sidebar IndexPage Sidebar--Show"
       >
         <div
-          class="CartItem__ProductImageWrapper"
+          class="Header"
+        >
+          <h1
+            class="Header__Title"
+          >
+            TestSite
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-image"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                1
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$14.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-details stx-details--left"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-details__title"
-            >
-              Test title
-            </div>
-            <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            1
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
-            >
-              CA$14.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="SummaryBlock CartItem"
-    >
-      <div
-        class="CartItem__ImageDescriptionWrapper"
-      >
-        <div
-          class="CartItem__ProductImageWrapper"
-        >
-          <div
-            class="stx-image"
-          >
-            <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title 2, Revenge of the title"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title 2, Revenge of the title"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title 2, Revenge of the title"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title 2, Revenge of the title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title 2, Revenge of the title
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                2
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$32.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-details stx-details--left"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-details__title"
-            >
-              Test title 2, Revenge of the title
-            </div>
-            <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            2
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
-            >
-              CA$32.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="SummaryBlock CartItem"
-    >
-      <div
-        class="CartItem__ImageDescriptionWrapper"
-      >
-        <div
-          class="CartItem__ProductImageWrapper"
-        >
-          <div
-            class="stx-image"
-          >
-            <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title 3, the search for more money"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title 3, the search for more money"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title 3, the search for more money"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title 3, the search for more money"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title 3, the search for more money
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                3
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$123.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="Card"
         >
           <div
-            class="stx-details stx-details--left"
+            class="Card__Title"
+          >
+            <button
+              type="button"
+            >
+              Summary
+            </button>
+          </div>
+          <div
+            class="Card__Overview"
           >
             <div
-              class="stx-details__title"
+              class="stx-price stx-price--alight-center"
             >
-              Test title 3, the search for more money
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$262.00
+              </p>
+            </div>
+          </div>
+          <div
+            class="Card__Description"
+          />
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div />
+          </div>
+        </div>
+        <div
+          class="Card"
+        >
+          <div
+            class="Card__Title"
+          />
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          >
+            john.doe@email.com
+          </div>
+          <div
+            class="Card__Action"
+          >
+            Not you?
+          </div>
+          <div
+            class="Card__Content"
+          >
+            <div />
+          </div>
+        </div>
+        <div
+          class="Card"
+        >
+          <div
+            class="Card__Title"
+          >
+            <button
+              type="button"
+            >
+              Shipping
+            </button>
+          </div>
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          >
+            John Doe
+          </div>
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div>
+              <div>
+                123 Fake Street, 
+            Winnipeg,
+            Manitoba,
+            R3T 1B8,
+            Canada
+          
+              </div>
+              <div
+                class="card-shipping-content"
+              >
+                Standard - 
+                <div
+                  class="stx-price stx-price--alight-center"
+                >
+                  <p
+                    aria-label="Product price"
+                    class="stx-price__amount"
+                  >
+                    CA$10.00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Card Card--Payment"
+        >
+          <div
+            class="Card__Title"
+          >
+            <span>
+              Payment
+            </span>
+          </div>
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          />
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div>
+              <div>
+                Billing address same as shipping address
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Payment"
+        >
+          <section
+            class="hidden FieldSet FieldSet--PaymentMethod"
+          >
+            <div
+              class="FieldSet__Content"
+            >
+              <iframe
+                data-bold-pigi-iframe="true"
+                src="test.url"
+                title="payments"
+              />
             </div>
             <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            3
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
+              class="FieldSet__Content"
             >
-              CA$123.00
-            </p>
+              <div
+                class="DiscountLink"
+              >
+                Discount code
+              </div>
+            </div>
+            <div
+              class="FieldSet__Content"
+            >
+              <section
+                class="FieldSet FieldSet--BillingAddress"
+              >
+                <div
+                  class="FieldSet__Header"
+                >
+                  <h3>
+                    Billing address
+                  </h3>
+                </div>
+                <div
+                  class="FieldSet__Content"
+                >
+                  <div
+                    class="stx-field stx-checkbox-field__field RadioButton"
+                  >
+                    <div
+                      class="stx-checkbox-field__div"
+                    >
+                      <span
+                        class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                      >
+                        <input
+                          checked=""
+                          class="stx-checkbox__input"
+                          id="stxField1"
+                          name="billing-address"
+                          type="checkbox"
+                          value="SAME_AS_SHIPPING_ADDRESS"
+                        />
+                        <span
+                          class="stx-checkbox__mount"
+                        />
+                      </span>
+                      <label
+                        class="stx-checkbox-field__label"
+                        for="stxField1"
+                      >
+                        Same as shipping address
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+        <div
+          class="CheckoutButton__Container"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="Sidebar Shipping Sidebar--Hide"
+      >
+        <div
+          class="Header"
+        >
+          <h1
+            class="Header__Title"
+          >
+            Shipping
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            class="back-btn"
+            type="button"
+          >
+            Back
+          </button>
+        </div>
+        <section
+          class="Shipping__ShippingAddress"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Shipping address
+          </h3>
+          <ul
+            class="AddressList"
+          >
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_1"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_1"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_2"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_2"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    456 Test Drive, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_3"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_3"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    789 Fake Crescent, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  checked=""
+                  id="address_0"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_0"
+                >
+                  <p>
+                    Use new address
+                  </p>
+                </label>
+              </div>
+              <div
+                class="RadioButton RadioButton__NewAddressContainer"
+              >
+                <div
+                  class="FieldSet--Address"
+                >
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--FirstName"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField2"
+                          name="first_name"
+                          placeholder="First name (optional)"
+                          type="text"
+                          value="John"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--LastName"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField3"
+                          name="last_name"
+                          placeholder="Last name (optional)"
+                          type="text"
+                          value="Doe"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Company"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField4"
+                          name="business_name"
+                          placeholder="Company (optional)"
+                          type="text"
+                          value="Bold Commerce"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Address"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField5"
+                          name="address_line_1"
+                          placeholder="Address (optional)"
+                          type="text"
+                          value="123 Fake Street"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Address2"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField6"
+                          name="address_line_2"
+                          placeholder="Apt, suite, etc."
+                          type="text"
+                          value="Unit 12"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--City"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField7"
+                          name="city"
+                          placeholder="City (optional)"
+                          type="text"
+                          value="Winnipeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup FieldGroup__Country"
+                  >
+                    <div
+                      class="stx-field stx-field--with-select SelectField Field--Country"
+                    >
+                      <div
+                        class="stx-select stx-select--with-placeholder"
+                      >
+                        <select
+                          class="stx-select__select-element"
+                          id="stxField8"
+                        >
+                          <option
+                            hidden=""
+                            value="___PLACEHOLDER___"
+                          >
+                            Select a country
+                          </option>
+                          <option
+                            value="CA"
+                          >
+                            Canada
+                          </option>
+                          <option
+                            value="US"
+                          >
+                            United States
+                          </option>
+                        </select>
+                        <span
+                          class="stx-select__icon"
+                        >
+                          <svg
+                            class="stx-select-icon__icon"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="stx-select-icon__path"
+                              d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                              fill="#6B6B6B"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-select SelectField Field--Province"
+                    >
+                      <div
+                        class="stx-select stx-select--with-placeholder"
+                      >
+                        <select
+                          class="stx-select__select-element"
+                          id="stxField9"
+                        >
+                          <option
+                            hidden=""
+                            value="___PLACEHOLDER___"
+                          >
+                            Select a province
+                          </option>
+                          <option
+                            value="AB"
+                          >
+                            Alberta
+                          </option>
+                          <option
+                            value="BC"
+                          >
+                            British Columbia
+                          </option>
+                          <option
+                            value="MB"
+                          >
+                            Manitoba
+                          </option>
+                          <option
+                            value="NB"
+                          >
+                            New Brunswick
+                          </option>
+                          <option
+                            value="NL"
+                          >
+                            Newfoundland and Labrador
+                          </option>
+                          <option
+                            value="NT"
+                          >
+                            Northwest Territories
+                          </option>
+                          <option
+                            value="NS"
+                          >
+                            Nova Scotia
+                          </option>
+                          <option
+                            value="NU"
+                          >
+                            Nunavut
+                          </option>
+                          <option
+                            value="ON"
+                          >
+                            Ontario
+                          </option>
+                          <option
+                            value="PE"
+                          >
+                            Prince Edward Island
+                          </option>
+                          <option
+                            value="QC"
+                          >
+                            Quebec
+                          </option>
+                          <option
+                            value="SK"
+                          >
+                            Saskatchewan
+                          </option>
+                          <option
+                            value="YT"
+                          >
+                            Yukon Territory
+                          </option>
+                        </select>
+                        <span
+                          class="stx-select__icon"
+                        >
+                          <svg
+                            class="stx-select-icon__icon"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="stx-select-icon__path"
+                              d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                              fill="#6B6B6B"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Postal_Code"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField10"
+                          name="postal"
+                          placeholder="Postal code / ZIP"
+                          type="text"
+                          value="R3A1B3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Phone"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField11"
+                          name="phone_number"
+                          placeholder="Phone (optional)"
+                          type="tel"
+                          value="204-123-4567"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="FieldSet FieldSet--ShippingMethod"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3
+              class="FieldSet__Heading"
+            >
+              Shipping method
+            </h3>
           </div>
-        </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="RadioButton"
+            >
+              <div
+                class="stx-field stx-field--with-radio-field RadioField"
+              >
+                <div
+                  class="stx-radio-field"
+                >
+                  <span
+                    class="stx-radio stx-radio-field__radio"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-disabled="false"
+                      class="stx-radio__input"
+                      id="stxField12"
+                      name="shipping-method"
+                      role="radio"
+                      type="radio"
+                      value=""
+                    />
+                    <span
+                      class="stx-radio__box"
+                    />
+                  </span>
+                  <label
+                    class="stx-radio-field__label"
+                    for="stxField12"
+                  >
+                    Standard Shipping
+                  </label>
+                </div>
+              </div>
+              <div
+                class="stx-price ShippingMethod__Price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$20.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="RadioButton"
+            >
+              <div
+                class="stx-field stx-field--with-radio-field RadioField"
+              >
+                <div
+                  class="stx-radio-field"
+                >
+                  <span
+                    class="stx-radio stx-radio-field__radio"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-disabled="false"
+                      class="stx-radio__input"
+                      id="stxField13"
+                      name="shipping-method"
+                      role="radio"
+                      type="radio"
+                      value=""
+                    />
+                    <span
+                      class="stx-radio__box"
+                    />
+                  </span>
+                  <label
+                    class="stx-radio-field__label"
+                    for="stxField13"
+                  >
+                    Expedited Shipping
+                  </label>
+                </div>
+              </div>
+              <div
+                class="stx-price ShippingMethod__Price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$40.00
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-    <div
-      class="Card"
-    >
       <div
-        class="Card__Title"
+        class="Sidebar Summary Sidebar--Hide"
       >
-        <a
-          href="/summary"
+        <div
+          class="Header"
         >
-          Summary
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      >
-        $23.80
-      </div>
-      <div
-        class="Card__Description"
-      />
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      />
-    </div>
-    <div
-      class="Card"
-    >
-      <div
-        class="Card__Title"
-      >
-        <a
-          href="/shipping"
+          <h1
+            class="Header__Title"
+          >
+            Summary
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            class="back-btn"
+            type="button"
+          >
+            Back
+          </button>
+        </div>
+        <section
+          class="Summary__OrderSummary"
         >
-          Shipping
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      />
-      <div
-        class="Card__Description"
-      >
-        Jane Doe
-      </div>
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      >
-        <div>
-          1234 Somewhere Street, Winnipeg, Manitoba, A1B 2C3, Canada
-        </div>
-        <div>
-          Canada Post Expedited Parcel — $7.00
-        </div>
-      </div>
-    </div>
-    <div
-      class="Card"
-    >
-      <div
-        class="Card__Title"
-      >
-        <a
-          href="/payment"
+          <div
+            class="Summary__Lines SummaryBlock"
+            data-allow-multiple="true"
+            id="accordianGroup"
+          >
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <div
+                  class="summary-line-title"
+                >
+                  <div
+                    class="summary-line-icon"
+                  />
+                  Subtotal
+                </div>
+                <div
+                  class="stx-price summary-line-value stx-price--alight-center"
+                >
+                  <p
+                    aria-label="Product price"
+                    class="stx-price__amount"
+                  >
+                    CA$230.00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <button
+                  aria-controls="Line-Shipping"
+                  aria-expanded="false"
+                  class="summary-btn"
+                  id="summary-line-Shipping"
+                >
+                  <div
+                    class="Accordion-title summary-line-title"
+                  >
+                    <div
+                      class="summary-line-icon"
+                      style="transform: rotate(0deg);"
+                    >
+                      <svg
+                        fill="none"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          opacity="0.8"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    Shipping
+                  </div>
+                  <div
+                    class="stx-price summary-line-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$20.00
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-labelledby="summary-line-Shipping"
+                class="summary-line-content"
+                hidden=""
+                id="summary-line-Shipping-div"
+                role="region"
+              >
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    Standard Shipping
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$20.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <div
+                  class="summary-line-title"
+                >
+                  <div
+                    class="summary-line-icon"
+                  />
+                  Discount
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <button
+                  aria-controls="Line-Taxes"
+                  aria-expanded="false"
+                  class="summary-btn"
+                  id="summary-line-Taxes"
+                >
+                  <div
+                    class="Accordion-title summary-line-title"
+                  >
+                    <div
+                      class="summary-line-icon"
+                      style="transform: rotate(0deg);"
+                    >
+                      <svg
+                        fill="none"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          opacity="0.8"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    Taxes
+                  </div>
+                  <div
+                    class="stx-price summary-line-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$12.00
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-labelledby="summary-line-Taxes"
+                class="summary-line-content"
+                hidden=""
+                id="summary-line-Taxes-div"
+                role="region"
+              >
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    GST
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$11.25
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    PST
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$15.75
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Summary__Total SummaryBlock"
+          >
+            <div>
+              Total
+            </div>
+            <div
+              class="stx-price summary-total-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$242.00
+              </p>
+            </div>
+          </div>
+        </section>
+        <div
+          class="CheckoutButton__Container"
         >
-          Payment
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      />
-      <div
-        class="Card__Description"
-      >
-        Visa **** 1234
-      </div>
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      >
-        <div>
-          Billing address same as shipping address.
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
         </div>
       </div>
     </div>
-    <button
-      aria-busy="false"
-      aria-disabled="false"
-      class="stx-button CheckoutButton"
-    >
-      <span
-        class="stx-button__text"
-      >
-        Complete Order
-      </span>
-      <span
-        class="stx-loading-spinner stx-button__spinner"
-      />
-    </button>
-    <div />
   </div>
 </DocumentFragment>
 `;
@@ -341,331 +1396,1386 @@ exports[`OneClickLayout renders OneClickLayout component order processed 1`] = `
     class="Checkout__Main"
   >
     <div
-      class="SummaryBlock CartItem"
+      class="Checkout__Form"
     >
       <div
-        class="CartItem__ImageDescriptionWrapper"
+        class="Sidebar IndexPage Sidebar--Show"
       >
         <div
-          class="CartItem__ProductImageWrapper"
+          class="Header"
+        >
+          <h1
+            class="Header__Title"
+          >
+            TestSite
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-image"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                1
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$14.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-details stx-details--left"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-details__title"
-            >
-              Test title
-            </div>
-            <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            1
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
-            >
-              CA$14.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="SummaryBlock CartItem"
-    >
-      <div
-        class="CartItem__ImageDescriptionWrapper"
-      >
-        <div
-          class="CartItem__ProductImageWrapper"
-        >
-          <div
-            class="stx-image"
-          >
-            <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title 2, Revenge of the title"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title 2, Revenge of the title"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title 2, Revenge of the title"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title 2, Revenge of the title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title 2, Revenge of the title
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                2
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$32.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-details stx-details--left"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-details__title"
-            >
-              Test title 2, Revenge of the title
-            </div>
-            <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            2
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
-            >
-              CA$32.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="SummaryBlock CartItem"
-    >
-      <div
-        class="CartItem__ImageDescriptionWrapper"
-      >
-        <div
-          class="CartItem__ProductImageWrapper"
-        >
-          <div
-            class="stx-image"
-          >
-            <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title 3, the search for more money"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title 3, the search for more money"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title 3, the search for more money"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title 3, the search for more money"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title 3, the search for more money
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                3
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$123.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="Card"
         >
           <div
-            class="stx-details stx-details--left"
+            class="Card__Title"
+          >
+            <button
+              type="button"
+            >
+              Summary
+            </button>
+          </div>
+          <div
+            class="Card__Overview"
           >
             <div
-              class="stx-details__title"
+              class="stx-price stx-price--alight-center"
             >
-              Test title 3, the search for more money
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$262.00
+              </p>
+            </div>
+          </div>
+          <div
+            class="Card__Description"
+          />
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div />
+          </div>
+        </div>
+        <div
+          class="Card"
+        >
+          <div
+            class="Card__Title"
+          />
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          >
+            john.doe@email.com
+          </div>
+          <div
+            class="Card__Action"
+          >
+            Not you?
+          </div>
+          <div
+            class="Card__Content"
+          >
+            <div />
+          </div>
+        </div>
+        <div
+          class="Card"
+        >
+          <div
+            class="Card__Title"
+          >
+            <button
+              type="button"
+            >
+              Shipping
+            </button>
+          </div>
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          >
+            John Doe
+          </div>
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div>
+              <div>
+                123 Fake Street, 
+            Winnipeg,
+            Manitoba,
+            R3T 1B8,
+            Canada
+          
+              </div>
+              <div
+                class="card-shipping-content"
+              >
+                Standard - 
+                <div
+                  class="stx-price stx-price--alight-center"
+                >
+                  <p
+                    aria-label="Product price"
+                    class="stx-price__amount"
+                  >
+                    CA$10.00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Card Card--Payment"
+        >
+          <div
+            class="Card__Title"
+          >
+            <span>
+              Payment
+            </span>
+          </div>
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          />
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div>
+              <div>
+                Billing address same as shipping address
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Payment"
+        >
+          <section
+            class="hidden FieldSet FieldSet--PaymentMethod"
+          >
+            <div
+              class="FieldSet__Content"
+            >
+              <iframe
+                data-bold-pigi-iframe="true"
+                src="test.url"
+                title="payments"
+              />
             </div>
             <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            3
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
+              class="FieldSet__Content"
             >
-              CA$123.00
-            </p>
+              <div
+                class="DiscountLink"
+              >
+                Discount code
+              </div>
+            </div>
+            <div
+              class="FieldSet__Content"
+            >
+              <section
+                class="FieldSet FieldSet--BillingAddress"
+              >
+                <div
+                  class="FieldSet__Header"
+                >
+                  <h3>
+                    Billing address
+                  </h3>
+                </div>
+                <div
+                  class="FieldSet__Content"
+                >
+                  <div
+                    class="stx-field stx-checkbox-field__field RadioButton"
+                  >
+                    <div
+                      class="stx-checkbox-field__div"
+                    >
+                      <span
+                        class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                      >
+                        <input
+                          checked=""
+                          class="stx-checkbox__input"
+                          id="stxField27"
+                          name="billing-address"
+                          type="checkbox"
+                          value="SAME_AS_SHIPPING_ADDRESS"
+                        />
+                        <span
+                          class="stx-checkbox__mount"
+                        />
+                      </span>
+                      <label
+                        class="stx-checkbox-field__label"
+                        for="stxField27"
+                      >
+                        Same as shipping address
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+        <div
+          class="CheckoutButton__Container"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="Sidebar Shipping Sidebar--Hide"
+      >
+        <div
+          class="Header"
+        >
+          <h1
+            class="Header__Title"
+          >
+            Shipping
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            class="back-btn"
+            type="button"
+          >
+            Back
+          </button>
+        </div>
+        <section
+          class="Shipping__ShippingAddress"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Shipping address
+          </h3>
+          <ul
+            class="AddressList"
+          >
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_1"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_1"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_2"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_2"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    456 Test Drive, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_3"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_3"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    789 Fake Crescent, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  checked=""
+                  id="address_0"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_0"
+                >
+                  <p>
+                    Use new address
+                  </p>
+                </label>
+              </div>
+              <div
+                class="RadioButton RadioButton__NewAddressContainer"
+              >
+                <div
+                  class="FieldSet--Address"
+                >
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--FirstName"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField28"
+                          name="first_name"
+                          placeholder="First name (optional)"
+                          type="text"
+                          value="John"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--LastName"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField29"
+                          name="last_name"
+                          placeholder="Last name (optional)"
+                          type="text"
+                          value="Doe"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Company"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField30"
+                          name="business_name"
+                          placeholder="Company (optional)"
+                          type="text"
+                          value="Bold Commerce"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Address"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField31"
+                          name="address_line_1"
+                          placeholder="Address (optional)"
+                          type="text"
+                          value="123 Fake Street"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Address2"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField32"
+                          name="address_line_2"
+                          placeholder="Apt, suite, etc."
+                          type="text"
+                          value="Unit 12"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--City"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField33"
+                          name="city"
+                          placeholder="City (optional)"
+                          type="text"
+                          value="Winnipeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup FieldGroup__Country"
+                  >
+                    <div
+                      class="stx-field stx-field--with-select SelectField Field--Country"
+                    >
+                      <div
+                        class="stx-select stx-select--with-placeholder"
+                      >
+                        <select
+                          class="stx-select__select-element"
+                          id="stxField34"
+                        >
+                          <option
+                            hidden=""
+                            value="___PLACEHOLDER___"
+                          >
+                            Select a country
+                          </option>
+                          <option
+                            value="CA"
+                          >
+                            Canada
+                          </option>
+                          <option
+                            value="US"
+                          >
+                            United States
+                          </option>
+                        </select>
+                        <span
+                          class="stx-select__icon"
+                        >
+                          <svg
+                            class="stx-select-icon__icon"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="stx-select-icon__path"
+                              d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                              fill="#6B6B6B"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-select SelectField Field--Province"
+                    >
+                      <div
+                        class="stx-select stx-select--with-placeholder"
+                      >
+                        <select
+                          class="stx-select__select-element"
+                          id="stxField35"
+                        >
+                          <option
+                            hidden=""
+                            value="___PLACEHOLDER___"
+                          >
+                            Select a province
+                          </option>
+                          <option
+                            value="AB"
+                          >
+                            Alberta
+                          </option>
+                          <option
+                            value="BC"
+                          >
+                            British Columbia
+                          </option>
+                          <option
+                            value="MB"
+                          >
+                            Manitoba
+                          </option>
+                          <option
+                            value="NB"
+                          >
+                            New Brunswick
+                          </option>
+                          <option
+                            value="NL"
+                          >
+                            Newfoundland and Labrador
+                          </option>
+                          <option
+                            value="NT"
+                          >
+                            Northwest Territories
+                          </option>
+                          <option
+                            value="NS"
+                          >
+                            Nova Scotia
+                          </option>
+                          <option
+                            value="NU"
+                          >
+                            Nunavut
+                          </option>
+                          <option
+                            value="ON"
+                          >
+                            Ontario
+                          </option>
+                          <option
+                            value="PE"
+                          >
+                            Prince Edward Island
+                          </option>
+                          <option
+                            value="QC"
+                          >
+                            Quebec
+                          </option>
+                          <option
+                            value="SK"
+                          >
+                            Saskatchewan
+                          </option>
+                          <option
+                            value="YT"
+                          >
+                            Yukon Territory
+                          </option>
+                        </select>
+                        <span
+                          class="stx-select__icon"
+                        >
+                          <svg
+                            class="stx-select-icon__icon"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="stx-select-icon__path"
+                              d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                              fill="#6B6B6B"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Postal_Code"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField36"
+                          name="postal"
+                          placeholder="Postal code / ZIP"
+                          type="text"
+                          value="R3A1B3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Phone"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField37"
+                          name="phone_number"
+                          placeholder="Phone (optional)"
+                          type="tel"
+                          value="204-123-4567"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="FieldSet FieldSet--ShippingMethod"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3
+              class="FieldSet__Heading"
+            >
+              Shipping method
+            </h3>
           </div>
-        </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="RadioButton"
+            >
+              <div
+                class="stx-field stx-field--with-radio-field RadioField"
+              >
+                <div
+                  class="stx-radio-field"
+                >
+                  <span
+                    class="stx-radio stx-radio-field__radio"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-disabled="false"
+                      class="stx-radio__input"
+                      id="stxField38"
+                      name="shipping-method"
+                      role="radio"
+                      type="radio"
+                      value=""
+                    />
+                    <span
+                      class="stx-radio__box"
+                    />
+                  </span>
+                  <label
+                    class="stx-radio-field__label"
+                    for="stxField38"
+                  >
+                    Standard Shipping
+                  </label>
+                </div>
+              </div>
+              <div
+                class="stx-price ShippingMethod__Price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$20.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="RadioButton"
+            >
+              <div
+                class="stx-field stx-field--with-radio-field RadioField"
+              >
+                <div
+                  class="stx-radio-field"
+                >
+                  <span
+                    class="stx-radio stx-radio-field__radio"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-disabled="false"
+                      class="stx-radio__input"
+                      id="stxField39"
+                      name="shipping-method"
+                      role="radio"
+                      type="radio"
+                      value=""
+                    />
+                    <span
+                      class="stx-radio__box"
+                    />
+                  </span>
+                  <label
+                    class="stx-radio-field__label"
+                    for="stxField39"
+                  >
+                    Expedited Shipping
+                  </label>
+                </div>
+              </div>
+              <div
+                class="stx-price ShippingMethod__Price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$40.00
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-    <div
-      class="Card"
-    >
       <div
-        class="Card__Title"
+        class="Sidebar Summary Sidebar--Hide"
       >
-        <a
-          href="/summary"
+        <div
+          class="Header"
         >
-          Summary
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      >
-        $23.80
-      </div>
-      <div
-        class="Card__Description"
-      />
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      />
-    </div>
-    <div
-      class="Card"
-    >
-      <div
-        class="Card__Title"
-      >
-        <a
-          href="/shipping"
+          <h1
+            class="Header__Title"
+          >
+            Summary
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            class="back-btn"
+            type="button"
+          >
+            Back
+          </button>
+        </div>
+        <section
+          class="Summary__OrderSummary"
         >
-          Shipping
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      />
-      <div
-        class="Card__Description"
-      >
-        Jane Doe
-      </div>
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      >
-        <div>
-          1234 Somewhere Street, Winnipeg, Manitoba, A1B 2C3, Canada
-        </div>
-        <div>
-          Canada Post Expedited Parcel — $7.00
-        </div>
-      </div>
-    </div>
-    <div
-      class="Card"
-    >
-      <div
-        class="Card__Title"
-      >
-        <a
-          href="/payment"
+          <div
+            class="Summary__Lines SummaryBlock"
+            data-allow-multiple="true"
+            id="accordianGroup"
+          >
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <div
+                  class="summary-line-title"
+                >
+                  <div
+                    class="summary-line-icon"
+                  />
+                  Subtotal
+                </div>
+                <div
+                  class="stx-price summary-line-value stx-price--alight-center"
+                >
+                  <p
+                    aria-label="Product price"
+                    class="stx-price__amount"
+                  >
+                    CA$230.00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <button
+                  aria-controls="Line-Shipping"
+                  aria-expanded="false"
+                  class="summary-btn"
+                  id="summary-line-Shipping"
+                >
+                  <div
+                    class="Accordion-title summary-line-title"
+                  >
+                    <div
+                      class="summary-line-icon"
+                      style="transform: rotate(0deg);"
+                    >
+                      <svg
+                        fill="none"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          opacity="0.8"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    Shipping
+                  </div>
+                  <div
+                    class="stx-price summary-line-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$20.00
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-labelledby="summary-line-Shipping"
+                class="summary-line-content"
+                hidden=""
+                id="summary-line-Shipping-div"
+                role="region"
+              >
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    Standard Shipping
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$20.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <div
+                  class="summary-line-title"
+                >
+                  <div
+                    class="summary-line-icon"
+                  />
+                  Discount
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <button
+                  aria-controls="Line-Taxes"
+                  aria-expanded="false"
+                  class="summary-btn"
+                  id="summary-line-Taxes"
+                >
+                  <div
+                    class="Accordion-title summary-line-title"
+                  >
+                    <div
+                      class="summary-line-icon"
+                      style="transform: rotate(0deg);"
+                    >
+                      <svg
+                        fill="none"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          opacity="0.8"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    Taxes
+                  </div>
+                  <div
+                    class="stx-price summary-line-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$12.00
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-labelledby="summary-line-Taxes"
+                class="summary-line-content"
+                hidden=""
+                id="summary-line-Taxes-div"
+                role="region"
+              >
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    GST
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$11.25
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    PST
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$15.75
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Summary__Total SummaryBlock"
+          >
+            <div>
+              Total
+            </div>
+            <div
+              class="stx-price summary-total-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$242.00
+              </p>
+            </div>
+          </div>
+        </section>
+        <div
+          class="CheckoutButton__Container"
         >
-          Payment
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      />
-      <div
-        class="Card__Description"
-      >
-        Visa **** 1234
-      </div>
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      >
-        <div>
-          Billing address same as shipping address.
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
         </div>
       </div>
     </div>
-    <button
-      aria-busy="false"
-      aria-disabled="false"
-      class="stx-button CheckoutButton"
-    >
-      <span
-        class="stx-button__text"
-      >
-        Complete Order
-      </span>
-      <span
-        class="stx-loading-spinner stx-button__spinner"
-      />
-    </button>
-    <div />
   </div>
 </DocumentFragment>
 `;
@@ -676,331 +2786,1386 @@ exports[`OneClickLayout renders OneClickLayout component order processing 1`] = 
     class="Checkout__Main"
   >
     <div
-      class="SummaryBlock CartItem"
+      class="Checkout__Form"
     >
       <div
-        class="CartItem__ImageDescriptionWrapper"
+        class="Sidebar IndexPage Sidebar--Show"
       >
         <div
-          class="CartItem__ProductImageWrapper"
+          class="Header"
+        >
+          <h1
+            class="Header__Title"
+          >
+            TestSite
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-image"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                1
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$14.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-details stx-details--left"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-details__title"
-            >
-              Test title
-            </div>
-            <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            1
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
-            >
-              CA$14.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="SummaryBlock CartItem"
-    >
-      <div
-        class="CartItem__ImageDescriptionWrapper"
-      >
-        <div
-          class="CartItem__ProductImageWrapper"
-        >
-          <div
-            class="stx-image"
-          >
-            <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title 2, Revenge of the title"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title 2, Revenge of the title"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title 2, Revenge of the title"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title 2, Revenge of the title"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title 2, Revenge of the title
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                2
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$32.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="SummaryBlock CartItem"
         >
           <div
-            class="stx-details stx-details--left"
+            class="CartItem__ImageDescriptionWrapper"
           >
             <div
-              class="stx-details__title"
-            >
-              Test title 2, Revenge of the title
-            </div>
-            <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            2
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
-            >
-              CA$32.00
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="SummaryBlock CartItem"
-    >
-      <div
-        class="CartItem__ImageDescriptionWrapper"
-      >
-        <div
-          class="CartItem__ProductImageWrapper"
-        >
-          <div
-            class="stx-image"
-          >
-            <div
-              class="stx-image--content"
+              class="CartItem__ProductImageWrapper"
             >
               <div
-                class="stx-image--holder"
+                class="stx-image"
               >
-                <img
-                  alt="Test title 3, the search for more money"
-                  class="stx-image--image"
-                  src=""
-                  title="Test title 3, the search for more money"
+                <div
+                  class="stx-image--content"
+                >
+                  <div
+                    class="stx-image--holder"
+                  >
+                    <img
+                      alt="Test title 3, the search for more money"
+                      class="stx-image--image"
+                      src=""
+                      title="Test title 3, the search for more money"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductDetails"
+            >
+              <div
+                class="stx-details stx-details--left"
+              >
+                <div
+                  class="stx-details__title"
+                >
+                  Test title 3, the search for more money
+                </div>
+                <div
+                  class="stx-details__description"
                 />
+              </div>
+            </div>
+          </div>
+          <div
+            class="CartItem__QuantityPriceWrapper"
+          >
+            <div
+              class="CartItem__ProductQuantityWrapper"
+            >
+              <div
+                class="ProductQuantity"
+              >
+                3
+              </div>
+            </div>
+            <div
+              class="CartItem__ProductPrice"
+            >
+              <div
+                class="stx-price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$123.00
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="CartItem__ProductDetails"
+          class="Card"
         >
           <div
-            class="stx-details stx-details--left"
+            class="Card__Title"
+          >
+            <button
+              type="button"
+            >
+              Summary
+            </button>
+          </div>
+          <div
+            class="Card__Overview"
           >
             <div
-              class="stx-details__title"
+              class="stx-price stx-price--alight-center"
             >
-              Test title 3, the search for more money
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$262.00
+              </p>
+            </div>
+          </div>
+          <div
+            class="Card__Description"
+          />
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div />
+          </div>
+        </div>
+        <div
+          class="Card"
+        >
+          <div
+            class="Card__Title"
+          />
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          >
+            john.doe@email.com
+          </div>
+          <div
+            class="Card__Action"
+          >
+            Not you?
+          </div>
+          <div
+            class="Card__Content"
+          >
+            <div />
+          </div>
+        </div>
+        <div
+          class="Card"
+        >
+          <div
+            class="Card__Title"
+          >
+            <button
+              type="button"
+            >
+              Shipping
+            </button>
+          </div>
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          >
+            John Doe
+          </div>
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div>
+              <div>
+                123 Fake Street, 
+            Winnipeg,
+            Manitoba,
+            R3T 1B8,
+            Canada
+          
+              </div>
+              <div
+                class="card-shipping-content"
+              >
+                Standard - 
+                <div
+                  class="stx-price stx-price--alight-center"
+                >
+                  <p
+                    aria-label="Product price"
+                    class="stx-price__amount"
+                  >
+                    CA$10.00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Card Card--Payment"
+        >
+          <div
+            class="Card__Title"
+          >
+            <span>
+              Payment
+            </span>
+          </div>
+          <div
+            class="Card__Overview"
+          />
+          <div
+            class="Card__Description"
+          />
+          <div
+            class="Card__Action"
+          />
+          <div
+            class="Card__Content"
+          >
+            <div>
+              <div>
+                Billing address same as shipping address
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Payment"
+        >
+          <section
+            class="hidden FieldSet FieldSet--PaymentMethod"
+          >
+            <div
+              class="FieldSet__Content"
+            >
+              <iframe
+                data-bold-pigi-iframe="true"
+                src="test.url"
+                title="payments"
+              />
             </div>
             <div
-              class="stx-details__description"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="CartItem__QuantityPriceWrapper"
-      >
-        <div
-          class="CartItem__ProductQuantityWrapper"
-        >
-          <div
-            class="ProductQuantity"
-          >
-            3
-          </div>
-        </div>
-        <div
-          class="CartItem__ProductPrice"
-        >
-          <div
-            class="stx-price stx-price--alight-center"
-          >
-            <p
-              aria-label="Product price"
-              class="stx-price__amount"
+              class="FieldSet__Content"
             >
-              CA$123.00
-            </p>
+              <div
+                class="DiscountLink"
+              >
+                Discount code
+              </div>
+            </div>
+            <div
+              class="FieldSet__Content"
+            >
+              <section
+                class="FieldSet FieldSet--BillingAddress"
+              >
+                <div
+                  class="FieldSet__Header"
+                >
+                  <h3>
+                    Billing address
+                  </h3>
+                </div>
+                <div
+                  class="FieldSet__Content"
+                >
+                  <div
+                    class="stx-field stx-checkbox-field__field RadioButton"
+                  >
+                    <div
+                      class="stx-checkbox-field__div"
+                    >
+                      <span
+                        class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                      >
+                        <input
+                          checked=""
+                          class="stx-checkbox__input"
+                          id="stxField14"
+                          name="billing-address"
+                          type="checkbox"
+                          value="SAME_AS_SHIPPING_ADDRESS"
+                        />
+                        <span
+                          class="stx-checkbox__mount"
+                        />
+                      </span>
+                      <label
+                        class="stx-checkbox-field__label"
+                        for="stxField14"
+                      >
+                        Same as shipping address
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+        <div
+          class="CheckoutButton__Container"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="Sidebar Shipping Sidebar--Hide"
+      >
+        <div
+          class="Header"
+        >
+          <h1
+            class="Header__Title"
+          >
+            Shipping
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            class="back-btn"
+            type="button"
+          >
+            Back
+          </button>
+        </div>
+        <section
+          class="Shipping__ShippingAddress"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Shipping address
+          </h3>
+          <ul
+            class="AddressList"
+          >
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_1"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_1"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    123 Fake Street, Unit 12, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_2"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_2"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    456 Test Drive, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  id="address_3"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_3"
+                >
+                  <p>
+                    John Doe
+                  </p>
+                  <p>
+                    789 Fake Crescent, Winnipeg, Manitoba, R3A1B3, Canada
+                  </p>
+                  <p>
+                    204-123-4567
+                  </p>
+                </label>
+              </div>
+            </li>
+            <li>
+              <div
+                class="RadioItem"
+              >
+                <input
+                  checked=""
+                  id="address_0"
+                  name="shipping_address"
+                  type="radio"
+                />
+                <label
+                  class="RadioItem__Content"
+                  for="address_0"
+                >
+                  <p>
+                    Use new address
+                  </p>
+                </label>
+              </div>
+              <div
+                class="RadioButton RadioButton__NewAddressContainer"
+              >
+                <div
+                  class="FieldSet--Address"
+                >
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--FirstName"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField15"
+                          name="first_name"
+                          placeholder="First name (optional)"
+                          type="text"
+                          value="John"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--LastName"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField16"
+                          name="last_name"
+                          placeholder="Last name (optional)"
+                          type="text"
+                          value="Doe"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Company"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField17"
+                          name="business_name"
+                          placeholder="Company (optional)"
+                          type="text"
+                          value="Bold Commerce"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Address"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField18"
+                          name="address_line_1"
+                          placeholder="Address (optional)"
+                          type="text"
+                          value="123 Fake Street"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Address2"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField19"
+                          name="address_line_2"
+                          placeholder="Apt, suite, etc."
+                          type="text"
+                          value="Unit 12"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--City"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField20"
+                          name="city"
+                          placeholder="City (optional)"
+                          type="text"
+                          value="Winnipeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup FieldGroup__Country"
+                  >
+                    <div
+                      class="stx-field stx-field--with-select SelectField Field--Country"
+                    >
+                      <div
+                        class="stx-select stx-select--with-placeholder"
+                      >
+                        <select
+                          class="stx-select__select-element"
+                          id="stxField21"
+                        >
+                          <option
+                            hidden=""
+                            value="___PLACEHOLDER___"
+                          >
+                            Select a country
+                          </option>
+                          <option
+                            value="CA"
+                          >
+                            Canada
+                          </option>
+                          <option
+                            value="US"
+                          >
+                            United States
+                          </option>
+                        </select>
+                        <span
+                          class="stx-select__icon"
+                        >
+                          <svg
+                            class="stx-select-icon__icon"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="stx-select-icon__path"
+                              d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                              fill="#6B6B6B"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-select SelectField Field--Province"
+                    >
+                      <div
+                        class="stx-select stx-select--with-placeholder"
+                      >
+                        <select
+                          class="stx-select__select-element"
+                          id="stxField22"
+                        >
+                          <option
+                            hidden=""
+                            value="___PLACEHOLDER___"
+                          >
+                            Select a province
+                          </option>
+                          <option
+                            value="AB"
+                          >
+                            Alberta
+                          </option>
+                          <option
+                            value="BC"
+                          >
+                            British Columbia
+                          </option>
+                          <option
+                            value="MB"
+                          >
+                            Manitoba
+                          </option>
+                          <option
+                            value="NB"
+                          >
+                            New Brunswick
+                          </option>
+                          <option
+                            value="NL"
+                          >
+                            Newfoundland and Labrador
+                          </option>
+                          <option
+                            value="NT"
+                          >
+                            Northwest Territories
+                          </option>
+                          <option
+                            value="NS"
+                          >
+                            Nova Scotia
+                          </option>
+                          <option
+                            value="NU"
+                          >
+                            Nunavut
+                          </option>
+                          <option
+                            value="ON"
+                          >
+                            Ontario
+                          </option>
+                          <option
+                            value="PE"
+                          >
+                            Prince Edward Island
+                          </option>
+                          <option
+                            value="QC"
+                          >
+                            Quebec
+                          </option>
+                          <option
+                            value="SK"
+                          >
+                            Saskatchewan
+                          </option>
+                          <option
+                            value="YT"
+                          >
+                            Yukon Territory
+                          </option>
+                        </select>
+                        <span
+                          class="stx-select__icon"
+                        >
+                          <svg
+                            class="stx-select-icon__icon"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              class="stx-select-icon__path"
+                              d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                              fill="#6B6B6B"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Postal_Code"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField23"
+                          name="postal"
+                          placeholder="Postal code / ZIP"
+                          type="text"
+                          value="R3A1B3"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="FieldGroup"
+                  >
+                    <div
+                      class="stx-field stx-field--with-input Field Field--Phone"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          class="stx-input__input-element"
+                          id="stxField24"
+                          name="phone_number"
+                          placeholder="Phone (optional)"
+                          type="tel"
+                          value="204-123-4567"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="FieldSet FieldSet--ShippingMethod"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3
+              class="FieldSet__Heading"
+            >
+              Shipping method
+            </h3>
           </div>
-        </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="RadioButton"
+            >
+              <div
+                class="stx-field stx-field--with-radio-field RadioField"
+              >
+                <div
+                  class="stx-radio-field"
+                >
+                  <span
+                    class="stx-radio stx-radio-field__radio"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-disabled="false"
+                      class="stx-radio__input"
+                      id="stxField25"
+                      name="shipping-method"
+                      role="radio"
+                      type="radio"
+                      value=""
+                    />
+                    <span
+                      class="stx-radio__box"
+                    />
+                  </span>
+                  <label
+                    class="stx-radio-field__label"
+                    for="stxField25"
+                  >
+                    Standard Shipping
+                  </label>
+                </div>
+              </div>
+              <div
+                class="stx-price ShippingMethod__Price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$20.00
+                </p>
+              </div>
+            </div>
+            <div
+              class="RadioButton"
+            >
+              <div
+                class="stx-field stx-field--with-radio-field RadioField"
+              >
+                <div
+                  class="stx-radio-field"
+                >
+                  <span
+                    class="stx-radio stx-radio-field__radio"
+                  >
+                    <input
+                      aria-checked="false"
+                      aria-disabled="false"
+                      class="stx-radio__input"
+                      id="stxField26"
+                      name="shipping-method"
+                      role="radio"
+                      type="radio"
+                      value=""
+                    />
+                    <span
+                      class="stx-radio__box"
+                    />
+                  </span>
+                  <label
+                    class="stx-radio-field__label"
+                    for="stxField26"
+                  >
+                    Expedited Shipping
+                  </label>
+                </div>
+              </div>
+              <div
+                class="stx-price ShippingMethod__Price stx-price--alight-center"
+              >
+                <p
+                  aria-label="Product price"
+                  class="stx-price__amount"
+                >
+                  CA$40.00
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-    <div
-      class="Card"
-    >
       <div
-        class="Card__Title"
+        class="Sidebar Summary Sidebar--Hide"
       >
-        <a
-          href="/summary"
+        <div
+          class="Header"
         >
-          Summary
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      >
-        $23.80
-      </div>
-      <div
-        class="Card__Description"
-      />
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      />
-    </div>
-    <div
-      class="Card"
-    >
-      <div
-        class="Card__Title"
-      >
-        <a
-          href="/shipping"
+          <h1
+            class="Header__Title"
+          >
+            Summary
+          </h1>
+          <button
+            class="Header__Times"
+          >
+            <svg
+              fill="none"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                opacity="0.8"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                  fill="black"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            class="back-btn"
+            type="button"
+          >
+            Back
+          </button>
+        </div>
+        <section
+          class="Summary__OrderSummary"
         >
-          Shipping
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      />
-      <div
-        class="Card__Description"
-      >
-        Jane Doe
-      </div>
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      >
-        <div>
-          1234 Somewhere Street, Winnipeg, Manitoba, A1B 2C3, Canada
-        </div>
-        <div>
-          Canada Post Expedited Parcel — $7.00
-        </div>
-      </div>
-    </div>
-    <div
-      class="Card"
-    >
-      <div
-        class="Card__Title"
-      >
-        <a
-          href="/payment"
+          <div
+            class="Summary__Lines SummaryBlock"
+            data-allow-multiple="true"
+            id="accordianGroup"
+          >
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <div
+                  class="summary-line-title"
+                >
+                  <div
+                    class="summary-line-icon"
+                  />
+                  Subtotal
+                </div>
+                <div
+                  class="stx-price summary-line-value stx-price--alight-center"
+                >
+                  <p
+                    aria-label="Product price"
+                    class="stx-price__amount"
+                  >
+                    CA$230.00
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <button
+                  aria-controls="Line-Shipping"
+                  aria-expanded="false"
+                  class="summary-btn"
+                  id="summary-line-Shipping"
+                >
+                  <div
+                    class="Accordion-title summary-line-title"
+                  >
+                    <div
+                      class="summary-line-icon"
+                      style="transform: rotate(0deg);"
+                    >
+                      <svg
+                        fill="none"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          opacity="0.8"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    Shipping
+                  </div>
+                  <div
+                    class="stx-price summary-line-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$20.00
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-labelledby="summary-line-Shipping"
+                class="summary-line-content"
+                hidden=""
+                id="summary-line-Shipping-div"
+                role="region"
+              >
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    Standard Shipping
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$20.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <div
+                  class="summary-line-title"
+                >
+                  <div
+                    class="summary-line-icon"
+                  />
+                  Discount
+                </div>
+              </div>
+            </div>
+            <div
+              class="summary-line"
+            >
+              <div
+                class="summary-line-head"
+              >
+                <button
+                  aria-controls="Line-Taxes"
+                  aria-expanded="false"
+                  class="summary-btn"
+                  id="summary-line-Taxes"
+                >
+                  <div
+                    class="Accordion-title summary-line-title"
+                  >
+                    <div
+                      class="summary-line-icon"
+                      style="transform: rotate(0deg);"
+                    >
+                      <svg
+                        fill="none"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          opacity="0.8"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="M9 5.91943L16.6008 12.0001L9 18.0807V5.91943ZM11 10.0807V13.9194L13.3992 12.0001L11 10.0807Z"
+                            fill="black"
+                            fill-rule="evenodd"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                    Taxes
+                  </div>
+                  <div
+                    class="stx-price summary-line-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$12.00
+                    </p>
+                  </div>
+                </button>
+              </div>
+              <div
+                aria-labelledby="summary-line-Taxes"
+                class="summary-line-content"
+                hidden=""
+                id="summary-line-Taxes-div"
+                role="region"
+              >
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    GST
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$11.25
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="summary-line-child"
+                >
+                  <div
+                    class="summary-child-title"
+                  >
+                    PST
+                  </div>
+                  <div
+                    class="stx-price summary-child-value stx-price--alight-center"
+                  >
+                    <p
+                      aria-label="Product price"
+                      class="stx-price__amount"
+                    >
+                      CA$15.75
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="Summary__Total SummaryBlock"
+          >
+            <div>
+              Total
+            </div>
+            <div
+              class="stx-price summary-total-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                CA$242.00
+              </p>
+            </div>
+          </div>
+        </section>
+        <div
+          class="CheckoutButton__Container"
         >
-          Payment
-        </a>
-      </div>
-      <div
-        class="Card__Overview"
-      />
-      <div
-        class="Card__Description"
-      >
-        Visa **** 1234
-      </div>
-      <div
-        class="Card__Action"
-      />
-      <div
-        class="Card__Content"
-      >
-        <div>
-          Billing address same as shipping address.
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
         </div>
       </div>
     </div>
-    <button
-      aria-busy="false"
-      aria-disabled="false"
-      class="stx-button CheckoutButton"
-    >
-      <span
-        class="stx-button__text"
-      >
-        Complete Order
-      </span>
-      <span
-        class="stx-loading-spinner stx-button__spinner"
-      />
-    </button>
-    <div />
   </div>
 </DocumentFragment>
 `;

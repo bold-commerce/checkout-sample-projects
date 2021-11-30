@@ -19,14 +19,20 @@ exports[`Discount renders Discount component opened 1`] = `
       class="DiscountForm"
     >
       <div
-        class="stx-input"
+        class="stx-field stx-field--with-input"
       >
-        <input
-          class="stx-input__input-element"
-          placeholder="Enter discount code"
-          type="text"
-          value="ExampleDiscount"
-        />
+        <div
+          class="stx-input"
+        >
+          <input
+            aria-disabled="false"
+            class="stx-input__input-element"
+            id="stxField1"
+            placeholder="Enter discount code"
+            type="text"
+            value="ExampleDiscount"
+          />
+        </div>
       </div>
       <button
         aria-busy="false"
@@ -56,15 +62,20 @@ exports[`Discount renders Discount component opened 2`] = `
       class="DiscountForm"
     >
       <div
-        class="stx-input stx-input--alert"
+        class="stx-field stx-field--with-input"
       >
-        <input
-          class="stx-input__input-element"
-          messagetext="Invalid example discount"
-          placeholder="Enter discount code"
-          type="text"
-          value="ExampleDiscount"
-        />
+        <div
+          class="stx-input"
+        >
+          <input
+            aria-disabled="false"
+            class="stx-input__input-element"
+            id="stxField2"
+            placeholder="Enter discount code"
+            type="text"
+            value="ExampleDiscount"
+          />
+        </div>
       </div>
       <button
         aria-busy="false"
@@ -80,11 +91,6 @@ exports[`Discount renders Discount component opened 2`] = `
           class="stx-loading-spinner stx-button__spinner"
         />
       </button>
-    </div>
-    <div
-      class="DiscountForm__error"
-    >
-      Invalid example discount
     </div>
   </div>
 </DocumentFragment>
