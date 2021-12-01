@@ -1,0 +1,56 @@
+.Checkout__Confirmation {
+  flex: 1;
+  padding: 35px;
+}
+
+.FieldSet.Confirmation__Section {
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin: 16px 0;
+}
+
+.Confirmation__List {
+  column-gap: 16px;
+  row-gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.FieldSet.Confirmation__Section .FieldSet__Heading {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.Confirmation__Section .FieldSet__Content {
+  font-size: 14px;
+  color: rgba(0,0,0,0.65);
+  line-height: 16px;
+}
+
+.Confirmation__Section .Confirmation__List strong {
+  margin-bottom: 8px;
+  display: block;
+  color: rgba(0,0,0,0.9);
+}
+
+.Checkout__ContactUs {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.Checkout__ContactUs a {
+  color: #0A75C2;
+}
+
+.Payment__List {
+  list-style: none;
+}
+
+.Confirmation__ListItem p {
+  margin-bottom: 8px;
+}
+
+.Confirmation__ListItem p:last-child {
+  margin-bottom: 0;
+}
