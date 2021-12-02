@@ -2,7 +2,6 @@ button.back-btn {
   position: relative;
   display: inline-block;
   border: none;
-  margin: 0;
   text-decoration: none;
   background: transparent;
   color: #0069ed;
@@ -13,7 +12,7 @@ button.back-btn {
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding: 16px 0;
+  margin-top: 16px;
 }
 
 button.back-btn::before {
@@ -24,7 +23,6 @@ button.back-btn::before {
   display: inline-block;
   height: 0.75em;
   width: 0.75em;
-  vertical-align: middle;
   transform: rotate(-135deg);
   margin: 0 5px;
 }

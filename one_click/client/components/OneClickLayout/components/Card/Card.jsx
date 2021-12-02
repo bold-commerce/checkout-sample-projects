@@ -1,10 +1,8 @@
 import React, { useContext }  from 'react';
-import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
-import { PaymentMethod } from '../Payment';
 import classnames from 'classnames';
-import './Card.scss';
 import { LayoutContext } from '../../context/LayoutContext';
+import './Card.scss';
 
 /**
  *
@@ -34,7 +32,7 @@ const Card = ({title, description, handleClick, overview, action, children, type
     })}>
       <div className="Card__Title">
         {paymentCard ?
-          <span onClick={() => setOpenModal(s => !s) }>{title}</span>
+          <button onClick={() => setOpenModal(s => !s) }>{title}</button>
         : (title ? <button type="button" onClick={handleClick}>{title}</button> : null)
         }
       </div>
@@ -47,7 +45,14 @@ const Card = ({title, description, handleClick, overview, action, children, type
           {description}
         </div>
         <div className="Card__Action">
-          {action && action.label && (action.label)}
+          {
+            action && action.label && 
+            (
+              action.onClick ? 
+              <button type="button" onClick={action.onClick}>{action.label}</button> :
+              action.label              
+            )
+          }
         </div>
         <div className="Card__Content">
           <div>{children}</div>

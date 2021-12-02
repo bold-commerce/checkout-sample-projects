@@ -14,8 +14,10 @@ import { useAnalytics } from '../../../../hooks';
 const IndexPage = ({ onSectionChange, show }) => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
-  const shippingAddressLines = addresses.shipping.address_line_2 ? `${addresses.shipping.address_line_1}, ${addresses.shipping.address_line_2}` : addresses.shipping.address_line_1;
-  const billingAddressLines = addresses.billing.address_line_2 ? `${addresses.billing.address_line_1}, ${addresses.billing.address_line_2}` : addresses.billing.address_line_1;
+  const shippingAddressArray = [ addresses.shipping.address_line_1, addresses.shipping.address_line_2, addresses.shipping.city, addresses.shipping.province, addresses.shipping.postal_code, addresses.shipping.country ]
+  const billingAddressArray = [ addresses.billing.address_line_1, addresses.billing.address_line_2, addresses.billing.city, addresses.billing.province, addresses.billing.postal_code, addresses.billing.country ];
+  const shippingCombined = shippingAddressArray.filter((addressString) => addressString !== '').join(', ');
+  const billingCombined = billingAddressArray.filter((addressString) => addressString !== '').join(', ');
   const { submitShippingAddress } = useShippingAddress();
   const [loading, setLoading] = useState(false);
   const { websiteName } = useContext(AppContext);
@@ -65,14 +67,7 @@ const IndexPage = ({ onSectionChange, show }) => {
       ( 
         shipping.selected_shipping &&
         <>
-        <div>
-          {`${shippingAddressLines}, 
-            ${addresses.shipping.city},
-            ${addresses.shipping.province},
-            ${addresses.shipping.postal_code},
-            ${addresses.shipping.country}
-          `}
-        </div>
+        <div>{shippingCombined}</div>
         <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
         </>
       )}
@@ -84,14 +79,7 @@ const IndexPage = ({ onSectionChange, show }) => {
       {
         state.orderInfo.billingSameAsShipping ? 
         <div>Billing address same as shipping address</div> :
-        <div>
-          {`${billingAddressLines}, 
-            ${addresses.billing.city},
-            ${addresses.billing.province},
-            ${addresses.billing.postal_code},
-            ${addresses.billing.country}
-          `}
-          </div>
+        <div>{billingCombined}</div>
       }
       </Card>
       <PaymentMethod />
