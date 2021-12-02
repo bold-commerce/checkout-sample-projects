@@ -7,11 +7,10 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
-
     position: static;
     border: 1px solid rgba(0,0, 0, 0.2);
     line-height: 20px;
-
+    margin-top: 16px;
     font-family: SF Pro Display;
     font-style: normal;
     font-weight: bold;
@@ -23,7 +22,7 @@
     align-items: center;
     color:rgba(0, 0, 0, 0.9);
     flex-grow: 0;
-    margin: 16px 0px;
+    margin-bottom: 16px;
     font-size: 18px;
 }
 

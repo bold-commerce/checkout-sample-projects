@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import InventoryItem from "./InventoryItem";
 import { useHistory, useLocation } from "react-router";
 import { Button } from "@boldcommerce/stacks-ui"
 import { Link } from "react-router-dom";
 import { useLineItems } from "@boldcommerce/checkout-react-components";
+import { AppContext } from '../../context/AppContext';
+import { Header } from "../Header";
 import './Inventory.css';
 
 export const Inventory = () => {
     const { data: lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
     const [loading, setLoading] = useState(false);
+    const { websiteName } = useContext(AppContext);
     const history = useHistory();
     const location = useLocation();
     const inventory = location.state;
@@ -53,6 +56,7 @@ export const Inventory = () => {
 
     return (
         <div className="Inventory__Main">
+            <Header title={websiteName} />
             <div className="Inventory__Message">
                 <div className="Inventory__Title">
                     Inventory issues
@@ -65,9 +69,9 @@ export const Inventory = () => {
             <div className="Inventory__footer">
                 <Link className="ReturnLink" to="/">Return to cart</Link>
                 <Button
-                onClick={handleUpdateQuantities}
-                className="CheckoutButton" 
-                disabled={loading} 
+                    onClick={handleUpdateQuantities}
+                    className="CheckoutButton"
+                    disabled={loading}
                 >
                     Continue with changes
                 </Button>
