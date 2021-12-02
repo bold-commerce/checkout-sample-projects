@@ -4,7 +4,6 @@ import { Price } from '@boldcommerce/stacks-ui';
 import SummaryLine from './SummaryLine';
 import SummaryItem from './SummaryItem';
 import { BackButton } from '../BackButton';
-import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { Header } from '../Header';
 import classNames from 'classnames';
 import { CheckoutButton } from '../CheckoutButton';
