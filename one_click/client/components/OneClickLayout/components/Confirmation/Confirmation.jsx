@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import { Button } from '@boldcommerce/stacks-ui';
 import { Link } from 'react-router-dom';
 import { useAnalytics } from '../../../../hooks';
 import './Confirmation.css'
@@ -51,7 +50,11 @@ const Confirmation = () => {
             <div className='confirmation-help'>
                 <p>Need help? <a href='#'>Contact us</a></p> { /* TODO: get correct contact us link */}
             </div>
-            <Link to='/'><Button className='confirmation-continue'>Continue shopping</Button></Link>
+            <div classname="confirmation-continue">
+                <Link className='confirmation-continue-button stx-button' to='/' >
+                    Continue shopping
+                </Link>
+            </div>
         </div>
     );
 };

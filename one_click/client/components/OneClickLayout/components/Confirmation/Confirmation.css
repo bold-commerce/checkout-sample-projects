@@ -48,10 +48,9 @@
     color: rgba(0, 0, 0, .65);
 }
 
-.confirmation-continue {
+.confirmation-continue-button {
     width: 100%;
     margin: 16px 0px;
     color: white;
     background-color: #0a75c2;
-    display: revert;
 }

@@ -66,7 +66,9 @@ export const Discount = ({
 };
 
   if (!open) return (
-    <div className="DiscountLink" onClick={openModal}>Discount code</div>
+    <div className="DiscountLink" >
+      <button onClick={openModal} >Discount code</button>
+    </div>
   );
 
   return (

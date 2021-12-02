@@ -60,7 +60,7 @@ export const BillingAddress = ({
   return (
     <section className="FieldSet FieldSet--BillingAddress">
       <div className="FieldSet__Header">
-        <h3>Billing address</h3>
+        <h3 className="Billing__Title">Billing address</h3>
       </div>
       <div className="FieldSet__Content">
         <CheckboxField

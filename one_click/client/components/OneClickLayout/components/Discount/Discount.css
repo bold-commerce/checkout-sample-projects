@@ -27,24 +27,29 @@
 }
 
 .DiscountLink {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0a75c2;
-  cursor: pointer;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   margin: 8px 0;
   padding: 16px 0;
 }
 
-.DiscountLink::before {
+.DiscountLink button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0a75c2;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  padding-right: 6px;
+}
+
+.DiscountLink button::before {
   position: relative;
   content: '+';
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
+  margin: 0px 10px 0px 6px;
 }
 
 .DiscountForm__Message {

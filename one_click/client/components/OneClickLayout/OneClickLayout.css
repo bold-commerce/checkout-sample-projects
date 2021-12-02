@@ -13,6 +13,18 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
+*.stx-button:focus,
+*.stx-input--has-focus,
+*.stx-select--has-focus{
+  box-shadow: none;
+  outline: #2175c2 auto 2px;
+}
+
+*:focus-visible {
+  outline: #2175c2 auto 2px;
+  outline-offset: 4px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -46,12 +58,12 @@ body {
 }
 
 .FieldSet {
-  margin: 2rem 0;
+  margin: 16px 0;
   padding: 0;
 }
 
 .FieldSet__Header {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .FieldSet__Heading {
@@ -121,8 +133,10 @@ h1.Section__Title {
 
 .Sidebar--Hide {
   transform: translate(100%, 0);
+  visibility: hidden;
 }
 
 .IndexPage--Hide {
   transform: translate(-100%, 0);
+  visibility: hidden;
 }

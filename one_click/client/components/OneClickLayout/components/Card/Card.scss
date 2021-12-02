@@ -44,7 +44,6 @@
     font-size: 16px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.9);
-
   }
 
   &__Description {
@@ -58,7 +57,6 @@
 
   &__Action {
     grid-area: action;
-    font-size: 1.2rem;
     display: flex;
     justify-content: flex-end;
     color: var(--color-primary);
@@ -66,6 +64,16 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+
+    & button {
+      font-size: inherit;
+      font-style: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      color: inherit;
+      border: none;
+      background-color: inherit;
+    }
   }
 
   &__Content {

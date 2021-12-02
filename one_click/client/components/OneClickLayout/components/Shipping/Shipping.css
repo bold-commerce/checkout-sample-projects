@@ -24,3 +24,7 @@ li .RadioItem input {
 .RadioButton.RadioButton__NewAddressContainer {
   padding: 8px 0;
 }
+
+.Shipping__ShippingAddress {
+  margin: 16px 0;
+}
