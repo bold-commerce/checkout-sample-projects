@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { Link } from 'react-router-dom';
 import { useAnalytics } from '../../../../hooks';
+import { AppContext } from '../../context/AppContext';
+import { Header } from '../Header';
 import './Confirmation.css'
 
 const Confirmation = () => {
     const { state } = useCheckoutStore();
     const { addresses, customer, payments, shipping} = state.applicationState;
     const trackEvent = useAnalytics();
+    const { websiteName } = useContext(AppContext);
 
     useEffect(() => {
       trackEvent('thank_you');
@@ -15,7 +18,8 @@ const Confirmation = () => {
 
     return(
         <div className='Sidebar ConfirmationPage'>
-            <h1>Thank you{ customer.first_name && ', ' + customer.first_name }!</h1>
+            <Header title={websiteName} />
+            <div className="ThankYou">Thank you{ customer.first_name && ', ' + customer.first_name }!</div>
             <div className='confirmation-order'>
                 <h2>Your order is confirmed</h2>
                 <div className='confirmation-order-accepted'>We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.</div>
