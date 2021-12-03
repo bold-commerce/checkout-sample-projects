@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { InputField, Button, Message } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
@@ -15,41 +15,48 @@ export const Discount = ({
   const [status, setStatus] = useState({});
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const discountRef = React.useRef();
 
   /**
-  * Opens the discount modal
-  */
+    * Opens the discount modal
+    */
   const openModal = useCallback(() => {
     setOpen(true);
   }, []);
 
+  useEffect(() => {
+    if (status.errors && loading === false){
+      discountRef.current.querySelector('input').focus();
+    }
+  }, [status.errors, loading])
 
-  const submitDiscount = async (discount, discountStatus = 'new') => {
-      setLoading(true);
-      try {
-          await applyDiscount(discount);
-          setStatus(() => {
-            return discountStatus === 'existing' ? {
-              info: {
-                message: 'The previous discount code was removed. Only one discount code may be applied at a time.',
-              }
-            } : {
-              success: {
-                message: 'Discount applied successfully',
-              }
+  const submitDiscount = useCallback( async(discount, discountStatus = 'new') => {
+    setLoading(true);
+    try {
+        await applyDiscount(discount);
+        setStatus(() => {
+          return discountStatus === 'existing' ? {
+            info: {
+              message: 'The previous discount code was removed. Only one discount code may be applied at a time.',
             }
-          });
-          trackEvent('apply_discount_code');
-      } catch(e) {
-        setStatus({
-          errors: e.body.errors,
+          } : {
+            success: {
+              message: 'Discount applied successfully',
+            }
+          }
         });
-        logError('discount_code', e);
-      }
-      setLoading(false);
-  };
+        trackEvent('apply_discount_code');
+    } catch(e) {
+      setStatus({
+        errors: e.body.errors,
+      });
+      logError('discount_code', e);
+    }
+    setLoading(false);
+  }, []);
 
-  const removeAndSubmitDiscount = async (discount) => {
+
+  const removeAndSubmitDiscount = useCallback(async (discount) => {
     setLoading(true);
     try {
       await removeDiscount(discount);
@@ -63,18 +70,19 @@ export const Discount = ({
       logError('discount_code', e);
     }
     setLoading(false);
-};
+  }, []);
 
   if (!open) return (
     <div className="DiscountLink" >
-      <button onClick={openModal} >Discount code</button>
+      <button onClick={openModal} aria-label="add discount code">Discount code</button>
     </div>
   );
 
   return (
     <div className="SummaryBlock Summary__DiscountForm">
-      <div className="DiscountForm">
+      <div className="DiscountForm" ref={discountRef}>
         <InputField
+          id="discount_input"
           type="text"
           placeholder="Enter discount code"
           value={discount}
@@ -82,8 +90,10 @@ export const Discount = ({
           messageType={status.errors && 'alert'}
           onChange={(e) => setDiscount(e.target.value)}
           disabled={loading}
+          aria-invalid={status.errors ? true : null }
         />
         <Button
+          aria-label='apply discount'
           primary={discountApplied || discount.length > 0}
           disabled={discount.length === 0 || loading}
           loading={loading}

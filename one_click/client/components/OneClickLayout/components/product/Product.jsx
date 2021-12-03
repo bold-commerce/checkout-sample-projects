@@ -26,7 +26,7 @@ const Product = ({
     </div>
     <div className="CartItem__QuantityPriceWrapper">
       <div className="CartItem__ProductQuantityWrapper">
-        <div className="ProductQuantity">
+        <div className="ProductQuantity" aria-label="product quantity">
           {quantity}
         </div>
       </div>

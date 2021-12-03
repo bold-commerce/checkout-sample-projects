@@ -9,6 +9,7 @@ const SummaryItem = ({ title, value, removeItem }) => {
                 { title }
                 { removeItem &&
                 <button
+                    aria-label="remove item"
                     className="summary-child-remove"
                     onClick={() => removeItem(title)}
                 >

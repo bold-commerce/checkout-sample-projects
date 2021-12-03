@@ -22,15 +22,13 @@ const SummaryLine = ({ title, value, items }) => {
         <div className="summary-line">
             <div className="summary-line-head">
                 <button
-                    aria-expanded={false}
-                    aria-controls={'Line-'+ title }
                     className="summary-btn"
                     id={'summary-line-' + title }
                     onClick={() => {setHidden(!hidden)}}
                 >
                     <div className="Accordion-title summary-line-title">
                         <div className="summary-line-icon"
-                            style={{ transform : "rotate(" +(hidden ? "0" : "90")+ "deg)"}}
+                            style={{ transform : "rotate(" + (hidden ? "0" : "90")+ "deg)" }}
                         >
                             <CaretRight />
                         </div>

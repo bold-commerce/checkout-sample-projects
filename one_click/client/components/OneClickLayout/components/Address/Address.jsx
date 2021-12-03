@@ -72,6 +72,7 @@ export const Address = ({
           value={address?.first_name ?? ''}
           messageType={errors && errorMap?.first_name && 'alert' || ''}
           messageText={errors && errorMap?.first_name && 'Enter a first name' || ''}
+          aria-invalid={errors && errorMap?.first_name && true || null }
           onChange={(e) => onChange({
             first_name: e.target.value,
           })}
@@ -84,6 +85,7 @@ export const Address = ({
           value={address?.last_name ?? ''}
           messageType={errors && errorMap?.last_name && 'alert' || ''}
           messageText={errors && errorMap?.last_name && 'Enter a last name' || ''}
+          aria-invalid={errors && errorMap?.last_name && true || null }
           onChange={(e) => onChange({
             last_name: e.target.value,
           })}
@@ -98,6 +100,7 @@ export const Address = ({
           value={address?.business_name ?? ''}
           messageType={errors && errorMap?.business_name && 'alert' || ''}
           messageText={errors && errorMap?.business_name && 'Enter a company name' || ''}
+          aria-invalid={errors && errorMap?.business_name && true || null }
           onChange={(e) => onChange({
             business_name: e.target.value,
           })}
@@ -112,6 +115,7 @@ export const Address = ({
           value={address?.address_line_1 ?? ''}
           messageType={errors && errorMap?.address && 'alert' || ''}
           messageText={errors && errorMap?.address && 'Enter an address' || ''}
+          aria-invalid={errors && errorMap?.address && true || null }
           onChange={(e) => onChange({
             address_line_1: e.target.value,
           })}
@@ -135,6 +139,7 @@ export const Address = ({
           value={address?.city ?? ''}
           messageType={errors && errorMap?.city && 'alert' || ''}
           messageText={errors && errorMap?.city && 'Enter a city' || ''}
+          aria-invalid={errors && errorMap?.city && true || null }
           className="Field Field--City"
           onChange={(e) => onChange({
             city: e.target.value,
@@ -148,6 +153,7 @@ export const Address = ({
           value={address?.country_code ?? ''}
           messageType={errors && errorMap?.country && 'alert' || ''}
           messageText={errors && errorMap?.country && 'Select a country' || ''}
+          aria-invalid={errors && errorMap?.country && true || null }
           onChange={(e) => onChange({
             country_code: e.target.value,
           })}
@@ -165,6 +171,7 @@ export const Address = ({
               value={address?.province_code ?? ''}
               messageType={errors && errorMap?.province && 'alert' || ''}
               messageText={errors && errorMap?.province && 'Select a province or state' || ''}
+              aria-invalid={errors && errorMap?.province && true || null }
               onChange={(e) => onChange({
                 province_code: e.target.value,
               })}
@@ -182,6 +189,7 @@ export const Address = ({
               className="Field Field--Postal_Code"
               messageType={errors && errorMap?.postal_code && 'alert' || ''}
               messageText={errors && errorMap?.postal_code}
+              aria-invalid={errors && errorMap?.postal_code && true || null }
               value={address?.postal_code ?? ''}
               onChange={(e) => onChange({
                 postal_code: e.target.value,
@@ -198,6 +206,7 @@ export const Address = ({
           value={address?.phone_number ?? ''}
           messageType={errors && errorMap?.phone_number && 'alert' || ''}
           messageText={errors && errorMap?.phone_number && 'Enter a phone number' || ''}
+          aria-invalid={errors && errorMap?.phone_number && true || null }          
           onChange={(e) => onChange({
             phone_number: e.target.value,
           })}

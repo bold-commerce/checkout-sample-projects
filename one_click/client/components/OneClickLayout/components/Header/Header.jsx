@@ -11,7 +11,7 @@ const Header = ({ title }) => {
   return (
     <div className="Header">
       <h1 className="Header__Title">{title}</h1>
-      <button className="Header__Times" onClick={() => setShowCheckout(false)}>
+      <button aria-label="Close" className="Header__Times" onClick={() => setShowCheckout(false)}>
         <Times />
       </button>
     </div>

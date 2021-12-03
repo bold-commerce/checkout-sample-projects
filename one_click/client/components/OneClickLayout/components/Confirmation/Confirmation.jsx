@@ -54,7 +54,7 @@ const Confirmation = () => {
             <div className='confirmation-help'>
                 <p>Need help? <a href='#'>Contact us</a></p> { /* TODO: get correct contact us link */}
             </div>
-            <div classname="confirmation-continue">
+            <div className="confirmation-continue">
                 <Link className='confirmation-continue-button stx-button' to='/' >
                     Continue shopping
                 </Link>
