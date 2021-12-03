@@ -25,7 +25,7 @@ const InventoryItem = ({
                     stockQty === 0 ?
                     <div className="SoldOut">Sold Out</div> :
                     <>                        
-                        <div className="ProductQuantity"> 
+                        <div aria-label="ordered quantity" className="ProductQuantity"> 
                             {orderQty} 
                         </div>
                         <div 
@@ -33,7 +33,7 @@ const InventoryItem = ({
                         >
                             <ArrowRight />
                         </div>
-                        <div className="ProductQuantity">
+                        <div aria-label="available quantity" className="ProductQuantity">
                             {stockQty}
                         </div>
                     </>
@@ -43,6 +43,7 @@ const InventoryItem = ({
         <div className="InventoryItem__RemoveItemWrapper">
             {stockQty !== 0 &&
             <button 
+                aria-label="remove item"
                 className="InventoryItem__RemoveItem" 
                 onClick={onRemove}
             >
