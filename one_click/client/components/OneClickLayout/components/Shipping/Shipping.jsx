@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Shipping.css';
 
-const Shipping = ({ show, onBack }) => {
+const Shipping = ({ show, onBack }, ref) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
@@ -28,7 +28,7 @@ const Shipping = ({ show, onBack }) => {
   const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching';
 
   return (
-    <div className={classNames('Sidebar Shipping', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
+    <div ref={ref} className={classNames('Sidebar Shipping', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
       <Header title={"Shipping"} />
       <BackButton onClick={onBack} />
       <section className="Shipping__ShippingAddress">
@@ -45,4 +45,6 @@ const Shipping = ({ show, onBack }) => {
   );
 };
 
-export default Shipping;
+const ShippingForwardedRef = React.forwardRef(Shipping);
+
+export default ShippingForwardedRef;

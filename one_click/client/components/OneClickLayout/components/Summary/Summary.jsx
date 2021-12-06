@@ -10,7 +10,7 @@ import { CheckoutButton } from '../CheckoutButton';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Summary.scss';
 
-const Summary = ({ show, onBack }) => {
+const Summary = ({ show, onBack }, ref) => {
   const { data: shipping } = useShippingLines();
   const { data: discount, removeDiscount } = useDiscount();
   const { state } = useCheckoutStore();
@@ -60,7 +60,7 @@ const Summary = ({ show, onBack }) => {
   }
 
   return(
-    <div className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
+    <div ref={ref} className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
       <Header title={"Summary"} />
       <BackButton onClick={onBack} />
       <section className="Summary__OrderSummary">
@@ -90,9 +90,11 @@ const Summary = ({ show, onBack }) => {
           <Price className="summary-total-price" amount={orderTotals.total} />
         </div>
       </section>
-      <CheckoutButton className="CheckoutButton" />
+      <CheckoutButton className="CheckoutButton CheckoutButton__Mobile" />
     </div>
   );
 };
 
-export default Summary;
+const SummaryForwardedRef = React.forwardRef(Summary);
+
+export default SummaryForwardedRef;

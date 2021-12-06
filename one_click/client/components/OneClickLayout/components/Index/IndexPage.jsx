@@ -11,7 +11,7 @@ import { PaymentMethod } from '../Payment';
 import { CheckoutButton } from '../CheckoutButton';
 import { useAnalytics } from '../../../../hooks';
 
-const IndexPage = ({ onSectionChange, show }) => {
+const IndexPage = ({ onSectionChange, show }, ref) => {
   const { state } = useCheckoutStore();
   const { order_total, customer, addresses, shipping } = state.applicationState;
   const shippingAddressArray = [ addresses.shipping.address_line_1, addresses.shipping.address_line_2, addresses.shipping.city, addresses.shipping.province, addresses.shipping.postal_code, addresses.shipping.country ]
@@ -43,7 +43,7 @@ const IndexPage = ({ onSectionChange, show }) => {
   }, []);
 
   return (
-    <div className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
+    <div ref={ref} className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName}/>
       <LineItems />
       <Card
@@ -83,9 +83,11 @@ const IndexPage = ({ onSectionChange, show }) => {
       }
       </Card>
       <PaymentMethod />
-      <CheckoutButton className="CheckoutButton" />
+      <CheckoutButton className="CheckoutButton CheckoutButton__Mobile" />
     </div>
   )
 };
 
-export default IndexPage;
+const IndexPageForwardedRef = React.forwardRef(IndexPage);
+
+export default IndexPageForwardedRef;
