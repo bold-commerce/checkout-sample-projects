@@ -6,10 +6,10 @@ import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/
 import { useAnalytics, useErrorLogging, useInventory } from '../../../../hooks';
 import './CheckoutButton.css';
 
-const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage }) => (
+const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage, innerRef }) => (
   <>
     { errorMessage ? <Message type="alert">{ errorMessage }</Message> : null }
-    <div className="CheckoutButton__Container">
+    <div ref={innerRef} className="CheckoutButton__Container">
       <Button onClick={onClick} disabled={disabled} loading={loading} className={className}>
         Complete Order
       </Button>
@@ -25,7 +25,7 @@ CheckoutButton.propTypes = {
   errorMessage: PropTypes.string,
 };
 
-const CheckoutButtonContainer = ({ className }) => {
+const CheckoutButtonContainer = ({ className }, ref) => {
   const { state } = useCheckoutStore();
   const [loading, setLoading] = useState();
   const { orderStatus } = state.orderInfo;
@@ -62,7 +62,9 @@ const CheckoutButtonContainer = ({ className }) => {
   };
   const onClick = processing ? null : handleCheckout;
 
-  return <CheckoutButton disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
+  return <CheckoutButton innerRef={ref} disabled={checkoutButtonDisabled} onClick={onClick} loading={processing || loading} className={className} errorMessage={orderErrorMessage} />;
 };
 
-export default CheckoutButtonContainer;
+const CheckoutButtonContainerForwardedRef = React.forwardRef(CheckoutButtonContainer);
+
+export default CheckoutButtonContainerForwardedRef;

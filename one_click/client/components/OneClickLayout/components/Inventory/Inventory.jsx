@@ -8,7 +8,7 @@ import { AppContext } from '../../context/AppContext';
 import { Header } from "../Header";
 import './Inventory.css';
 
-export const Inventory = () => {
+export const Inventory = ({}, ref) => {
     const { data: lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
     const [loading, setLoading] = useState(false);
     const { websiteName } = useContext(AppContext);
@@ -55,7 +55,7 @@ export const Inventory = () => {
     }
 
     return (
-        <div className="Inventory__Main">
+        <div ref={ref} className="Inventory__Main">
             <Header title={websiteName} />
             <div className="Inventory__Message">
                 <div className="Inventory__Title">
@@ -79,4 +79,7 @@ export const Inventory = () => {
         </div>
     )
 }
-export default Inventory;
+
+const InventoryForwardedRef = React.forwardRef(Inventory);
+
+export default InventoryForwardedRef;

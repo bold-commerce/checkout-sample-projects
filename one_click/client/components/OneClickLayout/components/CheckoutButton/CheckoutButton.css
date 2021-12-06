@@ -1,7 +1,3 @@
-.CheckoutButton__Container {
-  border-top: 1px solid;
-  border-color: rgba(0, 0, 0, 0.4);
-}
 .CheckoutButton {
   color: white;
   width: 100%;
@@ -11,4 +7,28 @@
 
 .CheckoutButton:disabled {
   background-color: rgba(0, 0, 0, 0.65);
+}
+
+.CheckoutButton__Show {
+  visibility: visible;
+}
+
+.CheckoutButton__Hide {
+  display:none;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .CheckoutButton__Desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .CheckoutButton__Container {
+    padding: 0px 32px;
+  }
+  .CheckoutButton__Mobile {
+    display: none;
+  }
 }

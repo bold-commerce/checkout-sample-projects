@@ -6,7 +6,7 @@ import { AppContext } from '../../context/AppContext';
 import { Header } from '../Header';
 import './Confirmation.css'
 
-const Confirmation = () => {
+const Confirmation = ({}, ref) => {
     const { state } = useCheckoutStore();
     const { addresses, customer, payments, shipping} = state.applicationState;
     const trackEvent = useAnalytics();
@@ -17,7 +17,7 @@ const Confirmation = () => {
     }, []);
 
     return(
-        <div className='Sidebar ConfirmationPage'>
+        <div ref={ref} className='Sidebar ConfirmationPage'>
             <Header title={websiteName} />
             <div className="ThankYou">Thank you{ customer.first_name && ', ' + customer.first_name }!</div>
             <div className='confirmation-order'>
@@ -63,4 +63,6 @@ const Confirmation = () => {
     );
 };
 
-export default Confirmation;
+const ConfirmationForwardedRef = React.forwardRef(Confirmation);
+
+export default ConfirmationForwardedRef;
