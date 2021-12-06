@@ -1,6 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Plus from '../Icons/Plus'
 import { InputField, Button, Message } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
@@ -74,7 +75,7 @@ export const Discount = ({
 
   if (!open) return (
     <div className="DiscountLink" >
-      <button onClick={openModal} aria-label="add discount code">Discount code</button>
+      <button onClick={openModal} aria-label="add discount code"><Plus className='DiscountPlus' />Discount code</button>
     </div>
   );
 

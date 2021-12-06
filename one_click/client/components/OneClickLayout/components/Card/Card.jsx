@@ -24,11 +24,13 @@ const Card = ({title, description, handleClick, overview, action, children, type
 
   const {openModal, setOpenModal} = useContext(LayoutContext);
   const paymentCard = type === 'paymentCard';
+  const shippingCard = type === 'shippingCard';
 
   return (
     <div className={classnames({
       'Card': true,
       'Card--Payment': paymentCard,
+      'Card--Shipping': shippingCard
     })}>
       <div className="Card__Title">
         {paymentCard ?

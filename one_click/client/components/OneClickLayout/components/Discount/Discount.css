@@ -29,11 +29,11 @@
 .DiscountLink {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  margin: 8px 0;
-  padding: 16px 0;
+  padding: 2px 0 24px 0;
 }
 
 .DiscountLink button {
+  text-decoration: underline    ;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -42,14 +42,10 @@
   cursor: pointer;
   border: none;
   background-color: inherit;
-  padding-right: 6px;
 }
 
-.DiscountLink button::before {
-  position: relative;
-  content: '+';
-  display: inline-block;
-  margin: 0px 10px 0px 6px;
+.DiscountLink button svg {
+  margin: 0 8px -2px 0;
 }
 
 .DiscountForm__Message {

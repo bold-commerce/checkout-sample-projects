@@ -1,4 +1,9 @@
 .Summary__ {
+    &Lines.SummaryBlock,
+    &Total.SummaryBlock {
+        padding: 16px 0;
+    }
+
     &Total {
         color: rgba(0, 0, 0, .9);
         line-height: 20px;
@@ -11,6 +16,10 @@
             margin-left: 24px;
         }
     }
+}
+
+.Summary > .CheckoutButton__Container {
+    border-top: none;
 }
 
 .summary-line {

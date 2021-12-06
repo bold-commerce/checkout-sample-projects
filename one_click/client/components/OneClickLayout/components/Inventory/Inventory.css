@@ -13,22 +13,16 @@
     margin-top: 16px;
     font-family: SF Pro Display;
     font-style: normal;
-    font-weight: bold;
 }
 
 .Inventory__Title {
-    order: 0;
-    align-self: stretch;
-    align-items: center;
     color:rgba(0, 0, 0, 0.9);
-    flex-grow: 0;
     margin-bottom: 16px;
     font-size: 18px;
 }
 
 .Inventory__Description {
     font-size: 14px;
-    align-items: center;
     color: rgba(0, 0, 0, 0.65);
 
 }

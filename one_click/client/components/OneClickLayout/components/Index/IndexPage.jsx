@@ -60,6 +60,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
       )}
       <Card
         title={"Shipping"}
+        type={"shippingCard"}
         handleClick={() => onSectionChange('shipping')}
         description={!loading ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
       >

@@ -19,7 +19,7 @@ const Confirmation = ({}, ref) => {
     return(
         <div ref={ref} className='Sidebar ConfirmationPage'>
             <Header title={websiteName} />
-            <div className="ThankYou">Thank you{ customer.first_name && ', ' + customer.first_name }!</div>
+            <div className="ThankYou">{`Thank you, {firstname}!`}</div>
             <div className='confirmation-order'>
                 <h2>Your order is confirmed</h2>
                 <div className='confirmation-order-accepted'>We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.</div>
