@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useLoadingStatus, useSavedAddresses, useShippingAddress } from '@boldcommerce/checkout-react-components';
 import { BackButton } from '../BackButton';
 import ShippingAddressList from './ShippingAddressList';
@@ -12,10 +12,12 @@ const Shipping = ({ show, onBack }, ref) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
+  const [selectingAddress, setSelectingAddress] = useState(false);
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
 
   const handleSubmit = useCallback(async (address) => {
+    setSelectingAddress(true);
     try {
       await submitShippingAddress(address);
       trackEvent('set_shipping_address');
@@ -23,9 +25,10 @@ const Shipping = ({ show, onBack }, ref) => {
     catch(e) {
       logError('shipping_address', e);
     }
+    setSelectingAddress(false);
   }, []);
 
-  const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching';
+  const isSetting = shippingAddressLoadingStatus === 'setting' || shippingLinesLoadingStatus === 'fetching' || selectingAddress;
 
   return (
     <div ref={ref} className={classNames('Sidebar Shipping', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
