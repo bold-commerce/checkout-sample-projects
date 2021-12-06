@@ -1,13 +1,16 @@
 .Card {
   --color-primary: #0A75C2;
   display: grid;
-  gap: 8px;
   padding: 16px 0;
   grid-template: "title overview" auto
                  "description action" auto
                  "content content" auto
                 / 1fr 1fr;
 
+  &--Shipping {
+    gap: 8px;
+  }
+  
   & .stx-price__amount {
     font-weight: inherit;
     font-size: inherit;
@@ -84,8 +87,11 @@
 
     & .card-shipping-content {
       display: flex;
-      color:rgba(0, 0, 0, 0.9);
       padding-top: 8px;
+    }
+
+    & .stx-price__amount {
+      padding-left: 4px;
     }
   }
 
@@ -93,7 +99,12 @@
     border-bottom: 1px solid;
     border-color: rgba(0, 0, 0, 0.4);
   }
+
+  &--Payment .Card__Content {
+    padding-top: 8px;
+  }
 }
+
 .hidden {
   display: none;
 }

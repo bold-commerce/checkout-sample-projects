@@ -25,6 +25,11 @@
   outline-offset: 4px;
 }
 
+.stx-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -69,7 +74,7 @@ body {
 }
 
 .FieldSet__Heading {
-  font-size: 17px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.9);

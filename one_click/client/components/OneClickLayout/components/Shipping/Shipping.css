@@ -2,12 +2,11 @@ ul.AddressList {
   list-style: none;
   display: grid;
   grid-auto-flow: row;
-  gap: 8px;
 }
 
 li .RadioItem {
   display: flex;
-  gap: 8px;
+  column-gap: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   font-style: normal;
   font-weight: normal;
@@ -19,6 +18,10 @@ li .RadioItem {
 
 li .RadioItem input {
   margin-top: 4px;
+}
+
+.RadioItem__Content > p:first-child {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .RadioButton.RadioButton__NewAddressContainer {
