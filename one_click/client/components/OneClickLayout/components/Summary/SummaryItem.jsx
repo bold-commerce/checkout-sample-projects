@@ -1,5 +1,5 @@
 import React from "react";
-import TimesCircle from "../Icons/TimesCirlce";
+import TimesCircle from "../Icons/TimesCircle";
 import { Price } from "@boldcommerce/stacks-ui/lib";
 
 const SummaryItem = ({ title, value, removeItem }) => {

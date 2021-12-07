@@ -3,13 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useCheckoutStore, useShippingLines } from '@boldcommerce/checkout-react-components';
 import { RadioField, Price } from '@boldcommerce/stacks-ui';
-import EmptyState from '../EmptyState/EmptyState';
 import LoadingState from '../LoadingState/LoadingState';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './ShippingLines.css';
 
 export const ShippingLines = ({
-  showShippingLines, shippingLinesFetching, shippingLinesLoadingStatus, shippingLines, selectedShippingLineIndex, setSelectedShippingLine,
+  showShippingLines, shippingLinesFetching, shippingLinesLoadingStatus, shippingLines, selectedShippingLineIndex, setSelectedShippingLine, disabled
 }) => {
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
@@ -29,7 +28,9 @@ export const ShippingLines = ({
         <div className="FieldSet__Header">
           <h3 className="FieldSet__Heading">Shipping method</h3>
         </div>
-        <div className="FieldSet__Content"><EmptyState title="To view shipping options, complete filling in your address" /></div>
+        <div className="FieldSet__Content">
+          <p>To see shipping options complete filling in your address above</p>
+        </div>
       </section>
     );
   }
@@ -50,7 +51,7 @@ export const ShippingLines = ({
                     name="shipping-method"
                     checked={selectedShippingLineIndex === parseInt(method.id, 10)}
                     className="RadioField"
-                    disabled={shippingLinesLoadingStatus === 'setting'}
+                    disabled={shippingLinesLoadingStatus === 'setting' || disabled }
                     onChange={() => handleShippingLineChange(index)}
                   />
                   <Price className="ShippingMethod__Price" amount={method.amount} />
@@ -74,7 +75,7 @@ ShippingLines.propTypes = {
 
 const MemoizedShippingLines = React.memo(ShippingLines);
 
-const ShippingLinesContainer = () => {
+const ShippingLinesContainer = ( {activePage, disabled} ) => {
   const { data, loadingStatus, errors, updateShippingLine,  } = useShippingLines();
   const { shippingLines, selectedShippingLineIndex } = data;
   const { state } = useCheckoutStore();
@@ -82,12 +83,13 @@ const ShippingLinesContainer = () => {
 
   return (
     <MemoizedShippingLines
-      showShippingLines={ country_code && loadingStatus !== 'incomplete' && !errors }
+      showShippingLines={ country_code && loadingStatus !== 'incomplete' && !errors && activePage }
       shippingLinesFetching={ loadingStatus === 'fetching' }
       shippingLinesLoadingStatus={loadingStatus}
       shippingLines={shippingLines}
       selectedShippingLineIndex={selectedShippingLineIndex}
       setSelectedShippingLine={updateShippingLine}
+      disabled={disabled}
     />
   );
 };

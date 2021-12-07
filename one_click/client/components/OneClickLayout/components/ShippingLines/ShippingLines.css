@@ -1,5 +1,4 @@
 .FieldSet--ShippingMethod .RadioButton {
-  border: 1px solid #D9D9D9;
   margin-bottom: 0;
   font-style: normal;
   font-weight: normal;
@@ -11,6 +10,10 @@
   padding: 8px 20px;
   cursor: pointer;
   position: relative;
+}
+
+.FieldSet--ShippingMethod .RadioButton:not(:first-child) {
+  border-top: 1px solid #D9D9D9;
 }
 
 .FieldSet--ShippingMethod .RadioButton .stx-radio-field__label {
