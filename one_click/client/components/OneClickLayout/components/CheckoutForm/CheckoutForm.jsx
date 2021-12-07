@@ -75,10 +75,10 @@ const CheckoutForm = () => {
 
     const resizeObserver = new ResizeObserver(() => {  
       if(showCheckoutButton){    
-        setHeight(openEl.current.clientHeight + checkoutButtonEl.current?.clientHeight);
+        setHeight(openEl.current?.clientHeight + checkoutButtonEl.current?.clientHeight);
       }
       else {
-        setHeight(openEl.current.clientHeight);
+        setHeight(openEl.current?.clientHeight);
       }
     });
     resizeObserver.observe(openEl.current);
@@ -88,10 +88,10 @@ const CheckoutForm = () => {
     }
   }, [openSection]);
 
-  const style = {
+  const style = window.innerWidth > 768 ? {
     height: height? `${height}px` : null,
     overflowY: height > window.innerHeight ? 'scroll' : 'hidden',
-  }
+  } : {}
 
   return (
     <div className="Checkout__Form" style={style}>
