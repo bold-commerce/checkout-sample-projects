@@ -9,7 +9,7 @@ import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Shipping.css';
 
 const Shipping = ({ show, onBack }, ref) => {
-  const { data: shippingAddress, submitShippingAddress } = useShippingAddress();
+  const { data: shippingAddress, errors, submitShippingAddress } = useShippingAddress();
   const { data: savedAddresses } = useSavedAddresses();
   const { shippingAddressLoadingStatus, shippingLinesLoadingStatus } = useLoadingStatus();
   const [selectingAddress, setSelectingAddress] = useState(false);
@@ -43,7 +43,7 @@ const Shipping = ({ show, onBack }, ref) => {
           disabled={isSetting}
         />
       </section>
-      <ShippingLines />
+      <ShippingLines activePage={show} disabled={Boolean(errors)} />
     </div>
   );
 };
