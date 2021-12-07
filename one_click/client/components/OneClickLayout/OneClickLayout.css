@@ -127,7 +127,7 @@ h1.Section__Title {
 @media only screen and (max-width: 768px) {
   .Sidebar {
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .Shipping,
