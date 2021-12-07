@@ -4,13 +4,14 @@ import { useLocation, useHistory} from 'react-router';
 import { useCheckoutStore, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
-import { useAnalytics, useInventory } from '../../../../hooks';
+import { useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
 import { ProcessingOrder } from '../Processing';
 import { Confirmation } from '../Confirmation';
 import { IndexPage } from '../Index';
 import { CheckoutButton } from '../CheckoutButton';
 import classNames from 'classnames';
+import { LoadingState } from '../LoadingState';
 
 const CheckoutForm = () => {
   const { data: lineItems } = useLineItems();
@@ -19,7 +20,8 @@ const CheckoutForm = () => {
   const location = useLocation();
   const checkInventory = useInventory();
   const history = useHistory();
-  const [openSection, setOpenSection] = useState("/");
+  const [openSection, setOpenSection] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [height, setHeight] = useState(null);
   const mainEl = useRef(null);
   const summaryEl = useRef(null);
@@ -41,8 +43,10 @@ const CheckoutForm = () => {
     setOpenSection(location.pathname);
   }, [location.pathname]);
 
-  useEffect(() => {
-    getInventory();
+  useEffect(async () => {
+    setLoading(true);
+    await getInventory();
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -95,23 +99,27 @@ const CheckoutForm = () => {
 
   return (
     <div className="Checkout__Form" style={style}>
-      <Switch location={location}>
-        <Route exact path="/processing" >
-          <ProcessingOrder ref={processingEl} />
-        </Route>
-        <Route exact path="/confirmation">
-          <Confirmation ref={confirmationEl}/>
-        </Route>
-        <Route exact path="/inventory">
-          <Inventory ref={inventoryEl}/>
-        </Route>
-        <Route exact path="/">
-          <IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>
-        </Route>
-      </Switch>
-      <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
-      <Summary ref={summaryEl} show={openSection==='summary'}  onBack={() => setOpenSection("/")} />
-      <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
+      { (loading && <LoadingState/>) || 
+        <>
+          <Switch location={location}>
+            <Route exact path="/processing" >
+              <ProcessingOrder ref={processingEl} />
+            </Route>
+            <Route exact path="/confirmation">
+              <Confirmation ref={confirmationEl}/>
+            </Route>
+            <Route exact path="/inventory">
+              <Inventory ref={inventoryEl}/>
+            </Route>
+            <Route exact path="/">
+              <IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>
+            </Route>
+          </Switch>
+          <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
+          <Summary ref={summaryEl} show={openSection==='summary'}  onBack={() => setOpenSection("/")} />
+          <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
+        </>
+      }
     </div>
   )};
 
