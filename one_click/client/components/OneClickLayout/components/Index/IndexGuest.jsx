@@ -7,7 +7,7 @@ import { Header } from "../Header";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 
-const IndexGuest = ({ onSectionChange, show }) => {
+const IndexGuest = ({ onSectionChange, show }, ref) => {
   const { websiteName } = useContext(AppContext);
   const { state } = useCheckoutStore();
   const { data: shippingAddress, errors, submitShippingAddress } = useShippingAddress();
@@ -18,7 +18,7 @@ const IndexGuest = ({ onSectionChange, show }) => {
   let provincePlaceholder = countryInfo.provinceLabel;
 
   return (
-    <div className={classNames('Sidebar IndexGuest', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
+    <div ref={ref} className={classNames('Sidebar IndexGuest', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName} />
       <div className="SummaryOI">
         <h2>Summary</h2>
@@ -69,4 +69,6 @@ const IndexGuest = ({ onSectionChange, show }) => {
   )
 }
 
-export default IndexGuest;
+const IndexGuestForwardedRef = React.forwardRef(IndexGuest);
+
+export default IndexGuestForwardedRef;
