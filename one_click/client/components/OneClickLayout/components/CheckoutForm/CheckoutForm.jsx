@@ -109,7 +109,10 @@ console.log(customer);
           <Inventory ref={inventoryEl}/>
         </Route>
         <Route exact path="/">
-          <IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>
+        { customer.platform_id ?
+          <IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/> :
+          <IndexGuest ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>
+        }
         </Route>
       </Switch>
       <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
