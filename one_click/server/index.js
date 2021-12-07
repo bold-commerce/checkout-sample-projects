@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
   // TODO: Change to dynamic cart data
   const body = {
     "customer": {
-      "platform_id": "39459641884739",
+      "platform_id": "",
       "platform_customer_id": "123",
       "email_address": "john.doe@email.com",
       "saved_addresses": [
@@ -64,7 +64,7 @@ app.get('/', async (req, res) => {
       "line_item_key": "SOAP"
     },{
       "sku":"OCG",
-      "quantity": 20,
+      "quantity": 2,
       "line_item_key": "GG"
     }],
   };
