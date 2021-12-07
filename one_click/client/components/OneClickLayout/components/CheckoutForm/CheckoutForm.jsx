@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState }  from 'react';
 import { Route, Switch } from "react-router-dom";
-import { useLocation, useHistory} from 'react-router';
+import { useLocation, useHistory } from 'react-router';
 import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
-import { useAnalytics, useInventory } from '../../../../hooks';
+import { useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
 import { ProcessingOrder } from '../Processing';
 import { Confirmation } from '../Confirmation';
@@ -15,7 +15,7 @@ import { IndexGuest, IndexPage } from '../Index';
 const CheckoutForm = () => {
   const { data: lineItems } = useLineItems();
   const { state } = useCheckoutStore();
-  const { data: customer } = useCustomer()
+  const { data: customer } = useCustomer();
   const orderStatus = state.orderInfo.orderStatus;
   const location = useLocation();
   const checkInventory = useInventory();
@@ -30,10 +30,8 @@ const CheckoutForm = () => {
   const inventoryEl = useRef(null);
   const checkoutButtonEl = useRef(null);
 
-  const showCheckoutButton = openSection === 'summary' || openSection === '/';
+  const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
 
-
-console.log(customer);
   const getInventory = async () => {
     const inventory = await checkInventory(lineItems);
     if (inventory) {
