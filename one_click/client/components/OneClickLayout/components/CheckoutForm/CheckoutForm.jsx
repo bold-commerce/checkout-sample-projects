@@ -1,21 +1,22 @@
 import React, { useEffect, useRef, useState }  from 'react';
 import { Route, Switch } from "react-router-dom";
 import { useLocation, useHistory} from 'react-router';
-import { useCheckoutStore, useLineItems } from '@boldcommerce/checkout-react-components';
+import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
 import { useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
 import { ProcessingOrder } from '../Processing';
 import { Confirmation } from '../Confirmation';
-import { IndexPage } from '../Index';
 import { CheckoutButton } from '../CheckoutButton';
 import classNames from 'classnames';
 import { LoadingState } from '../LoadingState';
+import { IndexGuest, IndexPage } from '../Index';
 
 const CheckoutForm = () => {
   const { data: lineItems } = useLineItems();
   const { state } = useCheckoutStore();
+  const { data: customer } = useCustomer()
   const orderStatus = state.orderInfo.orderStatus;
   const location = useLocation();
   const checkInventory = useInventory();
