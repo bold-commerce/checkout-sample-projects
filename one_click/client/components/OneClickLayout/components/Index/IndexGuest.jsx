@@ -93,7 +93,7 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
       <div className="IndexGuest-footer">
         <Button
           className="IndexGuest-billing-btn"
-          onClick={() => onSectionChange('shipping')}
+          onClick={() => onSectionChange('billing')}
           disabled={!(customer.email_address && state.applicationState.shipping.selected_shipping && !shippingErrors && !customerErrors)}
           primary
         >

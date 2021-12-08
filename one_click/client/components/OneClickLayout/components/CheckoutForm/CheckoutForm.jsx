@@ -4,6 +4,7 @@ import { useLocation, useHistory } from 'react-router';
 import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
+import { Billing } from '../Billing';
 import { useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
 import { ProcessingOrder } from '../Processing';
@@ -27,12 +28,14 @@ const CheckoutForm = () => {
   const mainEl = useRef(null);
   const summaryEl = useRef(null);
   const shippingEl = useRef(null);
+  const billingEl = useRef(null);
   const processingEl = useRef(null);
   const confirmationEl = useRef(null);
   const inventoryEl = useRef(null);
   const checkoutButtonEl = useRef(null);
 
   const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
+  const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
 
   const getInventory = async () => {
     const inventory = await checkInventory(lineItems);
@@ -66,6 +69,9 @@ const CheckoutForm = () => {
         break;
       case "shipping":
         openEl = shippingEl;
+        break;
+      case "billing":
+        openEl = billingEl;
         break;
       case "/processing":
         openEl = processingEl;
@@ -119,8 +125,14 @@ const CheckoutForm = () => {
               }
             </Route>
           </Switch>
-          <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
-          <Summary ref={summaryEl} show={openSection==='summary'}  onBack={() => setOpenSection("/")} />
+          { renderSidebar ? 
+            <>
+              <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
+              <Summary ref={summaryEl} show={openSection==='summary'}  onBack={() => setOpenSection("/")} />
+              <Billing ref={billingEl} show={openSection==='billing'} onBack={() => setOpenSection("/")}/>
+            </>
+            : null
+          }
           <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
         </>
       }
