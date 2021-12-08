@@ -114,6 +114,7 @@ h1.Section__Title {
   color: rgba(0, 0, 0, 0.9);
 }
 
+.Billing,
 .Shipping,
 .Summary {
   width: 100%;
@@ -130,6 +131,7 @@ h1.Section__Title {
     overflow-y: auto;
   }
 
+  .Billing,
   .Shipping,
   .Summary {
     position: absolute;
