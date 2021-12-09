@@ -1,14 +1,14 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Button, Price } from "@boldcommerce/stacks-ui/lib";
+import React, { useContext, useState } from "react";
+import { Button } from "@boldcommerce/stacks-ui";
 import { useShippingAddress, useCountryInfo, useCheckoutStore, useCustomer } from "@boldcommerce/checkout-react-components";
 import { ShippingLines } from "../ShippingLines";
-import { ChevronRight } from "../Icons";
 import { AppContext } from "../../context/AppContext";
 import { Address } from "../Address";
 import { Header } from "../Header";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import CustomerInfo from "../CustomerInfo/CustomerInfo";
+import { SummaryCondensed } from "../Summary";
 
 const IndexGuest = ({ onSectionChange, show }, ref) => {
   const { websiteName } = useContext(AppContext);
@@ -16,7 +16,7 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
   const { data: shippingAddress, errors: shippingErrors, submitShippingAddress } = useShippingAddress();
   const [ address, setAddress ] = useState(shippingAddress);
   const { data: countryInfo } = useCountryInfo(address);
-  const { data: customer, errors: customerErrors, submitCustomer } = useCustomer();
+  const { data: customer, errors: customerErrors } = useCustomer();
 
   const requiredAddressFields = ['first_name','last_name','address_line_1','city'];
   let provincePlaceholder = countryInfo.provinceLabel;
@@ -24,17 +24,8 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
   return (
     <div ref={ref} className={classNames('Sidebar IndexGuest', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName} />
-      <div className="IndexGuest__Summary">
-        <button
-          className="IndexGuest__Summary__Btn"
-          onClick={() => onSectionChange('summary')}
-        >
-          <ChevronRight className="IndexGuest__Chevron"/>
-          <h2>Summary</h2>
-          <Price amount={state.applicationState.order_total} />
-      </button>
-      </div>
-      <CustomerInfo />      
+      <SummaryCondensed onSectionChange={onSectionChange}/>
+      <CustomerInfo />
       <div className="IndexGuest__ShippingAddress">
         <h2 className="IndexGuest__Title">Shipping address</h2>
         <Address
