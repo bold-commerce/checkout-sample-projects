@@ -48,7 +48,7 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
           onClick={() => onSectionChange('summary')}
         >
           <ChevronRight className="IndexGuest-chevron"/>
-          <h2 className="IndexGuest-title">Summary</h2>
+          <h2>Summary</h2>
           <Price amount={state.applicationState.order_total} />
       </button>
       </div>
