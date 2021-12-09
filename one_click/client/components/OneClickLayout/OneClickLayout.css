@@ -125,7 +125,8 @@ h1.Section__Title {
   padding: 16px 32px;
 }
 
-.IndexGuest .Header {
+.IndexGuest .Header,
+.Billing .Header {
   border: none;
 }
 
@@ -149,6 +150,7 @@ h1.Section__Title {
 .IndexGuest-customer,
 .IndexGuest-shipping-address,
 .IndexGuest-shipping-method,
+.IndexGuest-payment,
 .IndexGuest-footer {
   padding: 16px 0;
 }
