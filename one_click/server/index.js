@@ -13,47 +13,48 @@ const port = 3000;
 app.get('/', async (req, res) => {
   // TODO: Change to dynamic cart data
   const body = {
-    "customer": {
-      "platform_id": "",
-      "platform_customer_id": "123",
-      "email_address": "john.doe@email.com",
-      "saved_addresses": [
-        {
-          "id": 123,
-          "first_name": "John",
-          "last_name": "Doe",
-          "company": "Bold",
-          "address_line_1": "50 Fultz Boulevard",
-          "address_line_2": "",
-          "city": "Winnipeg",
-          "province": "Manitoba",
-          "country": "Canada",
-          "postal_code": "R3Y 0L6",
-          "phone_number": "+12042222222",
-          "province_code": "MB",
-          "country_code": "CA",
-          "country_name": "Canada",
-          "default": true
-        },
-        {
-          "id": 456,
-          "first_name": "Jane",
-          "last_name": "Doe",
-          "company": "Bold",
-          "address_line_1": "100 Innovation Drive",
-          "address_line_2": "",
-          "city": "Winnipeg",
-          "province": "Manitoba",
-          "country": "Canada",
-          "postal_code": "R3T 6A8",
-          "phone_number": "+12042222222",
-          "province_code": "MB",
-          "country_code": "CA",
-          "country_name": "Canada",
-          "default": false
-        },
-      ],
-    },
+    // "customer": {
+    //   "platform_id": "",
+    // //  "platform_id": "39459641884739",
+    //   "platform_customer_id": "123",
+    //   "email_address": "john.doe@email.com",
+    //   "saved_addresses": [
+    //     {
+    //       "id": 123,
+    //       "first_name": "John",
+    //       "last_name": "Doe",
+    //       "company": "Bold",
+    //       "address_line_1": "50 Fultz Boulevard",
+    //       "address_line_2": "",
+    //       "city": "Winnipeg",
+    //       "province": "Manitoba",
+    //       "country": "Canada",
+    //       "postal_code": "R3Y 0L6",
+    //       "phone_number": "+12042222222",
+    //       "province_code": "MB",
+    //       "country_code": "CA",
+    //       "country_name": "Canada",
+    //       "default": true
+    //     },
+    //     {
+    //       "id": 456,
+    //       "first_name": "Jane",
+    //       "last_name": "Doe",
+    //       "company": "Bold",
+    //       "address_line_1": "100 Innovation Drive",
+    //       "address_line_2": "",
+    //       "city": "Winnipeg",
+    //       "province": "Manitoba",
+    //       "country": "Canada",
+    //       "postal_code": "R3T 6A8",
+    //       "phone_number": "+12042222222",
+    //       "province_code": "MB",
+    //       "country_code": "CA",
+    //       "country_name": "Canada",
+    //       "default": false
+    //     },
+    //   ],
+    // },
     "cart_items": [{
       "sku": "ABS",
       "quantity": 1,
@@ -62,10 +63,6 @@ app.get('/', async (req, res) => {
       "sku":"CGLD-MO",
       "quantity": 3,
       "line_item_key": "SOAP"
-    },{
-      "sku":"OCG",
-      "quantity": 2,
-      "line_item_key": "GG"
     }],
   };
 
