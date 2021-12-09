@@ -221,8 +221,8 @@ h1.Section__Title {
 }
 
 .IndexGuest__Customer .stx-input {
-  margin: 0;
   height: 2.25rem;
+  padding: 0 0.5rem;
 }
 
 .IndexGuest__Customer .stx-checkbox-field__checkbox {
