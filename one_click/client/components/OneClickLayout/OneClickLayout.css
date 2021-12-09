@@ -240,7 +240,8 @@ h1.Section__Title {
   background-color: #0a75c2;
 }
 
-.IndexGuest-billing-btn.stx-button--is-disabled {
+.IndexGuest-billing-btn:disabled,
+.Billing-CheckoutButton:disabled {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -256,6 +257,10 @@ h1.Section__Title {
   font-weight: 400;
   line-height: 16px;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.IndexGuest-footer .CheckoutButton__Container { 
+  padding: 0;
 }
 
 @media only screen and (max-width: 768px) {
