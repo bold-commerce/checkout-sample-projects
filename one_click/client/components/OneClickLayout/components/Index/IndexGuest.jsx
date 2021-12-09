@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Button } from "@boldcommerce/stacks-ui";
+import { Button } from "@boldcommerce/stacks-ui/lib";
 import { useShippingAddress, useCountryInfo, useCheckoutStore, useCustomer } from "@boldcommerce/checkout-react-components";
 import { ShippingLines } from "../ShippingLines";
 import { AppContext } from "../../context/AppContext";
