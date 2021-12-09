@@ -241,7 +241,7 @@ h1.Section__Title {
   background-color: #0a75c2;
 }
 
-.IndexGuest-billing-btn:disabled,
+.IndexGuest__Billing__Btn:disabled,
 .Billing-CheckoutButton:disabled {
   background-color: rgba(0, 0, 0, 0.4);
 }
