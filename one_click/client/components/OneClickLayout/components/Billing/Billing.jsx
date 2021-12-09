@@ -23,19 +23,18 @@ const Billing = ({show, onBack}, ref) => {
           onClick={() => onSectionChange('summary')}
         >
           <ChevronRight className="IndexGuest-chevron"/>
-          <h2 className="IndexGuest-title">Summary</h2>
+          <h2>Summary</h2>
           <Price amount={state.applicationState.order_total} />
-        </button>
+      </button>
       </div>
 
-      <div className="IndexGuest-payment">
+      <div className="Billing-payment">
         <h2 className="IndexGuest-title">Payment method</h2>
+        <PaymentMethod/>
       </div>
-      <PaymentMethod/>
 
       <div className="IndexGuest-footer">
-
-        <CheckoutButton className="CheckoutButton" />
+        <CheckoutButton className="CheckoutButton Billing-CheckoutButton" />
         <div className="IndexGuest-footer-login">
           <button className="link-btn" type="button" onClick={onBack}>Back to shipping</button>
         </div>          
