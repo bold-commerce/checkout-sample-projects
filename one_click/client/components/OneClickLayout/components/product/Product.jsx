@@ -20,7 +20,9 @@ const Product = ({
       <div className="CartItem__ProductDetails">
         <Details
           title={title}
-          description={description}
+          description={description.map((variant) => {
+            return <div>{variant}</div>
+          })}
         />
       </div>
     </div>

@@ -59,11 +59,13 @@
   padding: 0 20px;
 }
 
+.InventoryItem .InventoryItem__ProductDetails .stx-details__description,
 .CartItem .CartItem__ProductDetails .stx-details__description {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+  min-height: 20px;
   color: rgba(0, 0, 0, 0.65);
 }
 

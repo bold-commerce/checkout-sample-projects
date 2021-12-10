@@ -4,6 +4,7 @@ import { useHistory, useLocation } from "react-router";
 import { Button } from "@boldcommerce/stacks-ui"
 import { Link } from "react-router-dom";
 import { useLineItems } from "@boldcommerce/checkout-react-components";
+import { useVariants } from "../../../../hooks";
 import { AppContext } from '../../context/AppContext';
 import { Header } from "../Header";
 import './Inventory.css';
@@ -12,6 +13,7 @@ export const Inventory = ({}, ref) => {
     const { data: lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
     const [loading, setLoading] = useState(false);
     const { websiteName } = useContext(AppContext);
+    const handleVariants = useVariants();
     const history = useHistory();
     const location = useLocation();
     const inventory = location.state;
@@ -19,13 +21,13 @@ export const Inventory = ({}, ref) => {
     let invItems = lineItems.map((item) => {
         const product = inventory.find(i => i.id === item.product_data.product_id);
         item.product_data.stock = product.stock;
-        item.product_data.inventory_issue = item.product_data.quantity > item.product_data.stock;
+        item.product_data.inventory_issue = product.tracking !== 'none' && item.product_data.quantity > item.product_data.stock;
         if (item.product_data.inventory_issue) {
             return (
                 <InventoryItem
                     key={item.product_data.line_item_key} 
-                    title={product.name}
-                    description={item.product_data.title}
+                    title={item.product_data.product_title}
+                    description={handleVariants(item.product_data.title)}
                     orderQty={item.product_data.quantity}
                     stockQty={item.product_data.stock}
                     image={item.product_data.image_url}

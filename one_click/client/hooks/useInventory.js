@@ -14,7 +14,7 @@ const useInventory = () => {
         lineItems.forEach(item => {
                 
             const product = inventory.find(i => i.id === item.product_data.product_id);
-            if (product.stock < item.product_data.quantity) {                
+            if ( product.tracking !== 'none' && product.stock < item.product_data.quantity) {                
                 inventoryIssues = inventory;        
             }
         });
@@ -22,6 +22,6 @@ const useInventory = () => {
     });
   
     return checkInventory;
-  };
+};
   
-  export default useInventory;
+export default useInventory;

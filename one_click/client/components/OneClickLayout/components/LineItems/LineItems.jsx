@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LineItem from './LineItem';
 import { useLineItems } from '@boldcommerce/checkout-react-components';
+import { useVariants } from '../../../../hooks';
 
 export const LineItems = ({
   readOnly,
@@ -10,9 +11,11 @@ export const LineItems = ({
   updateLineItemQuantity,
   removeLineItem,
 }) => {
+  const handleVariants = useVariants();
   const lineItemList = lineItems.map((item) => (
     <LineItem
-      title={item.product_data.title}
+      title={item.product_data.product_title}
+      description={handleVariants(item.product_data.title)}
       image={item.product_data.image_url}
       quantity={item.product_data.quantity}
       price={item.product_data.price}
