@@ -52,6 +52,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 4px;
 }
 
 .InventoryItem__ProductImageWrapper {
@@ -65,7 +66,8 @@
     width: 16px;
     height: 16px;
     border: none;
-    background-color: inherit; 
+    background-color: inherit;
+    cursor: pointer;
 }
 
 .ReturnLink {

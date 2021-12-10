@@ -18,7 +18,9 @@ const InventoryItem = ({
         <div className="InventoryItem__ProductDetails">
             <Details
                 title={title}
-                description={description}
+                description={description.map((variant) => {
+                    return <div>{variant}</div>
+                })}
             />
             <div className="InventoryItem__ProductQuantityWrapper">
                 {

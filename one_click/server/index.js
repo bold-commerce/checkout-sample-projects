@@ -104,9 +104,9 @@ app.get('/inventory', async ( req, res ) => {
   })
   const invResult = await invRequest.json();
   const invList = invResult.data.map((item) => {
-      return { id:    item.platform_id,
-               stock: item.inventory_quantity,
-               name:  item.name 
+      return { id:        item.platform_id,
+               stock:     item.inventory_quantity,
+               tracking:  item.inventory_tracking_service
              }
     });
   return res.json(invList);
