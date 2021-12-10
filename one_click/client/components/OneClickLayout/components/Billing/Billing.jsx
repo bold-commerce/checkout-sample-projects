@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Price } from "@boldcommerce/stacks-ui/lib";
 import { useCheckoutStore } from "@boldcommerce/checkout-react-components";
 import classNames from "classnames";
@@ -9,18 +9,18 @@ import { CheckoutButton } from "../CheckoutButton";
 import { AppContext } from "../../context/AppContext";
 import './Billing.css';
 
-const Billing = ({show, onBack}, ref) => {
+const Billing = ({section, onSectionChange}, ref) => {
   const { websiteName } = useContext(AppContext);
   const { state } = useCheckoutStore();
 
   return (
-    <div ref={ref} className={classNames('Sidebar Billing', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
+    <div ref={ref} className={classNames('Sidebar Billing', section === 'billing' ? 'Sidebar--Show' : (section === 'summaryB' ? 'IndexPage--Hide' : 'Sidebar--Hide'))}>
       <Header title={websiteName} />
       
       <div className="IndexGuest-summary">
         <button
           className="IndexGuest-summary-btn"
-          onClick={() => onSectionChange('summary')}
+          onClick={() => onSectionChange('summaryB')}
         >
           <ChevronRight className="IndexGuest-chevron"/>
           <h2>Summary</h2>
@@ -36,7 +36,7 @@ const Billing = ({show, onBack}, ref) => {
       <div className="IndexGuest-footer">
         <CheckoutButton className="CheckoutButton Billing-CheckoutButton" />
         <div className="IndexGuest-footer-login">
-          <button className="link-btn" type="button" onClick={onBack}>Back to shipping</button>
+          <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>Back to shipping</button>
         </div>          
         <div className="IndexGuest-rights">{`All right reserved ${websiteName}`}</div>
       </div>
