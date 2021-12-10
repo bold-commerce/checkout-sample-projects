@@ -180,6 +180,7 @@ h1.Section__Title {
   background-color: unset;
   width: 100%;
   align-items: center;
+  cursor: pointer;
 }
 
 .IndexGuest-summary-btn svg {

@@ -10,7 +10,7 @@ import { CheckoutButton } from '../CheckoutButton';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Summary.scss';
 
-const Summary = ({ show, onBack }, ref) => {
+const Summary = ({ section, onSectionChange }, ref) => {
   const { data: shipping } = useShippingLines();
   const { data: discount, removeDiscount } = useDiscount();
   const { state } = useCheckoutStore();
@@ -18,6 +18,8 @@ const Summary = ({ show, onBack }, ref) => {
   const taxes = state.applicationState.taxes;
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const show = section === 'summary' || section === 'summaryB'
+  const backLocation = section === 'summaryB' ? 'billing' : '/';
 
   const handleRemoveDiscount = async () => {
     try {
@@ -62,7 +64,7 @@ const Summary = ({ show, onBack }, ref) => {
   return(
     <div ref={ref} className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
       <Header title={"Summary"} />
-      <BackButton onClick={onBack} />
+      <BackButton onClick={() => onSectionChange(backLocation)} />
       <section className="Summary__OrderSummary">
         <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">
           <SummaryLine
