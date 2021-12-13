@@ -7,12 +7,12 @@ const SummaryCondensed = ({ onSectionChange }) => {
   const { state } = useCheckoutStore();
 
   return (
-    <div className="IndexGuest-summary">
+    <div className="IndexGuest__Summary">
       <button
-        className="IndexGuest-summary-btn"
+        className="IndexGuest__Summary__Btn"
         onClick={() => onSectionChange('summary')}
       >
-        <ChevronRight className="IndexGuest-chevron"/>
+        <ChevronRight className="IndexGuest__Chevron"/>
         <h2>Summary</h2>
         <Price amount={state.applicationState.order_total} />
       </button>
