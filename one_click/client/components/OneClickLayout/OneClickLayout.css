@@ -143,6 +143,7 @@ h1.Section__Title {
   font-weight: 400;
 }
 
+
 .IndexGuest .stx-select__select-element,
 .IndexGuest .stx-input {
   border-radius: 4px;
@@ -152,15 +153,15 @@ h1.Section__Title {
   color: #0a75c2;
 }
 
-.IndexGuest-customer,
-.IndexGuest-shipping-address,
-.IndexGuest-shipping-method,
-.IndexGuest-payment,
-.IndexGuest-footer {
+.IndexGuest__Customer,
+.IndexGuest__ShippingAddress,
+.IndexGuest__ShippingMethod,
+.IndexGuest__Payment,
+.IndexGuest__Footer {
   padding: 16px 0;
 }
 
-.IndexGuest-summary {
+.IndexGuest__Summary {
   margin: 0 -32px;
   padding: 16px 0;
   background-color: #fafafa;
@@ -169,17 +170,17 @@ h1.Section__Title {
   border-color:rgba(0, 0, 0, 0.4);
 }
 
-.IndexGuest-title,
-.IndexGuest-summary-btn h2,
-.IndexGuest-summary .stx-price__amount,
-.IndexGuest-shipping-method .FieldSet__Heading {
+.IndexGuest__Title,
+.IndexGuest__Summary__Btn h2,
+.IndexGuest__Summary .stx-price__amount,
+.IndexGuest__ShippingMethod .FieldSet__Heading {
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: bold;
 }
 
-.IndexGuest-summary-btn {
+.IndexGuest__Summary__Btn {
   display: flex;
   border: none;
   background-color: unset;
@@ -187,51 +188,51 @@ h1.Section__Title {
   align-items: center;
 }
 
-.IndexGuest-summary-btn svg {
+.IndexGuest__Summary__Btn svg {
   overflow: initial;
   margin: 0 8px;
   width: 16px;
   height: 16px;
 }
 
-.IndexGuest-summary-btn h2 {
+.IndexGuest__Summary__Btn h2 {
   width: 100%;
   text-align: left;
 }
 
-.IndexGuest-summary-btn .stx-price {
+.IndexGuest__Summary__Btn .stx-price {
   margin-right: 32px;
 }
 
-.IndexGuest-title,
-.IndexGuest-shipping-method .FieldSet__Header {
+.IndexGuest__Title,
+.IndexGuest__ShippingMethod .FieldSet__Header {
   margin-bottom: 14px;
 }
 
-.IndexGuest-customer {
+.IndexGuest__Customer {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 }
 
-.IndexGuest-customer .stx-field--with-input {
+.IndexGuest__Customer .stx-field--with-input {
   margin: 8px 0;
 }
 
-.IndexGuest-customer .stx-input {
+.IndexGuest__Customer .stx-input {
   margin: 0;
   height: 2.25rem;
 }
 
-.IndexGuest-customer .stx-checkbox-field__checkbox {
+.IndexGuest__Customer .stx-checkbox-field__checkbox {
   height: 16px;
   width: 16px;
 }
-.IndexGuest-customer .stx-checkbox-field__field {
+.IndexGuest__Customer .stx-checkbox-field__field {
   padding-left: 26px;
 }
 
-.IndexGuest-billing-btn {
+.IndexGuest__Billing__Btn {
   width: 100%;
   padding: 12px 0;
   margin: 0;
@@ -245,12 +246,12 @@ h1.Section__Title {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.IndexGuest-footer {
+.IndexGuest__Footer {
   display: grid;
   row-gap: 32px;
 }
 
-.IndexGuest-rights {
+.IndexGuest__Rights {
   border-top: 1px solid #d9d9d9;
   padding-top: 32px;
   font-size: 12px;

@@ -42,19 +42,19 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
   return (
     <div ref={ref} className={classNames('Sidebar IndexGuest', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName} />
-      <div className="IndexGuest-summary">
+      <div className="IndexGuest__Summary">
         <button
-          className="IndexGuest-summary-btn"
+          className="IndexGuest__Summary__Btn"
           onClick={() => onSectionChange('summary')}
         >
-          <ChevronRight className="IndexGuest-chevron"/>
+          <ChevronRight className="IndexGuest__Chevron"/>
           <h2>Summary</h2>
           <Price amount={state.applicationState.order_total} />
       </button>
       </div>
-      <div className="IndexGuest-customer">
-        <h2 className="IndexGuest-title">Customer Info</h2>
-        <div className="IndexGuest-login">Already have an account? <Link to='#'>Log in</Link></div>
+      <div className="IndexGuest__Customer">
+        <h2 className="IndexGuest__Title">Customer Info</h2>
+        <div className="IndexGuest__Login">Already have an account? <Link to='#'>Log in</Link></div>
         <InputField
           type="email"
           name="email_address"
@@ -69,8 +69,8 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
           onChange={() => setAcceptsMarketing(!acceptsMarketing)}
         />
       </div>
-      <div className="IndexGuest-shipping-address">
-        <h2 className="IndexGuest-title">Shipping address</h2>
+      <div className="IndexGuest__ShippingAddress">
+        <h2 className="IndexGuest__Title">Shipping address</h2>
         <Address
               address={address}
               onChange={(d) => setAddress((prevAddress) => ({
@@ -87,22 +87,22 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
               requiredAddressFields={requiredAddressFields}
             />
       </div>
-      <div className="IndexGuest-shipping-method">
+      <div className="IndexGuest__ShippingMethod">
         <ShippingLines activePage={show} disabled={Boolean(shippingErrors)} />
       </div>
-      <div className="IndexGuest-footer">
+      <div className="IndexGuest__Footer">
         <Button
-          className="IndexGuest-billing-btn"
+          className="IndexGuest__Billing-btn"
           onClick={() => onSectionChange('billing')}
           disabled={!(customer.email_address && state.applicationState.shipping.selected_shipping && !shippingErrors && !customerErrors)}
           primary
         >
           Continue to billing
         </Button>
-        <div className="IndexGuest-footer-login">
+        <div className="IndexGuest__Footer--login">
           <Link to="#">Back to log in</Link>
         </div>          
-        <div className="IndexGuest-rights">{`All right reserved ${websiteName}`}</div>
+        <div className="IndexGuest__Rights">{`All right reserved ${websiteName}`}</div>
       </div>
     </div>
   )
