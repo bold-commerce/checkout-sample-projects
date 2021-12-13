@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { Price } from '@boldcommerce/stacks-ui';
 import SummaryLine from './SummaryLine';
@@ -19,14 +19,14 @@ const Summary = ({ show, onBack }, ref) => {
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
 
-  const handleRemoveDiscount = async () => {
+  const handleRemoveDiscount = useCallback(async () => {
     try {
-      await removeDiscount();
+      await removeDiscount(discount.discountCode);
       trackEvent('remove_discount_code');
     } catch(e) {
       logError('discount_code', e);
     }
-  };
+  }, [discount.discountCode]);
 
   let shippingItems = null;
   let discountItems = null;
