@@ -57,12 +57,11 @@ export const Discount = ({
   }, []);
 
 
-  const removeAndSubmitDiscount = useCallback(async (discount) => {
+  const removeAndSubmitDiscount = useCallback(async (oldDiscount, newDiscount) => {
     setLoading(true);
     try {
-      await removeDiscount(discount);
-      // TODO: check if the discount was removed
-      submitDiscount(discount, discountStatus='existing');
+      await removeDiscount(oldDiscount);
+      await submitDiscount(newDiscount, 'existing');
       trackEvent('apply_discount_code');
     } catch(e) {
       setStatus({
@@ -100,7 +99,7 @@ export const Discount = ({
           loading={loading}
           onClick={() => {
             if (discountApplied) {
-              removeAndSubmitDiscount(discount);
+              removeAndSubmitDiscount(discountCode, discount);
             } else {
               submitDiscount(discount);
             }
