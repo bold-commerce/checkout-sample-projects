@@ -23,7 +23,11 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
         <div
           class="DiscountLink"
         >
-          Discount code
+          <button
+            aria-label="add discount code"
+          >
+            Discount code
+          </button>
         </div>
       </div>
       <div
@@ -35,7 +39,9 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
           <div
             class="FieldSet__Header"
           >
-            <h3>
+            <h3
+              class="Billing__Title"
+            >
               Billing address
             </h3>
           </div>
@@ -102,7 +108,11 @@ exports[`Payment renders PaymentMethod component without showing payment method 
         <div
           class="DiscountLink"
         >
-          Discount code
+          <button
+            aria-label="add discount code"
+          >
+            Discount code
+          </button>
         </div>
       </div>
       <div
@@ -114,7 +124,9 @@ exports[`Payment renders PaymentMethod component without showing payment method 
           <div
             class="FieldSet__Header"
           >
-            <h3>
+            <h3
+              class="Billing__Title"
+            >
               Billing address
             </h3>
           </div>

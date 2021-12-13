@@ -53,6 +53,7 @@ exports[`Product renders Product component 1`] = `
       class="CartItem__ProductQuantityWrapper"
     >
       <div
+        aria-label="product quantity"
         class="ProductQuantity"
       >
         2

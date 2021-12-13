@@ -1,16 +1,13 @@
-import React from "react";
+import React from 'react';
+import IndexGuest from '../../../client/components/OneClickLayout/components/Index/IndexPage';
 import { render } from '@testing-library/react';
-import { OneClickLayout } from '../../../client/components/OneClickLayout';
-import ResizeObserver from "../../../__mocks__/ResizeObserver";
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKexampleApplicationState } from '../../utils/applicationStateHelper';
 import {
-    countries as MOCKcountries,
-    caProvinces as MOCKprovinces,
     exampleAddress as MOCKexampleAddress,
-    exampleSavedAddresses as MOCKexampleSavedAddresses
+    countries as MOCKcountries
 } from '../../utils/addressHelpers';
-import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
+import { exampleShippingLines as MOCKexampleShippingLines } from '../../utils/shippingLinesHelper';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
@@ -27,17 +24,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             },
             errors: { order: null },
             loadingStatus: { isLoading: false },
-            applicationState: MOCKexampleApplicationState,
-            orderTotals: {
-                taxesTotal: 1200,
-                subTotal: 23000,
-                total: 24200
-            }
-        }
-    }),
-    useCustomer: () => ({
-        data: {
-            platform_id: 123
+            applicationState: MOCKexampleApplicationState
         }
     }),
     usePaymentIframe: () => ({
@@ -47,14 +34,10 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             paymentIframeOnLoaded: (() => {})
         }
     }),
-    useSavedAddresses: () => ({
-        data: MOCKexampleSavedAddresses
-    }),
     useShippingLines: () => ({
-        data: MOCKexampleShippingState
+        data: MOCKexampleShippingLines
     }),
     useShippingAddress: () => ({
-        data: MOCKexampleAddress,
         submitShippingAddress: (() => {})
     }),
     useBillingAddress: () => ({
@@ -69,17 +52,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
         setBillingSameAsShipping: (() => {})
     }),
     useCountryInfo: () => ({
-        data: {
-            countries: MOCKcountries,
-            provinceLabel: "province",
-            provinces: MOCKprovinces,
-            showPostalCode: true,
-            showProvince: true
-        }
-    }),
-    useLoadingStatus: () => ({
-        shippingAddressLoadingStatus: 'complete',
-        shippingLinesLoadingStatus: 'complete'
+        data: MOCKcountries
     })
 })).mock('react', () => ({
     ...jest.requireActual('react'),
@@ -93,9 +66,14 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     })
 }));
 
-describe('OneClickLayout', () => {
-    test('renders OneClickLayout component', () => {
-        const { asFragment } = render( <OneClickLayout /> );
-        expect(asFragment()).toMatchSnapshot();
-    });
-});
+describe('IndexGuest', () => {
+  test('renders IndexGuest component', () => {
+    const { asFragment } = render(<IndexGuest show /> )
+    expect(asFragment()).toMatchSnapshot();
+  })
+
+  test('renders IndexGuest component', () => {
+    const { asFragment } = render(<IndexGuest show={false} /> )
+    expect(asFragment()).toMatchSnapshot();
+  })
+})

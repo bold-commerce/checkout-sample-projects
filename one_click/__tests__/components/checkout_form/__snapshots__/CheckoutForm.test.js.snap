@@ -4,6 +4,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
 <DocumentFragment>
   <div
     class="Checkout__Form"
+    style="overflow-y: hidden;"
   >
     <div
       class="Sidebar IndexPage Sidebar--Show"
@@ -17,9 +18,11 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
           TestSite
         </h1>
         <button
+          aria-label="Close"
           class="Header__Times"
         >
           <svg
+            aria-labelledby="button"
             fill="none"
             height="20"
             viewBox="0 0 24 24"
@@ -97,6 +100,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             class="CartItem__ProductQuantityWrapper"
           >
             <div
+              aria-label="product quantity"
               class="ProductQuantity"
             >
               1
@@ -170,6 +174,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             class="CartItem__ProductQuantityWrapper"
           >
             <div
+              aria-label="product quantity"
               class="ProductQuantity"
             >
               2
@@ -243,6 +248,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             class="CartItem__ProductQuantityWrapper"
           >
             <div
+              aria-label="product quantity"
               class="ProductQuantity"
             >
               3
@@ -355,12 +361,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
         >
           <div>
             <div>
-              123 Fake Street, 
-            Winnipeg,
-            Manitoba,
-            R3T 1B8,
-            Canada
-          
+              123 Fake Street, Winnipeg, Manitoba, R3T 1B8, Canada
             </div>
             <div
               class="card-shipping-content"
@@ -386,9 +387,9 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
         <div
           class="Card__Title"
         >
-          <span>
+          <button>
             Payment
-          </span>
+          </button>
         </div>
         <div
           class="Card__Overview"
@@ -430,7 +431,11 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             <div
               class="DiscountLink"
             >
-              Discount code
+              <button
+                aria-label="add discount code"
+              >
+                Discount code
+              </button>
             </div>
           </div>
           <div
@@ -442,7 +447,9 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
               <div
                 class="FieldSet__Header"
               >
-                <h3>
+                <h3
+                  class="Billing__Title"
+                >
                   Billing address
                 </h3>
               </div>
@@ -489,7 +496,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
         <button
           aria-busy="false"
           aria-disabled="false"
-          class="stx-button CheckoutButton"
+          class="stx-button CheckoutButton CheckoutButton__Mobile"
         >
           <span
             class="stx-button__text"
@@ -514,9 +521,11 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
           Shipping
         </h1>
         <button
+          aria-label="Close"
           class="Header__Times"
         >
           <svg
+            aria-labelledby="button"
             fill="none"
             height="20"
             viewBox="0 0 24 24"
@@ -974,96 +983,9 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
         <div
           class="FieldSet__Content"
         >
-          <div
-            class="RadioButton"
-          >
-            <div
-              class="stx-field stx-field--with-radio-field RadioField"
-            >
-              <div
-                class="stx-radio-field"
-              >
-                <span
-                  class="stx-radio stx-radio-field__radio"
-                >
-                  <input
-                    aria-checked="false"
-                    aria-disabled="false"
-                    class="stx-radio__input"
-                    id="stxField12"
-                    name="shipping-method"
-                    role="radio"
-                    type="radio"
-                    value=""
-                  />
-                  <span
-                    class="stx-radio__box"
-                  />
-                </span>
-                <label
-                  class="stx-radio-field__label"
-                  for="stxField12"
-                >
-                  Standard Shipping
-                </label>
-              </div>
-            </div>
-            <div
-              class="stx-price ShippingMethod__Price stx-price--alight-center"
-            >
-              <p
-                aria-label="Product price"
-                class="stx-price__amount"
-              >
-                CA$20.00
-              </p>
-            </div>
-          </div>
-          <div
-            class="RadioButton"
-          >
-            <div
-              class="stx-field stx-field--with-radio-field RadioField"
-            >
-              <div
-                class="stx-radio-field"
-              >
-                <span
-                  class="stx-radio stx-radio-field__radio"
-                >
-                  <input
-                    aria-checked="false"
-                    aria-disabled="false"
-                    class="stx-radio__input"
-                    id="stxField13"
-                    name="shipping-method"
-                    role="radio"
-                    type="radio"
-                    value=""
-                  />
-                  <span
-                    class="stx-radio__box"
-                  />
-                </span>
-                <label
-                  class="stx-radio-field__label"
-                  for="stxField13"
-                >
-                  Expedited Shipping
-                </label>
-              </div>
-            </div>
-            <div
-              class="stx-price ShippingMethod__Price stx-price--alight-center"
-            >
-              <p
-                aria-label="Product price"
-                class="stx-price__amount"
-              >
-                CA$40.00
-              </p>
-            </div>
-          </div>
+          <p>
+            To see shipping options complete filling in your address above
+          </p>
         </div>
       </section>
     </div>
@@ -1079,9 +1001,11 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
           Summary
         </h1>
         <button
+          aria-label="Close"
           class="Header__Times"
         >
           <svg
+            aria-labelledby="button"
             fill="none"
             height="20"
             viewBox="0 0 24 24"
@@ -1156,8 +1080,6 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
               class="summary-line-head"
             >
               <button
-                aria-controls="Line-Shipping"
-                aria-expanded="false"
                 class="summary-btn"
                 id="summary-line-Shipping"
               >
@@ -1252,8 +1174,6 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
               class="summary-line-head"
             >
               <button
-                aria-controls="Line-Taxes"
-                aria-expanded="false"
                 class="summary-btn"
                 id="summary-line-Taxes"
               >
@@ -1369,7 +1289,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
         <button
           aria-busy="false"
           aria-disabled="false"
-          class="stx-button CheckoutButton"
+          class="stx-button CheckoutButton CheckoutButton__Mobile"
         >
           <span
             class="stx-button__text"
@@ -1381,6 +1301,226 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
           />
         </button>
       </div>
+    </div>
+    <div
+      class="Sidebar Billing Sidebar--Hide"
+    >
+      <div
+        class="Header"
+      >
+        <h1
+          class="Header__Title"
+        >
+          TestSite
+        </h1>
+        <button
+          aria-label="Close"
+          class="Header__Times"
+        >
+          <svg
+            aria-labelledby="button"
+            fill="none"
+            height="20"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              opacity="0.8"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+                fill="black"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+                fill="black"
+                fill-rule="evenodd"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div
+        class="IndexGuest__Summary"
+      >
+        <button
+          class="IndexGuest__Summary__Btn"
+        >
+          <svg
+            fill="none"
+            height="20"
+            viewBox="0 0 24 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.5858 12L6.29289 3.70711C5.90237 3.31658 5.90237 2.68342 6.29289 2.29289C6.68342 1.90237 7.31658 1.90237 7.70711 2.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L7.70711 21.7071C7.31658 22.0976 6.68342 22.0976 6.29289 21.7071C5.90237 21.3166 5.90237 20.6834 6.29289 20.2929L14.5858 12Z"
+              fill="black"
+            />
+          </svg>
+          <h2>
+            Summary
+          </h2>
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              CA$262.00
+            </p>
+          </div>
+        </button>
+      </div>
+      <div
+        class="Billing__Payment"
+      >
+        <h2
+          class="IndexGuest__Title"
+        >
+          Payment method
+        </h2>
+        <div
+          class="Payment"
+        >
+          <section
+            class="hidden FieldSet FieldSet--PaymentMethod"
+          >
+            <div
+              class="FieldSet__Content"
+            >
+              <iframe
+                data-bold-pigi-iframe="true"
+                src="test.url"
+                title="payments"
+              />
+            </div>
+            <div
+              class="FieldSet__Content"
+            >
+              <div
+                class="DiscountLink"
+              >
+                <button
+                  aria-label="add discount code"
+                >
+                  Discount code
+                </button>
+              </div>
+            </div>
+            <div
+              class="FieldSet__Content"
+            >
+              <section
+                class="FieldSet FieldSet--BillingAddress"
+              >
+                <div
+                  class="FieldSet__Header"
+                >
+                  <h3
+                    class="Billing__Title"
+                  >
+                    Billing address
+                  </h3>
+                </div>
+                <div
+                  class="FieldSet__Content"
+                >
+                  <div
+                    class="stx-field stx-checkbox-field__field RadioButton"
+                  >
+                    <div
+                      class="stx-checkbox-field__div"
+                    >
+                      <span
+                        class="stx-checkbox stx-checkbox--is-checked stx-checkbox-field__checkbox"
+                      >
+                        <input
+                          checked=""
+                          class="stx-checkbox__input"
+                          id="stxField12"
+                          name="billing-address"
+                          type="checkbox"
+                          value="SAME_AS_SHIPPING_ADDRESS"
+                        />
+                        <span
+                          class="stx-checkbox__mount"
+                        />
+                      </span>
+                      <label
+                        class="stx-checkbox-field__label"
+                        for="stxField12"
+                      >
+                        Same as shipping address
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div
+        class="IndexGuest-__Footer"
+      >
+        <div
+          class="CheckoutButton__Container"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button CheckoutButton Billing__Checkout__Btn"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Complete Order
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+        <div
+          class="IndexGuest__Footer--login"
+        >
+          <button
+            class="link-btn"
+            type="button"
+          >
+            Back to shipping
+          </button>
+        </div>
+        <div
+          class="IndexGuest__Rights"
+        >
+          All right reserved TestSite
+        </div>
+      </div>
+    </div>
+    <div
+      class="CheckoutButton__Container"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button CheckoutButton CheckoutButton__Desktop CheckoutButton__Show"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Complete Order
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
     </div>
   </div>
 </DocumentFragment>

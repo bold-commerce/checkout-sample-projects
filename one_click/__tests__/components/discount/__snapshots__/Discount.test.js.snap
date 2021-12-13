@@ -5,7 +5,11 @@ exports[`Discount renders Discount component closed 1`] = `
   <div
     class="DiscountLink"
   >
-    Discount code
+    <button
+      aria-label="add discount code"
+    >
+      Discount code
+    </button>
   </div>
 </DocumentFragment>
 `;
@@ -13,42 +17,13 @@ exports[`Discount renders Discount component closed 1`] = `
 exports[`Discount renders Discount component opened 1`] = `
 <DocumentFragment>
   <div
-    class="SummaryBlock Summary__DiscountForm"
+    class="DiscountLink"
   >
-    <div
-      class="DiscountForm"
+    <button
+      aria-label="add discount code"
     >
-      <div
-        class="stx-field stx-field--with-input"
-      >
-        <div
-          class="stx-input"
-        >
-          <input
-            aria-disabled="false"
-            class="stx-input__input-element"
-            id="stxField1"
-            placeholder="Enter discount code"
-            type="text"
-            value="ExampleDiscount"
-          />
-        </div>
-      </div>
-      <button
-        aria-busy="false"
-        aria-disabled="false"
-        class="stx-button stx-button--primary"
-      >
-        <span
-          class="stx-button__text"
-        >
-          Apply
-        </span>
-        <span
-          class="stx-loading-spinner stx-button__spinner"
-        />
-      </button>
-    </div>
+      Discount code
+    </button>
   </div>
 </DocumentFragment>
 `;
@@ -56,42 +31,13 @@ exports[`Discount renders Discount component opened 1`] = `
 exports[`Discount renders Discount component opened 2`] = `
 <DocumentFragment>
   <div
-    class="SummaryBlock Summary__DiscountForm"
+    class="DiscountLink"
   >
-    <div
-      class="DiscountForm"
+    <button
+      aria-label="add discount code"
     >
-      <div
-        class="stx-field stx-field--with-input"
-      >
-        <div
-          class="stx-input"
-        >
-          <input
-            aria-disabled="false"
-            class="stx-input__input-element"
-            id="stxField2"
-            placeholder="Enter discount code"
-            type="text"
-            value="ExampleDiscount"
-          />
-        </div>
-      </div>
-      <button
-        aria-busy="false"
-        aria-disabled="false"
-        class="stx-button stx-button--primary"
-      >
-        <span
-          class="stx-button__text"
-        >
-          Apply
-        </span>
-        <span
-          class="stx-loading-spinner stx-button__spinner"
-        />
-      </button>
-    </div>
+      Discount code
+    </button>
   </div>
 </DocumentFragment>
 `;

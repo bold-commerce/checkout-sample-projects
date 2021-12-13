@@ -5,9 +5,50 @@ exports[`Confirmation renders Confirmation component 1`] = `
   <div
     class="Sidebar ConfirmationPage"
   >
-    <h1>
+    <div
+      class="Header"
+    >
+      <h1
+        class="Header__Title"
+      >
+        app.test
+      </h1>
+      <button
+        aria-label="Close"
+        class="Header__Times"
+      >
+        <svg
+          aria-labelledby="button"
+          fill="none"
+          height="20"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.8"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="ThankYou"
+    >
       Thank you, John!
-    </h1>
+    </div>
     <div
       class="confirmation-order"
     >
@@ -84,24 +125,16 @@ exports[`Confirmation renders Confirmation component 1`] = `
       </p>
        
     </div>
-    <a
-      href="/"
+    <div
+      class="confirmation-continue"
     >
-      <button
-        aria-busy="false"
-        aria-disabled="false"
-        class="stx-button confirmation-continue"
+      <a
+        class="confirmation-continue-button stx-button"
+        href="/"
       >
-        <span
-          class="stx-button__text"
-        >
-          Continue shopping
-        </span>
-        <span
-          class="stx-loading-spinner stx-button__spinner"
-        />
-      </button>
-    </a>
+        Continue shopping
+      </a>
+    </div>
   </div>
 </DocumentFragment>
 `;

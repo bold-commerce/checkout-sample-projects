@@ -34,9 +34,11 @@ exports[`SummaryItem renders SummaryItem component that is removable 1`] = `
     >
       test title two
       <button
+        aria-label="remove item"
         class="summary-child-remove"
       >
         <svg
+          aria-labelledby="button"
           fill="none"
           height="20"
           viewBox="0 0 24 24"

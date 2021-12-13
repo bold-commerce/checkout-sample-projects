@@ -8,7 +8,9 @@ exports[`BillingAddress render BillingAddress component with differnt billing ad
     <div
       class="FieldSet__Header"
     >
-      <h3>
+      <h3
+        class="Billing__Title"
+      >
         Billing address
       </h3>
     </div>
@@ -57,7 +59,9 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
     <div
       class="FieldSet__Header"
     >
-      <h3>
+      <h3
+        class="Billing__Title"
+      >
         Billing address
       </h3>
     </div>

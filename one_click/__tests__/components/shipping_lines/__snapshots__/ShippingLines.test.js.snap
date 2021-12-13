@@ -31,7 +31,6 @@ exports[`ShippingLines renders ShippingLines component 1`] = `
             >
               <input
                 aria-checked="true"
-                aria-disabled="false"
                 checked=""
                 class="stx-radio__input"
                 id="stxField1"
@@ -77,7 +76,6 @@ exports[`ShippingLines renders ShippingLines component 1`] = `
             >
               <input
                 aria-checked="false"
-                aria-disabled="false"
                 class="stx-radio__input"
                 id="stxField2"
                 name="shipping-method"
@@ -130,70 +128,9 @@ exports[`ShippingLines renders ShippingLines component when shipping lines shoul
     <div
       class="FieldSet__Content"
     >
-      <div
-        class="FieldSet--EmptyState"
-      >
-        <svg
-          fill="none"
-          height="29"
-          viewBox="0 0 28 29"
-          width="28"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            fill="#C4C4C4"
-            height="5"
-            rx="2.5"
-            width="28"
-          />
-          <rect
-            fill="#C4C4C4"
-            height="5"
-            rx="2.5"
-            width="28"
-            y="8"
-          />
-          <rect
-            fill="#C4C4C4"
-            height="5"
-            rx="2.5"
-            width="28"
-            y="16"
-          />
-          <rect
-            fill="#C4C4C4"
-            height="5"
-            rx="2.5"
-            width="28"
-            y="24"
-          />
-          <circle
-            cx="2.5"
-            cy="10.5"
-            fill="white"
-            r="1.5"
-          />
-          <circle
-            cx="2.5"
-            cy="2.5"
-            fill="white"
-            r="1.5"
-          />
-          <circle
-            cx="2.5"
-            cy="18.5"
-            fill="white"
-            r="1.5"
-          />
-          <circle
-            cx="2.5"
-            cy="26.5"
-            fill="white"
-            r="1.5"
-          />
-        </svg>
-        To view shipping options, complete filling in your address
-      </div>
+      <p>
+        To see shipping options complete filling in your address above
+      </p>
     </div>
   </section>
 </DocumentFragment>

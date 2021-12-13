@@ -16,7 +16,7 @@ const OneClickLayout = ({ orderErrors }) => {
         {
           orderErrors['order'] &&
           <Message type="alert">
-            An error with your order has occured, please try again
+            An error with your order has occurred, please try again
           </Message>
         }
         <Router>

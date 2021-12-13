@@ -9,6 +9,11 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useCheckoutStore: () => ({
         state: { applicationState: MOCKtestApplicationState }
     })
+})).mock('React', () => ({
+    ...jest.requireActual('React'),
+    useContext: () => ({
+        websiteName: 'app.test'
+    })
 }));
 
 describe('Confirmation', () => {

@@ -1,24 +1,17 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { OneClickLayout } from '../../../client/components/OneClickLayout';
-import ResizeObserver from "../../../__mocks__/ResizeObserver";
+import { Billing } from '../../../client/components/OneClickLayout/components/Billing'
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
-import { testApplicationState as MOCKexampleApplicationState } from '../../utils/applicationStateHelper';
-import {
-    countries as MOCKcountries,
-    caProvinces as MOCKprovinces,
-    exampleAddress as MOCKexampleAddress,
-    exampleSavedAddresses as MOCKexampleSavedAddresses
-} from '../../utils/addressHelpers';
+import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
 import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
+import {
+    exampleAddress as MOCKexampleAddress,
+    countries as MOCKcountries,
+    caProvinces as MOCKprovinces
+} from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useLineItems: () => ({
-        data: MOCKexampleLineItems,
-        updateLineItemQuantity: (() => {}),
-        removeLineItem: (() => {})        
-    }),
     useCheckoutStore: () => ({
         state: {
             orderInfo: {
@@ -27,7 +20,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             },
             errors: { order: null },
             loadingStatus: { isLoading: false },
-            applicationState: MOCKexampleApplicationState,
+            applicationState: MOCKapplicationState,
             orderTotals: {
                 taxesTotal: 1200,
                 subTotal: 23000,
@@ -35,10 +28,14 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             }
         }
     }),
-    useCustomer: () => ({
-        data: {
-            platform_id: 123
-        }
+    useLineItems: () => ({
+        data: MOCKexampleLineItems
+    }),
+    useShippingLines: () => ({
+        data: MOCKexampleShippingState
+    }),
+    useBillingAddress: () => ({
+        data: MOCKexampleAddress
     }),
     usePaymentIframe: () => ({
         data: {
@@ -47,22 +44,9 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             paymentIframeOnLoaded: (() => {})
         }
     }),
-    useSavedAddresses: () => ({
-        data: MOCKexampleSavedAddresses
-    }),
-    useShippingLines: () => ({
-        data: MOCKexampleShippingState
-    }),
-    useShippingAddress: () => ({
-        data: MOCKexampleAddress,
-        submitShippingAddress: (() => {})
-    }),
-    useBillingAddress: () => ({
-        data: MOCKexampleAddress
-    }),
     useDiscount: () => ({
         data: '?',
-        applyDiscount: (() => {})
+        applyDiscount : (() => {})
     }),
     useBillingSameAsShipping: () => ({
         data: true,
@@ -76,10 +60,6 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             showPostalCode: true,
             showProvince: true
         }
-    }),
-    useLoadingStatus: () => ({
-        shippingAddressLoadingStatus: 'complete',
-        shippingLinesLoadingStatus: 'complete'
     })
 })).mock('react', () => ({
     ...jest.requireActual('react'),
@@ -93,9 +73,32 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     })
 }));
 
-describe('OneClickLayout', () => {
-    test('renders OneClickLayout component', () => {
-        const { asFragment } = render( <OneClickLayout /> );
-        expect(asFragment()).toMatchSnapshot();
-    });
-});
+
+describe('Billing', () => {
+  test('render Billing component set to show', () => {
+      const { asFragment } = render(
+          <Billing
+            section={'billing'}
+          />
+      );
+      expect(asFragment()).toMatchSnapshot();
+  })
+
+  test('render Billing component with the summary set to show', () => {
+      const { asFragment } = render(
+          <Billing
+            section={'summaryB'}
+          />
+      );
+      expect(asFragment()).toMatchSnapshot();
+  })
+
+  test('render Billing component with another component set to show', () => {
+      const { asFragment } = render(
+          <Billing
+            section={'shipping'}
+          />
+      );
+      expect(asFragment()).toMatchSnapshot();
+  })
+})

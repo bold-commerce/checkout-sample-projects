@@ -109,6 +109,7 @@ exports[`InventoryItem renders InventoryItem component with stock 1`] = `
         class="InventoryItem__ProductQuantityWrapper"
       >
         <div
+          aria-label="ordered quantity"
           class="ProductQuantity"
         >
           3
@@ -142,6 +143,7 @@ exports[`InventoryItem renders InventoryItem component with stock 1`] = `
           </svg>
         </div>
         <div
+          aria-label="available quantity"
           class="ProductQuantity"
         >
           1
@@ -152,9 +154,11 @@ exports[`InventoryItem renders InventoryItem component with stock 1`] = `
       class="InventoryItem__RemoveItemWrapper"
     >
       <button
+        aria-label="remove item"
         class="InventoryItem__RemoveItem"
       >
         <svg
+          aria-labelledby="button"
           fill="none"
           height="20"
           viewBox="0 0 24 24"

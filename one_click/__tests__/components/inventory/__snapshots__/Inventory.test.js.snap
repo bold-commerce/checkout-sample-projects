@@ -6,6 +6,45 @@ exports[`Inventory renders Inventory component 1`] = `
     class="Inventory__Main"
   >
     <div
+      class="Header"
+    >
+      <h1
+        class="Header__Title"
+      >
+        app.test
+      </h1>
+      <button
+        aria-label="Close"
+        class="Header__Times"
+      >
+        <svg
+          aria-labelledby="button"
+          fill="none"
+          height="20"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            opacity="0.8"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M17.7071 7.70706L7.70712 17.7071L6.29291 16.2928L16.2929 6.29285L17.7071 7.70706Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M16.2929 17.7071L6.29291 7.70706L7.70712 6.29285L17.7071 16.2928L16.2929 17.7071Z"
+              fill="black"
+              fill-rule="evenodd"
+            />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div
       class="Inventory__Message"
     >
       <div
@@ -65,6 +104,7 @@ exports[`Inventory renders Inventory component 1`] = `
           class="InventoryItem__ProductQuantityWrapper"
         >
           <div
+            aria-label="ordered quantity"
             class="ProductQuantity"
           >
             2
@@ -98,6 +138,7 @@ exports[`Inventory renders Inventory component 1`] = `
             </svg>
           </div>
           <div
+            aria-label="available quantity"
             class="ProductQuantity"
           >
             1
@@ -108,9 +149,11 @@ exports[`Inventory renders Inventory component 1`] = `
         class="InventoryItem__RemoveItemWrapper"
       >
         <button
+          aria-label="remove item"
           class="InventoryItem__RemoveItem"
         >
           <svg
+            aria-labelledby="button"
             fill="none"
             height="20"
             viewBox="0 0 24 24"
