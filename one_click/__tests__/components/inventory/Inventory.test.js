@@ -19,6 +19,11 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useLocation: () => ({
         state: MOCKinventory
     })
+})).mock('React', () => ({
+    ...jest.requireActual('React'),
+    useContext: () => ({
+        websiteName: 'app.test'
+    })
 }));
 
 describe('Inventory', () => {

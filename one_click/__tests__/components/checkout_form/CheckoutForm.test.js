@@ -5,6 +5,7 @@ import { MemoryRouter } from "react-router";
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
 import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
+import ResizeObserver from "../../../__mocks__/ResizeObserver";
 import {
     exampleAddress as MOCKexampleAddress,
     countries as MOCKcountries,
@@ -39,6 +40,11 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useShippingAddress: () => ({
         data: MOCKexampleAddress,
         submitShippingAdderess: (() => {})
+    }),
+    useCustomer: () => ({
+        data: {
+            platform_id: 123
+        }
     }),
     useBillingAddress: () => ({
         data: MOCKexampleAddress

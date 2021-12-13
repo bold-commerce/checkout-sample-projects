@@ -56,6 +56,7 @@ exports[`LineItem renders LineItem component with editable quantity 1`] = `
         class="CartItem__ProductQuantityWrapper"
       >
         <div
+          aria-label="product quantity"
           class="ProductQuantity"
         >
           2
@@ -136,6 +137,7 @@ exports[`LineItem renders read only LineItem component 1`] = `
         class="CartItem__ProductQuantityWrapper"
       >
         <div
+          aria-label="product quantity"
           class="ProductQuantity"
         >
           2

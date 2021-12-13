@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerInfo renders CustomerInfo component 1`] = `
+<DocumentFragment>
+  <div
+    class="IndexGuest__Customer"
+  >
+    <h2
+      class="IndexGuest__Title"
+    >
+      Customer Info
+    </h2>
+    <div
+      class="IndexGuest__Login"
+    >
+      Already have an account? 
+      <a
+        href="/"
+      >
+        Log in
+      </a>
+    </div>
+    <div
+      class="stx-field stx-field--with-input"
+    >
+      <div
+        class="stx-input"
+      >
+        <input
+          class="stx-input__input-element"
+          id="stxField1"
+          name="email_address"
+          placeholder="Email address"
+          type="email"
+        />
+      </div>
+    </div>
+    <div
+      class="stx-field stx-checkbox-field__field"
+    >
+      <div
+        class="stx-checkbox-field__div"
+      >
+        <span
+          class="stx-checkbox stx-checkbox-field__checkbox"
+        >
+          <input
+            class="stx-checkbox__input"
+            id="stxField2"
+            type="checkbox"
+          />
+          <span
+            class="stx-checkbox__mount"
+          />
+        </span>
+        <label
+          class="stx-checkbox-field__label"
+          for="stxField2"
+        >
+          Subscribe to our newsletter
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

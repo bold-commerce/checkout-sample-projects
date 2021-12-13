@@ -14,9 +14,11 @@ exports[`Summary renders Summary component 1`] = `
         Summary
       </h1>
       <button
+        aria-label="Close"
         class="Header__Times"
       >
         <svg
+          aria-labelledby="button"
           fill="none"
           height="20"
           viewBox="0 0 24 24"
@@ -91,8 +93,6 @@ exports[`Summary renders Summary component 1`] = `
             class="summary-line-head"
           >
             <button
-              aria-controls="Line-Shipping"
-              aria-expanded="false"
               class="summary-btn"
               id="summary-line-Shipping"
             >
@@ -187,8 +187,6 @@ exports[`Summary renders Summary component 1`] = `
             class="summary-line-head"
           >
             <button
-              aria-controls="Line-Taxes"
-              aria-expanded="false"
               class="summary-btn"
               id="summary-line-Taxes"
             >
@@ -304,7 +302,7 @@ exports[`Summary renders Summary component 1`] = `
       <button
         aria-busy="false"
         aria-disabled="false"
-        class="stx-button CheckoutButton"
+        class="stx-button CheckoutButton CheckoutButton__Mobile"
       >
         <span
           class="stx-button__text"

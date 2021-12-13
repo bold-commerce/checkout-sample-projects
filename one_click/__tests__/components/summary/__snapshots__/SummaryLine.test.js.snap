@@ -9,8 +9,6 @@ exports[`SummaryLine renders SummaryLine component with items 1`] = `
       class="summary-line-head"
     >
       <button
-        aria-controls="Line-test title"
-        aria-expanded="false"
         class="summary-btn"
         id="summary-line-test title"
       >
@@ -92,8 +90,6 @@ exports[`SummaryLine renders SummaryLine component with removable items 1`] = `
       class="summary-line-head"
     >
       <button
-        aria-controls="Line-test title"
-        aria-expanded="false"
         class="summary-btn"
         id="summary-line-test title"
       >
@@ -151,9 +147,11 @@ exports[`SummaryLine renders SummaryLine component with removable items 1`] = `
           class="summary-child-title"
         >
           <button
+            aria-label="remove item"
             class="summary-child-remove"
           >
             <svg
+              aria-labelledby="button"
               fill="none"
               height="20"
               viewBox="0 0 24 24"
