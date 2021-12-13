@@ -43,7 +43,7 @@ const CheckoutButtonContainer = ({ className }, ref) => {
   const orderErrorMessage = state.errors.order?.public_order_id;
 
   // don't disable checkout button if only error is order error
-  const hasErrors = Object.keys(state.errors).some((errorKey) => errorKey != 'order' && state.errors[errorKey] != null);
+  const hasErrors = Object.keys(state.errors).some((errorKey) => errorKey != 'order' && errorKey != 'paymentIframe' && state.errors[errorKey] != null);
   const missingAddress = Object.values(state.applicationState.addresses).some(x => x === null || x.length === 0);
   const checkoutButtonDisabled = state.loadingStatus.isLoading || hasErrors ||  missingAddress;
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
