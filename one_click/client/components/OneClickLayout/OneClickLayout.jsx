@@ -5,9 +5,11 @@ import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { CheckoutForm } from './components/CheckoutForm';
 import { LayoutContext } from './context/LayoutContext';
 import { Message} from '@boldcommerce/stacks-ui';
+import { useTranslation } from 'react-i18next';
 import './OneClickLayout.css';
 
 const OneClickLayout = ({ orderErrors }) => {
+  const { t } = useTranslation(); 
   const [openModal, setOpenModal] = useState(true);
 
   return (
@@ -16,7 +18,7 @@ const OneClickLayout = ({ orderErrors }) => {
         {
           orderErrors['order'] &&
           <Message type="alert">
-            An error with your order has occurred, please try again
+            {t('error.order')}
           </Message>
         }
         <Router>

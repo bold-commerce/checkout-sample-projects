@@ -6,6 +6,7 @@ import { InputField, Button, Message } from '@boldcommerce/stacks-ui';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
+import { useTranslation } from 'react-i18next';
 
 export const Discount = ({
   discountApplied, discountCode, applyDiscount, removeDiscount
@@ -17,6 +18,7 @@ export const Discount = ({
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
   const discountRef = React.useRef();
+  const { t } = useTranslation();
 
   /**
     * Opens the discount modal
@@ -38,11 +40,11 @@ export const Discount = ({
         setStatus(() => {
           return discountStatus === 'existing' ? {
             info: {
-              message: 'The previous discount code was removed. Only one discount code may be applied at a time.',
+              message: t('discount.updated_discount_message'),
             }
           } : {
             success: {
-              message: 'Discount applied successfully',
+              message: t('discount.new_discount_message'),
             }
           }
         });
@@ -74,7 +76,7 @@ export const Discount = ({
 
   if (!open) return (
     <div className="DiscountLink" >
-      <button onClick={openModal} aria-label="add discount code"><Plus className='DiscountPlus' />Discount code</button>
+      <button onClick={openModal} aria-label="add discount code"><Plus className='DiscountPlus' />{t('discount.code')}</button>
     </div>
   );
 
@@ -84,7 +86,7 @@ export const Discount = ({
         <InputField
           id="discount_input"
           type="text"
-          placeholder="Enter discount code"
+          placeholder={t('discount.enter_code')}
           value={discount}
           messageText={status.errors && status.errors[0].message}
           messageType={status.errors && 'alert'}

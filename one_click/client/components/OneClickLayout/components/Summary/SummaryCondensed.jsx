@@ -2,9 +2,11 @@ import React from "react";
 import { useCheckoutStore } from "@boldcommerce/checkout-react-components";
 import { ChevronRight } from "../Icons";
 import { Price } from "@boldcommerce/stacks-ui/lib";
+import { useTranslation } from 'react-i18next';
 
 const SummaryCondensed = ({ onSectionChange }) => {
   const { state } = useCheckoutStore();
+  const { t } = useTranslation();
 
   return (
     <div className="IndexGuest__Summary">
@@ -13,7 +15,7 @@ const SummaryCondensed = ({ onSectionChange }) => {
         onClick={onSectionChange}
       >
         <ChevronRight className="IndexGuest__Chevron"/>
-        <h2>Summary</h2>
+        <h2>{t('summary.title')}</h2>
         <Price amount={state.applicationState.order_total} />
       </button>
     </div>

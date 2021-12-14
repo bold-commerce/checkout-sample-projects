@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
 import { OneClickLayout } from './components';
 import { AppContext } from './components/OneClickLayout/context/AppContext';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
-  const websiteName = "websitename";
+  const { t } = useTranslation();
+  const websiteName = t("website_name");
   const [showCheckout, setShowCheckout] = useState(true);
 
   return !showCheckout ? null : (

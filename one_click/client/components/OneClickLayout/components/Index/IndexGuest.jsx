@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import classNames from "classnames";
 import CustomerInfo from "../CustomerInfo/CustomerInfo";
 import { SummaryCondensed } from "../Summary";
+import { useTranslation } from 'react-i18next';
 
 const IndexGuest = ({ onSectionChange, show }, ref) => {
   const { websiteName } = useContext(AppContext);
@@ -17,6 +18,7 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
   const [ address, setAddress ] = useState(shippingAddress);
   const { data: countryInfo } = useCountryInfo(address);
   const { data: customer, errors: customerErrors } = useCustomer();
+  const { t } = useTranslation();
 
   const requiredAddressFields = ['first_name','last_name','address_line_1','city'];
   let provincePlaceholder = countryInfo.provinceLabel;
@@ -27,7 +29,7 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
       <SummaryCondensed onSectionChange={() => onSectionChange('summary')}/>
       <CustomerInfo />
       <div className="IndexGuest__ShippingAddress">
-        <h2 className="IndexGuest__Title">Shipping address</h2>
+        <h2 className="IndexGuest__Title">{t('shipping.address')}</h2>
         <Address
           address={address}
           onChange={(d) => setAddress((prevAddress) => ({
@@ -54,12 +56,12 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
           disabled={!(customer.email_address && state.applicationState.shipping.selected_shipping && !shippingErrors && !customerErrors)}
           primary
         >
-          Continue to billing
+          {t('continue_to_billing')}
         </Button>
         <div className="IndexGuest__Footer--login">
-          <Link to="#">Back to log in</Link>
+          <Link to="#">{t('back_to_login')}</Link>
         </div>          
-        <div className="IndexGuest__Rights">{`All right reserved ${websiteName}`}</div>
+        <div className="IndexGuest__Rights">{`${t('all_rights_reserved')} ${websiteName}`}</div>
       </div>
     </div>
   )

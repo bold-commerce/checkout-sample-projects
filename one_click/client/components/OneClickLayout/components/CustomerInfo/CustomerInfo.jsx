@@ -3,6 +3,7 @@ import { useAnalytics, useErrorLogging } from "../../../../hooks";
 import { InputField, CheckboxField } from "@boldcommerce/stacks-ui/lib";
 import { useCustomer } from "@boldcommerce/checkout-react-components";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CustomerInfo = () => {
   const { errors: customerErrors, submitCustomer } = useCustomer();
@@ -10,6 +11,7 @@ const CustomerInfo = () => {
   const [ email, setEmail ] = useState(null);
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const postalCodeTimeout = setTimeout(() => {
@@ -27,18 +29,18 @@ const CustomerInfo = () => {
 
   return (
     <div className="IndexGuest__Customer">
-      <h2 className="IndexGuest__Title">Customer Info</h2>
-      <div className="IndexGuest__Login">Already have an account? <Link to='#'>Log in</Link></div>
+      <h2 className="IndexGuest__Title">{t('customer.info')}</h2>
+      <div className="IndexGuest__Login">{t('customer.already_have_account')}<Link to='#'>{t('customer.login')}</Link></div>
       <InputField
         type="email"
         name="email_address"
-        placeholder="Email address"
-        messageText={customerErrors && 'Valid email is required' || ''}
+        placeholder={t('customer.email')}
+        messageText={customerErrors && t('invalid_email') || ''}
         messageType={customerErrors && 'alert' || ''}
         onChange={(e) => setEmail(e.target.value)}
       />
       <CheckboxField
-        label="Subscribe to our newsletter"
+        label={t('customer.subscribe')}
         checked={acceptsMarketing}
         onChange={() => setAcceptsMarketing(!acceptsMarketing)}
       />

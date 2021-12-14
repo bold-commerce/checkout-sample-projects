@@ -6,9 +6,11 @@ import { PaymentMethod } from "../Payment";
 import { CheckoutButton } from "../CheckoutButton";
 import { AppContext } from "../../context/AppContext";
 import './Billing.css';
+import { useTranslation } from 'react-i18next';
 
 const Billing = ({section, onSectionChange}, ref) => {
   const { websiteName } = useContext(AppContext);
+  const { t } = useTranslation();
 
   return (
     <div ref={ref} className={classNames('Sidebar Billing', section === 'billing' ? 'Sidebar--Show' : (section === 'summaryB' ? 'IndexPage--Hide' : 'Sidebar--Hide'))}>
@@ -17,16 +19,16 @@ const Billing = ({section, onSectionChange}, ref) => {
       <SummaryCondensed onSectionChange={() => onSectionChange('summaryB')}/>
 
       <div className="Billing__Payment">
-        <h2 className="IndexGuest__Title">Payment method</h2>
+        <h2 className="IndexGuest__Title">{t('payment.method')}</h2>
         <PaymentMethod/>
       </div>
 
       <div className="IndexGuest-__Footer">
         <CheckoutButton className="CheckoutButton Billing__Checkout__Btn" />
         <div className="IndexGuest__Footer--login">
-          <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>Back to shipping</button>
+          <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>{t('back_to_shipping')}</button>
         </div>          
-        <div className="IndexGuest__Rights">{`All right reserved ${websiteName}`}</div>
+        <div className="IndexGuest__Rights">{`${t('all_rights_reserved')} ${websiteName}`}</div>
       </div>
     </div>
   )
