@@ -14,7 +14,7 @@ describe('LineItem', () => {
         lineItemKey="abcd"
         onRemove={() => {}}
         onQuantityChange={() => {}}
-        description="Test description right here"
+        description={["Test description right here"]}
         readOnly={false}
       />,
     );
@@ -32,7 +32,7 @@ describe('LineItem', () => {
         lineItemKey="abcd"
         onRemove={() => {}}
         onQuantityChange={() => {}}
-        description="Test description right here"
+        description={[]}
         readOnly
       />,
     );

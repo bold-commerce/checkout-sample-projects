@@ -23,7 +23,7 @@ const CheckoutForm = () => {
   const checkInventory = useInventory();
   const history = useHistory();
   const [openSection, setOpenSection] = useState('/');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = React.useState(true); // calling React.useState to be able to mock with snapshot tests.
   const [height, setHeight] = useState(null);
   const mainEl = useRef(null);
   const summaryEl = useRef(null);
@@ -36,7 +36,6 @@ const CheckoutForm = () => {
 
   const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
   const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
-
   const getInventory = async () => {
     const inventory = await checkInventory(lineItems);
     if (inventory) {

@@ -4,7 +4,8 @@ export const exampleLineItems = [
         fees: [],
         product_data: {
             id: "1",
-            title: "Test title",
+            product_title: "Test title",
+            title: "Size Large / Colour Blue",
             image_url: "",
             properties: [],
             description: "",
@@ -31,7 +32,8 @@ export const exampleLineItems = [
         fees: [],
         product_data: {
             id: "2",
-            title: "Test title 2, Revenge of the title",
+            product_title: "Test title 2, Revenge of the title",
+            title: "Number Two",
             image_url: "",
             properties: [],
             description: "",
@@ -58,7 +60,8 @@ export const exampleLineItems = [
         fees: [],
         product_data: {
             id: "3",
-            title: "Test title 3, the search for more money",
+            product_title: "Test title 3, the search for more money",
+            title: "Default Title",
             image_url: "",
             properties: [],
             description: "",

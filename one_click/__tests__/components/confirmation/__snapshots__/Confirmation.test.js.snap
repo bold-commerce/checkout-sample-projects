@@ -47,7 +47,7 @@ exports[`Confirmation renders Confirmation component 1`] = `
     <div
       class="ThankYou"
     >
-      Thank you, John!
+      Thank you, {firstname}!
     </div>
     <div
       class="confirmation-order"

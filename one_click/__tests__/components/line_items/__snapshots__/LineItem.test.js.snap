@@ -44,7 +44,9 @@ exports[`LineItem renders LineItem component with editable quantity 1`] = `
           <div
             class="stx-details__description"
           >
-            Test description right here
+            <div>
+              Test description right here
+            </div>
           </div>
         </div>
       </div>
@@ -124,9 +126,7 @@ exports[`LineItem renders read only LineItem component 1`] = `
           </div>
           <div
             class="stx-details__description"
-          >
-            Test description right here
-          </div>
+          />
         </div>
       </div>
     </div>

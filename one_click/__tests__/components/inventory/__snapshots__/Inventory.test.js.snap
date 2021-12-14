@@ -97,7 +97,9 @@ exports[`Inventory renders Inventory component 1`] = `
           <div
             class="stx-details__description"
           >
-            Test title 2, Revenge of the title
+            <div>
+              Number Two
+            </div>
           </div>
         </div>
         <div
@@ -224,9 +226,7 @@ exports[`Inventory renders Inventory component 1`] = `
           </div>
           <div
             class="stx-details__description"
-          >
-            Test title 3, the search for more money
-          </div>
+          />
         </div>
         <div
           class="InventoryItem__ProductQuantityWrapper"

@@ -3,7 +3,7 @@ import IndexPage from '../../../client/components/OneClickLayout/components/Inde
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
-import { testApplicationState as MOCKexampleapplicationState } from '../../utils/applicationStateHelper';
+import { testApplicationState as MOCKexampleApplicationState } from '../../utils/applicationStateHelper';
 import {
     exampleAddress as MOCKexampleAddress,
     countries as MOCKcountries
@@ -25,7 +25,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
             },
             errors: { order: null },
             loadingStatus: { isLoading: false },
-            applicationState: MOCKexampleapplicationState
+            applicationState: MOCKexampleApplicationState
         }
     }),
     usePaymentIframe: () => ({

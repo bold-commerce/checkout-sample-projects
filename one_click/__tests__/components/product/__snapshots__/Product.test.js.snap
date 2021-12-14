@@ -41,7 +41,9 @@ exports[`Product renders Product component 1`] = `
         <div
           class="stx-details__description"
         >
-          Test description goes here
+          <div>
+            Test description goes here
+          </div>
         </div>
       </div>
     </div>

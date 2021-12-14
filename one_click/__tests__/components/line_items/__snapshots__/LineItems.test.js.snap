@@ -43,7 +43,14 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
           </div>
           <div
             class="stx-details__description"
-          />
+          >
+            <div>
+              Size Large
+            </div>
+            <div>
+              Colour Blue
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -117,7 +124,11 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
           </div>
           <div
             class="stx-details__description"
-          />
+          >
+            <div>
+              Number Two
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -270,7 +281,14 @@ exports[`LineItems renders read only LineItems component 1`] = `
           </div>
           <div
             class="stx-details__description"
-          />
+          >
+            <div>
+              Size Large
+            </div>
+            <div>
+              Colour Blue
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -344,7 +362,11 @@ exports[`LineItems renders read only LineItems component 1`] = `
           </div>
           <div
             class="stx-details__description"
-          />
+          >
+            <div>
+              Number Two
+            </div>
+          </div>
         </div>
       </div>
     </div>
