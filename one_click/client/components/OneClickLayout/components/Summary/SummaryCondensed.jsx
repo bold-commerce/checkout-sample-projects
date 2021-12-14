@@ -10,7 +10,7 @@ const SummaryCondensed = ({ onSectionChange }) => {
     <div className="IndexGuest__Summary">
       <button
         className="IndexGuest__Summary__Btn"
-        onClick={() => onSectionChange('summary')}
+        onClick={onSectionChange}
       >
         <ChevronRight className="IndexGuest__Chevron"/>
         <h2>Summary</h2>

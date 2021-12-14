@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Button } from "@boldcommerce/stacks-ui/lib";
+import { Button } from "@boldcommerce/stacks-ui";
 import { useShippingAddress, useCountryInfo, useCheckoutStore, useCustomer } from "@boldcommerce/checkout-react-components";
 import { ShippingLines } from "../ShippingLines";
 import { AppContext } from "../../context/AppContext";
@@ -24,7 +24,7 @@ const IndexGuest = ({ onSectionChange, show }, ref) => {
   return (
     <div ref={ref} className={classNames('Sidebar IndexGuest', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName} />
-      <SummaryCondensed onSectionChange={onSectionChange}/>
+      <SummaryCondensed onSectionChange={() => onSectionChange('summary')}/>
       <CustomerInfo />
       <div className="IndexGuest__ShippingAddress">
         <h2 className="IndexGuest__Title">Shipping address</h2>
