@@ -5,17 +5,20 @@ import { Button, Message } from '@boldcommerce/stacks-ui';
 import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
 import { useAnalytics, useErrorLogging, useInventory } from '../../../../hooks';
 import './CheckoutButton.css';
+import { useTranslation } from 'react-i18next';
 
-const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage, innerRef }) => (
+const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage, innerRef }) => {
+  const { t } = useTranslation();
+  return (
   <>
     { errorMessage ? <Message type="alert">{ errorMessage }</Message> : null }
     <div ref={innerRef} className="CheckoutButton__Container">
       <Button onClick={onClick} disabled={disabled} loading={loading} className={className}>
-        Complete Order
+        {t('complete_order')}
       </Button>
     </div>
   </>
-);
+)};
 
 CheckoutButton.propTypes = {
   disabled: PropTypes.bool,

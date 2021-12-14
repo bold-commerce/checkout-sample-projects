@@ -7,6 +7,7 @@ import { Header } from '../Header';
 import classNames from 'classnames';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Shipping.css';
+import { useTranslation } from 'react-i18next';
 
 const Shipping = ({ show, onBack }, ref) => {
   const { data: shippingAddress, errors, submitShippingAddress } = useShippingAddress();
@@ -15,6 +16,7 @@ const Shipping = ({ show, onBack }, ref) => {
   const [selectingAddress, setSelectingAddress] = useState(false);
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const { t } = useTranslation();
 
   const handleSubmit = useCallback(async (address) => {
     setSelectingAddress(true);
@@ -35,7 +37,7 @@ const Shipping = ({ show, onBack }, ref) => {
       <Header title={"Shipping"} />
       <BackButton onClick={onBack} />
       <section className="Shipping__ShippingAddress">
-        <h3 className="FieldSet__Heading">Shipping address</h3>
+        <h3 className="FieldSet__Heading">{t('shipping.address')}</h3>
         <ShippingAddressList
           addresses={savedAddresses}
           onChange={(address) => handleSubmit(address)}

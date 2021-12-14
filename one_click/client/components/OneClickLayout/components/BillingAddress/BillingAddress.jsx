@@ -6,6 +6,7 @@ import { Address } from '../Address';
 import { useBillingAddress, useBillingSameAsShipping, useCountryInfo } from '@boldcommerce/checkout-react-components';
 import './BillingAddress.css';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
+import { useTranslation } from 'react-i18next';
 
 export const BillingAddress = ({
   billingAddress, billingSameAsShipping, submitBillingAddress, setBillingSameAsShipping, requiredAddressFields,
@@ -23,13 +24,9 @@ export const BillingAddress = ({
   const [errors, setErrors] = useState(null);
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const { t } = useTranslation();
 
   let provincePlaceholder = provinceLabel;
-
-  // TODO: replace with languages config file
-  if (provinceLabel === 'state_territory') {
-    provincePlaceholder = 'state/territory';
-  }
 
   const handleSubmit = async(data) => {
     setLoading(true);
@@ -60,11 +57,11 @@ export const BillingAddress = ({
   return (
     <section className="FieldSet FieldSet--BillingAddress">
       <div className="FieldSet__Header">
-        <h3 className="Billing__Title">Billing address</h3>
+        <h3 className="Billing__Title">{t('billing.address')}</h3>
       </div>
       <div className="FieldSet__Content">
         <CheckboxField
-          label="Same as shipping address"
+          label={t('billing.same_as_shipping')}
           name="billing-address"
           className="RadioButton"
           value="SAME_AS_SHIPPING_ADDRESS"

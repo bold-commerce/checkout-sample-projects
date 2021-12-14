@@ -8,6 +8,7 @@ import { useVariants } from "../../../../hooks";
 import { AppContext } from '../../context/AppContext';
 import { Header } from "../Header";
 import './Inventory.css';
+import { useTranslation } from 'react-i18next';
 
 export const Inventory = ({}, ref) => {
     const { data: lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
@@ -17,6 +18,7 @@ export const Inventory = ({}, ref) => {
     const history = useHistory();
     const location = useLocation();
     const inventory = location.state;
+    const { t } = useTranslation();
 
     let invItems = lineItems.map((item) => {
         const product = inventory.find(i => i.id === item.product_data.product_id);
@@ -61,21 +63,21 @@ export const Inventory = ({}, ref) => {
             <Header title={websiteName} />
             <div className="Inventory__Message">
                 <div className="Inventory__Title">
-                    Inventory issues
+                    {t('inventory.issues')}
                 </div>                
                 <div className="Inventory__Description">
-                    Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience.
+                    {t('inventory.issues_description')}
                 </div>
             </div>
             {invItems}
             <div className="Inventory__footer">
-                <Link className="ReturnLink" to="/">Return to cart</Link>
+                <Link className="ReturnLink" to="/">{t('inventory.return_to_cart')}</Link>
                 <Button
                     onClick={handleUpdateQuantities}
                     className="CheckoutButton"
                     disabled={loading}
                 >
-                    Continue with changes
+                    {t('inventory.continue')}
                 </Button>
             </div>
         </div>

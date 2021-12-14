@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import { CheckoutButton } from '../CheckoutButton';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './Summary.scss';
+import { useTranslation } from 'react-i18next';
 
 const Summary = ({ section, onSectionChange }, ref) => {
   const { data: shipping } = useShippingLines();
@@ -20,6 +21,7 @@ const Summary = ({ section, onSectionChange }, ref) => {
   const logError = useErrorLogging();
   const show = section === 'summary' || section === 'summaryB'
   const backLocation = section === 'summaryB' ? 'billing' : '/';
+  const { t } = useTranslation();
 
   const handleRemoveDiscount = useCallback(async () => {
     try {
@@ -63,32 +65,32 @@ const Summary = ({ section, onSectionChange }, ref) => {
 
   return(
     <div ref={ref} className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
-      <Header title={"Summary"} />
+      <Header title={t('summary.title')} />
       <BackButton onClick={() => onSectionChange(backLocation)} />
       <section className="Summary__OrderSummary">
         <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">
           <SummaryLine
-            title="Subtotal"
+            title={t('summary.subtotal')}
             value={orderTotals.subTotal}
           />
           <SummaryLine
-            title="Shipping"
+            title={t('shipping.title')}
             value={shipping.selectedShippingAmount}
             items={shippingItems}
           />
           <SummaryLine
-            title="Discount"
+            title={t('discount.title')}
             value={( discount.discountApplied ? discount.discountTotal * -1 : undefined )}
             items={discountItems}
           />
           <SummaryLine
-            title="Taxes"
+            title={t('summary.taxes')}
             value={( orderTotals.taxesTotal !== 0 ? orderTotals.taxesTotal : undefined )}
             items={taxItems}
           />
         </div>                
         <div className="Summary__Total SummaryBlock">
-          <div>Total</div>
+          <div>{t('summary.total')}</div>
           <Price className="summary-total-price" amount={orderTotals.total} />
         </div>
       </section>

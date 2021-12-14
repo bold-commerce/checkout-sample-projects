@@ -10,6 +10,7 @@ import { AppContext } from '../../context/AppContext';
 import { PaymentMethod } from '../Payment';
 import { CheckoutButton } from '../CheckoutButton';
 import { useAnalytics } from '../../../../hooks';
+import { useTranslation } from 'react-i18next';
 
 const IndexPage = ({ onSectionChange, show }, ref) => {
   const { state } = useCheckoutStore();
@@ -22,6 +23,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
   const [loading, setLoading] = useState(false);
   const { websiteName } = useContext(AppContext);
   const trackEvent = useAnalytics();
+  const { t } = useTranslation();
 
   const setDefaultAddress = useCallback(async () => {
     setLoading(true);
@@ -47,7 +49,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
       <Header title={websiteName}/>
       <LineItems />
       <Card
-        title={"Summary"}
+        title={t('summary.title')}
         handleClick={() => onSectionChange('summary')}
         component={"/summary"}
         overview={<Price amount={order_total} />}
@@ -55,14 +57,14 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
       { customer?.email_address && (
         <Card
           description={customer.email_address}
-          action={{label: "Not you?"}}
+          action={{label: t('customer.not_you')}}
         />
       )}
       <Card
-        title={"Shipping"}
+        title={t('shipping.title')}
         type={"shippingCard"}
         handleClick={() => onSectionChange('shipping')}
-        description={loading ? '' : addresses.shipping.first_name ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : 'No shipping address selected'}
+        description={loading ? '' : addresses.shipping.first_name ? `${addresses.shipping.first_name} ${addresses.shipping.last_name}` : t('shipping.empty')}
       >
       { (loading && <LoadingState/>) || 
       ( 
@@ -74,12 +76,12 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
       )}
       </Card>
       <Card
-        title={"Payment"}
+        title={t('payment.title')}
         type={"paymentCard"}
       >
       {
         state.orderInfo.billingSameAsShipping ? 
-        <div>Billing address same as shipping address</div> :
+        <div>{t('payment.billing_same_as_shipping')}</div> :
         <div>{billingCombined}</div>
       }
       </Card>

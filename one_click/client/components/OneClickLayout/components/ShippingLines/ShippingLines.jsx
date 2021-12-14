@@ -6,12 +6,14 @@ import { RadioField, Price } from '@boldcommerce/stacks-ui';
 import LoadingState from '../LoadingState/LoadingState';
 import { useAnalytics, useErrorLogging } from '../../../../hooks';
 import './ShippingLines.css';
+import { useTranslation } from 'react-i18next';
 
 export const ShippingLines = ({
   showShippingLines, shippingLinesFetching, shippingLinesLoadingStatus, shippingLines, selectedShippingLineIndex, setSelectedShippingLine, disabled
 }) => {
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const { t } = useTranslation();
 
   const handleShippingLineChange = async (index) => {
     try {
@@ -26,10 +28,10 @@ export const ShippingLines = ({
     return (
       <section className="FieldSet FieldSet--ShippingMethod">
         <div className="FieldSet__Header">
-          <h3 className="FieldSet__Heading">Shipping method</h3>
+          <h3 className="FieldSet__Heading">{t('shipping.method')}</h3>
         </div>
         <div className="FieldSet__Content">
-          <p>To see shipping options complete filling in your address above</p>
+          <p>{t('shipping.options_description')}</p>
         </div>
       </section>
     );
@@ -38,7 +40,7 @@ export const ShippingLines = ({
   return (
     <section className="FieldSet FieldSet--ShippingMethod">
       <div className="FieldSet__Header">
-        <h3 className="FieldSet__Heading">Shipping method</h3>
+        <h3 className="FieldSet__Heading">{t('shipping.method')}</h3>
       </div>
       {
         shippingLinesFetching ? <LoadingState />
