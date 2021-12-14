@@ -10,7 +10,7 @@ describe('Product', () => {
             image="https://via.placeholder.com/150"
             quantity={2}
             lineItemKey="abcd"
-            description="Test description goes here"
+            description={["Test description goes here"]}
             onQuantityChange={() => {}}
             totalPrice={19998}
             onRemove= {() => {}}

@@ -39,7 +39,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     }),
     useShippingAddress: () => ({
         data: MOCKexampleAddress,
-        submitShippingAdderess: (() => {})
+        submitShippingAddress: (() => {})
     }),
     useCustomer: () => ({
         data: {
@@ -94,10 +94,12 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('CheckoutForm', () => {
     test('renders CheckoutForm', () => {
+        React.useState = jest.fn().mockReturnValueOnce([false, {}])
+
         const { asFragment } = render(
             <CheckoutForm />,
             {wrapper: MemoryRouter}
-        );
+        );``
         expect(asFragment()).toMatchSnapshot();
     });
 });

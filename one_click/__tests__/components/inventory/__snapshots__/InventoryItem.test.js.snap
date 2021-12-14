@@ -41,7 +41,9 @@ exports[`InventoryItem renders InventoryItem component with no stock 1`] = `
         <div
           class="stx-details__description"
         >
-          Test description
+          <div>
+            Test description
+          </div>
         </div>
       </div>
       <div
@@ -102,7 +104,9 @@ exports[`InventoryItem renders InventoryItem component with stock 1`] = `
         <div
           class="stx-details__description"
         >
-          Test description
+          <div>
+            Test description
+          </div>
         </div>
       </div>
       <div
