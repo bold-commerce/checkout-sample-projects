@@ -22,7 +22,7 @@ const CheckoutForm = () => {
   const location = useLocation();
   const checkInventory = useInventory();
   const history = useHistory();
-  const [openSection, setOpenSection] = useState(null);
+  const [openSection, setOpenSection] = useState('/');
   const [loading, setLoading] = useState(true);
   const [height, setHeight] = useState(null);
   const mainEl = useRef(null);
@@ -92,12 +92,15 @@ const CheckoutForm = () => {
         setHeight(openEl.current?.clientHeight);
       }
     });
-    resizeObserver.observe(openEl.current);
+
+    if (openEl.current) {
+      resizeObserver.observe(openEl.current);
+    }
   
     return () => {
-        resizeObserver.disconnect();
+      resizeObserver.disconnect();
     }
-  }, [openSection]);
+  }, [openSection, mainEl?.current]);
 
   const style = window.innerWidth > 768 ? {
     height: height? `${height}px` : null,
