@@ -80,7 +80,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             class="CartItem__ProductDetails"
           >
             <div
-              class="stx-details stx-details--left"
+              class="stx-details"
             >
               <div
                 class="stx-details__title"
@@ -98,6 +98,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
                 </div>
               </div>
             </div>
+            <div />
           </div>
         </div>
         <div
@@ -161,7 +162,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             class="CartItem__ProductDetails"
           >
             <div
-              class="stx-details stx-details--left"
+              class="stx-details"
             >
               <div
                 class="stx-details__title"
@@ -176,6 +177,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
                 </div>
               </div>
             </div>
+            <div />
           </div>
         </div>
         <div
@@ -239,7 +241,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
             class="CartItem__ProductDetails"
           >
             <div
-              class="stx-details stx-details--left"
+              class="stx-details"
             >
               <div
                 class="stx-details__title"
@@ -250,6 +252,7 @@ exports[`CheckoutForm renders CheckoutForm 1`] = `
                 class="stx-details__description"
               />
             </div>
+            <div />
           </div>
         </div>
         <div

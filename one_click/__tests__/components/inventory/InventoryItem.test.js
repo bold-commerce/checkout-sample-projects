@@ -25,7 +25,7 @@ describe('InventoryItem', () => {
         const { asFragment } = render(
             <InventoryItem
                 title={"Test Title"}
-                description={["Test description"]}
+                variants={["Test description"]}
                 orderQty={3}
                 stockQty={1}
                 onRemove={() => {}}
@@ -39,7 +39,7 @@ describe('InventoryItem', () => {
         const { asFragment } = render(
             <InventoryItem
                 title={"Test Title"}
-                description={["Test description"]}
+                variants={["Test description"]}
                 orderQty={1}
                 stockQty={0}
                 onRemove={() => {}}

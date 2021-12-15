@@ -99,7 +99,7 @@ describe('CheckoutForm', () => {
         const { asFragment } = render(
             <CheckoutForm />,
             {wrapper: MemoryRouter}
-        );``
+        );
         expect(asFragment()).toMatchSnapshot();
     });
 });
