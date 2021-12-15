@@ -1,10 +1,3 @@
-.ProductQuantity__Decrement button.stx-button,
-.ProductQuantity__Increment button.stx-button {
-  background-color: #e7e7e7;
-  color: #848484;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .CartItem {
   display: flex;
   justify-content: space-between;
@@ -51,6 +44,7 @@
   align-items: center;
 }
 
+.InventoryItem  .CartItem__ProductDetails,
 .CartItem .CartItem__ProductDetails {
   display: flex;
   flex-direction: column;
@@ -59,8 +53,7 @@
   padding: 0 20px;
 }
 
-.InventoryItem .InventoryItem__ProductDetails .stx-details__description,
-.CartItem .CartItem__ProductDetails .stx-details__description {
+.CartItem__ProductDetails .stx-details__description {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -69,25 +62,12 @@
   color: rgba(0, 0, 0, 0.65);
 }
 
-.CartItem .CartItem__ProductDetails .stx-details__title {
+.CartItem__ProductDetails .stx-details__title {
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.9);
-}
-
-.CartItem .CartItem__ProductDetails a {
-  padding: 0;
-  margin: 0;
-  text-transform: capitalize;
-}
-
-.CartItem .CartItem__ProductDetails .stx-button {
-  padding: 0;
-  margin: 7px 0 0 0;
-  text-transform: capitalize;
-  text-decoration: underline;
 }
 
 .CartItem__ProductPrice {
@@ -105,18 +85,6 @@
   color: rgba(0, 0, 0, 0.65);
 }
 
-.ProductQuantity__Decrement,
-.ProductQuantity__Increment {
-  width: 24px;
-  height: 25px;
-}
-
-.ProductQuantity__Decrement .stx-button__text,
-.ProductQuantity__Increment .stx-button__text {
-  overflow: visible;
-  line-height: 0;
-}
-
 .ProductQuantity {
   width: 25px;
   height: 25px;
@@ -127,47 +95,6 @@
   font-size: 14px;
   line-height: 16px;
   display: flex;
-  align-items: stretch;
-}
-
-.ProductQuantity input {
-  padding: 0.275rem;
-  text-align: center;
-}
-
-.ProductQuantity .stx-input {
-  height: 100%;
-  box-shadow: none;
-}
-
-.ProductQuantity__Decrement button.stx-button,
-.ProductQuantity__Increment button.stx-button,
-.ProductQuantity button.stx-button {
-  width: 100%;
-  height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.ProductQuantity__Decrement,
-.ProductQuantity__Increment,
-.ProductQuantity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ProductQuantity--read-only {
-  border-radius: 12px;
-  background: #a9a9a9;
-  color: #fff;
-  height: 24px;
-  width: 24px;
-}
-
-.accordion__content input::-webkit-outer-spin-button,
-.accordion__content input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }

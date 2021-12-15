@@ -63,6 +63,10 @@ app.get('/', async (req, res) => {
       "sku":"CGLD-MO",
       "quantity": 3,
       "line_item_key": "SOAP"
+    },{    
+      "sku":"OFSUC-CO-PO",
+      "quantity": 3,
+      "line_item_key": "CAD"
     }],
   };
 
