@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {  useHistory } from 'react-router';
 import { Button, Message } from '@boldcommerce/stacks-ui';
 import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
-import { useAnalytics, useErrorLogging, useInventory } from '../../../../hooks';
+import { useAnalytics, useErrorLogging, useInventory, useMountedState } from '../../../../hooks';
 import './CheckoutButton.css';
 import { useTranslation } from 'react-i18next';
 
@@ -38,6 +38,7 @@ const CheckoutButtonContainer = ({ className }, ref) => {
   const history = useHistory();
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const isMounted = useMountedState();
 
   const orderErrorMessage = state.errors.order?.public_order_id;
 
@@ -53,13 +54,15 @@ const CheckoutButtonContainer = ({ className }, ref) => {
       const inventoryIssues = await checkInventory(lineItems);
       if (!inventoryIssues) {
         await processPaymentIframe();
-        setLoading(false);
+        if(isMounted()) //need to check if mounted first to prevent memory leak
+          setLoading(false);
       } else {
         setLoading(false);
         history.push('/inventory', inventoryIssues);
       }
     } catch(e) {  
-      setLoading(false);
+      if(isMounted())
+        setLoading(false);
       logError('checkout_button', e);
     }
   };
