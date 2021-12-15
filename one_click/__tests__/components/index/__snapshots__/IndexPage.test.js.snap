@@ -76,7 +76,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
           class="CartItem__ProductDetails"
         >
           <div
-            class="stx-details stx-details--left"
+            class="stx-details"
           >
             <div
               class="stx-details__title"
@@ -94,6 +94,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               </div>
             </div>
           </div>
+          <div />
         </div>
       </div>
       <div
@@ -157,7 +158,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
           class="CartItem__ProductDetails"
         >
           <div
-            class="stx-details stx-details--left"
+            class="stx-details"
           >
             <div
               class="stx-details__title"
@@ -172,6 +173,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               </div>
             </div>
           </div>
+          <div />
         </div>
       </div>
       <div
@@ -235,7 +237,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
           class="CartItem__ProductDetails"
         >
           <div
-            class="stx-details stx-details--left"
+            class="stx-details"
           >
             <div
               class="stx-details__title"
@@ -246,6 +248,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               class="stx-details__description"
             />
           </div>
+          <div />
         </div>
       </div>
       <div

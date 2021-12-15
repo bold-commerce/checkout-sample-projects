@@ -62,88 +62,94 @@ exports[`Inventory renders Inventory component 1`] = `
       class="SummaryBlock InventoryItem"
     >
       <div
-        class="InventoryItem__ProductImageWrapper"
+        class="CartItem__ImageDescriptionWrapper"
       >
         <div
-          class="stx-image"
+          class="CartItem__ProductImageWrapper"
         >
           <div
-            class="stx-image--content"
+            class="stx-image"
           >
             <div
-              class="stx-image--holder"
+              class="stx-image--content"
             >
-              <img
-                alt="Test title 2, Revenge of the title"
-                class="stx-image--image"
-                src=""
-                title="Test title 2, Revenge of the title"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="InventoryItem__ProductDetails"
-      >
-        <div
-          class="stx-details stx-details--left"
-        >
-          <div
-            class="stx-details__title"
-          >
-            Test title 2, Revenge of the title
-          </div>
-          <div
-            class="stx-details__description"
-          >
-            <div>
-              Number Two
-            </div>
-          </div>
-        </div>
-        <div
-          class="InventoryItem__ProductQuantityWrapper"
-        >
-          <div
-            aria-label="ordered quantity"
-            class="ProductQuantity"
-          >
-            2
-          </div>
-          <div
-            class="Arrow"
-          >
-            <svg
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g
-                opacity="0.8"
+              <div
+                class="stx-image--holder"
               >
-                <path
-                  clip-rule="evenodd"
-                  d="M14.7471 4.33289L22.4142 12L14.7471 19.6671L13.3329 18.2529L19.5858 12L13.3329 5.7471L14.7471 4.33289Z"
-                  fill="rgba(0, 0, 0, 0.65)"
-                  fill-rule="evenodd"
+                <img
+                  alt="Test title 2, Revenge of the title"
+                  class="stx-image--image"
+                  src=""
+                  title="Test title 2, Revenge of the title"
                 />
-                <path
-                  clip-rule="evenodd"
-                  d="M3 11H21V13H3V11Z"
-                  fill="rgba(0, 0, 0, 0.65)"
-                  fill-rule="evenodd"
-                />
-              </g>
-            </svg>
+              </div>
+            </div>
           </div>
+        </div>
+        <div
+          class="CartItem__ProductDetails"
+        >
           <div
-            aria-label="available quantity"
-            class="ProductQuantity"
+            class="stx-details"
           >
-            1
+            <div
+              class="stx-details__title"
+            >
+              Test title 2, Revenge of the title
+            </div>
+            <div
+              class="stx-details__description"
+            >
+              <div>
+                Number Two
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="InventoryItem__ProductQuantityWrapper"
+            >
+              <div
+                aria-label="ordered quantity"
+                class="ProductQuantity"
+              >
+                2
+              </div>
+              <div
+                class="Arrow"
+              >
+                <svg
+                  fill="none"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    opacity="0.8"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M14.7471 4.33289L22.4142 12L14.7471 19.6671L13.3329 18.2529L19.5858 12L13.3329 5.7471L14.7471 4.33289Z"
+                      fill="rgba(0, 0, 0, 0.65)"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      clip-rule="evenodd"
+                      d="M3 11H21V13H3V11Z"
+                      fill="rgba(0, 0, 0, 0.65)"
+                      fill-rule="evenodd"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div
+                aria-label="available quantity"
+                class="ProductQuantity"
+              >
+                1
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -192,49 +198,55 @@ exports[`Inventory renders Inventory component 1`] = `
       class="SummaryBlock InventoryItem"
     >
       <div
-        class="InventoryItem__ProductImageWrapper"
+        class="CartItem__ImageDescriptionWrapper"
       >
         <div
-          class="stx-image"
+          class="CartItem__ProductImageWrapper"
         >
           <div
-            class="stx-image--content"
+            class="stx-image"
           >
             <div
-              class="stx-image--holder"
+              class="stx-image--content"
             >
-              <img
-                alt="Test title 3, the search for more money"
-                class="stx-image--image"
-                src=""
-                title="Test title 3, the search for more money"
-              />
+              <div
+                class="stx-image--holder"
+              >
+                <img
+                  alt="Test title 3, the search for more money"
+                  class="stx-image--image"
+                  src=""
+                  title="Test title 3, the search for more money"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="InventoryItem__ProductDetails"
-      >
         <div
-          class="stx-details stx-details--left"
+          class="CartItem__ProductDetails"
         >
           <div
-            class="stx-details__title"
+            class="stx-details"
           >
-            Test title 3, the search for more money
+            <div
+              class="stx-details__title"
+            >
+              Test title 3, the search for more money
+            </div>
+            <div
+              class="stx-details__description"
+            />
           </div>
-          <div
-            class="stx-details__description"
-          />
-        </div>
-        <div
-          class="InventoryItem__ProductQuantityWrapper"
-        >
-          <div
-            class="SoldOut"
-          >
-            Sold Out
+          <div>
+            <div
+              class="InventoryItem__ProductQuantityWrapper"
+            >
+              <div
+                class="SoldOut"
+              >
+                Sold Out
+              </div>
+            </div>
           </div>
         </div>
       </div>

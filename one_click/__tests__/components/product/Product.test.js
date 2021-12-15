@@ -10,10 +10,8 @@ describe('Product', () => {
             image="https://via.placeholder.com/150"
             quantity={2}
             lineItemKey="abcd"
-            description={["Test description goes here"]}
-            onQuantityChange={() => {}}
+            variants={["Test description goes here"]}
             totalPrice={19998}
-            onRemove= {() => {}}
         />
         );
         expect(asFragment()).toMatchSnapshot();

@@ -34,7 +34,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
         class="CartItem__ProductDetails"
       >
         <div
-          class="stx-details stx-details--left"
+          class="stx-details"
         >
           <div
             class="stx-details__title"
@@ -52,6 +52,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
             </div>
           </div>
         </div>
+        <div />
       </div>
     </div>
     <div
@@ -115,7 +116,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
         class="CartItem__ProductDetails"
       >
         <div
-          class="stx-details stx-details--left"
+          class="stx-details"
         >
           <div
             class="stx-details__title"
@@ -130,6 +131,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
             </div>
           </div>
         </div>
+        <div />
       </div>
     </div>
     <div
@@ -193,7 +195,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
         class="CartItem__ProductDetails"
       >
         <div
-          class="stx-details stx-details--left"
+          class="stx-details"
         >
           <div
             class="stx-details__title"
@@ -204,6 +206,7 @@ exports[`LineItems renders LineItems component with editable quantity 1`] = `
             class="stx-details__description"
           />
         </div>
+        <div />
       </div>
     </div>
     <div
@@ -272,7 +275,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
         class="CartItem__ProductDetails"
       >
         <div
-          class="stx-details stx-details--left"
+          class="stx-details"
         >
           <div
             class="stx-details__title"
@@ -290,6 +293,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
             </div>
           </div>
         </div>
+        <div />
       </div>
     </div>
     <div
@@ -353,7 +357,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
         class="CartItem__ProductDetails"
       >
         <div
-          class="stx-details stx-details--left"
+          class="stx-details"
         >
           <div
             class="stx-details__title"
@@ -368,6 +372,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
             </div>
           </div>
         </div>
+        <div />
       </div>
     </div>
     <div
@@ -431,7 +436,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
         class="CartItem__ProductDetails"
       >
         <div
-          class="stx-details stx-details--left"
+          class="stx-details"
         >
           <div
             class="stx-details__title"
@@ -442,6 +447,7 @@ exports[`LineItems renders read only LineItems component 1`] = `
             class="stx-details__description"
           />
         </div>
+        <div />
       </div>
     </div>
     <div

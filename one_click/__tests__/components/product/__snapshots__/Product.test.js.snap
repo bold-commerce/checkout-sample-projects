@@ -31,7 +31,7 @@ exports[`Product renders Product component 1`] = `
       class="CartItem__ProductDetails"
     >
       <div
-        class="stx-details stx-details--left"
+        class="stx-details"
       >
         <div
           class="stx-details__title"
@@ -46,34 +46,7 @@ exports[`Product renders Product component 1`] = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    class="CartItem__QuantityPriceWrapper"
-  >
-    <div
-      class="CartItem__ProductQuantityWrapper"
-    >
-      <div
-        aria-label="product quantity"
-        class="ProductQuantity"
-      >
-        2
-      </div>
-    </div>
-    <div
-      class="CartItem__ProductPrice"
-    >
-      <div
-        class="stx-price stx-price--alight-center"
-      >
-        <p
-          aria-label="Product price"
-          class="stx-price__amount"
-        >
-          CA$199.98
-        </p>
-      </div>
+      <div />
     </div>
   </div>
 </DocumentFragment>
