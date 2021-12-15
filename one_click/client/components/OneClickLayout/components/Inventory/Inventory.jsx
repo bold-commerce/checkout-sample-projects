@@ -27,7 +27,7 @@ export const Inventory = ({}, ref) => {
                 <InventoryItem
                     key={item.product_data.line_item_key} 
                     title={item.product_data.product_title}
-                    description={handleVariants(item.product_data.title)}
+                    variants={handleVariants(item.product_data.title)}
                     orderQty={item.product_data.quantity}
                     stockQty={item.product_data.stock}
                     image={item.product_data.image_url}

@@ -68,8 +68,8 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
       ( 
         shipping.selected_shipping &&
         <>
-        <div>{shippingCombined}</div>
-        <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
+          <div>{shippingCombined}</div>
+          <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
         </>
       )}
       </Card>
