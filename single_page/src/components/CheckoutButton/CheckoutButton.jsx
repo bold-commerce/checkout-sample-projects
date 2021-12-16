@@ -5,6 +5,7 @@ import {
 import { Button } from '@boldcommerce/stacks-ui';
 import React, { memo, useCallback, useState } from 'react';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import { useTranslation } from 'react-i18next';
 
 const CheckoutButton = () => {
   const { processPaymentIframe } = usePaymentIframe();
@@ -36,6 +37,7 @@ const MemoizedCheckoutButton = memo(({
   const logError = useErrorLogging();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const validateInventory = useCallback(async () => {
     const variants = lineItems.map((lineItem) => lineItem.product_data.variant_id).join(',');
@@ -84,7 +86,7 @@ const MemoizedCheckoutButton = memo(({
       loading={loading || processing}
       disabled={!hasBillingAddress || processing || appLoading}
     >
-      Confirm order
+      {t('confirm_order')}
     </Button>
   );
 });

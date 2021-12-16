@@ -5,6 +5,7 @@ import { SavedAddressList } from './components';
 import { CheckoutSection } from '../CheckoutSection';
 import './ShippingAddress.css';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import { useTranslation } from 'react-i18next';
 
 const ShippingAddress = ({ applicationLoading }) => {
   const { data: shippingAddress, submitShippingAddress } = useShippingAddress(['first_name', 'last_name']);
@@ -44,12 +45,9 @@ const MemoizedShippingAddress = memo(({
     provinceLabel,
   } = data;
   const [errors, setErrors] = useState(null);
+  const { t } = useTranslation();
 
   let provincePlaceholder = provinceLabel;
-
-  if (provinceLabel === 'state_territory') {
-    provincePlaceholder = 'state/territory';
-  }
 
   useEffect(() => {
     setAddress(shippingAddress);
@@ -76,7 +74,7 @@ const MemoizedShippingAddress = memo(({
   return (
     <CheckoutSection
       className="FieldSet--ShippingAddress"
-      title="Shipping address"
+      title={t('shipping.address')}
     >
       <SavedAddressList
         savedAddresses={savedAddresses}

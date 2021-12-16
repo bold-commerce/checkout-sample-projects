@@ -4,6 +4,7 @@ import { CheckoutSection } from '../CheckoutSection';
 import { EmptyState } from '../EmptyState';
 import { LoadingState } from '../LoadingState';
 import './PaymentMethod.css';
+import { useTranslation } from 'react-i18next';
 
 const PaymentMethod = ({ applicationLoading }) => {
   const { state } = useCheckoutStore();
@@ -39,6 +40,7 @@ const MemoizedPaymentMethod = memo(({
   loading,
 }) => {
   const [disabled, setDisabled] = useState();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (billingSameAsShipping && Array.isArray(shippingAddress)) {
@@ -60,7 +62,7 @@ const MemoizedPaymentMethod = memo(({
   let content = '';
 
   if (disabled) {
-    content = <EmptyState title="To view payment options, complete filling in your address" />;
+    content = <EmptyState title={t('payment.empty')} />;
   } else if (loading) {
     content = <LoadingState />;
   }
@@ -68,7 +70,7 @@ const MemoizedPaymentMethod = memo(({
   return (
     <CheckoutSection
       className="FieldSet--PaymentMethod"
-      title="Payment method"
+      title={t('payment.method')}
     >
       <iframe
         title="payments"

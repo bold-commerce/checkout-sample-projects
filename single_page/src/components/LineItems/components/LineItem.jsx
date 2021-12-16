@@ -4,6 +4,7 @@ import { Button, Price, Details, Image } from '@boldcommerce/stacks-ui';
 import { SoldOut } from '../../Icons'
 import LineItemQuantity from './LineItemQuantity';
 import LineItemInventoryAdjustment from './LineItemInventoryAdjustment';
+import { useTranslation } from 'react-i18next';
 
 const LineItem = ({
   title,
@@ -16,7 +17,9 @@ const LineItem = ({
   onChange,
   onRemove,
   readOnly = false,
-}) => (
+}) => {
+  const { t } = useTranslation();
+  return (
   <div className="LineItem" key={lineItemKey}>
     <div className="LineItem__ImageDescriptionWrapper">
       <div className="LineItem__ProductImageWrapper">
@@ -36,7 +39,7 @@ const LineItem = ({
             secondary
             onClick={() => onRemove(lineItemKey)}
           >
-            Remove
+            {t('line_item.remove')}
           </Button>
         )}
       </div>
@@ -66,7 +69,7 @@ const LineItem = ({
       </div>
     </div>
   </div>
-);
+)};
 
 LineItem.propTypes = {
   title: PropTypes.string,

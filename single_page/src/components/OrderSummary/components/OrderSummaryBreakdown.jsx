@@ -4,6 +4,7 @@ import { useAnalytics, useErrorLogging } from '../../../hooks';
 import { RedactedCreditCard } from '../../../pages/ConfirmationPage/components/RedactedCreditCard';
 import OrderSummaryItem from './OrderSummaryItem';
 import OrderSummaryItemLine from './OrderSummaryItemLine';
+import { useTranslation } from 'react-i18next';
 
 const OrderSummaryBreakdown = () => {
   const { data } = useBreakdown();
@@ -42,6 +43,7 @@ const MemoizedOrderSummaryBreakdown = memo(({
 }) => {
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
+  const { t } = useTranslation();
   const handleRemoveDiscount = useCallback(async () => {
     try {
       await onRemoveDiscount(discountCode);
@@ -53,7 +55,7 @@ const MemoizedOrderSummaryBreakdown = memo(({
 
   const discountLines = discountCode && (
     <OrderSummaryItemLine
-      description={`Discount code: ${discountCode}`}
+      description={`${t('discount.code')}: ${discountCode}`}
       amount={-discountTotal}
       onRemove={handleRemoveDiscount}
     />
@@ -71,32 +73,32 @@ const MemoizedOrderSummaryBreakdown = memo(({
     <div className="OrderSummary__Breakdown">
       <div className="Breakdown__Section">
         <OrderSummaryItem
-          title="Subtotal"
+          title={t('summary.subtotal')}
           amount={subTotal}
         />
         <OrderSummaryItem
-          title="Discount"
+          title={t('discount.title')}
           lines={discountLines}
         />
         <OrderSummaryItem
-          title="Shipping"
+          title={t('shipping.title')}
           amount={shippingTotal}
         />
         <OrderSummaryItem
-          title="Taxes"
+          title={t('summary.taxes')}
           amount={taxesTotal}
         />
       </div>
       <div className="Breakdown__Section Breakdown__Section--Total">
         <OrderSummaryItem
-          title="Total"
+          title={t('summary.total')}
           amount={total}
         />
       </div>
       { (paymentLines && paymentLines.length > 0) && (
         <div className="Breakdown__Section">
           <OrderSummaryItem
-            title="Payments"
+            title={t('payment.title')}
             lines={paymentLines}
           />
         </div>
