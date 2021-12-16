@@ -5,6 +5,7 @@ import { Address } from '../Address';
 import './BillingAddress.css';
 import { CheckoutSection } from '../CheckoutSection';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import { useTranslation } from 'react-i18next';
 
 const BillingAddress = ({ applicationLoading }) => {
   const { data, submitBillingAddress } = useBillingAddress();
@@ -42,12 +43,9 @@ const MemoizedBillingAddress = memo(({
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
   const [sameAsShipping, setSameAsShipping] = useState(billingSameAsShipping);
+  const { t } = useTranslation();
 
   let provincePlaceholder = provinceLabel;
-
-  if (provinceLabel === 'state_territory') {
-    provincePlaceholder = 'state/territory';
-  }
 
   useEffect(() => {
     setAddress(billingAddress);
@@ -99,7 +97,7 @@ const MemoizedBillingAddress = memo(({
   return (
     <CheckoutSection
       className="FieldSet--BillingAddress"
-      title="Billing address"
+      title={t('billing.address')}
     >
       <BillingSameAsShipping
         billingSameAsShipping={sameAsShipping}

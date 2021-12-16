@@ -1,9 +1,11 @@
 import RadioField from '@boldcommerce/stacks-ui/lib/components/radiofield/RadioField';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import SavedAddress from './SavedAddress';
+import { useTranslation } from 'react-i18next';
 
 const SavedAddressList = ({ savedAddresses, selectedAddress, disabled, onChange }) => {
   const [prevAddress, setPrevAddress] = useState(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (selectedAddress) {
@@ -50,7 +52,7 @@ const SavedAddressList = ({ savedAddresses, selectedAddress, disabled, onChange 
       { savedAddressList }
       <div className="RadioButton RadioButton__NewAddressContainer">
         <RadioField
-          label="Add a new address"
+          label={t('shipping.add_new_address')}
           name="shipping-address"
           checked={!selectedAddress}
           className="RadioField"

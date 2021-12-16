@@ -5,6 +5,7 @@ import { ShippingLineList, EmptyShippingLines } from './components';
 import { Message } from '@boldcommerce/stacks-ui';
 import './ShippingLines.css';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import { useTranslation } from 'react-i18next';
 
 const ShippingLines = ({ applicationLoading }) => {
   const { data, updateShippingLine, getShippingLines } = useShippingLines();
@@ -42,6 +43,7 @@ const MemoizedShippingLines = memo(({
   const [shippingLineIndex, setShippingLineIndex] = useState(selectedShippingLine);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const refreshShippingLines = useCallback(async () => {
     if (showShippingLines) {
@@ -88,9 +90,9 @@ const MemoizedShippingLines = memo(({
   if (appLoading) {
     content = <LoadingState />;
   } else if (!showShippingLines) {
-    content = <EmptyShippingLines title="To view shipping options, complete filling in your address" />;
+    content = <EmptyShippingLines title={t('shipping.options_description')} />;
   } else if (shippingLines.length === 0) {
-    content = <EmptyShippingLines title="No available shipping options for your shipping address" />;
+    content = <EmptyShippingLines title={t('shipping.no_options_description')} />;
   } else {
     content = <ShippingLineList 
       shippingLines={shippingLines}
@@ -106,7 +108,7 @@ const MemoizedShippingLines = memo(({
         errors && <Message type="alert">{ errors[0].message }</Message>
       }
       <div className="FieldSet__Header">
-        <h2 className="FieldSet__Heading">Shipping method</h2>
+        <h2 className="FieldSet__Heading">{t('shipping.method')}</h2>
       </div>
       { content }
     </section>

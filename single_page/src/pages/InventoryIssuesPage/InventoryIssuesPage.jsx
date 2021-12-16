@@ -5,6 +5,7 @@ import { CheckoutSection, LineItem } from '../../components';
 import { useErrorLogging } from '../../hooks'; 
 import './InventoryIssuesPage.css';
 import { Button } from '@boldcommerce/stacks-ui';
+import { useTranslation } from 'react-i18next';
 
 const InventoryIssuesPage = () => {
   const location = useLocation();
@@ -13,6 +14,7 @@ const InventoryIssuesPage = () => {
   const { data: lineItems, updateLineItemQuantity, removeLineItem } = useLineItems();
   const inventoryIssues = location.state;
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   // Only run this when the component mounts since we don't want the list of items to change as it adjusts quantities
   const updatedLineItems = useMemo(() => {
@@ -82,9 +84,9 @@ const InventoryIssuesPage = () => {
     <div className="Checkout__InventoryIssues" role="main">
       <CheckoutSection
         className="InventoryIssues__Section"
-        title="Inventory issues"
+        title={t('inventory.issues')}
       >
-        <p>Some products became unavailable and your cart has been updated. We’re sorry for the inconvenience.</p>
+        <p>{t('inventory.issues_description')}</p>
       </CheckoutSection>
       <div className="InventoryIssues__List">
         {lineItemList}
@@ -96,7 +98,7 @@ const InventoryIssuesPage = () => {
         loading={loading}
         disabled={loading}
       >
-        Continue with changes
+        {t('inventory.continue')}
       </Button>
     </div>
   );

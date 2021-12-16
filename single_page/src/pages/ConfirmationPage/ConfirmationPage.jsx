@@ -4,6 +4,7 @@ import { OrderSummary, CheckoutSection } from '../../components';
 import './ConfirmationPage.css';
 import { ConfirmationList, ConfirmationListItem } from './components';
 import { RedactedCreditCard } from './components/RedactedCreditCard';
+import { useTranslation } from 'react-i18next';
 
 const ConfirmationPage = () => {
   const { state } = useCheckoutStore();
@@ -12,6 +13,7 @@ const ConfirmationPage = () => {
   const billingAddress = state.applicationState.addresses.billing;
   const shippingMethod = state.applicationState.shipping.selected_shipping.description;
   const payments = state.applicationState.payments;
+  const { t } = useTranslation();
 
   const paymentList = payments.map((payment) => {
     return (
@@ -24,19 +26,19 @@ const ConfirmationPage = () => {
   return (
     <>
       <div className="Checkout__Confirmation" role="main">
-        <h1 className="FieldSet__Heading">Thank you, {customer.first_name || shippingAddress.first_name}!</h1>
+        <h1 className="FieldSet__Heading">{`${t('confirmation.thank_you')}, ${customer.first_name || shippingAddress.first_name}!`}</h1>
         <CheckoutSection
           className="Confirmation__Section"
-          title="Your order is confirmed"
+          title={t('confirmation.order_confirmed')}
         >
-          <p>We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.</p>
+          <p>{t('confirmation.order_accepted')}</p>
         </CheckoutSection>
         <CheckoutSection
           className="Confirmation__Section"
-          title="Your order is confirmed"
+          title={t('confirmation.order_confirmed')}
         >
           <ConfirmationList>
-            <ConfirmationListItem title="Shipping address">
+            <ConfirmationListItem title={t('shipping.address')}>
               <p>{`${shippingAddress.first_name} ${shippingAddress.last_name}`}</p>
               <p>
                 {`
@@ -50,7 +52,7 @@ const ConfirmationPage = () => {
                 `}
               </p>
             </ConfirmationListItem>
-            <ConfirmationListItem title="Billing address">
+            <ConfirmationListItem title={t('billing.address')}>
             <p>{`${billingAddress.first_name} ${billingAddress.last_name}`}</p>
               <p>
                 {`
@@ -64,17 +66,17 @@ const ConfirmationPage = () => {
                 `}
               </p>
             </ConfirmationListItem>
-            <ConfirmationListItem title="Shipping method">
+            <ConfirmationListItem title={t('shipping.method')}>
               <p>{shippingMethod}</p>
             </ConfirmationListItem>
-            <ConfirmationListItem title="Payment method">
+            <ConfirmationListItem title={t('payment.method')}>
               <ul className="Payment__List">
                 {paymentList}
               </ul>
             </ConfirmationListItem>
           </ConfirmationList>
         </CheckoutSection>
-        <p className="Checkout__ContactUs">Need help? <a href="">Contact us</a></p>
+        <p className="Checkout__ContactUs">{t('confirmation.need_help')}<a href="">{t('confirmation.contact_us')}</a></p>
       </div>
       <div className="Checkout__Sidebar" role="complementary">
         <OrderSummary readOnly={true} />
