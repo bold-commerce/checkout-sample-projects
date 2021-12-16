@@ -5,15 +5,17 @@ import { LineItems } from '../LineItems';
 import { DiscountForm } from '../DiscountForm';
 import { OrderSummaryBreakdown, OrderSummaryCollapseButton } from '.';
 import './OrderSummary.css';
+import { useTranslation } from 'react-i18next';
 
 const OrderSummary = ({ readOnly, summaryOpen, onCollapse }) => {
+  const { t } = useTranslation();
   return (
     <>
       <OrderSummaryCollapseButton onClick={onCollapse} summaryOpen={summaryOpen} />
       <div id="OrderSummary" className="OrderSummary">
         <CheckoutSection
           className="FieldSet--OrderSummary"
-          title="Order Summary"
+          title={t('order_summary')}
         >
           <LineItems readOnly={readOnly} />
           { !readOnly && <DiscountForm /> }

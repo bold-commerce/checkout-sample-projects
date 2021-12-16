@@ -1,14 +1,17 @@
 import { RadioField } from '@boldcommerce/stacks-ui';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const BillingSameAsShipping = ({
   billingSameAsShipping,
   setBillingSameAsShipping,
   disabled,
-}) => (
+}) => {
+  const { t } = useTranslation();
+  return (
   <>
     <RadioField
-      label="Same as shipping address"
+      label={t('billing.same_as_shipping')}
       name="billing-address"
       className="RadioButton"
       value="SAME_AS_SHIPPING_ADDRESS"
@@ -17,7 +20,7 @@ const BillingSameAsShipping = ({
       disabled={disabled}
     />
     <RadioField
-      label="Use a different billing address"
+      label={t('billing.different_from_shipping')}
       name="billing-address"
       className="RadioButton"
       value="DIFFERENT_BILLING_ADDRESS"
@@ -26,6 +29,7 @@ const BillingSameAsShipping = ({
       disabled={disabled}
     />
   </>
-);
+  );
+};
 
 export default BillingSameAsShipping;

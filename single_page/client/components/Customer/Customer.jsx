@@ -4,6 +4,7 @@ import { InputField } from '@boldcommerce/stacks-ui';
 import { CheckoutSection } from '../CheckoutSection';
 import './Customer.css';
 import { useAnalytics, useErrorLogging } from '../../hooks';
+import { useTranslation } from 'react-i18next';
 
 const Customer = () => {
   const {data, submitCustomer } = useCustomer();
@@ -17,6 +18,7 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
   const [email, setEmail] = useState(customer?.email_address);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = useCallback(async () => {
     setLoading(true);
@@ -36,11 +38,11 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
   return (
     <CheckoutSection
       className="FieldSet--CustomerInformation"
-      title="Customer information"
+      title={t('customer.info')}
     >
       <InputField
         className="InputField Field--Email"
-        placeholder="Email"
+        placeholder={t('customer.email')}
         type="email"
         name="email"
         messageType={errors && 'alert'}

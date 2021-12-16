@@ -3,6 +3,7 @@ import { Button, InputField } from '@boldcommerce/stacks-ui';
 import React, { memo, useCallback, useState } from 'react';
 import { useAnalytics, useErrorLogging } from '../../hooks';
 import './DiscountForm.css';
+import { useTranslation } from 'react-i18next';
 
 const DiscountForm = () => {
   const { data, applyDiscount } = useDiscount();
@@ -30,6 +31,7 @@ const MemoizedDiscountForm = memo(({
   const [discount, setDiscount] = useState(discountCode);
   const [errors, setErrors] = useState(null);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleApply = useCallback(async () => {
     setLoading(true);
@@ -51,7 +53,7 @@ const MemoizedDiscountForm = memo(({
       <div className="DiscountForm">
         <InputField
           type="text"
-          placeholder="Enter discount code"
+          placeholder={t('discount.enter_code')}
           value={discount}
           messageText={errors && errors[0].message}
           messageType={errors && 'alert'}
@@ -64,7 +66,7 @@ const MemoizedDiscountForm = memo(({
           onClick={handleApply}
           loading={loading}
         >
-          Apply
+          {t('discount.apply')}
         </Button>
       </div>
     </div>
