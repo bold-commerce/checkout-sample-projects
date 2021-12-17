@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Customer renders Customer component 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--CustomerInformation"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <h3
+        class="FieldSet__Heading"
+      >
+        Customer information
+      </h3>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <div
+        class="stx-field stx-field--is-disabled stx-field--with-input InputField Field--Email"
+      >
+        <div
+          class="stx-input stx-input--is-disabled"
+        >
+          <input
+            aria-disabled="true"
+            class="stx-input__input-element"
+            disabled=""
+            id="stxField1"
+            name="email"
+            placeholder="Email"
+            type="email"
+            value="guy@test.gg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

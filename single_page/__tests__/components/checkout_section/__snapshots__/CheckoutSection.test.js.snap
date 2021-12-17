@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutSection renders CheckoutSection component with children 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet undefined"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <h3
+        class="FieldSet__Heading"
+      >
+        Test Title
+      </h3>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <div>
+        test child one
+      </div>
+      <div>
+        test child two
+      </div>
+      <div>
+        test child three
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`CheckoutSection renders CheckoutSection component without children 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet undefined"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <h3
+        class="FieldSet__Heading"
+      >
+        Test Title
+      </h3>
+    </div>
+    <div
+      class="FieldSet__Content"
+    />
+  </section>
+</DocumentFragment>
+`;

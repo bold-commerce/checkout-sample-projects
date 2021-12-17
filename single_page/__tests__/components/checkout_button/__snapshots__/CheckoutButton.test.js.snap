@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutButton renders CheckoutButton component 1`] = `
+<DocumentFragment>
+  <button
+    aria-busy="false"
+    aria-disabled="true"
+    class="stx-button stx-button--is-disabled Checkout__ConfirmButton"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="stx-button__text"
+    >
+      Confirm order
+    </span>
+    <span
+      class="stx-loading-spinner stx-button__spinner"
+    />
+  </button>
+</DocumentFragment>
+`;

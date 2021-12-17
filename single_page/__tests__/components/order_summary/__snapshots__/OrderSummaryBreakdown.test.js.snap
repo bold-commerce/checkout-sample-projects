@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderSummaryBreakdown renders OrderSummaryBreakdown component 1`] = `
+<DocumentFragment>
+  <div
+    class="OrderSummary__Breakdown"
+  >
+    <div
+      class="Breakdown__Section"
+    >
+      <div
+        class="OrderSummaryItem"
+      >
+        <span
+          class="OrderSummaryItem__Title"
+        >
+          Subtotal
+        </span>
+        <span
+          class="OrderSummaryItem__Amount"
+        >
+          (
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $19.19
+            </p>
+          </div>
+          )
+        </span>
+      </div>
+      <div
+        class="OrderSummaryItem OrderSummaryItem--removable"
+      >
+        <span
+          class="OrderSummaryItem__Title"
+        >
+          Discount
+        </span>
+        <div
+          class="OrderSummaryItem__Description"
+        >
+          <button
+            class="OrderSummaryItem__Action"
+            type="button"
+          >
+            <svg
+              fill="none"
+              height="12"
+              viewBox="0 0 13 12"
+              width="13"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M6.14551 12C9.45922 12 12.1455 9.31371 12.1455 6C12.1455 2.68629 9.45922 0 6.14551 0C2.8318 0 0.145508 2.68629 0.145508 6C0.145508 9.31371 2.8318 12 6.14551 12ZM9.30831 2.80811C9.50357 3.00338 9.50357 3.31996 9.30831 3.51522L6.83789 5.98564L9.32005 8.4678C9.51531 8.66306 9.51531 8.97964 9.32005 9.17491C9.12479 9.37017 8.80821 9.37017 8.61294 9.17491L6.13078 6.69275L3.65707 9.16646C3.4618 9.36172 3.14522 9.36172 2.94996 9.16646C2.7547 8.9712 2.7547 8.65462 2.94996 8.45936L5.42368 5.98564L2.95104 3.513C2.75577 3.31774 2.75577 3.00116 2.95104 2.80589C3.1463 2.61063 3.46288 2.61063 3.65814 2.80589L6.13078 5.27853L8.6012 2.80811C8.79646 2.61285 9.11305 2.61285 9.30831 2.80811Z"
+                fill="#666666"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <span
+            class="OrderSummaryItem__Label"
+          >
+            Discount code: Test
+          </span>
+          <span
+            class="OrderSummaryItem__Amount"
+          >
+            (
+            <div
+              class="stx-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                -$1.23
+              </p>
+            </div>
+            )
+          </span>
+        </div>
+      </div>
+      <div
+        class="OrderSummaryItem"
+      >
+        <span
+          class="OrderSummaryItem__Title"
+        >
+          Shipping
+        </span>
+        <span
+          class="OrderSummaryItem__Amount"
+        >
+          (
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $2.10
+            </p>
+          </div>
+          )
+        </span>
+      </div>
+      <div
+        class="OrderSummaryItem"
+      >
+        <span
+          class="OrderSummaryItem__Title"
+        >
+          Taxes
+        </span>
+        <span
+          class="OrderSummaryItem__Amount"
+        >
+          (
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $11.11
+            </p>
+          </div>
+          )
+        </span>
+      </div>
+    </div>
+    <div
+      class="Breakdown__Section Breakdown__Section--Total"
+    >
+      <div
+        class="OrderSummaryItem"
+      >
+        <span
+          class="OrderSummaryItem__Title"
+        >
+          Total
+        </span>
+        <span
+          class="OrderSummaryItem__Amount"
+        >
+          (
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $32.40
+            </p>
+          </div>
+          )
+        </span>
+      </div>
+    </div>
+    <div
+      class="Breakdown__Section"
+    >
+      <div
+        class="OrderSummaryItem OrderSummaryItem--removable"
+      >
+        <span
+          class="OrderSummaryItem__Title"
+        >
+          Payments
+        </span>
+        <div
+          class="OrderSummaryItem__Description"
+        >
+          <span
+            class="OrderSummaryItem__Label"
+          >
+            <span
+              class="RedactedCard"
+            >
+              <span
+                class="RedactedCard__Brand"
+              >
+                visa
+              </span>
+              <span
+                class="RedactedCard__Number"
+              >
+                 •••• •••• •••• test card
+              </span>
+            </span>
+          </span>
+          <span
+            class="OrderSummaryItem__Amount"
+          >
+            (
+            <div
+              class="stx-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $1.00
+              </p>
+            </div>
+            )
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

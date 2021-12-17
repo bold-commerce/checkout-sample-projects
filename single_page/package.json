@@ -8,6 +8,7 @@
     "server:watch": "nodemon ./server/index.js",
     "dev": "concurrently \"npm run server:watch\" \"npm run client:watch\"",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "test": "jest",
     "start": "node ./server/index.js"
   },
   "devDependencies": {
@@ -36,11 +37,15 @@
   "dependencies": {
     "@boldcommerce/checkout-react-components": "^4.0.0",
     "@boldcommerce/stacks-ui": "^1.2.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
+    "jest": "26",
+    "jest-fetch-mock": "^3.0.3",
     "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",

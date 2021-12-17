@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderErrors renders OrderErrors component 1`] = `
+<DocumentFragment>
+  <div
+    class="stx-message stx-message--with-alert"
+    role="alert"
+  >
+    Testing order errors
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentMethod renders PaymentMethod component 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--PaymentMethod"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <h3
+        class="FieldSet__Heading"
+      >
+        Payment method
+      </h3>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <iframe
+        class="PaymentMethod__Iframe"
+        data-bold-pigi-iframe="true"
+        src="test.gg"
+        style="height: 42px; display: none;"
+        title="payments"
+      />
+      <div
+        class="FieldSet--LoadingState"
+      >
+        <span
+          class="stx-loading-spinner"
+        />
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

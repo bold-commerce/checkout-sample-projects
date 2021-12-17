@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BillingSameAsShipping renders BillingSameAsShipping component 1`] = `
+<DocumentFragment>
+  <div
+    class="stx-field stx-field--with-radio-field RadioButton"
+  >
+    <div
+      class="stx-radio-field"
+    >
+      <span
+        class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+      >
+        <input
+          aria-checked="true"
+          checked=""
+          class="stx-radio__input"
+          id="stxField1"
+          name="billing-address"
+          role="radio"
+          type="radio"
+          value="SAME_AS_SHIPPING_ADDRESS"
+        />
+        <span
+          class="stx-radio__box"
+        />
+      </span>
+      <label
+        class="stx-radio-field__label"
+        for="stxField1"
+      >
+        Same as shipping address
+      </label>
+    </div>
+  </div>
+  <div
+    class="stx-field stx-field--with-radio-field RadioButton"
+  >
+    <div
+      class="stx-radio-field"
+    >
+      <span
+        class="stx-radio stx-radio-field__radio"
+      >
+        <input
+          aria-checked="false"
+          class="stx-radio__input"
+          id="stxField2"
+          name="billing-address"
+          role="radio"
+          type="radio"
+          value="DIFFERENT_BILLING_ADDRESS"
+        />
+        <span
+          class="stx-radio__box"
+        />
+      </span>
+      <label
+        class="stx-radio-field__label"
+        for="stxField2"
+      >
+        Use a different billing address
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BillingSameAsShipping renders BillingSameAsShipping component disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioButton"
+  >
+    <div
+      class="stx-radio-field"
+    >
+      <span
+        class="stx-radio stx-radio--is-disabled stx-radio--is-checked stx-radio-field__radio"
+      >
+        <input
+          aria-checked="true"
+          aria-disabled="true"
+          checked=""
+          class="stx-radio__input"
+          disabled=""
+          id="stxField5"
+          name="billing-address"
+          role="radio"
+          type="radio"
+          value="SAME_AS_SHIPPING_ADDRESS"
+        />
+        <span
+          class="stx-radio__box"
+        />
+      </span>
+      <label
+        class="stx-radio-field__label"
+        for="stxField5"
+      >
+        Same as shipping address
+      </label>
+    </div>
+  </div>
+  <div
+    class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioButton"
+  >
+    <div
+      class="stx-radio-field"
+    >
+      <span
+        class="stx-radio stx-radio--is-disabled stx-radio-field__radio"
+      >
+        <input
+          aria-checked="false"
+          aria-disabled="true"
+          class="stx-radio__input"
+          disabled=""
+          id="stxField6"
+          name="billing-address"
+          role="radio"
+          type="radio"
+          value="DIFFERENT_BILLING_ADDRESS"
+        />
+        <span
+          class="stx-radio__box"
+        />
+      </span>
+      <label
+        class="stx-radio-field__label"
+        for="stxField6"
+      >
+        Use a different billing address
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BillingSameAsShipping renders BillingSameAsShipping component use different billing address 1`] = `
+<DocumentFragment>
+  <div
+    class="stx-field stx-field--with-radio-field RadioButton"
+  >
+    <div
+      class="stx-radio-field"
+    >
+      <span
+        class="stx-radio stx-radio-field__radio"
+      >
+        <input
+          class="stx-radio__input"
+          id="stxField3"
+          name="billing-address"
+          role="radio"
+          type="radio"
+          value="SAME_AS_SHIPPING_ADDRESS"
+        />
+        <span
+          class="stx-radio__box"
+        />
+      </span>
+      <label
+        class="stx-radio-field__label"
+        for="stxField3"
+      >
+        Same as shipping address
+      </label>
+    </div>
+  </div>
+  <div
+    class="stx-field stx-field--with-radio-field RadioButton"
+  >
+    <div
+      class="stx-radio-field"
+    >
+      <span
+        class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+      >
+        <input
+          aria-checked="true"
+          checked=""
+          class="stx-radio__input"
+          id="stxField4"
+          name="billing-address"
+          role="radio"
+          type="radio"
+          value="DIFFERENT_BILLING_ADDRESS"
+        />
+        <span
+          class="stx-radio__box"
+        />
+      </span>
+      <label
+        class="stx-radio-field__label"
+        for="stxField4"
+      >
+        Use a different billing address
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

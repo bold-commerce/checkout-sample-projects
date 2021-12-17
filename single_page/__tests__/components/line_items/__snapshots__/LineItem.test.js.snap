@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders  component 1`] = `
+<DocumentFragment>
+  <div
+    class="LineItem"
+  >
+    <div
+      class="LineItem__ImageDescriptionWrapper"
+    >
+      <div
+        class="LineItem__ProductImageWrapper"
+      >
+        <div
+          class="stx-image"
+        >
+          <div
+            class="stx-image--content"
+          >
+            <div
+              class="stx-image--holder"
+            >
+              <img
+                alt="Test Item"
+                class="stx-image--image"
+                title="Test Item"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="LineItem__ProductDetails"
+      >
+        <div
+          class="stx-details stx-details--left"
+        >
+          <div
+            class="stx-details__title"
+          >
+            Test Item
+          </div>
+          <div
+            class="stx-details__description"
+          />
+        </div>
+        <button
+          aria-busy="false"
+          aria-disabled="false"
+          class="stx-button stx-button--secondary"
+        >
+          <span
+            class="stx-button__text"
+          >
+            Remove
+          </span>
+          <span
+            class="stx-loading-spinner stx-button__spinner"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="LineItem__QuantityPriceWrapper"
+    >
+      <div
+        class="LineItem__LineItemQuantityWrapper"
+      >
+        <div
+          class="LineItemQuantity__Decrement"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button"
+          >
+            <span
+              class="stx-button__text"
+            >
+              -
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+        <div
+          class="LineItemQuantity"
+        >
+          <div
+            class="stx-input"
+          >
+            <input
+              aria-readonly="false"
+              class="stx-input__input-element"
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="LineItemQuantity__Increment"
+        >
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button"
+          >
+            <span
+              class="stx-button__text"
+            >
+              +
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="LineItem__ProductPrice"
+      >
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $19.91
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
