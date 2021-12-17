@@ -14,7 +14,6 @@ import {
 } from '../../utils/addressHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
-    ...jest.requireActual('@boldcommerce/checkout-react-components'),
     useCheckoutStore: () => ({
         state: {
             orderInfo: {
@@ -57,8 +56,13 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
         }
     }),
     useDiscount: () => ({
-        data: '?',
-        applyDiscount : (() => {})
+        data: {
+            discountTotal: 1234,
+            discountApplied: true,
+            discountCode: '?'
+        },
+        applyDiscount: (() => {}),
+        removeDiscount: (() => {})
     }),
     useBillingSameAsShipping: () => ({
         data: true,
@@ -94,7 +98,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('CheckoutForm', () => {
     test('renders CheckoutForm', () => {
-        React.useState = jest.fn().mockReturnValueOnce([false, {}])
+        React.useState = jest.fn().mockReturnValueOnce([false, ((i) => {})])
 
         const { asFragment } = render(
             <CheckoutForm />,
