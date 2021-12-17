@@ -120,7 +120,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               aria-label="Product price"
               class="stx-price__amount"
             >
-              CA$14.00
+              $14.00
             </p>
           </div>
         </div>
@@ -199,7 +199,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               aria-label="Product price"
               class="stx-price__amount"
             >
-              CA$32.00
+              $32.00
             </p>
           </div>
         </div>
@@ -274,7 +274,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               aria-label="Product price"
               class="stx-price__amount"
             >
-              CA$123.00
+              $123.00
             </p>
           </div>
         </div>
@@ -302,7 +302,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$262.00
+            $262.00
           </p>
         </div>
       </div>
@@ -384,7 +384,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
                 aria-label="Product price"
                 class="stx-price__amount"
               >
-                CA$10.00
+                $10.00
               </p>
             </div>
           </div>

@@ -47,7 +47,7 @@ exports[`SummaryLine renders SummaryLine component with items 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$11.11
+            $11.11
           </p>
         </div>
       </button>
@@ -72,7 +72,7 @@ exports[`SummaryLine renders SummaryLine component with items 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$1.23
+            $1.23
           </p>
         </div>
       </div>
@@ -128,7 +128,7 @@ exports[`SummaryLine renders SummaryLine component with removable items 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$11.11
+            $11.11
           </p>
         </div>
       </button>
@@ -190,7 +190,7 @@ exports[`SummaryLine renders SummaryLine component with removable items 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$1.23
+            $1.23
           </p>
         </div>
       </div>
@@ -222,7 +222,7 @@ exports[`SummaryLine renders SummaryLine component without items 1`] = `
           aria-label="Product price"
           class="stx-price__amount"
         >
-          CA$11.11
+          $11.11
         </p>
       </div>
     </div>

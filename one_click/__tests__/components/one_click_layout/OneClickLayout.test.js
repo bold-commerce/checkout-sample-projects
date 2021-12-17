@@ -95,7 +95,10 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('OneClickLayout', () => {
     test('renders OneClickLayout component', () => {
+        React.useState = jest.fn().mockReturnValueOnce([false, ((i) => {})])
+
         const { asFragment } = render( <OneClickLayout /> );
+        
         expect(asFragment()).toMatchSnapshot();
     });
 });

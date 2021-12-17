@@ -58,7 +58,7 @@ exports[`ShippingLines renders ShippingLines component 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$20.00
+            $20.00
           </p>
         </div>
       </div>
@@ -102,7 +102,7 @@ exports[`ShippingLines renders ShippingLines component 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$40.00
+            $40.00
           </p>
         </div>
       </div>
@@ -196,7 +196,7 @@ exports[`ShippingLines renders ShippingLines component while shipping lines are 
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$20.00
+            $20.00
           </p>
         </div>
       </div>
@@ -242,7 +242,7 @@ exports[`ShippingLines renders ShippingLines component while shipping lines are 
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$40.00
+            $40.00
           </p>
         </div>
       </div>

@@ -72,7 +72,7 @@ exports[`Billing render Billing component set to show 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$262.00
+            $262.00
           </p>
         </div>
       </button>
@@ -296,7 +296,7 @@ exports[`Billing render Billing component with another component set to show 1`]
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$262.00
+            $262.00
           </p>
         </div>
       </button>
@@ -520,7 +520,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
             aria-label="Product price"
             class="stx-price__amount"
           >
-            CA$262.00
+            $262.00
           </p>
         </div>
       </button>

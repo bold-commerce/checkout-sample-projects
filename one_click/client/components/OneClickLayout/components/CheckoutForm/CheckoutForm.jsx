@@ -5,7 +5,7 @@ import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/check
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
 import { Billing } from '../Billing';
-import { useInventory } from '../../../../hooks';
+import { useErrorLogging, useInventory } from '../../../../hooks';
 import { Inventory } from '../Inventory';
 import { ProcessingOrder } from '../Processing';
 import { Confirmation } from '../Confirmation';
@@ -21,6 +21,7 @@ const CheckoutForm = () => {
   const orderStatus = state.orderInfo.orderStatus;
   const location = useLocation();
   const checkInventory = useInventory();
+  const logError = useErrorLogging();
   const history = useHistory();
   const [openSection, setOpenSection] = useState('/');
   const [loading, setLoading] = React.useState(true); // calling React.useState to be able to mock with snapshot tests.
@@ -37,9 +38,13 @@ const CheckoutForm = () => {
   const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
   const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
   const getInventory = async () => {
-    const inventory = await checkInventory(lineItems);
-    if (inventory) {
-      history.push('/inventory', inventory)
+    try{
+      const inventory = await checkInventory(lineItems);
+      if (inventory) {
+        history.push('/inventory', inventory)
+      }
+    } catch (e) {
+      logError('check_inventory', e);
     }
   }
   useEffect(() => {
