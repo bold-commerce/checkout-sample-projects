@@ -29,7 +29,7 @@ const ConfirmationPage = () => {
           className="Confirmation__Section"
           title="Your order is confirmed"
         >
-          <p>We’ve accepted your order, and we’re getting it ready. A confirmation email has been sent to your email address.</p>
+          <p>We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.</p>
         </CheckoutSection>
         <CheckoutSection
           className="Confirmation__Section"
