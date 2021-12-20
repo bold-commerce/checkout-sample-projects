@@ -22,7 +22,7 @@ const SinglePageLayout = () => {
     } else if (orderStatus === 'processing') {
       navigate('/processing');
     } else if (orderStatus === 'completed') {
-      navigate(`/confirmation?public_order_id=${state.publicOrderId}`);
+      navigate(`/${process.env.CONFIRMATION_URL}?public_order_id=${state.publicOrderId}`);
     }
   }, [orderStatus]);
 

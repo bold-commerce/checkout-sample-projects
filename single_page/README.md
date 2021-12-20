@@ -27,11 +27,11 @@ This project uses the following resources and toolkits:
 - Run `yarn start` or `npm run start`. This will run the node server on port 3000.
 
 ## Analytics
-To add analytics tracking to the app, you can edit the custom hook called `useAnalytics` that can be found in `client/hooks/useAnalytics.js`.
+To add analytics tracking to the app, you can edit the custom hook called `useAnalytics` that can be found in `src/hooks/useAnalytics.js`.
 
 **Usage**:
 ```javascript
-import { useAnalytics } from './client/hooks/useAnalytics.js' // Change this to the correct path to the hooks folder
+import { useAnalytics } from './src/hooks/useAnalytics.js' // Change this to the correct path to the hooks folder
 
 const CustomComponent = () => {
   const trackEvent = useAnalytics();
@@ -41,16 +41,29 @@ const CustomComponent = () => {
 ```
 
 ## Error Logging
-To add error logging to the app, you can edit the custom hook called `useErrorLogging` that can be found in `client/hooks/useErrorLogging.js`
+To add error logging to the app, you can edit the custom hook called `useErrorLogging` that can be found in `src/hooks/useErrorLogging.js`
 
 **Usage**
 ```javascript
-import { useErrorLogging } from './client/hooks/useErrorLogging.js'; // Change this to the correct path to the hooks folder
+import { useErrorLogging } from './src/hooks/useErrorLogging.js'; // Change this to the correct path to the hooks folder
 
 const CustomComponent = () => {
   const logError = useErrorLogging();
 
   logError('type', new Error('error message'));
+}
+```
+
+**Inventory**
+example response
+```json
+{
+  "data" : [
+    {
+      "platform_id": "string",
+      "inventory_quantity" : 0
+    }
+  ]
 }
 ```
 

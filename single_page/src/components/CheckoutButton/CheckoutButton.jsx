@@ -39,7 +39,7 @@ const MemoizedCheckoutButton = memo(({
 
   const validateInventory = useCallback(async () => {
     const variants = lineItems.map((lineItem) => lineItem.product_data.variant_id).join(',');
-    const response = await fetch(`/validate_inventory?variants=${variants}`);
+    const response = await fetch(`${process.env.INVENTORY_URL}?variants=${variants}`);
     const responseData = await response.json();
     let inventory = responseData.inventory.reduce((acc,curr)=> (acc[curr.platform_id]=curr.inventory_quantity,acc),{});
     let inventoryIssues = false;
