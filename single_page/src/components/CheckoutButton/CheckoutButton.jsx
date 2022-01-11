@@ -1,10 +1,8 @@
 import { useBillingAddress, useCheckoutStore, useLineItems, usePaymentIframe } from '@boldcommerce/checkout-react-components';
-import {
-  useNavigate,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from '@boldcommerce/stacks-ui';
 import React, { memo, useCallback, useState } from 'react';
-import { useAnalytics, useErrorLogging } from '../../hooks';
+import { useAnalytics, useErrorLogging, useInventory } from '../../hooks';
 
 const CheckoutButton = () => {
   const { processPaymentIframe } = usePaymentIframe();
@@ -12,11 +10,13 @@ const CheckoutButton = () => {
   const { data: lineItems } = useLineItems();
   const { data: billingAddress } = useBillingAddress();
   const { orderStatus } = state.orderInfo;
+  const validateInventory = useInventory();
   const processing = orderStatus === 'processing' || orderStatus === 'authorizing';
 
   return (
     <MemoizedCheckoutButton
       processOrder={processPaymentIframe}
+      validateInventory={validateInventory}
       processing={processing}
       hasBillingAddress={!!billingAddress.country_code}
       lineItems={lineItems}
@@ -27,6 +27,7 @@ const CheckoutButton = () => {
 
 const MemoizedCheckoutButton = memo(({
   processOrder,
+  validateInventory,
   processing,
   hasBillingAddress,
   lineItems,
@@ -37,32 +38,12 @@ const MemoizedCheckoutButton = memo(({
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  const validateInventory = useCallback(async () => {
-    const variants = lineItems.map((lineItem) => lineItem.product_data.variant_id).join(',');
-    const response = await fetch(`${process.env.INVENTORY_URL}?variants=${variants}`);
-    const responseData = await response.json();
-    let inventory = responseData.inventory.reduce((acc,curr)=> (acc[curr.platform_id]=curr.inventory_quantity,acc),{});
-    let inventoryIssues = false;
-
-    lineItems.forEach((lineItem) => {
-      inventory[lineItem.product_data.variant_id] -= lineItem.product_data.quantity;
-      if (inventory[lineItem.product_data.variant_id] < 0) {
-        inventoryIssues = true;
-      }
-    });
-
-    if (inventoryIssues) {
-      return responseData.inventory;
-    } else {
-      return null;
-    }
-  }, [lineItems]);
-
   const handleProcessPayment = useCallback(async () => {
     trackEvent('click_complete_order');
     setLoading(true);
     try {
-      const inventoryIssues = await validateInventory();
+      const inventoryIssues = await validateInventory(lineItems);
+
       if (inventoryIssues) {
         setLoading(false);
         navigate('/inventory_issues', { state: inventoryIssues });
@@ -74,7 +55,7 @@ const MemoizedCheckoutButton = memo(({
       logError('process_order', e);
       setLoading(false);
     }
-  }, [logError, trackEvent, processOrder, validateInventory]);
+  }, [logError, trackEvent, processOrder, lineItems]);
 
   return (
     <Button

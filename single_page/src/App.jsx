@@ -5,14 +5,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/checkout'>
       <CheckoutProvider
         applicationState={window.checkout.applicationState}
         initialData={window.checkout.initialData}
         publicOrderId={window.checkout.publicOrderId}
         token={window.checkout.jwtToken}
         storeIdentifier={window.checkout.storeIdentifier}
-        apiBase="https://api.boldcommerce.com/checkout/storefront"
+        apiBase={process.env.API_BASE}
       >
         <SinglePageLayout />
       </CheckoutProvider>

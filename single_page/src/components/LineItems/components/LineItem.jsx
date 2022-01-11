@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Price, Details, Image } from '@boldcommerce/stacks-ui';
+import { SoldOut } from '../../Icons'
 import LineItemQuantity from './LineItemQuantity';
 import LineItemInventoryAdjustment from './LineItemInventoryAdjustment';
 
@@ -43,11 +44,15 @@ const LineItem = ({
     <div className="LineItem__QuantityPriceWrapper">
       {
         originalQuantity ? (
-          <LineItemInventoryAdjustment
+          quantity > 0 ? (
+            <LineItemInventoryAdjustment
             originalQuantity={originalQuantity}
             quantity={quantity}
             readOnly={readOnly}
-          />
+            /> 
+          ) : ( 
+            <SoldOut />
+          )
         ) : (
           <LineItemQuantity
             readOnly={readOnly}

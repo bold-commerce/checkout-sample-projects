@@ -16,25 +16,18 @@ const InventoryIssuesPage = () => {
 
   // Only run this when the component mounts since we don't want the list of items to change as it adjusts quantities
   const updatedLineItems = useMemo(() => {
-    let inventoryMap = inventoryIssues.reduce((acc,curr)=> (acc[curr.platform_id]=curr.inventory_quantity,acc),{});
-    const adjustedLineItems = lineItems.map((lineItem) => {
-      const variantInventory = inventoryMap[lineItem.product_data.variant_id];
-      let quantity = lineItem.product_data.quantity;
+    const adjustedLineItems = []
+    lineItems.map((lineItem) => {
+      const index = lineItem.product_data.variant_id;
+      let orderQuantity = lineItem.product_data.quantity;
+      if (!(inventoryIssues[index].allow_backorder || inventoryIssues[index].inventory_tracker === 'none')) {
+        const variantInventory = inventoryIssues[index].quantity;
 
-      if (quantity > variantInventory) {
-        quantity = variantInventory;
-        inventoryMap[lineItem.product_data.variant_id] = 0;
-      } else {
-        inventoryMap[lineItem.product_data.variant_id] -= quantity;
-      }
-
-      return {
-        ...lineItem,
-        product_data: {
-          ...lineItem.product_data,
-          quantity,
-          originalQuantity: lineItem.product_data.quantity,
-        },
+        if (orderQuantity > variantInventory) {
+          lineItem.product_data.quantity = variantInventory;
+          lineItem.product_data.originalQuantity = orderQuantity;
+          adjustedLineItems.push(lineItem)
+        }
       }
     });
 
@@ -59,13 +52,12 @@ const InventoryIssuesPage = () => {
     setLoading(true);
     try {
       let results = [];
-  
       for (let i = 0; i < updatedLineItems.length; i++) {
         const item = updatedLineItems[i];
-        if (item.product_data.quantity === 0) {
-          results.push(removeLineItem(item.product_data.line_item_key));
-        } else if (item.product_data.quantity !== item.product_data.originalQuantity) {
+        if (item.product_data.quantity > 0) {
           results.push(updateLineItemQuantity(item.product_data.line_item_key, item.product_data.quantity));
+        } else {
+          results.push(removeLineItem(item.product_data.line_item_key));
         }
       }
   
@@ -84,7 +76,7 @@ const InventoryIssuesPage = () => {
         className="InventoryIssues__Section"
         title="Inventory issues"
       >
-        <p>Some products became unavailable and your cart has been updated. We’re sorry for the inconvenience.</p>
+        <p>Some products became unavailable and your cart has been updated. We're sorry for the inconvenience.</p>
       </CheckoutSection>
       <div className="InventoryIssues__List">
         {lineItemList}

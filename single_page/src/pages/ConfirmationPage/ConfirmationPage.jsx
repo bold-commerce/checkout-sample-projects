@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { OrderSummary, CheckoutSection } from '../../components';
-import './ConfirmationPage.css';
 import { ConfirmationList, ConfirmationListItem } from './components';
 import { RedactedCreditCard } from './components/RedactedCreditCard';
+import './ConfirmationPage.css';
 
 const ConfirmationPage = () => {
   const { state } = useCheckoutStore();
@@ -12,6 +12,10 @@ const ConfirmationPage = () => {
   const billingAddress = state.applicationState.addresses.billing;
   const shippingMethod = state.applicationState.shipping.selected_shipping.description;
   const payments = state.applicationState.payments;
+
+useEffect(() => {
+  fetch(`${process.env.CLEAR_CART_URL}?cart_id=${state.applicationState.order_meta_data.cart_parameters.cart_id}`)
+}, []);
 
   const paymentList = payments.map((payment) => {
     return (

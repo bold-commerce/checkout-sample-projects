@@ -19,3 +19,7 @@
 .InventoryIssues__Section p {
   color: rgba(0,0,0,0.65);
 }
+
+.LineItem__QuantityPriceWrapper svg {
+  height: 100%;
+}
