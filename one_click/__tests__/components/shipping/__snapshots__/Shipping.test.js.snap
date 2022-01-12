@@ -49,7 +49,7 @@ exports[`Shipping renders Shipping component 1`] = `
         class="back-btn"
         type="button"
       >
-        back
+        Back
       </button>
     </div>
     <section
@@ -58,7 +58,7 @@ exports[`Shipping renders Shipping component 1`] = `
       <h3
         class="FieldSet__Heading"
       >
-        shipping.address
+        Shipping address
       </h3>
       <ul
         class="AddressList"
@@ -153,7 +153,7 @@ exports[`Shipping renders Shipping component 1`] = `
               for="address_0"
             >
               <p>
-                shipping.use_new_address
+                Use new address
               </p>
             </label>
           </div>
@@ -176,7 +176,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField1"
                       name="first_name"
-                      placeholder="address.first_name_optional"
+                      placeholder="First name (optional)"
                       type="text"
                       value="John"
                     />
@@ -192,7 +192,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField2"
                       name="last_name"
-                      placeholder="address.last_name_optional"
+                      placeholder="Last name (optional)"
                       type="text"
                       value="Doe"
                     />
@@ -212,7 +212,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField3"
                       name="business_name"
-                      placeholder="address.business_name_optional"
+                      placeholder="Company (optional)"
                       type="text"
                       value="Bold Commerce"
                     />
@@ -232,7 +232,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField4"
                       name="address_line_1"
-                      placeholder="address.address_line_1_optional"
+                      placeholder="Address (optional)"
                       type="text"
                       value="123 Fake Street"
                     />
@@ -248,7 +248,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField5"
                       name="address_line_2"
-                      placeholder="address.address_line_2"
+                      placeholder="Apt, suite, etc."
                       type="text"
                       value="Unit 12"
                     />
@@ -268,7 +268,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField6"
                       name="city"
-                      placeholder="address.city_optional"
+                      placeholder="City (optional)"
                       type="text"
                       value="Winnipeg"
                     />
@@ -292,7 +292,7 @@ exports[`Shipping renders Shipping component 1`] = `
                         hidden=""
                         value="___PLACEHOLDER___"
                       >
-                        address.country_hint
+                        Select a country
                       </option>
                       <option
                         value="CA"
@@ -335,7 +335,7 @@ exports[`Shipping renders Shipping component 1`] = `
                         hidden=""
                         value="___PLACEHOLDER___"
                       >
-                        address.province_hint
+                        Select a province
                       </option>
                       <option
                         value="AB"
@@ -429,7 +429,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField9"
                       name="postal"
-                      placeholder="address.postal_code"
+                      placeholder="Postal code"
                       type="text"
                       value="R3A1B3"
                     />
@@ -449,7 +449,7 @@ exports[`Shipping renders Shipping component 1`] = `
                       class="stx-input__input-element"
                       id="stxField10"
                       name="phone_number"
-                      placeholder="address.phone_number_optional"
+                      placeholder="Phone (optional)"
                       type="tel"
                       value="204-123-4567"
                     />
@@ -470,14 +470,14 @@ exports[`Shipping renders Shipping component 1`] = `
         <h3
           class="FieldSet__Heading"
         >
-          shipping.method
+          Shipping method
         </h3>
       </div>
       <div
         class="FieldSet__Content"
       >
         <p>
-          shipping.options_description
+          To see shipping options complete filling in your address above
         </p>
       </div>
     </section>

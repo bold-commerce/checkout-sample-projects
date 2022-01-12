@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ShippingLines } from '../../../src/components/ShippingLines/ShippingLines';
 import { exampleShippingLines } from '../../utils/shippingLinesHelper';
+import '../../../src/i18n/config';
 
 describe('ShippingLines', () => {
     test('renders ShippingLines component', () => {

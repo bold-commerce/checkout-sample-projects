@@ -1,6 +1,7 @@
 import React from "react";
 import { render, fireEvent } from '@testing-library/react';
 import { Discount } from '../../../src/components/Discount/Discount';
+import '../../../src/i18n/config';
 
 describe('Discount', () => {
     test('renders Discount component closed', () => {

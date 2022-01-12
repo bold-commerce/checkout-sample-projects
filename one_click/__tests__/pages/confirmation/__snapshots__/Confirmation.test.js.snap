@@ -47,28 +47,28 @@ exports[`Confirmation renders Confirmation component 1`] = `
     <div
       class="ThankYou"
     >
-      confirmation.thank_you
+      Thank you!
     </div>
     <div
       class="confirmation-order"
     >
       <h2>
-        confirmation.order_confirmed
+        Your order is confirmed
       </h2>
       <div
         class="confirmation-order-accepted"
       >
-        confirmation.order_accepted
+        We've accepted your order, and we're getting it ready. A confirmation email has been sent to your email address.
       </div>
     </div>
     <div
       class="confirmation-information"
     >
       <h2>
-        customer.info
+        Customer information
       </h2>
       <h3>
-        shipping.address
+        Shipping address
       </h3>
       <p>
         John Doe
@@ -84,7 +84,7 @@ exports[`Confirmation renders Confirmation component 1`] = `
         Canada
       </p>
       <h3>
-        billing.address
+        Billing address
       </h3>
       <p>
         John Doe
@@ -100,13 +100,13 @@ exports[`Confirmation renders Confirmation component 1`] = `
         Canada
       </p>
       <h3>
-        shipping.method
+        Shipping method
       </h3>
       <p>
         Standard
       </p>
       <h3>
-        payment.method
+        Payment method
       </h3>
       <p>
         visa
@@ -116,11 +116,11 @@ exports[`Confirmation renders Confirmation component 1`] = `
       class="confirmation-help"
     >
       <p>
-        confirmation.need_help
+        Need help? 
         <a
           href="#"
         >
-          confirmation.contact_us
+          Contact us
         </a>
       </p>
        
@@ -132,7 +132,7 @@ exports[`Confirmation renders Confirmation component 1`] = `
         class="confirmation-continue-button stx-button"
         href="/"
       >
-        confirmation.continue_shopping
+        Continue shopping
       </a>
     </div>
   </div>

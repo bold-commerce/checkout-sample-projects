@@ -11,13 +11,13 @@ exports[`Processing renders Processing component 1`] = `
     <h1
       class="section__title processing-title"
     >
-      processing.order
+      Processing order...
     </h1>
     <div
       class="processing-content"
     >
       <p>
-        processing.description
+        This may take a few moments. Please remain on the the page until the process is complete.
       </p>
     </div>
   </div>

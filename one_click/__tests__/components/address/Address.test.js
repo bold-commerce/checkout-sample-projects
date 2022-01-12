@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 import {
   addressErrors, caProvinces, countries, emptyAddress, exampleAddress,
 } from '../../utils/addressHelpers';
+import '../../../src/i18n/config';
 
 describe('Address', () => {
     test('renders Address component', () => {

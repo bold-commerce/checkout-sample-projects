@@ -11,7 +11,7 @@ exports[`Summary renders Summary component 1`] = `
       <h1
         class="Header__Title"
       >
-        summary.title
+        Summary
       </h1>
       <button
         aria-label="Close"
@@ -49,7 +49,7 @@ exports[`Summary renders Summary component 1`] = `
         class="back-btn"
         type="button"
       >
-        back
+        Back
       </button>
     </div>
     <section
@@ -72,7 +72,7 @@ exports[`Summary renders Summary component 1`] = `
               <div
                 class="summary-line-icon"
               />
-              summary.subtotal
+              Subtotal
             </div>
             <div
               class="stx-price summary-line-value stx-price--alight-center"
@@ -94,7 +94,7 @@ exports[`Summary renders Summary component 1`] = `
           >
             <button
               class="summary-btn"
-              id="summary-line-shipping.title"
+              id="summary-line-Shipping"
             >
               <div
                 class="Accordion-title summary-line-title"
@@ -122,7 +122,7 @@ exports[`Summary renders Summary component 1`] = `
                     </g>
                   </svg>
                 </div>
-                shipping.title
+                Shipping
               </div>
               <div
                 class="stx-price summary-line-value stx-price--alight-center"
@@ -137,10 +137,10 @@ exports[`Summary renders Summary component 1`] = `
             </button>
           </div>
           <div
-            aria-labelledby="summary-line-shipping.title"
+            aria-labelledby="summary-line-Shipping"
             class="summary-line-content"
             hidden=""
-            id="summary-line-shipping.title-div"
+            id="summary-line-Shipping-div"
             role="region"
           >
             <div
@@ -176,7 +176,7 @@ exports[`Summary renders Summary component 1`] = `
               <div
                 class="summary-line-icon"
               />
-              discount.title
+              Discount
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ exports[`Summary renders Summary component 1`] = `
           >
             <button
               class="summary-btn"
-              id="summary-line-summary.taxes"
+              id="summary-line-Taxes"
             >
               <div
                 class="Accordion-title summary-line-title"
@@ -216,7 +216,7 @@ exports[`Summary renders Summary component 1`] = `
                     </g>
                   </svg>
                 </div>
-                summary.taxes
+                Taxes
               </div>
               <div
                 class="stx-price summary-line-value stx-price--alight-center"
@@ -231,10 +231,10 @@ exports[`Summary renders Summary component 1`] = `
             </button>
           </div>
           <div
-            aria-labelledby="summary-line-summary.taxes"
+            aria-labelledby="summary-line-Taxes"
             class="summary-line-content"
             hidden=""
-            id="summary-line-summary.taxes-div"
+            id="summary-line-Taxes-div"
             role="region"
           >
             <div
@@ -282,7 +282,7 @@ exports[`Summary renders Summary component 1`] = `
         class="Summary__Total SummaryBlock"
       >
         <div>
-          summary.total
+          Total
         </div>
         <div
           class="stx-price summary-total-price stx-price--alight-center"
@@ -307,7 +307,7 @@ exports[`Summary renders Summary component 1`] = `
         <span
           class="stx-button__text"
         >
-          complete_order
+          Complete Order
         </span>
         <span
           class="stx-loading-spinner stx-button__spinner"

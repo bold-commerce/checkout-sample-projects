@@ -6,6 +6,7 @@ import {
     exampleLineItems as MOCKexampleLineItems,
     exampleInventory as MOCKinventory
 } from '../../utils/lineItemHelpers';
+import '../../../src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),

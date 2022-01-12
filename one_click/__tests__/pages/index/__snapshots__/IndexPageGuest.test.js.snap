@@ -63,7 +63,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
           />
         </svg>
         <h2>
-          summary.title
+          Summary
         </h2>
         <div
           class="stx-price stx-price--alight-center"
@@ -83,16 +83,16 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
       <h2
         class="IndexGuest__Title"
       >
-        customer.info
+        Customer information
       </h2>
       <div
         class="IndexGuest__Login"
       >
-        customer.already_have_account
+        Already have an account? 
         <a
           href="/"
         >
-          customer.login
+          Log in
         </a>
       </div>
       <div
@@ -105,7 +105,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
             class="stx-input__input-element"
             id="stxField1"
             name="email_address"
-            placeholder="customer.email"
+            placeholder="Email address"
             type="email"
           />
         </div>
@@ -132,7 +132,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
             class="stx-checkbox-field__label"
             for="stxField2"
           >
-            customer.subscribe
+            Subscribe to our newsletter
           </label>
         </div>
       </div>
@@ -143,7 +143,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
       <h2
         class="IndexGuest__Title"
       >
-        shipping.address
+        Shipping address
       </h2>
       <div
         class="FieldSet--Address"
@@ -161,7 +161,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField3"
                 name="first_name"
-                placeholder="address.first_name"
+                placeholder="First name"
                 type="text"
                 value=""
               />
@@ -177,7 +177,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField4"
                 name="last_name"
-                placeholder="address.last_name"
+                placeholder="Last name"
                 type="text"
                 value=""
               />
@@ -197,7 +197,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField5"
                 name="business_name"
-                placeholder="address.business_name_optional"
+                placeholder="Company (optional)"
                 type="text"
                 value=""
               />
@@ -217,7 +217,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField6"
                 name="address_line_1"
-                placeholder="address.address_line_1"
+                placeholder="Address"
                 type="text"
                 value=""
               />
@@ -233,7 +233,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField7"
                 name="address_line_2"
-                placeholder="address.address_line_2"
+                placeholder="Apt, suite, etc."
                 type="text"
                 value=""
               />
@@ -253,7 +253,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField8"
                 name="city"
-                placeholder="address.city"
+                placeholder="City"
                 type="text"
                 value=""
               />
@@ -277,7 +277,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  address.country_hint
+                  Select a country
                 </option>
                 <option
                   value="CA"
@@ -320,7 +320,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 class="stx-input__input-element"
                 id="stxField10"
                 name="phone_number"
-                placeholder="address.phone_number_optional"
+                placeholder="Phone (optional)"
                 type="tel"
                 value=""
               />
@@ -341,7 +341,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
           <h3
             class="FieldSet__Heading"
           >
-            shipping.method
+            Shipping method
           </h3>
         </div>
         <div
@@ -361,7 +361,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
         <span
           class="stx-button__text"
         >
-          continue_to_billing
+          Continue to billing
         </span>
         <span
           class="stx-loading-spinner stx-button__spinner"
@@ -373,13 +373,13 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
         <a
           href="/"
         >
-          back_to_login
+          Back to log in
         </a>
       </div>
       <div
         class="IndexGuest__Rights"
       >
-        all_rights_reserved TestSite
+        All rights reserved TestSite
       </div>
     </div>
   </div>
@@ -449,7 +449,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
           />
         </svg>
         <h2>
-          summary.title
+          Summary
         </h2>
         <div
           class="stx-price stx-price--alight-center"
@@ -469,16 +469,16 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
       <h2
         class="IndexGuest__Title"
       >
-        customer.info
+        Customer information
       </h2>
       <div
         class="IndexGuest__Login"
       >
-        customer.already_have_account
+        Already have an account? 
         <a
           href="/"
         >
-          customer.login
+          Log in
         </a>
       </div>
       <div
@@ -491,7 +491,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
             class="stx-input__input-element"
             id="stxField11"
             name="email_address"
-            placeholder="customer.email"
+            placeholder="Email address"
             type="email"
           />
         </div>
@@ -518,7 +518,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
             class="stx-checkbox-field__label"
             for="stxField12"
           >
-            customer.subscribe
+            Subscribe to our newsletter
           </label>
         </div>
       </div>
@@ -529,7 +529,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
       <h2
         class="IndexGuest__Title"
       >
-        shipping.address
+        Shipping address
       </h2>
       <div
         class="FieldSet--Address"
@@ -547,7 +547,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField13"
                 name="first_name"
-                placeholder="address.first_name"
+                placeholder="First name"
                 type="text"
                 value=""
               />
@@ -563,7 +563,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField14"
                 name="last_name"
-                placeholder="address.last_name"
+                placeholder="Last name"
                 type="text"
                 value=""
               />
@@ -583,7 +583,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField15"
                 name="business_name"
-                placeholder="address.business_name_optional"
+                placeholder="Company (optional)"
                 type="text"
                 value=""
               />
@@ -603,7 +603,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField16"
                 name="address_line_1"
-                placeholder="address.address_line_1"
+                placeholder="Address"
                 type="text"
                 value=""
               />
@@ -619,7 +619,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField17"
                 name="address_line_2"
-                placeholder="address.address_line_2"
+                placeholder="Apt, suite, etc."
                 type="text"
                 value=""
               />
@@ -639,7 +639,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField18"
                 name="city"
-                placeholder="address.city"
+                placeholder="City"
                 type="text"
                 value=""
               />
@@ -663,7 +663,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  address.country_hint
+                  Select a country
                 </option>
                 <option
                   value="CA"
@@ -706,7 +706,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
                 class="stx-input__input-element"
                 id="stxField20"
                 name="phone_number"
-                placeholder="address.phone_number_optional"
+                placeholder="Phone (optional)"
                 type="tel"
                 value=""
               />
@@ -727,14 +727,14 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
           <h3
             class="FieldSet__Heading"
           >
-            shipping.method
+            Shipping method
           </h3>
         </div>
         <div
           class="FieldSet__Content"
         >
           <p>
-            shipping.options_description
+            To see shipping options complete filling in your address above
           </p>
         </div>
       </section>
@@ -751,7 +751,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
         <span
           class="stx-button__text"
         >
-          continue_to_billing
+          Continue to billing
         </span>
         <span
           class="stx-loading-spinner stx-button__spinner"
@@ -763,13 +763,13 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
         <a
           href="/"
         >
-          back_to_login
+          Back to log in
         </a>
       </div>
       <div
         class="IndexGuest__Rights"
       >
-        all_rights_reserved TestSite
+        All rights reserved TestSite
       </div>
     </div>
   </div>

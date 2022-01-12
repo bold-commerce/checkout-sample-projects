@@ -13,7 +13,7 @@ exports[`CheckoutButton renders CheckoutButton component 1`] = `
       <span
         class="stx-button__text"
       >
-        complete_order
+        Complete Order
       </span>
       <span
         class="stx-loading-spinner stx-button__spinner"
@@ -36,7 +36,7 @@ exports[`CheckoutButton renders CheckoutButton component that is disabled 1`] = 
       <span
         class="stx-button__text"
       >
-        complete_order
+        Complete Order
       </span>
       <span
         class="stx-loading-spinner stx-button__spinner"
@@ -59,7 +59,7 @@ exports[`CheckoutButton renders CheckoutButton component that is loading 1`] = `
       <span
         class="stx-button__text"
       >
-        complete_order
+        Complete Order
       </span>
       <span
         class="stx-loading-spinner stx-button__spinner"
@@ -82,7 +82,7 @@ exports[`CheckoutButton renders CheckoutButton component with an error message 1
       <span
         class="stx-button__text"
       >
-        complete_order
+        Complete Order
       </span>
       <span
         class="stx-loading-spinner stx-button__spinner"
@@ -105,7 +105,7 @@ exports[`CheckoutButton renders CheckoutButton with a class name 1`] = `
       <span
         class="stx-button__text"
       >
-        complete_order
+        Complete Order
       </span>
       <span
         class="stx-loading-spinner stx-button__spinner"

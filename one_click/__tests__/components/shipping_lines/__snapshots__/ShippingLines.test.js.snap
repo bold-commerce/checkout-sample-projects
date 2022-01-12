@@ -11,7 +11,7 @@ exports[`ShippingLines renders ShippingLines component 1`] = `
       <h3
         class="FieldSet__Heading"
       >
-        shipping.method
+        Shipping method
       </h3>
     </div>
     <div
@@ -122,14 +122,14 @@ exports[`ShippingLines renders ShippingLines component when shipping lines shoul
       <h3
         class="FieldSet__Heading"
       >
-        shipping.method
+        Shipping method
       </h3>
     </div>
     <div
       class="FieldSet__Content"
     >
       <p>
-        shipping.options_description
+        To see shipping options complete filling in your address above
       </p>
     </div>
   </section>
@@ -147,7 +147,7 @@ exports[`ShippingLines renders ShippingLines component while shipping lines are 
       <h3
         class="FieldSet__Heading"
       >
-        shipping.method
+        Shipping method
       </h3>
     </div>
     <div
@@ -262,7 +262,7 @@ exports[`ShippingLines renders ShippingLines component while shipping lines are 
       <h3
         class="FieldSet__Heading"
       >
-        shipping.method
+        Shipping method
       </h3>
     </div>
     <div

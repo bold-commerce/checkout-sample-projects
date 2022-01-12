@@ -98,7 +98,7 @@ exports[`ShippingAddressList renders ShippingAddressList component disabled 1`] 
           for="address_0"
         >
           <p>
-            shipping.use_new_address
+            Use new address
           </p>
         </label>
       </div>
@@ -201,7 +201,7 @@ exports[`ShippingAddressList renders ShippingAddressList component with addresse
           for="address_0"
         >
           <p>
-            shipping.use_new_address
+            Use new address
           </p>
         </label>
       </div>
@@ -304,7 +304,7 @@ exports[`ShippingAddressList renders ShippingAddressList component with onChange
           for="address_0"
         >
           <p>
-            shipping.use_new_address
+            Use new address
           </p>
         </label>
       </div>

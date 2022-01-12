@@ -9,6 +9,7 @@ import {
     exampleAddress as MOCKexampleAddress,
     exampleSavedAddresses as MOCKexampleSavedAddresses
  } from '../../utils/addressHelpers';
+ import '../../../src/i18n/config';
 
  jest.mock('@boldcommerce/checkout-react-components', () => ({
      ...jest.requireActual('@boldcommerce/checkout-react-components'),

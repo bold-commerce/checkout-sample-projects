@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import { CheckoutButton } from '../../../src/components/CheckoutButton'
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
+import '../../../src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),

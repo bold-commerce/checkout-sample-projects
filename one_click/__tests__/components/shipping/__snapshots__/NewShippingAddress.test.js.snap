@@ -16,7 +16,7 @@ exports[`NewShippingAddress renders NewShippingAddress component 1`] = `
         for="address_0"
       >
         <p>
-          shipping.use_new_address
+          Use new address
         </p>
       </label>
     </div>
@@ -41,7 +41,7 @@ exports[`NewShippingAddress renders NewShippingAddress component 2`] = `
         for="address_0"
       >
         <p>
-          shipping.use_new_address
+          Use new address
         </p>
       </label>
     </div>
@@ -65,7 +65,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with default ad
         for="address_0"
       >
         <p>
-          shipping.use_new_address
+          Use new address
         </p>
       </label>
     </div>
@@ -90,7 +90,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
         for="address_0"
       >
         <p>
-          shipping.use_new_address
+          Use new address
         </p>
       </label>
     </div>
@@ -113,7 +113,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField11"
                 name="first_name"
-                placeholder="address.first_name_optional"
+                placeholder="First name (optional)"
                 type="text"
                 value="John"
               />
@@ -129,7 +129,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField12"
                 name="last_name"
-                placeholder="address.last_name_optional"
+                placeholder="Last name (optional)"
                 type="text"
                 value="Doe"
               />
@@ -149,7 +149,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField13"
                 name="business_name"
-                placeholder="address.business_name_optional"
+                placeholder="Company (optional)"
                 type="text"
                 value="Bold Commerce"
               />
@@ -169,7 +169,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField14"
                 name="address_line_1"
-                placeholder="address.address_line_1_optional"
+                placeholder="Address (optional)"
                 type="text"
                 value="123 Fake Street"
               />
@@ -185,7 +185,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField15"
                 name="address_line_2"
-                placeholder="address.address_line_2"
+                placeholder="Apt, suite, etc."
                 type="text"
                 value="Unit 12"
               />
@@ -205,7 +205,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField16"
                 name="city"
-                placeholder="address.city_optional"
+                placeholder="City (optional)"
                 type="text"
                 value="Winnipeg"
               />
@@ -229,7 +229,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  address.country_hint
+                  Select a country
                 </option>
                 <option
                   value="CA"
@@ -272,7 +272,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  address.province_hint
+                  Select a province
                 </option>
                 <option
                   value="AB"
@@ -366,7 +366,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField19"
                 name="postal"
-                placeholder="address.postal_code"
+                placeholder="Postal code"
                 type="text"
                 value="R3A1B3"
               />
@@ -386,7 +386,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with onChange 1
                 class="stx-input__input-element"
                 id="stxField20"
                 name="phone_number"
-                placeholder="address.phone_number_optional"
+                placeholder="Phone (optional)"
                 type="tel"
                 value="204-123-4567"
               />
@@ -416,7 +416,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
         for="address_0"
       >
         <p>
-          shipping.use_new_address
+          Use new address
         </p>
       </label>
     </div>
@@ -439,7 +439,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField1"
                 name="first_name"
-                placeholder="address.first_name_optional"
+                placeholder="First name (optional)"
                 type="text"
                 value="John"
               />
@@ -455,7 +455,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField2"
                 name="last_name"
-                placeholder="address.last_name_optional"
+                placeholder="Last name (optional)"
                 type="text"
                 value="Doe"
               />
@@ -475,7 +475,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField3"
                 name="business_name"
-                placeholder="address.business_name_optional"
+                placeholder="Company (optional)"
                 type="text"
                 value="Bold Commerce"
               />
@@ -495,7 +495,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField4"
                 name="address_line_1"
-                placeholder="address.address_line_1_optional"
+                placeholder="Address (optional)"
                 type="text"
                 value="123 Fake Street"
               />
@@ -511,7 +511,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField5"
                 name="address_line_2"
-                placeholder="address.address_line_2"
+                placeholder="Apt, suite, etc."
                 type="text"
                 value="Unit 12"
               />
@@ -531,7 +531,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField6"
                 name="city"
-                placeholder="address.city_optional"
+                placeholder="City (optional)"
                 type="text"
                 value="Winnipeg"
               />
@@ -555,7 +555,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  address.country_hint
+                  Select a country
                 </option>
                 <option
                   value="CA"
@@ -598,7 +598,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  address.province_hint
+                  Select a province
                 </option>
                 <option
                   value="AB"
@@ -692,7 +692,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField9"
                 name="postal"
-                placeholder="address.postal_code"
+                placeholder="Postal code"
                 type="text"
                 value="R3A1B3"
               />
@@ -712,7 +712,7 @@ exports[`NewShippingAddress renders NewShippingAddress component with selected 1
                 class="stx-input__input-element"
                 id="stxField10"
                 name="phone_number"
-                placeholder="address.phone_number_optional"
+                placeholder="Phone (optional)"
                 type="tel"
                 value="204-123-4567"
               />

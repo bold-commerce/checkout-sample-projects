@@ -7,7 +7,7 @@ exports[`BackButton renders BackButton component 1`] = `
       class="back-btn"
       type="button"
     >
-      back
+      Back
     </button>
   </div>
 </DocumentFragment>

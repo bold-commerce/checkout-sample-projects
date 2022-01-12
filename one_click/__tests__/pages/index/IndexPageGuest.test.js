@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router';
 import { IndexPageGuest } from '../../../src/pages/IndexPage';
 import { render } from '@testing-library/react';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
@@ -8,7 +9,7 @@ import {
     caProvinces as MOCKprovinces
 } from '../../utils/addressHelpers';
 import { exampleShippingLines as MOCKexampleShippingLines } from '../../utils/shippingLinesHelper';
-import { BrowserRouter } from 'react-router-dom';
+import '../../../src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
@@ -81,12 +82,18 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('IndexPageGuest', () => {
   test('renders IndexPageGuest component', () => {
-    const { asFragment } = render(<BrowserRouter><IndexPageGuest show /></BrowserRouter> )
+    const { asFragment } = render(
+        <IndexPageGuest show />,
+        {wrapper: MemoryRouter}
+    );
     expect(asFragment()).toMatchSnapshot();
   })
 
   test('renders IndexPageGuest component', () => {
-    const { asFragment } = render(<BrowserRouter><IndexPageGuest show={false} /></BrowserRouter> )
+    const { asFragment } = render(
+        <IndexPageGuest show={false} />,
+        {wrapper: MemoryRouter}
+    );
     expect(asFragment()).toMatchSnapshot();
   })
 })

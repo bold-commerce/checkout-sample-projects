@@ -50,12 +50,12 @@ exports[`Inventory renders Inventory component 1`] = `
       <div
         class="Inventory__Title"
       >
-        inventory.issues
+        Inventory issues
       </div>
       <div
         class="Inventory__Description"
       >
-        inventory.issues_description
+        Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience.
       </div>
     </div>
     <div
@@ -261,7 +261,7 @@ exports[`Inventory renders Inventory component 1`] = `
         class="ReturnLink"
         href="/"
       >
-        inventory.return_to_cart
+        Return to cart
       </a>
       <button
         aria-busy="false"
@@ -271,7 +271,7 @@ exports[`Inventory renders Inventory component 1`] = `
         <span
           class="stx-button__text"
         >
-          inventory.continue
+          Continue with changes
         </span>
         <span
           class="stx-loading-spinner stx-button__spinner"

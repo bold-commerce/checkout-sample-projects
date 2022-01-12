@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { CustomerInfo } from '../../../src/components/CustomerInfo';
+import '../../../src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
   ...jest.requireActual('@boldcommerce/checkout-react-components'),

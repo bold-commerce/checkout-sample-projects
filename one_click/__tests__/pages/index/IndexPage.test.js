@@ -9,6 +9,7 @@ import {
     countries as MOCKcountries
 } from '../../utils/addressHelpers';
 import { exampleShippingLines as MOCKexampleShippingLines } from '../../utils/shippingLinesHelper';
+import '../../../src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
