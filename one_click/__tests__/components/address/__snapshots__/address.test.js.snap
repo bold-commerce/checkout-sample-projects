@@ -18,7 +18,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField1"
             name="first_name"
-            placeholder="First name (optional)"
+            placeholder="address.first_name_optional"
             type="text"
             value=""
           />
@@ -34,7 +34,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField2"
             name="last_name"
-            placeholder="Last name (optional)"
+            placeholder="address.last_name_optional"
             type="text"
             value=""
           />
@@ -54,7 +54,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField3"
             name="business_name"
-            placeholder="Company (optional)"
+            placeholder="address.business_name_optional"
             type="text"
             value=""
           />
@@ -74,7 +74,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField4"
             name="address_line_1"
-            placeholder="Address (optional)"
+            placeholder="address.address_line_1_optional"
             type="text"
             value=""
           />
@@ -90,7 +90,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField5"
             name="address_line_2"
-            placeholder="Apt, suite, etc."
+            placeholder="address.address_line_2"
             type="text"
             value=""
           />
@@ -110,7 +110,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField6"
             name="city"
-            placeholder="City (optional)"
+            placeholder="address.city_optional"
             type="text"
             value=""
           />
@@ -134,7 +134,7 @@ exports[`Address renders Address component 1`] = `
               hidden=""
               value="___PLACEHOLDER___"
             >
-              Select a country
+              address.country_hint
             </option>
             <option
               value="CA"
@@ -177,7 +177,7 @@ exports[`Address renders Address component 1`] = `
             class="stx-input__input-element"
             id="stxField8"
             name="phone_number"
-            placeholder="Phone (optional)"
+            placeholder="address.phone_number_optional"
             type="tel"
             value=""
           />
@@ -206,7 +206,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField9"
             name="first_name"
-            placeholder="First name (optional)"
+            placeholder="address.first_name_optional"
             type="text"
             value=""
           />
@@ -222,7 +222,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField10"
             name="last_name"
-            placeholder="Last name (optional)"
+            placeholder="address.last_name_optional"
             type="text"
             value=""
           />
@@ -242,7 +242,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField11"
             name="business_name"
-            placeholder="Company (optional)"
+            placeholder="address.business_name_optional"
             type="text"
             value=""
           />
@@ -262,7 +262,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField12"
             name="address_line_1"
-            placeholder="Address (optional)"
+            placeholder="address.address_line_1_optional"
             type="text"
             value=""
           />
@@ -278,7 +278,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField13"
             name="address_line_2"
-            placeholder="Apt, suite, etc."
+            placeholder="address.address_line_2"
             type="text"
             value=""
           />
@@ -298,7 +298,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField14"
             name="city"
-            placeholder="City (optional)"
+            placeholder="address.city_optional"
             type="text"
             value=""
           />
@@ -322,7 +322,7 @@ exports[`Address renders Address component with errors 1`] = `
               hidden=""
               value="___PLACEHOLDER___"
             >
-              Select a country
+              address.country_hint
             </option>
             <option
               value="CA"
@@ -365,7 +365,7 @@ exports[`Address renders Address component with errors 1`] = `
             class="stx-input__input-element"
             id="stxField16"
             name="phone_number"
-            placeholder="Phone (optional)"
+            placeholder="address.phone_number_optional"
             type="tel"
             value=""
           />
@@ -394,7 +394,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField17"
             name="first_name"
-            placeholder="First name (optional)"
+            placeholder="address.first_name_optional"
             type="text"
             value="John"
           />
@@ -410,7 +410,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField18"
             name="last_name"
-            placeholder="Last name (optional)"
+            placeholder="address.last_name_optional"
             type="text"
             value="Doe"
           />
@@ -430,7 +430,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField19"
             name="business_name"
-            placeholder="Company (optional)"
+            placeholder="address.business_name_optional"
             type="text"
             value="Bold Commerce"
           />
@@ -450,7 +450,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField20"
             name="address_line_1"
-            placeholder="Address (optional)"
+            placeholder="address.address_line_1_optional"
             type="text"
             value="123 Fake Street"
           />
@@ -466,7 +466,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField21"
             name="address_line_2"
-            placeholder="Apt, suite, etc."
+            placeholder="address.address_line_2"
             type="text"
             value="Unit 12"
           />
@@ -486,7 +486,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField22"
             name="city"
-            placeholder="City (optional)"
+            placeholder="address.city_optional"
             type="text"
             value="Winnipeg"
           />
@@ -510,7 +510,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
               hidden=""
               value="___PLACEHOLDER___"
             >
-              Select a country
+              address.country_hint
             </option>
             <option
               value="CA"
@@ -553,7 +553,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
               hidden=""
               value="___PLACEHOLDER___"
             >
-              Select a Province
+              address.province_hint
             </option>
             <option
               value="AB"
@@ -647,7 +647,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField25"
             name="postal"
-            placeholder="Postal code / ZIP"
+            placeholder="address.postal_code"
             type="text"
             value="R3A1B3"
           />
@@ -667,7 +667,7 @@ exports[`Address renders Address component with pre-filled data 1`] = `
             class="stx-input__input-element"
             id="stxField26"
             name="phone_number"
-            placeholder="Phone (optional)"
+            placeholder="address.phone_number_optional"
             type="tel"
             value="204-123-4567"
           />
@@ -696,7 +696,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField27"
             name="first_name"
-            placeholder="First name"
+            placeholder="address.first_name"
             type="text"
             value="John"
           />
@@ -712,7 +712,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField28"
             name="last_name"
-            placeholder="Last name"
+            placeholder="address.last_name"
             type="text"
             value="Doe"
           />
@@ -732,7 +732,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField29"
             name="business_name"
-            placeholder="Company"
+            placeholder="address.business_name"
             type="text"
             value="Bold Commerce"
           />
@@ -752,7 +752,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField30"
             name="address_line_1"
-            placeholder="Address"
+            placeholder="address.address_line_1"
             type="text"
             value="123 Fake Street"
           />
@@ -768,7 +768,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField31"
             name="address_line_2"
-            placeholder="Apt, suite, etc."
+            placeholder="address.address_line_2"
             type="text"
             value="Unit 12"
           />
@@ -788,7 +788,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField32"
             name="city"
-            placeholder="City (optional)"
+            placeholder="address.city_optional"
             type="text"
             value="Winnipeg"
           />
@@ -812,7 +812,7 @@ exports[`Address renders Address component with required fields 1`] = `
               hidden=""
               value="___PLACEHOLDER___"
             >
-              Select a country
+              address.country_hint
             </option>
             <option
               value="CA"
@@ -855,7 +855,7 @@ exports[`Address renders Address component with required fields 1`] = `
               hidden=""
               value="___PLACEHOLDER___"
             >
-              Select a Province
+              address.province_hint
             </option>
             <option
               value="AB"
@@ -949,7 +949,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField35"
             name="postal"
-            placeholder="Postal code / ZIP"
+            placeholder="address.postal_code"
             type="text"
             value="R3A1B3"
           />
@@ -969,7 +969,7 @@ exports[`Address renders Address component with required fields 1`] = `
             class="stx-input__input-element"
             id="stxField36"
             name="phone_number"
-            placeholder="Phone"
+            placeholder="address.phone_number"
             type="tel"
             value="204-123-4567"
           />

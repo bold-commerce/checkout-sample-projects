@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { BillingAddress } from '../../../src/components/OneClickLayout/components/BillingAddress/BillingAddress';
+import { BillingAddress } from '../../../src/components/BillingAddress/BillingAddress';
 import {
     exampleAddress as MOCKexampleAddress,
     countries as MOCKcountries,

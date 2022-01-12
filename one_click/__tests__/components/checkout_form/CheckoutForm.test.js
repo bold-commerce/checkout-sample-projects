@@ -1,5 +1,5 @@
 import React from "react";
-import CheckoutForm from '../../../src/components/OneClickLayout/components/CheckoutForm/CheckoutForm'
+import CheckoutForm from '../../../src/components/CheckoutForm/CheckoutForm'
 import { render } from '@testing-library/react';
 import { MemoryRouter } from "react-router";
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Inventory } from '../../../src/components/OneClickLayout/components/Inventory';
+import { Inventory } from '../../../src/pages/Inventory';
 import { MemoryRouter } from 'react-router';
 import { 
     exampleLineItems as MOCKexampleLineItems,

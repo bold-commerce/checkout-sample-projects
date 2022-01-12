@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { Billing } from '../../../src/components/OneClickLayout/components/Billing'
+import { Billing } from '../../../src/components/Billing'
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
 import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';

@@ -1,5 +1,5 @@
 import React from "react";
-import Card from '../../../src/components/OneClickLayout/components/Card'
+import Card from '../../../src/components/Card'
 import { render } from '@testing-library/react';
 import { MemoryRouter } from "react-router";
 

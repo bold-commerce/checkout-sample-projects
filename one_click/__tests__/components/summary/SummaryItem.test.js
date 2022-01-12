@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SummaryItem from '../../../src/components/OneClickLayout/components/Summary/SummaryItem';
+import SummaryItem from '../../../src/components/Summary/SummaryItem';
 
 describe('SummaryItem', () => {
     test('renders SummaryItem component', () => {

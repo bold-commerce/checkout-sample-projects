@@ -25,7 +25,7 @@ exports[`Discount renders Discount component closed 1`] = `
           fill="#0A75C2"
         />
       </svg>
-      Discount code
+      discount.code
     </button>
   </div>
 </DocumentFragment>
@@ -56,7 +56,7 @@ exports[`Discount renders Discount component opened 1`] = `
           fill="#0A75C2"
         />
       </svg>
-      Discount code
+      discount.code
     </button>
   </div>
 </DocumentFragment>
@@ -87,7 +87,7 @@ exports[`Discount renders Discount component opened 2`] = `
           fill="#0A75C2"
         />
       </svg>
-      Discount code
+      discount.code
     </button>
   </div>
 </DocumentFragment>

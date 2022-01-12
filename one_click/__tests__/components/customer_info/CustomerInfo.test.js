@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { CustomerInfo } from '../../../src/components/OneClickLayout/components/CustomerInfo';
+import { CustomerInfo } from '../../../src/components/CustomerInfo';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
   ...jest.requireActual('@boldcommerce/checkout-react-components'),

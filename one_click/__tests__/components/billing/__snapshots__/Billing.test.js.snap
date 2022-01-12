@@ -63,7 +63,7 @@ exports[`Billing render Billing component set to show 1`] = `
           />
         </svg>
         <h2>
-          Summary
+          summary.title
         </h2>
         <div
           class="stx-price stx-price--alight-center"
@@ -83,7 +83,7 @@ exports[`Billing render Billing component set to show 1`] = `
       <h2
         class="IndexGuest__Title"
       >
-        Payment method
+        payment.method
       </h2>
       <div
         class="Payment"
@@ -126,7 +126,7 @@ exports[`Billing render Billing component set to show 1`] = `
                     fill="#0A75C2"
                   />
                 </svg>
-                Discount code
+                discount.code
               </button>
             </div>
           </div>
@@ -142,7 +142,7 @@ exports[`Billing render Billing component set to show 1`] = `
                 <h3
                   class="Billing__Title"
                 >
-                  Billing address
+                  billing.address
                 </h3>
               </div>
               <div
@@ -173,7 +173,7 @@ exports[`Billing render Billing component set to show 1`] = `
                       class="stx-checkbox-field__label"
                       for="stxField1"
                     >
-                      Same as shipping address
+                      billing.same_as_shipping
                     </label>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ exports[`Billing render Billing component set to show 1`] = `
           <span
             class="stx-button__text"
           >
-            Complete Order
+            complete_order
           </span>
           <span
             class="stx-loading-spinner stx-button__spinner"
@@ -211,13 +211,13 @@ exports[`Billing render Billing component set to show 1`] = `
           class="link-btn"
           type="button"
         >
-          Back to shipping
+          back_to_shipping
         </button>
       </div>
       <div
         class="IndexGuest__Rights"
       >
-        All right reserved TestSite
+        all_rights_reserved TestSite
       </div>
     </div>
   </div>
@@ -287,7 +287,7 @@ exports[`Billing render Billing component with another component set to show 1`]
           />
         </svg>
         <h2>
-          Summary
+          summary.title
         </h2>
         <div
           class="stx-price stx-price--alight-center"
@@ -307,7 +307,7 @@ exports[`Billing render Billing component with another component set to show 1`]
       <h2
         class="IndexGuest__Title"
       >
-        Payment method
+        payment.method
       </h2>
       <div
         class="Payment"
@@ -350,7 +350,7 @@ exports[`Billing render Billing component with another component set to show 1`]
                     fill="#0A75C2"
                   />
                 </svg>
-                Discount code
+                discount.code
               </button>
             </div>
           </div>
@@ -366,7 +366,7 @@ exports[`Billing render Billing component with another component set to show 1`]
                 <h3
                   class="Billing__Title"
                 >
-                  Billing address
+                  billing.address
                 </h3>
               </div>
               <div
@@ -397,7 +397,7 @@ exports[`Billing render Billing component with another component set to show 1`]
                       class="stx-checkbox-field__label"
                       for="stxField3"
                     >
-                      Same as shipping address
+                      billing.same_as_shipping
                     </label>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ exports[`Billing render Billing component with another component set to show 1`]
           <span
             class="stx-button__text"
           >
-            Complete Order
+            complete_order
           </span>
           <span
             class="stx-loading-spinner stx-button__spinner"
@@ -435,13 +435,13 @@ exports[`Billing render Billing component with another component set to show 1`]
           class="link-btn"
           type="button"
         >
-          Back to shipping
+          back_to_shipping
         </button>
       </div>
       <div
         class="IndexGuest__Rights"
       >
-        All right reserved TestSite
+        all_rights_reserved TestSite
       </div>
     </div>
   </div>
@@ -511,7 +511,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
           />
         </svg>
         <h2>
-          Summary
+          summary.title
         </h2>
         <div
           class="stx-price stx-price--alight-center"
@@ -531,7 +531,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
       <h2
         class="IndexGuest__Title"
       >
-        Payment method
+        payment.method
       </h2>
       <div
         class="Payment"
@@ -574,7 +574,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
                     fill="#0A75C2"
                   />
                 </svg>
-                Discount code
+                discount.code
               </button>
             </div>
           </div>
@@ -590,7 +590,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
                 <h3
                   class="Billing__Title"
                 >
-                  Billing address
+                  billing.address
                 </h3>
               </div>
               <div
@@ -621,7 +621,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
                       class="stx-checkbox-field__label"
                       for="stxField2"
                     >
-                      Same as shipping address
+                      billing.same_as_shipping
                     </label>
                   </div>
                 </div>
@@ -645,7 +645,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
           <span
             class="stx-button__text"
           >
-            Complete Order
+            complete_order
           </span>
           <span
             class="stx-loading-spinner stx-button__spinner"
@@ -659,13 +659,13 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
           class="link-btn"
           type="button"
         >
-          Back to shipping
+          back_to_shipping
         </button>
       </div>
       <div
         class="IndexGuest__Rights"
       >
-        All right reserved TestSite
+        all_rights_reserved TestSite
       </div>
     </div>
   </div>

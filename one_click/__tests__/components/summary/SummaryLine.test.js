@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SummaryLine from '../../../src/components/OneClickLayout/components/Summary/SummaryLine';
-import SummaryItem from '../../../src/components/OneClickLayout/components/Summary/SummaryItem'
+import SummaryLine from '../../../src/components/Summary/SummaryLine';
+import SummaryItem from '../../../src/components/Summary/SummaryItem'
 
 describe('SummaryLine', () => {
     test('renders SummaryLine component without items', () => {

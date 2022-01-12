@@ -1,5 +1,5 @@
 import React from 'react';
-import Address from '../../../src/components/OneClickLayout/components/Address/Address'
+import Address from '../../../src/components/Address/Address'
 import { render } from '@testing-library/react';
 import {
   addressErrors, caProvinces, countries, emptyAddress, exampleAddress,

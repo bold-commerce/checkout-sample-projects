@@ -43,7 +43,7 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
                 fill="#0A75C2"
               />
             </svg>
-            Discount code
+            discount.code
           </button>
         </div>
       </div>
@@ -59,7 +59,7 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
             <h3
               class="Billing__Title"
             >
-              Billing address
+              billing.address
             </h3>
           </div>
           <div
@@ -90,7 +90,7 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
                   class="stx-checkbox-field__label"
                   for="stxField1"
                 >
-                  Same as shipping address
+                  billing.same_as_shipping
                 </label>
               </div>
             </div>
@@ -145,7 +145,7 @@ exports[`Payment renders PaymentMethod component without showing payment method 
                 fill="#0A75C2"
               />
             </svg>
-            Discount code
+            discount.code
           </button>
         </div>
       </div>
@@ -161,7 +161,7 @@ exports[`Payment renders PaymentMethod component without showing payment method 
             <h3
               class="Billing__Title"
             >
-              Billing address
+              billing.address
             </h3>
           </div>
           <div
@@ -192,7 +192,7 @@ exports[`Payment renders PaymentMethod component without showing payment method 
                   class="stx-checkbox-field__label"
                   for="stxField2"
                 >
-                  Same as shipping address
+                  billing.same_as_shipping
                 </label>
               </div>
             </div>

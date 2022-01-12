@@ -11,7 +11,7 @@ exports[`BillingAddress render BillingAddress component with differnt billing ad
       <h3
         class="Billing__Title"
       >
-        Billing address
+        billing.address
       </h3>
     </div>
     <div
@@ -42,7 +42,7 @@ exports[`BillingAddress render BillingAddress component with differnt billing ad
             class="stx-checkbox-field__label"
             for="stxField12"
           >
-            Same as shipping address
+            billing.same_as_shipping
           </label>
         </div>
       </div>
@@ -62,7 +62,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
       <h3
         class="Billing__Title"
       >
-        Billing address
+        billing.address
       </h3>
     </div>
     <div
@@ -92,7 +92,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
             class="stx-checkbox-field__label"
             for="stxField1"
           >
-            Same as shipping address
+            billing.same_as_shipping
           </label>
         </div>
       </div>
@@ -112,7 +112,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField2"
                 name="first_name"
-                placeholder="First name (optional)"
+                placeholder="address.first_name_optional"
                 type="text"
                 value="John"
               />
@@ -128,7 +128,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField3"
                 name="last_name"
-                placeholder="Last name (optional)"
+                placeholder="address.last_name_optional"
                 type="text"
                 value="Doe"
               />
@@ -148,7 +148,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField4"
                 name="business_name"
-                placeholder="Company (optional)"
+                placeholder="address.business_name_optional"
                 type="text"
                 value="Bold Commerce"
               />
@@ -168,7 +168,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField5"
                 name="address_line_1"
-                placeholder="Address (optional)"
+                placeholder="address.address_line_1_optional"
                 type="text"
                 value="123 Fake Street"
               />
@@ -184,7 +184,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField6"
                 name="address_line_2"
-                placeholder="Apt, suite, etc."
+                placeholder="address.address_line_2"
                 type="text"
                 value="Unit 12"
               />
@@ -204,7 +204,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField7"
                 name="city"
-                placeholder="City (optional)"
+                placeholder="address.city_optional"
                 type="text"
                 value="Winnipeg"
               />
@@ -228,7 +228,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  Select a country
+                  address.country_hint
                 </option>
                 <option
                   value="CA"
@@ -271,7 +271,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                   hidden=""
                   value="___PLACEHOLDER___"
                 >
-                  Select a province
+                  address.province_hint
                 </option>
                 <option
                   value="AB"
@@ -365,7 +365,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField10"
                 name="postal"
-                placeholder="Postal code / ZIP"
+                placeholder="address.postal_code"
                 type="text"
                 value="R3A1B3"
               />
@@ -385,7 +385,7 @@ exports[`BillingAddress render BillingAddress component with the same billing ad
                 class="stx-input__input-element"
                 id="stxField11"
                 name="phone_number"
-                placeholder="Phone (optional)"
+                placeholder="address.phone_number_optional"
                 type="tel"
                 value="204-123-4567"
               />

@@ -8,16 +8,16 @@ exports[`CustomerInfo renders CustomerInfo component 1`] = `
     <h2
       class="IndexGuest__Title"
     >
-      Customer Info
+      customer.info
     </h2>
     <div
       class="IndexGuest__Login"
     >
-      Already have an account? 
+      customer.already_have_account
       <a
         href="/"
       >
-        Log in
+        customer.login
       </a>
     </div>
     <div
@@ -30,7 +30,7 @@ exports[`CustomerInfo renders CustomerInfo component 1`] = `
           class="stx-input__input-element"
           id="stxField1"
           name="email_address"
-          placeholder="Email address"
+          placeholder="customer.email"
           type="email"
         />
       </div>
@@ -57,7 +57,7 @@ exports[`CustomerInfo renders CustomerInfo component 1`] = `
           class="stx-checkbox-field__label"
           for="stxField2"
         >
-          Subscribe to our newsletter
+          customer.subscribe
         </label>
       </div>
     </div>

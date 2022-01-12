@@ -296,7 +296,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             <button
               type="button"
             >
-              Summary
+              summary.title
             </button>
           </div>
           <div
@@ -342,7 +342,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
           <div
             class="Card__Action"
           >
-            Not you?
+            customer.not_you
           </div>
           <div
             class="Card__Content"
@@ -359,7 +359,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             <button
               type="button"
             >
-              Shipping
+              shipping.title
             </button>
           </div>
           <div
@@ -405,7 +405,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             class="Card__Title"
           >
             <button>
-              Payment
+              payment.title
             </button>
           </div>
           <div
@@ -422,7 +422,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
           >
             <div>
               <div>
-                Billing address same as shipping address
+                payment.billing_same_as_shipping
               </div>
             </div>
           </div>
@@ -468,7 +468,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                       fill="#0A75C2"
                     />
                   </svg>
-                  Discount code
+                  discount.code
                 </button>
               </div>
             </div>
@@ -484,7 +484,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                   <h3
                     class="Billing__Title"
                   >
-                    Billing address
+                    billing.address
                   </h3>
                 </div>
                 <div
@@ -515,7 +515,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                         class="stx-checkbox-field__label"
                         for="stxField1"
                       >
-                        Same as shipping address
+                        billing.same_as_shipping
                       </label>
                     </div>
                   </div>
@@ -535,7 +535,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             <span
               class="stx-button__text"
             >
-              Complete Order
+              complete_order
             </span>
             <span
               class="stx-loading-spinner stx-button__spinner"
@@ -590,7 +590,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             class="back-btn"
             type="button"
           >
-            Back
+            back
           </button>
         </div>
         <section
@@ -599,7 +599,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
           <h3
             class="FieldSet__Heading"
           >
-            Shipping address
+            shipping.address
           </h3>
           <ul
             class="AddressList"
@@ -694,7 +694,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                   for="address_0"
                 >
                   <p>
-                    Use new address
+                    shipping.use_new_address
                   </p>
                 </label>
               </div>
@@ -717,7 +717,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField2"
                           name="first_name"
-                          placeholder="First name (optional)"
+                          placeholder="address.first_name_optional"
                           type="text"
                           value="John"
                         />
@@ -733,7 +733,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField3"
                           name="last_name"
-                          placeholder="Last name (optional)"
+                          placeholder="address.last_name_optional"
                           type="text"
                           value="Doe"
                         />
@@ -753,7 +753,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField4"
                           name="business_name"
-                          placeholder="Company (optional)"
+                          placeholder="address.business_name_optional"
                           type="text"
                           value="Bold Commerce"
                         />
@@ -773,7 +773,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField5"
                           name="address_line_1"
-                          placeholder="Address (optional)"
+                          placeholder="address.address_line_1_optional"
                           type="text"
                           value="123 Fake Street"
                         />
@@ -789,7 +789,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField6"
                           name="address_line_2"
-                          placeholder="Apt, suite, etc."
+                          placeholder="address.address_line_2"
                           type="text"
                           value="Unit 12"
                         />
@@ -809,7 +809,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField7"
                           name="city"
-                          placeholder="City (optional)"
+                          placeholder="address.city_optional"
                           type="text"
                           value="Winnipeg"
                         />
@@ -833,7 +833,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                             hidden=""
                             value="___PLACEHOLDER___"
                           >
-                            Select a country
+                            address.country_hint
                           </option>
                           <option
                             value="CA"
@@ -876,7 +876,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                             hidden=""
                             value="___PLACEHOLDER___"
                           >
-                            Select a province
+                            address.province_hint
                           </option>
                           <option
                             value="AB"
@@ -970,7 +970,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField10"
                           name="postal"
-                          placeholder="Postal code / ZIP"
+                          placeholder="address.postal_code"
                           type="text"
                           value="R3A1B3"
                         />
@@ -990,7 +990,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-input__input-element"
                           id="stxField11"
                           name="phone_number"
-                          placeholder="Phone (optional)"
+                          placeholder="address.phone_number_optional"
                           type="tel"
                           value="204-123-4567"
                         />
@@ -1011,14 +1011,14 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             <h3
               class="FieldSet__Heading"
             >
-              Shipping method
+              shipping.method
             </h3>
           </div>
           <div
             class="FieldSet__Content"
           >
             <p>
-              To see shipping options complete filling in your address above
+              shipping.options_description
             </p>
           </div>
         </section>
@@ -1032,7 +1032,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
           <h1
             class="Header__Title"
           >
-            Summary
+            summary.title
           </h1>
           <button
             aria-label="Close"
@@ -1070,7 +1070,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             class="back-btn"
             type="button"
           >
-            Back
+            back
           </button>
         </div>
         <section
@@ -1093,7 +1093,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                   <div
                     class="summary-line-icon"
                   />
-                  Subtotal
+                  summary.subtotal
                 </div>
                 <div
                   class="stx-price summary-line-value stx-price--alight-center"
@@ -1115,7 +1115,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
               >
                 <button
                   class="summary-btn"
-                  id="summary-line-Shipping"
+                  id="summary-line-shipping.title"
                 >
                   <div
                     class="Accordion-title summary-line-title"
@@ -1143,7 +1143,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                         </g>
                       </svg>
                     </div>
-                    Shipping
+                    shipping.title
                   </div>
                   <div
                     class="stx-price summary-line-value stx-price--alight-center"
@@ -1158,10 +1158,10 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                 </button>
               </div>
               <div
-                aria-labelledby="summary-line-Shipping"
+                aria-labelledby="summary-line-shipping.title"
                 class="summary-line-content"
                 hidden=""
-                id="summary-line-Shipping-div"
+                id="summary-line-shipping.title-div"
                 role="region"
               >
                 <div
@@ -1197,7 +1197,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                   <div
                     class="summary-line-icon"
                   />
-                  Discount
+                  discount.title
                 </div>
               </div>
             </div>
@@ -1209,7 +1209,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
               >
                 <button
                   class="summary-btn"
-                  id="summary-line-Taxes"
+                  id="summary-line-summary.taxes"
                 >
                   <div
                     class="Accordion-title summary-line-title"
@@ -1237,7 +1237,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                         </g>
                       </svg>
                     </div>
-                    Taxes
+                    summary.taxes
                   </div>
                   <div
                     class="stx-price summary-line-value stx-price--alight-center"
@@ -1252,10 +1252,10 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                 </button>
               </div>
               <div
-                aria-labelledby="summary-line-Taxes"
+                aria-labelledby="summary-line-summary.taxes"
                 class="summary-line-content"
                 hidden=""
-                id="summary-line-Taxes-div"
+                id="summary-line-summary.taxes-div"
                 role="region"
               >
                 <div
@@ -1303,7 +1303,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             class="Summary__Total SummaryBlock"
           >
             <div>
-              Total
+              summary.total
             </div>
             <div
               class="stx-price summary-total-price stx-price--alight-center"
@@ -1328,7 +1328,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
             <span
               class="stx-button__text"
             >
-              Complete Order
+              complete_order
             </span>
             <span
               class="stx-loading-spinner stx-button__spinner"
@@ -1397,7 +1397,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
               />
             </svg>
             <h2>
-              Summary
+              summary.title
             </h2>
             <div
               class="stx-price stx-price--alight-center"
@@ -1417,7 +1417,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
           <h2
             class="IndexGuest__Title"
           >
-            Payment method
+            payment.method
           </h2>
           <div
             class="Payment"
@@ -1460,7 +1460,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                         fill="#0A75C2"
                       />
                     </svg>
-                    Discount code
+                    discount.code
                   </button>
                 </div>
               </div>
@@ -1476,7 +1476,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                     <h3
                       class="Billing__Title"
                     >
-                      Billing address
+                      billing.address
                     </h3>
                   </div>
                   <div
@@ -1507,7 +1507,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
                           class="stx-checkbox-field__label"
                           for="stxField12"
                         >
-                          Same as shipping address
+                          billing.same_as_shipping
                         </label>
                       </div>
                     </div>
@@ -1531,7 +1531,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
               <span
                 class="stx-button__text"
               >
-                Complete Order
+                complete_order
               </span>
               <span
                 class="stx-loading-spinner stx-button__spinner"
@@ -1545,13 +1545,13 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
               class="link-btn"
               type="button"
             >
-              Back to shipping
+              back_to_shipping
             </button>
           </div>
           <div
             class="IndexGuest__Rights"
           >
-            All right reserved TestSite
+            all_rights_reserved TestSite
           </div>
         </div>
       </div>
@@ -1566,7 +1566,7 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
           <span
             class="stx-button__text"
           >
-            Complete Order
+            complete_order
           </span>
           <span
             class="stx-loading-spinner stx-button__spinner"

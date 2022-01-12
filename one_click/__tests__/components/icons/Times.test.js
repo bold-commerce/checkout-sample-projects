@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Times } from "../../../src/components/OneClickLayout/components/Icons";
+import { Times } from "../../../src/components/Icons";
 
 describe('Times', () => {
   test('renders Times icon', () => {

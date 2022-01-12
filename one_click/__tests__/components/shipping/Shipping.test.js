@@ -1,5 +1,5 @@
 import React from 'react';
-import Shipping from '../../../src/components/OneClickLayout/components/Shipping/Shipping';
+import Shipping from '../../../src/components/Shipping/Shipping';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';

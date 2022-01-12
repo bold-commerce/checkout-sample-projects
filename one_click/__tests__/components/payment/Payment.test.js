@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { PaymentMethod } from '../../../src/components/OneClickLayout/components/Payment'
+import { PaymentMethod } from '../../../src/components/Payment'
 import { MemoryRouter } from "react-router";
 import { exampleShippingState as  MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
 import { 

@@ -289,7 +289,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
         <button
           type="button"
         >
-          Summary
+          summary.title
         </button>
       </div>
       <div
@@ -335,7 +335,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
       <div
         class="Card__Action"
       >
-        Not you?
+        customer.not_you
       </div>
       <div
         class="Card__Content"
@@ -352,7 +352,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
         <button
           type="button"
         >
-          Shipping
+          shipping.title
         </button>
       </div>
       <div
@@ -398,7 +398,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
         class="Card__Title"
       >
         <button>
-          Payment
+          payment.title
         </button>
       </div>
       <div
@@ -415,7 +415,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
       >
         <div>
           <div>
-            Billing address same as shipping address
+            payment.billing_same_as_shipping
           </div>
         </div>
       </div>
@@ -461,7 +461,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
                   fill="#0A75C2"
                 />
               </svg>
-              Discount code
+              discount.code
             </button>
           </div>
         </div>
@@ -477,7 +477,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
               <h3
                 class="Billing__Title"
               >
-                Billing address
+                billing.address
               </h3>
             </div>
             <div
@@ -508,7 +508,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
                     class="stx-checkbox-field__label"
                     for="stxField1"
                   >
-                    Same as shipping address
+                    billing.same_as_shipping
                   </label>
                 </div>
               </div>
@@ -528,7 +528,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
         <span
           class="stx-button__text"
         >
-          Complete Order
+          complete_order
         </span>
         <span
           class="stx-loading-spinner stx-button__spinner"

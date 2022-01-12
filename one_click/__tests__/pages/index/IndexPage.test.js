@@ -1,6 +1,7 @@
 import React from 'react';
-import IndexGuest from '../../../src/components/OneClickLayout/components/Index/IndexPage';
+import { IndexPage } from '../../../src/pages/IndexPage';
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKexampleApplicationState } from '../../utils/applicationStateHelper';
 import {
@@ -66,14 +67,12 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     })
 }));
 
-describe('IndexGuest', () => {
-  test('renders IndexGuest component', () => {
-    const { asFragment } = render(<IndexGuest show /> )
-    expect(asFragment()).toMatchSnapshot();
-  })
-
-  test('renders IndexGuest component', () => {
-    const { asFragment } = render(<IndexGuest show={false} /> )
-    expect(asFragment()).toMatchSnapshot();
-  })
-})
+describe('IndexPage', () => {
+    test('renders IndexPage component', () => {
+        const { asFragment } = render(
+            <IndexPage />,
+            {wrapper: MemoryRouter}
+        );
+        expect(asFragment()).toMatchSnapshot();
+    });
+});

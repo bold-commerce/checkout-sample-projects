@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Summary } from '../../../src/components/OneClickLayout/components/Summary'
+import { Summary } from '../../../src/components/Summary'
 import { MemoryRouter } from 'react-router';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
