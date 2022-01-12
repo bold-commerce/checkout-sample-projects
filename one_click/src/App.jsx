@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
-import { OneClickLayout } from './components';
-import { AppContext } from './components/OneClickLayout/context/AppContext';
+import { OneClickLayout } from './layouts';
+import { AppContext } from './context/AppContext';
 import { useTranslation } from 'react-i18next';
 
 const App = () => {
