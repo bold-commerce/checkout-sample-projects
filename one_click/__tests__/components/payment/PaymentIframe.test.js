@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { PaymentIframe } from '../../../client/components/OneClickLayout/components/Payment'
+import { PaymentIframe } from '../../../src/components/OneClickLayout/components/Payment'
 import { MemoryRouter } from "react-router";
 import {
     caProvinces as MOCKprovinces,

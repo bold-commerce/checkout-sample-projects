@@ -1,5 +1,5 @@
 import React from 'react';
-import ShippingAddressList from '../../../client/components/OneClickLayout/components/Shipping/ShippingAddressList';
+import ShippingAddressList from '../../../src/components/OneClickLayout/components/Shipping/ShippingAddressList';
 import { render } from '@testing-library/react';
 import { exampleShippingState as MOCKexampleShippingState } from '../../utils/shippingLinesHelper';
 import {

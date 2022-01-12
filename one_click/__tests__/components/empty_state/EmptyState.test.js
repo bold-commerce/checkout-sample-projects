@@ -1,5 +1,5 @@
 import React from 'react';
-import EmptyState from '../../../client/components/OneClickLayout/components/EmptyState/EmptyState';
+import EmptyState from '../../../src/components/OneClickLayout/components/EmptyState/EmptyState';
 import { render } from '@testing-library/react';
 
 describe('EmptyState', () => {

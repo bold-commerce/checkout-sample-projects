@@ -1,5 +1,5 @@
 import React from 'react';
-import LoadingState from '../../../client/components/OneClickLayout/components/LoadingState/LoadingState';
+import LoadingState from '../../../src/components/OneClickLayout/components/LoadingState/LoadingState';
 import { render } from'@testing-library/react';
 
 describe('LoadingState', () => {

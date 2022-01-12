@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { CheckoutButton } from '../../../client/components/OneClickLayout/components/CheckoutButton'
+import { CheckoutButton } from '../../../src/components/OneClickLayout/components/CheckoutButton'
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKapplicationState } from '../../utils/applicationStateHelper';
 

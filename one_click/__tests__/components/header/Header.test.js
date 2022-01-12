@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { Header } from "../../../client/components/OneClickLayout/components/Header";
+import { Header } from "../../../src/components/OneClickLayout/components/Header";
 
 jest.mock('react', () => ({
   ...jest.requireActual('react'),

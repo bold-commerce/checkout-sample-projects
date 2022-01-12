@@ -1,5 +1,5 @@
 import React from 'react';
-import Confirmation from '../../../client/components/OneClickLayout/components/Confirmation/Confirmation';
+import Confirmation from '../../../src/components/OneClickLayout/components/Confirmation/Confirmation';
 import { testApplicationState as MOCKtestApplicationState } from '../../utils/applicationStateHelper';
 import { MemoryRouter } from 'react-router';
 import { render } from '@testing-library/react';

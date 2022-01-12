@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ShippingLines } from '../../../client/components/OneClickLayout/components/ShippingLines/ShippingLines';
+import { ShippingLines } from '../../../src/components/OneClickLayout/components/ShippingLines/ShippingLines';
 import { exampleShippingLines } from '../../utils/shippingLinesHelper';
 
 describe('ShippingLines', () => {

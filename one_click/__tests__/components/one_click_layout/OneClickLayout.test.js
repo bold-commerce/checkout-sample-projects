@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from '@testing-library/react';
-import { OneClickLayout } from '../../../client/components/OneClickLayout';
+import { OneClickLayout } from '../../../src/components/OneClickLayout';
 import ResizeObserver from "../../../__mocks__/ResizeObserver";
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKexampleApplicationState } from '../../utils/applicationStateHelper';

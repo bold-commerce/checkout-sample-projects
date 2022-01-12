@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import LoadingState from '../../../client/components/OneClickLayout/components/LoadingState/LoadingState';
-import RadioItem from '../../../client/components/OneClickLayout/components/RadioItem/RadioItem';
+import LoadingState from '../../../src/components/OneClickLayout/components/LoadingState/LoadingState';
+import RadioItem from '../../../src/components/OneClickLayout/components/RadioItem/RadioItem';
 
 describe('RadioItem', () => {
     test('renders RadioItem component', () => {

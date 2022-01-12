@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { LineItems } from '../../../client/components/OneClickLayout/components/LineItems/LineItems'
+import { LineItems } from '../../../src/components/OneClickLayout/components/LineItems/LineItems'
 import { exampleLineItems } from '../../utils/lineItemHelpers';
 
 describe('LineItems', () => {

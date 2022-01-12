@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from '@testing-library/react';
-import { Discount } from '../../../client/components/OneClickLayout/components/Discount/Discount';
+import { Discount } from '../../../src/components/OneClickLayout/components/Discount/Discount';
 
 describe('Discount', () => {
     test('renders Discount component closed', () => {

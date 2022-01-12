@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Product from '../../../client/components/OneClickLayout/components/Product/Product';
+import Product from '../../../src/components/OneClickLayout/components/Product/Product';
 
 describe('Product', () => {
     test('renders Product component', () => {

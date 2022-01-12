@@ -3,7 +3,7 @@ const { defaults } = require('jest-config');
 module.exports = {
   testEnvironment: 'jsdom',
   roots: [
-    '<rootDir>/client/',
+    '<rootDir>/src/',
     '<rootDir>/__tests__',
   ],
   automock: false,

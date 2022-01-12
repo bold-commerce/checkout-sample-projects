@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexGuest from '../../../client/components/OneClickLayout/components/Index/IndexPage';
+import IndexGuest from '../../../src/components/OneClickLayout/components/Index/IndexPage';
 import { render } from '@testing-library/react';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
 import { testApplicationState as MOCKexampleApplicationState } from '../../utils/applicationStateHelper';

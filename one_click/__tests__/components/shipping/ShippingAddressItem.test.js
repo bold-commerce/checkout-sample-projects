@@ -1,5 +1,5 @@
 import React from 'react';
-import ShippingAddressItem from '../../../client/components/OneClickLayout/components/Shipping/ShippingAddressItem';
+import ShippingAddressItem from '../../../src/components/OneClickLayout/components/Shipping/ShippingAddressItem';
 import { render } from '@testing-library/react';
 import { exampleAddress } from '../../utils/addressHelpers';
 

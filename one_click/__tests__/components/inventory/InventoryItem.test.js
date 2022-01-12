@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { InventoryItem } from '../../../client/components/OneClickLayout/components/Inventory';
+import { InventoryItem } from '../../../src/components/OneClickLayout/components/Inventory';
 import { 
     exampleLineItems as MOCKexampleLineItems,
     exampleInventory as MOCKinventory

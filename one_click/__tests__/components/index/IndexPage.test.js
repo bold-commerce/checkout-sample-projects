@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexPage from '../../../client/components/OneClickLayout/components/Index/IndexPage';
+import IndexPage from '../../../src/components/OneClickLayout/components/Index/IndexPage';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import { exampleLineItems as MOCKexampleLineItems } from '../../utils/lineItemHelpers';
