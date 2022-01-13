@@ -7,7 +7,7 @@ const useInventory = () => {
           return item.product_data.product_id;
         })
         
-        const response = await fetch(`/inventory?ids=${lineIds.join(',')}`);
+        const response = await fetch(`${process.env.INVENTORY_URL}?ids=${lineIds.join(',')}`);
         const inventory = await response.json();
         let inventoryIssues = null;
 
