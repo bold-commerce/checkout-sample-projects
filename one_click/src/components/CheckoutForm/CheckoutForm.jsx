@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState }  from 'react';
-import { Route, Switch } from "react-router-dom";
-import { useLocation, useHistory } from 'react-router';
+import { Route, Routes } from "react-router-dom";
+import { useLocation, useNavigate } from 'react-router';
 import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
@@ -22,7 +22,7 @@ const CheckoutForm = () => {
   const location = useLocation();
   const checkInventory = useInventory();
   const logError = useErrorLogging();
-  const history = useHistory();
+  const navigate = useNavigate();
   const [openSection, setOpenSection] = useState('/');
   const [loading, setLoading] = React.useState(true); // calling React.useState to be able to mock with snapshot tests.
   const [height, setHeight] = useState(null);
@@ -41,7 +41,7 @@ const CheckoutForm = () => {
     try{
       const inventory = await checkInventory(lineItems);
       if (inventory) {
-        history.push('/inventory', inventory)
+        navigate('/inventory', inventory)
       }
     } catch (e) {
       logError('check_inventory', e);
@@ -59,9 +59,9 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     if (orderStatus === 'processing') {
-      history.push('/processing');
+      navigate('/processing');
     } else if (orderStatus === 'completed') {
-      history.push(`/confirmation?public_order_id=${state.publicOrderId}`);
+      navigate(`/confirmation?public_order_id=${state.publicOrderId}`);
     }
   }, [orderStatus]);
 
@@ -115,23 +115,16 @@ const CheckoutForm = () => {
     <div className="Checkout__Form" style={style}>
       { (loading && <LoadingState/>) || 
         <>
-          <Switch location={location}>
-            <Route exact path="/processing" >
-              <ProcessingOrder ref={processingEl} />
-            </Route>
-            <Route exact path="/confirmation">
-              <Confirmation ref={confirmationEl}/>
-            </Route>
-            <Route exact path="/inventory">
-              <Inventory ref={inventoryEl}/>
-            </Route>
-            <Route exact path="/">
-              { customer.platform_id ?
-                <IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/> :
-                <IndexPageGuest ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>
-              }
-            </Route>
-          </Switch>
+          <Routes location={location}>
+            <Route exact path="/processing" element={<ProcessingOrder ref={processingEl} />} />
+            <Route exact path="/confirmation" element={<Confirmation ref={confirmationEl}/>} />
+            <Route exact path="/inventory" element={<Inventory ref={inventoryEl}/>} />
+            {
+              customer.platform_id ?
+              <Route exact path="/" element={<IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>} /> :
+              <Route exact path="/" element={<IndexPageGuest ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>} />
+            }
+          </Routes>
           { renderSidebar ? 
             <>
               <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />

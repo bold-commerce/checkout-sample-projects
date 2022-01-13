@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {  useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { Button, Message } from '@boldcommerce/stacks-ui';
 import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
 import { useAnalytics, useErrorLogging, useInventory, useMountedState } from '../../hooks';
@@ -35,7 +35,7 @@ const CheckoutButtonContainer = ({ className }, ref) => {
   const { processPaymentIframe } = usePaymentIframe();
   const checkInventory = useInventory();
   const { data: lineItems } = useLineItems();
-  const history = useHistory();
+  const navigate = useNavigate();
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
   const isMounted = useMountedState();
@@ -58,7 +58,7 @@ const CheckoutButtonContainer = ({ className }, ref) => {
           setLoading(false);
       } else {
         setLoading(false);
-        history.push('/inventory', inventoryIssues);
+        navigate('/inventory', inventoryIssues);
       }
     } catch(e) {  
       if(isMounted())

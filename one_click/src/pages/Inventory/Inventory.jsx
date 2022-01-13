@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { InventoryItem } from "../../components/InventoryItem";
-import { useHistory, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 import { Button } from "@boldcommerce/stacks-ui"
 import { Link } from "react-router-dom";
 import { useLineItems } from "@boldcommerce/checkout-react-components";
@@ -15,7 +15,7 @@ export const Inventory = ({}, ref) => {
     const [loading, setLoading] = useState(false);
     const { websiteName } = useContext(AppContext);
     const handleVariants = useVariants();
-    const history = useHistory();
+    const navigate = useNavigate();
     const location = useLocation();
     const inventory = location.state;
     const { t } = useTranslation();
@@ -55,7 +55,7 @@ export const Inventory = ({}, ref) => {
 
         await Promise.all(results);
         setLoading(false);
-        history.push("/");
+        navigate("/");
     }
 
     return (
