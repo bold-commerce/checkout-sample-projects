@@ -1,11 +1,11 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useCallback } from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import { Link } from 'react-router-dom';
 import { useAnalytics } from '../../hooks';
 import { AppContext } from '../../context/AppContext';
 import { Header } from '../../components/Header';
 import './Confirmation.css'
 import { useTranslation } from 'react-i18next';
+import { Button } from '@boldcommerce/stacks-ui';
 
 const Confirmation = ({}, ref) => {
     const { state } = useCheckoutStore();
@@ -16,6 +16,11 @@ const Confirmation = ({}, ref) => {
 
     useEffect(() => {
       trackEvent('thank_you');
+    }, []);
+
+    const continueShopping = useCallback(() => {
+        const event = new CustomEvent("oneClick:close");
+        window.dispatchEvent(event);
     }, []);
 
     return(
@@ -57,9 +62,9 @@ const Confirmation = ({}, ref) => {
                 <p>{t('confirmation.need_help')}<a href='#'>{t('confirmation.contact_us')}</a></p> { /* TODO: get correct contact us link */}
             </div>
             <div className="confirmation-continue">
-                <Link className='confirmation-continue-button stx-button' to='/' >
+                <Button className='confirmation-continue-button' onClick={continueShopping} > 
                     {t('confirmation.continue_shopping')}
-                </Link>
+                </Button>
             </div>
         </div>
     );
