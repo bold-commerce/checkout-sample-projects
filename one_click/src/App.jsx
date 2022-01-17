@@ -3,13 +3,14 @@ import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
 import { OneClickLayout } from './layouts';
 import { AppContext } from './context/AppContext';
 import { useTranslation } from 'react-i18next';
+import './App.css';
 
 const App = () => {
   const { t } = useTranslation();
   const websiteName = t("website_name");
-  const [showCheckout, setShowCheckout] = useState(true);
 
-  return !showCheckout ? null : (
+  return (
+  <div className="OneClick--Modal">
     <CheckoutProvider
       applicationState={window.checkout.applicationState}
       initialData={window.checkout.initialData}
@@ -18,10 +19,11 @@ const App = () => {
       storeIdentifier={window.checkout.storeIdentifier}
       apiBase="https://api.boldcommerce.com/checkout/storefront"
     >
-      <AppContext.Provider value={{websiteName, setShowCheckout}}>
+      <AppContext.Provider value={{websiteName}}>
         <OneClickLayout /> 
       </AppContext.Provider>
     </CheckoutProvider>
+    </div>
   );
   
 };
