@@ -30,7 +30,7 @@ const CustomerInfo = () => {
   return (
     <div className="IndexGuest__Customer">
       <h2 className="IndexGuest__Title">{t('customer.info')}</h2>
-      <div className="IndexGuest__Login">{t('customer.already_have_account')}<Link to='#'>{t('customer.login')}</Link></div>
+      <div className="IndexGuest__Login">{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
       <InputField
         type="email"
         name="email_address"

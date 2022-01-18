@@ -59,7 +59,7 @@ const IndexPageGuest = ({ onSectionChange, show }, ref) => {
           {t('continue_to_billing')}
         </Button>
         <div className="IndexGuest__Footer--login">
-          <Link to="#">{t('back_to_login')}</Link>
+          <a href={process.env.LOGIN_URL}>{t('back_to_login')}</a>
         </div>          
         <div className="IndexGuest__Rights">{`${t('all_rights_reserved')} ${websiteName}`}</div>
       </div>
