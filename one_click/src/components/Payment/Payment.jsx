@@ -5,7 +5,6 @@ import EmptyState from '../EmptyState/EmptyState';
 import PaymentIframe from './PaymentIframe';
 import { Discount } from '../Discount';
 import { useLocation } from 'react-router-dom';
-import { LayoutContext } from '../../context/LayoutContext';
 import { BillingAddress } from '../BillingAddress';
 import { useBillingAddress, useShippingLines } from '@boldcommerce/checkout-react-components';
 import './Payment.css';
@@ -14,7 +13,6 @@ import { useTranslation } from 'react-i18next';
 const PaymentMethod = ({ billingAddress, shippingLines }) => {
   const location = useLocation();
   const hidePaymentComponent = !(location.pathname === "/");
-  const { openModal } = useContext(LayoutContext);
   const disabled = Array.isArray(billingAddress) && shippingLines.length === 0;
   const { t } = useTranslation();
 
@@ -22,7 +20,7 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
     return (
       <div className='Payment'>
         <section className={classnames(
-          {'hidden': hidePaymentComponent || !openModal,
+          {'hidden': hidePaymentComponent ,
           'FieldSet FieldSet--PaymentMethod': true
         })}>
           <div className="FieldSet__Content">
@@ -38,7 +36,7 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
     <>
       <div className='Payment'>
         <section className={classnames(
-          {'hidden': hidePaymentComponent || !openModal,
+          {'hidden': hidePaymentComponent,
           'FieldSet FieldSet--PaymentMethod': true
         })}>
           <div className="FieldSet__Content">
