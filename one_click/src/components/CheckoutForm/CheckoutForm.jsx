@@ -69,6 +69,7 @@ const CheckoutForm = () => {
     let openEl = mainEl;
     switch(openSection){
       case "summary":
+      case "summaryB":
         openEl = summaryEl;
         break;
       case "shipping":
