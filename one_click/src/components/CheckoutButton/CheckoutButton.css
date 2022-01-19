@@ -1,25 +1,25 @@
-.CheckoutButton {
+button.CheckoutButton {
   color: white;
   width: 100%;
   margin: 16px 0;
   background-color: #0a75c2;
 }
 
-.CheckoutButton:disabled {
+button.CheckoutButton:disabled {
   background-color: rgba(0, 0, 0, 0.65);
 }
 
-.CheckoutButton__Show {
+button.CheckoutButton__Show {
   visibility: visible;
 }
 
-.CheckoutButton__Hide {
+button.CheckoutButton__Hide {
   display:none;
   visibility: hidden;
 }
 
 @media only screen and (max-width: 768px) {
-  .CheckoutButton__Desktop {
+  button.CheckoutButton__Desktop {
     display: none;
   }
 }
@@ -28,7 +28,7 @@
   .CheckoutButton__Container {
     padding: 0px 32px;
   }
-  .CheckoutButton__Mobile {
+  button.CheckoutButton__Mobile {
     display: none;
   }
 }

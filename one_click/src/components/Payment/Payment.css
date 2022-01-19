@@ -15,3 +15,7 @@ section.FieldSet.FieldSet--PaymentMethod {
 section.FieldSet.FieldSet--PaymentMethod .FieldSet__Content {
   margin-bottom: 16px;
 }
+
+section.FieldSet.FieldSet--PaymentMethod > div.FieldSet__Content:last-child {
+  margin-bottom: 0px;
+}

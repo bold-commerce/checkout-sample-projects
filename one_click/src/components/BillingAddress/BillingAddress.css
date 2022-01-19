@@ -38,7 +38,7 @@
   margin-right: 10px;
 }
 
-.FieldSet--BillingAddress .RadioButton .stx-radio-field__label {
+.FieldSet--BillingAddress .RadioButton .stx-checkbox-field__label {
   position: absolute;
   left: 0;
   height: 100%;
