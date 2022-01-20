@@ -43,6 +43,7 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
         placeholder="Email"
         type="email"
         name="email"
+        autoComplete="email"
         messageType={errors && 'alert'}
         messageText={errors && errors[0].message}
         value={email}
