@@ -70,6 +70,7 @@ const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('first_name') ? 'First name' : 'First name (optional)'}
           type="text"
           name="first_name"
+          autoComplete="given-name"
           className="Field Field--FirstName"
           value={address?.first_name ?? ''}
           messageType={errors && errorMap?.first_name && 'alert' || ''}
@@ -82,6 +83,7 @@ const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('last_name') ? 'Last name' : 'Last name (optional)'}
           type="text"
           name="last_name"
+          autoComplete="family-name"
           className="Field Field--LastName"
           value={address?.last_name ?? ''}
           messageType={errors && errorMap?.last_name && 'alert' || ''}
@@ -110,6 +112,7 @@ const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('address_line_1') ? 'Address' : 'Address (optional)'}
           type="text"
           name="address_line_1"
+          autoComplete="address_line1"
           className="Field Field--Address"
           value={address?.address_line_1 ?? ''}
           messageType={errors && errorMap?.address && 'alert' || ''}
@@ -122,6 +125,7 @@ const Address = ({
           placeholder="Apt, suite, etc."
           type="text"
           name="address_line_2"
+          autoComplete="address_line2"
           className="Field Field--Address2"
           value={address?.address_line_2 ?? ''}
           onChange={(e) => onChange({
@@ -134,6 +138,7 @@ const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('city') ? 'City' : 'City (optional)'}
           type="text"
           name="city"
+          autoComplete="address-level2"
           value={address?.city ?? ''}
           messageType={errors && errorMap?.city && 'alert' || ''}
           messageText={errors && errorMap?.city && 'Enter a city' || ''}
@@ -146,6 +151,8 @@ const Address = ({
       <div className="FieldGroup">
         <SelectField
           placeholder="Select a country"
+          name="country"
+          autoComplete="country"
           className="SelectField Field--Country"
           value={address?.country_code ?? ''}
           messageType={errors && errorMap?.country && 'alert' || ''}
@@ -156,46 +163,42 @@ const Address = ({
         >
           {countryList}
         </SelectField>
-        {
-          address?.country_code
-            && showProvince && (
-            <SelectField
-              placeholder={
-                `Select a ${provinceLabel}`
-              }
-              className="SelectField Field--Province"
-              value={address?.province_code ?? ''}
-              messageType={errors && errorMap?.province && 'alert' || ''}
-              messageText={errors && errorMap?.province && 'Select a province or state' || ''}
-              onChange={(e) => onChange({
-                province_code: e.target.value,
-              })}
-            >
-              {provinceList}
-            </SelectField>
-          )
-        }
-        {address?.country_code
-          && showPostalCode && (
-            <InputField
-              placeholder="Postal code / ZIP"
-              type="text"
-              name="postal"
-              className="Field Field--Postal_Code"
-              messageType={errors && errorMap?.postal_code && 'alert' || ''}
-              messageText={errors && errorMap?.postal_code}
-              value={address?.postal_code ?? ''}
-              onChange={(e) => onChange({
-                postal_code: e.target.value,
-              })}
-            />
-          )}
+        <SelectField
+          placeholder={
+            `Select a ${provinceLabel}`
+          }
+          name="province"
+          autoComplete="address-level1"
+          className={classNames("SelectField Field--Province", !(address?.country_code && showProvince) && 'Field--Hidden')}
+          value={address?.province_code ?? ''}
+          messageType={errors && errorMap?.province && 'alert' || ''}
+          messageText={errors && errorMap?.province && 'Select a province or state' || ''}
+          onChange={(e) => onChange({
+            province_code: e.target.value,
+          })}
+        >
+          {provinceList}
+        </SelectField>
+        <InputField
+          placeholder="Postal code / ZIP"
+          type="text"
+          name="postal"
+          autoComplete="postal-code"
+          className={classNames("Field Field--Postal_Code", !(address?.country_code && showPostalCode) && 'Field--Hidden')}
+          messageType={errors && errorMap?.postal_code && 'alert' || ''}
+          messageText={errors && errorMap?.postal_code}
+          value={address?.postal_code ?? ''}
+          onChange={(e) => onChange({
+            postal_code: e.target.value,
+          })}
+        />
       </div>
       <div className="FieldGroup">
         <InputField
           placeholder={hasRequiredFields && requiredAddressFields.includes('phone_number') ? 'Phone' : 'Phone (optional)'}
           type="tel"
           name="phone_number"
+          autoComplete="tel"
           className="Field Field--Phone"
           value={address?.phone_number ?? ''}
           messageType={errors && errorMap?.phone_number && 'alert' || ''}
