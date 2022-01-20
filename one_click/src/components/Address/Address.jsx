@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { InputField, SelectField } from '@boldcommerce/stacks-ui';
 import '../Address/Address.css';
 import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 
 export const Address = ({
   address,
@@ -73,6 +74,7 @@ export const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('first_name') ? t('address.first_name') : t('address.first_name_optional')}
           type="text"
           name="first_name"
+          autoComplete="given-name"
           className="Field Field--FirstName"
           value={address?.first_name ?? ''}
           messageType={errors && errorMap?.first_name && 'alert' || ''}
@@ -86,6 +88,7 @@ export const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('last_name') ? t('address.last_name') : t('address.last_name_optional')}
           type="text"
           name="last_name"
+          autoComplete="family-name"
           className="Field Field--LastName"
           value={address?.last_name ?? ''}
           messageType={errors && errorMap?.last_name && 'alert' || ''}
@@ -116,6 +119,7 @@ export const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('address_line_1') ? t('address.address_line_1') : t('address.address_line_1_optional')}
           type="text"
           name="address_line_1"
+          autoComplete="address_line1"
           className="Field Field--Address"
           value={address?.address_line_1 ?? ''}
           messageType={errors && errorMap?.address && 'alert' || ''}
@@ -129,6 +133,7 @@ export const Address = ({
           placeholder={t('address.address_line_2')}
           type="text"
           name="address_line_2"
+          autoComplete="address_line2"
           className="Field Field--Address2"
           value={address?.address_line_2 ?? ''}
           onChange={(e) => onChange({
@@ -141,6 +146,7 @@ export const Address = ({
           placeholder={hasRequiredFields && requiredAddressFields.includes('city') ? t('address.city') : t('address.city_optional')}
           type="text"
           name="city"
+          autoComplete="address-level2"
           value={address?.city ?? ''}
           messageType={errors && errorMap?.city && 'alert' || ''}
           messageText={errors && errorMap?.city && t('address.city_hint') || ''}
@@ -154,6 +160,8 @@ export const Address = ({
       <div className="FieldGroup FieldGroup__Country">
         <SelectField
           placeholder={t('address.country_hint')}
+          name="country"
+          autoComplete="country"
           className="SelectField Field--Country"
           value={address?.country_code ?? ''}
           messageType={errors && errorMap?.country && 'alert' || ''}
@@ -165,46 +173,42 @@ export const Address = ({
         >
           {countryList}
         </SelectField>
-        {
-          address?.country_code
-            && showProvince && (
-            <SelectField
-              placeholder={provincePlaceholder}
-              className="SelectField Field--Province"
-              value={address?.province_code ?? ''}
-              messageType={errors && errorMap?.province && 'alert' || ''}
-              messageText={errors && errorMap?.province && provincePlaceholder || ''}
-              aria-invalid={errors && errorMap?.province && true || null }
-              onChange={(e) => onChange({
-                province_code: e.target.value,
-              })}
-            >
-              {provinceList}
-            </SelectField>
-          )
-        }
-        {address?.country_code
-          && showPostalCode && (
-            <InputField
-              placeholder={postalCodePlaceholder}
-              type="text"
-              name="postal"
-              className="Field Field--Postal_Code"
-              messageType={errors && errorMap?.postal_code && 'alert' || ''}
-              messageText={errors && errorMap?.postal_code}
-              aria-invalid={errors && errorMap?.postal_code && true || null }
-              value={address?.postal_code ?? ''}
-              onChange={(e) => onChange({
-                postal_code: e.target.value,
-              })}
-            />
-          )}
+        <SelectField
+          placeholder={provincePlaceholder}
+          name="province"
+          autoComplete="address-level1"
+          className={classNames("SelectField Field--Province", !(address?.country_code && showProvince) && 'Field--Hidden')}
+          value={address?.province_code ?? ''}
+          messageType={errors && errorMap?.province && 'alert' || ''}
+          messageText={errors && errorMap?.province && provincePlaceholder || ''}
+          aria-invalid={errors && errorMap?.province && true || null }
+          onChange={(e) => onChange({
+            province_code: e.target.value,
+          })}
+        >
+          {provinceList}
+        </SelectField>
+        <InputField
+          placeholder={postalCodePlaceholder}
+          type="text"
+          name="postal"
+          autoComplete="postal-code"
+          className={classNames("Field Field--Postal_Code", !(address?.country_code && showPostalCode) && 'Field--Hidden')}
+          messageType={errors && errorMap?.postal_code && 'alert' || ''}
+          messageText={errors && errorMap?.postal_code}
+          aria-invalid={errors && errorMap?.postal_code && true || null }
+          value={address?.postal_code ?? ''}
+          onChange={(e) => onChange({
+            postal_code: e.target.value,
+          })}
+        />
       </div>
       <div className="FieldGroup">
         <InputField
           placeholder={hasRequiredFields && requiredAddressFields.includes('phone_number') ? t('address.phone_number') : t('address.phone_number_optional')}
           type="tel"
           name="phone_number"
+          autoComplete="tel"
           className="Field Field--Phone"
           value={address?.phone_number ?? ''}
           messageType={errors && errorMap?.phone_number && 'alert' || ''}

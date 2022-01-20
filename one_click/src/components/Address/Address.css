@@ -69,3 +69,7 @@
 .FieldGroup.FieldGroup__Country {
   display: grid;
 }
+
+div.Field--Hidden {
+  display:none;
+}

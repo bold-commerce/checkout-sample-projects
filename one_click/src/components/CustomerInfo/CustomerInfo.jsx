@@ -33,7 +33,8 @@ const CustomerInfo = () => {
       <div className="IndexGuest__Login">{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
       <InputField
         type="email"
-        name="email_address"
+        name="email"
+        autoComplete="email"
         placeholder={t('customer.email')}
         messageText={customerErrors && t('invalid_email') || ''}
         messageType={customerErrors && 'alert' || ''}
