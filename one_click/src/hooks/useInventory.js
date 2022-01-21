@@ -10,25 +10,25 @@ const useInventory = () => {
     let inventory = await response.json();
 
     lineItems.forEach((lineItem) => {
-      const index = lineItem.product_data.variant_id;
-      const product_id = inventory[index].product_id;
+      const variantId = lineItem.product_data.variant_id;
+      const productId = inventory[variantId].product_id;
 
-      if (!(inventory[index].allow_backorder || inventory[index].inventory_tracker === 'none')) {
-        if (inventory[index].standard_tracking && inventory[index].quantity < lineItem.product_data.quantity) {
+      if (!(inventory[variantId].allow_backorder || inventory[variantId].inventory_tracker === 'none')) {
+        if (inventory[variantId].standard_tracking && inventory[variantId].quantity < lineItem.product_data.quantity) {
           inventoryIssues = true;
-        } else if (!inventory[index].standard_tracking) {
+        } else if (!inventory[variantId].standard_tracking) {
           // If there are multiple variants of the same product that has inventory tracked at product level
-          if (productInventory[product_id]) {
+          if (productInventory[productId]) {
             // If the product id already exists, set the inventory amount to it.
-            inventory[index].quantity = productInventory[inventory[index].product_id];
+            inventory[variantId].quantity = productInventory[inventory[variantId].product_id];
           } else {
             // If the product id does not exists, set the amount to the quantity.
-            productInventory[product_id] = inventory[index].quantity;
+            productInventory[productId] = inventory[variantId].quantity;
           }
 
-          productInventory[product_id] = inventory[index].quantity - lineItem.product_data.quantity;
+          productInventory[productId] = inventory[variantId].quantity - lineItem.product_data.quantity;
           
-          if (productInventory[product_id] < 0) {
+          if (productInventory[productId] < 0) {
             inventoryIssues = true;        
           }
         }

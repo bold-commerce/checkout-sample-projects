@@ -21,9 +21,9 @@ export const Inventory = ({}, ref) => {
     const { t } = useTranslation();
 
     let invItems = lineItems.map((item) => {
-        const index = item.product_data.variant_id;
-        item.product_data.stock = inventory[index].quantity;
-        item.product_data.inventory_issue = inventory[index].inventory_tracker !== 'none' && item.product_data.quantity > item.product_data.stock;
+        const variantId = item.product_data.variant_id;
+        item.product_data.stock = inventory[variantId].quantity;
+        item.product_data.inventory_issue = inventory[variantId].inventory_tracker !== 'none' && item.product_data.quantity > item.product_data.stock;
         if (item.product_data.inventory_issue) {
             return (
                 <InventoryItem
