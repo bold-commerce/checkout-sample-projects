@@ -23,7 +23,7 @@ const OrderSummaryCollapseButton = ({ onClick, summaryOpen }) => {
       </span>
       <span className="CollapseButton__description">
         {itemCountText}
-        <Price amount={total} />
+        <Price amount={total} moneyFormatString={t('currency_format')}/>
       </span>
     </button>
   );

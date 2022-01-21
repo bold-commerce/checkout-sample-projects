@@ -1,7 +1,9 @@
 import { RadioField, Price } from '@boldcommerce/stacks-ui';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ShippingLineList = ({ shippingLines, selectedShippingLine, onChange, disabled }) => {
+  const { t } = useTranslation();
   return (
     <div className="FieldSet__Content">
       {shippingLines && shippingLines.map((method, index) => (
@@ -14,7 +16,7 @@ const ShippingLineList = ({ shippingLines, selectedShippingLine, onChange, disab
             disabled={disabled}
             onChange={() => onChange(index)}
           />
-          <Price className="ShippingMethod__Price" amount={method.amount} />
+          <Price className="ShippingMethod__Price" amount={method.amount} moneyFormatString={t('currency_format')} />
         </div>
       ))}
     </div>
