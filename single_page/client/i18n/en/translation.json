@@ -38,6 +38,7 @@
     "thank_you": "Thank you"
   },
   "confirm_order": "Confirm Order",
+  "currency_format": "${{amount}} CAD",
   "customer" : {
     "email": "Email",
     "info": "Customer information"
