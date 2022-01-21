@@ -66,6 +66,15 @@ example response
   ]
 }
 ```
+## Currency Formatting
+The currency can be customized using the `CURRENCY_FORMAT` variable in the `.env` file. The available `amount` options are as follows:
+* `amount`
+* `amount_no_decimals`
+* `amount_with_comma_separator`
+* `amount_no_decimals_with_comma_separator`
+* `amount_with_space_separator`
+* `amount_no_decimals_with_space_separator`
+* `amount_with_apostrophe_separator`
 
 ## Additional Notes
 This is only meant to be a starting point for building your own headless checkout project. In order to enable this example to be a fully-functioning checkout, you must:

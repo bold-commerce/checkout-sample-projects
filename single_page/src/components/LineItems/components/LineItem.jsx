@@ -65,7 +65,7 @@ const LineItem = ({
         )
       }
       <div className="LineItem__ProductPrice">
-        <Price amount={totalPrice} />
+        <Price amount={totalPrice} moneyFormatString={t('currency_format')}/>
       </div>
     </div>
   </div>
