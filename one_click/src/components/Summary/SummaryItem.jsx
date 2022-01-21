@@ -1,8 +1,10 @@
 import React from "react";
 import TimesCircle from "../Icons/TimesCircle";
 import { Price } from "@boldcommerce/stacks-ui/lib";
+import { useTranslation } from 'react-i18next';
 
 const SummaryItem = ({ title, value, removeItem }) => {
+    const { t } = useTranslation();
     return (    
         <div className="summary-line-child" >
             <div className="summary-child-title">
@@ -17,7 +19,7 @@ const SummaryItem = ({ title, value, removeItem }) => {
                 </button>
                 }
             </div>
-            <Price className="summary-child-value" amount={value} />
+            <Price className="summary-child-value" amount={value} moneyFormatString={t('currency_format')} />
         </div>
     )
 }

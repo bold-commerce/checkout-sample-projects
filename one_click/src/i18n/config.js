@@ -14,6 +14,7 @@ i18n
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, 
+      skipOnVariables: true //needed to escape currency_format curly braces
     }
   });
 

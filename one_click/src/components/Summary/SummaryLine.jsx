@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Price } from "@boldcommerce/stacks-ui/lib";
 import { CaretRight } from "../Icons";
+import { useTranslation } from 'react-i18next';
 
 const SummaryLine = ({ title, value, items }) => {
     const [hidden, setHidden] = useState(true);
+    const { t } = useTranslation();
     if (!items || items.length < 1) {
         return (
             <div className="summary-line" >
@@ -12,7 +14,7 @@ const SummaryLine = ({ title, value, items }) => {
                         <div className="summary-line-icon"></div>
                         {title}
                     </div>
-                    <Price className="summary-line-value" amount={value} />
+                    <Price className="summary-line-value" amount={value} moneyFormatString={t('currency_format')} />
                 </div>
             </div>
         );
@@ -34,7 +36,7 @@ const SummaryLine = ({ title, value, items }) => {
                         </div>
                         {title}
                     </div>
-                    <Price className="summary-line-value" hidden={!hidden} amount={value} />
+                    <Price className="summary-line-value" hidden={!hidden} amount={value} moneyFormatString={t('currency_format')} />
                 </button>
             </div>
             <div

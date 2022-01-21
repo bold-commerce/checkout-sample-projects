@@ -52,7 +52,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
         title={t('summary.title')}
         handleClick={() => onSectionChange('summary')}
         component={"/summary"}
-        overview={<Price amount={order_total} />}
+        overview={<Price amount={order_total} moneyFormatString={t('currency_format')} />}
       />
       { customer?.email_address && (
         <Card
@@ -71,7 +71,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
         shipping.selected_shipping &&
         <>
           <div>{shippingCombined}</div>
-          <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} /></div>
+          <div className="card-shipping-content">{shipping.selected_shipping.description} - <Price amount={shipping.selected_shipping.amount} moneyFormatString={t('currency_format')}/></div>
         </>
       )}
       </Card>

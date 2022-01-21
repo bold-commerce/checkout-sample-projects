@@ -43,6 +43,7 @@
     "thank_you": "Thank you!"
   },
   "continue_to_billing": "Continue to billing",
+  "currency_format": "${{amount}} CAD",
   "customer" : {
     "already_have_account": "Already have an account? ",
     "email": "Email address",

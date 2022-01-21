@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Product from '../Product/Product';
 import { Price } from '@boldcommerce/stacks-ui'
+import { useTranslation } from 'react-i18next';
 
 const LineItem = ({
   title,
@@ -9,7 +10,9 @@ const LineItem = ({
   quantity,
   totalPrice,
   variants,
-}) => (
+}) => {
+  const { t } = useTranslation();
+  return(
   <div className="SummaryBlock CartItem" >
     <Product
       title={title}
@@ -23,11 +26,11 @@ const LineItem = ({
         </div>
       </div>
       <div className="CartItem__ProductPrice">
-        <Price amount={totalPrice} />
+        <Price amount={totalPrice} moneyFormatString={t('currency_format')} />
       </div>
     </div>
   </div>
-);
+);}
 
 LineItem.propTypes = {
   title: PropTypes.string,

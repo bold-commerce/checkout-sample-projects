@@ -91,7 +91,7 @@ const Summary = ({ section, onSectionChange }, ref) => {
         </div>                
         <div className="Summary__Total SummaryBlock">
           <div>{t('summary.total')}</div>
-          <Price className="summary-total-price" amount={orderTotals.total} />
+          <Price className="summary-total-price" amount={orderTotals.total} moneyFormatString={t('currency_format')} />
         </div>
       </section>
       <CheckoutButton className="CheckoutButton CheckoutButton__Mobile" />

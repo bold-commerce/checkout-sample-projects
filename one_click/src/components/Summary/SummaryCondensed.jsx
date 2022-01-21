@@ -16,7 +16,7 @@ const SummaryCondensed = ({ onSectionChange }) => {
       >
         <ChevronRight className="IndexGuest__Chevron"/>
         <h2>{t('summary.title')}</h2>
-        <Price amount={state.applicationState.order_total} />
+        <Price amount={state.applicationState.order_total} moneyFormatString={t('currency_format')} />
       </button>
     </div>
   )

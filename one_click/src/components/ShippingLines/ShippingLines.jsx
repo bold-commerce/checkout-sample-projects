@@ -56,7 +56,7 @@ export const ShippingLines = ({
                     disabled={shippingLinesLoadingStatus === 'setting' || disabled }
                     onChange={() => handleShippingLineChange(index)}
                   />
-                  <Price className="ShippingMethod__Price" amount={method.amount} />
+                  <Price className="ShippingMethod__Price" amount={method.amount} moneyFormatString={t('currency_format')} />
                 </div>
               ))}
             </div>
