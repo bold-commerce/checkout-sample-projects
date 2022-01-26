@@ -58,7 +58,9 @@ const CheckoutForm = () => {
   }, []);
 
   useEffect(() => {
-    if (orderStatus === 'processing') {
+    if (orderStatus === 'error') {
+      navigate('/');
+    } else if (orderStatus === 'processing') {
       navigate('/processing');
     } else if (orderStatus === 'error') {
       navigate('/')
