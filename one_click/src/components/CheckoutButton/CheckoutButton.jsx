@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router';
 import { Button, Message } from '@boldcommerce/stacks-ui';
@@ -32,13 +32,17 @@ const CheckoutButtonContainer = ({ className }, ref) => {
   const { state } = useCheckoutStore();
   const [loading, setLoading] = useState();
   const { orderStatus } = state.orderInfo;
-  const { processPaymentIframe } = usePaymentIframe();
+  const { processPaymentIframe, loadingStatus, errors } = usePaymentIframe();
   const checkInventory = useInventory();
   const { data: lineItems } = useLineItems();
   const navigate = useNavigate();
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
   const isMounted = useMountedState();
+
+  useEffect(() => {
+    console.log('LS', loadingStatus);
+  }, [loadingStatus]);
 
   const orderErrorMessage = state.errors.order?.public_order_id;
 
@@ -60,7 +64,9 @@ const CheckoutButtonContainer = ({ className }, ref) => {
         setLoading(false);
         navigate('/inventory', inventoryIssues);
       }
-    } catch(e) {  
+    } catch(e) {
+      console.log('BC', e);
+      console.log('PI', errors)
       if(isMounted())
         setLoading(false);
       logError('checkout_button', e);

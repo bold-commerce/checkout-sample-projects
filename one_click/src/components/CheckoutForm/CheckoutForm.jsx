@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState }  from 'react';
 import { Route, Routes } from "react-router-dom";
 import { useLocation, useNavigate } from 'react-router';
-import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/checkout-react-components';
+import { PaymentIframe, useCheckoutStore, useCustomer, useLineItems, usePaymentIframe } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';
 import { Billing } from '../Billing';
@@ -58,8 +58,14 @@ const CheckoutForm = () => {
   }, []);
 
   useEffect(() => {
-    if (orderStatus === 'processing') {
-      navigate('/processing');
+    console.log(orderStatus, openSection)
+  }, [orderStatus, openSection]);
+
+  useEffect(() => {
+    if (orderStatus === 'error') {
+      // setOpenSection('/');
+    } else if (orderStatus === 'authorizing') {
+      // setOpenSection('processing');
     } else if (orderStatus === 'completed') {
       navigate(`/confirmation?public_order_id=${state.publicOrderId}`);
     }
@@ -117,9 +123,8 @@ const CheckoutForm = () => {
       { (loading && <LoadingState/>) || 
         <>
           <Routes location={location}>
-            <Route exact path="/processing" element={<ProcessingOrder ref={processingEl} />} />
-            <Route exact path="/confirmation" element={<Confirmation ref={confirmationEl}/>} />
-            <Route exact path="/inventory" element={<Inventory ref={inventoryEl}/>} />
+            <Route exact path="/confirmation" element={<Confirmation ref={confirmationEl} />} />
+            <Route exact path="/inventory" element={<Inventory ref={inventoryEl} />} />
             {
               customer.platform_id ?
               <Route exact path="/" element={<IndexPage ref={mainEl} onSectionChange={setOpenSection} show={openSection==="/"}/>} /> :
@@ -128,6 +133,7 @@ const CheckoutForm = () => {
           </Routes>
           { renderSidebar ? 
             <>
+              <ProcessingOrder ref={processingEl} show={openSection==='processing'} />
               <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
               <Summary ref={summaryEl} section={openSection} onSectionChange={setOpenSection}/>
               <Billing ref={billingEl} section={openSection} onSectionChange={setOpenSection}/>
