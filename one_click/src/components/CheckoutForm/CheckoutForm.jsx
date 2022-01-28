@@ -14,7 +14,7 @@ import classNames from 'classnames';
 import { LoadingState } from '../LoadingState';
 import { IndexPageGuest, IndexPage } from '../../pages/IndexPage';
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ banners }) => {
   const { data: lineItems } = useLineItems();
   const { state } = useCheckoutStore();
   const { data: customer } = useCustomer();
@@ -24,6 +24,7 @@ const CheckoutForm = () => {
   const logError = useErrorLogging();
   const navigate = useNavigate();
   const [openSection, setOpenSection] = useState('/');
+  const [modalHeight, setModalHeight] = useState('100%')
   const [loading, setLoading] = React.useState(true); // calling React.useState to be able to mock with snapshot tests.
   const [height, setHeight] = useState(null);
   const mainEl = useRef(null);
@@ -37,6 +38,7 @@ const CheckoutForm = () => {
 
   const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
   const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
+  
   const getInventory = async () => {
     try{
       const inventory = await checkInventory(lineItems);
@@ -47,6 +49,16 @@ const CheckoutForm = () => {
       logError('check_inventory', e);
     }
   }
+  
+  useEffect(() => {
+    if (banners) {
+      const checkoutDiv = document.querySelector('[bold-one-click-form]');
+      setModalHeight( `${checkoutDiv.clientHeight - checkoutDiv.offsetTop}px`)
+    } else {
+      setModalHeight('100%')
+    }
+  }, [banners]);
+
   useEffect(() => {
     setOpenSection(location.pathname);
   }, [location.pathname]);
@@ -112,10 +124,10 @@ const CheckoutForm = () => {
   const style = window.innerWidth > 768 ? {
     height: height? `${height}px` : null,
     overflowY: height > window.innerHeight ? 'scroll' : 'hidden',
-  } : {}
+  } : { height: modalHeight }
 
   return (
-    <div className="Checkout__Form" style={style}>
+    <div className="Checkout__Form" style={style} bold-one-click-form="true">
       { (loading && <LoadingState/>) || 
         <>
           <Routes location={location}>
