@@ -13,7 +13,7 @@ module.exports = merge(common, {
       directory: path.join(__dirname, 'public'),
     },
     compress: true,
-    port: 8090,
+    port: 8080,
     allowedHosts: 'all'
   },
 });

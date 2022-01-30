@@ -7,7 +7,8 @@ dotenv.config();
 
 module.exports = {
   entry: {
-    checkout: './src/index.js',
+    one_click: './one_click/src/index.js',
+    single_page: './single_page/src/index.js'
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -38,9 +39,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      react: path.resolve('./node_modules/react')
-    }
   },
   output: {
     filename: 'js/[name].js',
