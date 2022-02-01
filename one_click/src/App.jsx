@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import { CheckoutProvider } from '@boldcommerce/checkout-react-components';
 import { OneClickLayout } from './layouts';
 import { AppContext } from './context/AppContext';
@@ -9,8 +9,15 @@ const App = () => {
   const { t } = useTranslation();
   const websiteName = t("website_name");
 
+  const closeModal = useCallback((e) => {
+    if(e.target.className === 'OneClick--Modal'){
+      const event = new CustomEvent("oneClick:close");
+      window.dispatchEvent(event);
+    }
+  })
+
   return (
-  <div className="OneClick--Modal">
+  <div className="OneClick--Modal" onClick={closeModal}>
     <CheckoutProvider
       applicationState={window.checkout.applicationState}
       initialData={window.checkout.initialData}
