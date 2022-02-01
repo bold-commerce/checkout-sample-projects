@@ -200,7 +200,7 @@ h1.Section__Title {
 }
 
 .IndexGuest__Summary__Btn h2 {
-  width: 100%;
+  flex-grow: 1;
   text-align: left;
 }
 
