@@ -59,7 +59,7 @@ const Confirmation = ({}, ref) => {
                 }
             </div>
             <div className='confirmation-help'>
-                <p>{t('confirmation.need_help')}<a href='#'>{t('confirmation.contact_us')}</a></p> { /* TODO: get correct contact us link */}
+                <p>{t('confirmation.need_help')}<a href={process.env.CONTACT_URL}>{t('confirmation.contact_us')}</a></p>
             </div>
             <div className="confirmation-continue">
                 <Button className='confirmation-continue-button' onClick={continueShopping} > 

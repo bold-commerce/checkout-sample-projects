@@ -57,7 +57,10 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
       { customer?.email_address && (
         <Card
           description={customer.email_address}
-          action={{label: t('customer.not_you')}}
+          action={{
+            label: t('customer.not_you'),
+            onclick: () => { window.location = process.env.LOGOUT_URL }
+          }}
         />
       )}
       <Card

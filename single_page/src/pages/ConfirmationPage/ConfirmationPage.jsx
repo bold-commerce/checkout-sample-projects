@@ -76,7 +76,7 @@ const ConfirmationPage = () => {
             </ConfirmationListItem>
           </ConfirmationList>
         </CheckoutSection>
-        <p className="Checkout__ContactUs">{t('confirmation.need_help')}<a href="">{t('confirmation.contact_us')}</a></p>
+        <p className="Checkout__ContactUs">{t('confirmation.need_help')}<a href={`https://${state.initialData.shop_name}${process.env.CONTACT_URL}`}>{t('confirmation.contact_us')}</a></p>
       </div>
       <div className="Checkout__Sidebar" role="complementary">
         <OrderSummary readOnly={true} />
