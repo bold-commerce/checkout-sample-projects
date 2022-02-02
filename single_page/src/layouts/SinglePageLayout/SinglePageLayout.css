@@ -25,13 +25,12 @@ body {
   margin: 0;
 }
 
-html, body, #checkout-app, .Checkout {
+html, body, #root, .Checkout {
   min-height: 100vh;
 }
 
-#checkout-app {
-  width: 100%;
-  overflow-x: hidden;
+#root {
+  background: linear-gradient(90deg, transparent 65%, #fafafa 65%);
 }
 
 .Checkout {
@@ -48,18 +47,6 @@ html, body, #checkout-app, .Checkout {
   border-left: 1px solid #d9d9d9;
   position: relative;
   background: #fafafa;
-}
-
-.Checkout__Sidebar:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 300%;
-  background: inherit;
-  height: 100%;
-  display: block;
-  content: '';
-  z-index: -1;
 }
 
 .Checkout__Summary,
@@ -111,6 +98,10 @@ html, body, #checkout-app, .Checkout {
 }
 
 @media only screen and (max-width: 1200px) {
+  #root {
+    background: transparent;
+  }
+
   .Checkout {
     flex-direction: column;
   }
