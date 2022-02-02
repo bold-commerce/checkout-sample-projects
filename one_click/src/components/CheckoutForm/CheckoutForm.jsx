@@ -130,9 +130,11 @@ const CheckoutForm = () => {
           </Routes>
           { renderSidebar ? 
             <>
-              <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} />
               <Summary ref={summaryEl} section={openSection} onSectionChange={setOpenSection}/>
-              <Billing ref={billingEl} section={openSection} onSectionChange={setOpenSection}/>
+              {/* only used on the IndexPage, hide otherwise to prevent autofilling hidden fields */}
+              { customer.platform_id && <Shipping ref={shippingEl} show={openSection==='shipping'} onBack={() => setOpenSection("/")} /> }
+              {/* only used on the IndexGuestPage, hide otherwise to prevent autofilling hidden fields */}
+              { !customer.platform_id && <Billing ref={billingEl} section={openSection} onSectionChange={setOpenSection}/> }
             </>
             : null
           }
