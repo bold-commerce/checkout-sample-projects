@@ -59,7 +59,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
           description={customer.email_address}
           action={{
             label: t('customer.not_you'),
-            onclick: () => { window.location = process.env.LOGOUT_URL }
+            onClick: () => { window.location = process.env.LOGOUT_URL }
           }}
         />
       )}
