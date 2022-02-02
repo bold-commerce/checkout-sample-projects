@@ -15,6 +15,7 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
   const hidePaymentComponent = !(location.pathname === "/");
   const disabled = Array.isArray(billingAddress) && shippingLines.length === 0;
   const { t } = useTranslation();
+  const requiredAddressFields = ['first_name','last_name','address_line_1','city'];
 
   if (disabled) {
     return (
@@ -46,7 +47,7 @@ const PaymentMethod = ({ billingAddress, shippingLines }) => {
             <Discount />
           </div>
           <div className="FieldSet__Content">
-            <BillingAddress />
+            <BillingAddress requiredAddressFields={requiredAddressFields}/>
           </div>
         </section>
       </div>

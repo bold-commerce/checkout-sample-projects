@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { CheckboxField } from '@boldcommerce/stacks-ui';
 import { Address } from '../Address';
@@ -28,6 +28,11 @@ export const BillingAddress = ({
 
   let provincePlaceholder = provinceLabel;
 
+  useEffect(() => {
+    //keep address up to date when toggling between billing same as shipping
+    setAddress(billingAddress);
+  }, [billingAddress]);
+
   const handleSubmit = async(data) => {
     setLoading(true);
     try {
@@ -44,7 +49,7 @@ export const BillingAddress = ({
   const handleSetBillingSameAsShipping = async(data) => {
     setLoading(true);
     try {
-      await setBillingSameAsShipping(data)
+      await setBillingSameAsShipping(data);
       setErrors(null);
       trackEvent('set_billing_same_as_shipping');
     } catch(e) {
