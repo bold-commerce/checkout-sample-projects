@@ -38,7 +38,7 @@ const CheckoutForm = ({ banners }) => {
   const checkoutButtonEl = useRef(null);
   const checkoutFormEl = useRef(null);
 
-  const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
+  const showCheckoutButton = (openSection === 'summary' || openSection === '/') && customer.platform_id;
   const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
   
   const getInventory = async () => {
@@ -172,7 +172,9 @@ const CheckoutForm = ({ banners }) => {
             </>
             : null
           }
-          <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
+          <div class="CheckoutButton__Desktop__Wrapper" >
+            <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
+          </div>
         </>
       }
     </div>

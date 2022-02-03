@@ -42,6 +42,7 @@
     "order_confirmed": "Your order is confirmed",
     "thank_you": "Thank you!"
   },
+  "continue_checkout_out": "Continue checking out",
   "continue_to_billing": "Continue to billing",
   "currency_format": "${{amount}} CAD",
   "customer" : {

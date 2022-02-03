@@ -157,8 +157,7 @@ h1.Section__Title {
 .IndexGuest__Customer,
 .IndexGuest__ShippingAddress,
 .IndexGuest__ShippingMethod,
-.IndexGuest__Payment,
-.IndexGuest__Footer {
+.IndexGuest__Payment{
   padding: 16px 0;
 }
 
@@ -235,36 +234,8 @@ h1.Section__Title {
   padding-left: 26px;
 }
 
-.IndexGuest__Billing__Btn {
-  width: 100%;
-  padding: 12px 0;
-  margin: 0;
-  border: none;
-  border-radius: 4px;
-  background-color: #0a75c2;
-}
-
-.IndexGuest__Billing__Btn:disabled,
 .Billing-CheckoutButton:disabled {
   background-color: rgba(0, 0, 0, 0.4);
-}
-
-.IndexGuest__Footer {
-  display: grid;
-  row-gap: 32px;
-}
-
-.IndexGuest__Rights {
-  border-top: 1px solid #d9d9d9;
-  padding-top: 32px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.IndexGuest__Footer .CheckoutButton__Container { 
-  padding: 0;
 }
 
 @media only screen and (max-width: 768px) {

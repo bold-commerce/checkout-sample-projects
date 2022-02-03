@@ -23,13 +23,11 @@ const Billing = ({section, onSectionChange}, ref) => {
         <PaymentMethod/>
       </div>
 
-      <div className="IndexGuest-__Footer">
-        <CheckoutButton className="CheckoutButton Billing__Checkout__Btn" />
-        <div className="IndexGuest__Footer--login">
-          <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>{t('back_to_shipping')}</button>
-        </div>          
-        <div className="IndexGuest__Rights">{`${t('all_rights_reserved')} ${websiteName}`}</div>
-      </div>
+      <CheckoutButton className="CheckoutButton Billing__Checkout__Btn" />
+      <div className="IndexGuest__Footer--login">
+        <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>{t('back_to_shipping')}</button>
+      </div>          
+        
     </div>
   )
 }

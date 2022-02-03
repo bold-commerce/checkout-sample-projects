@@ -49,20 +49,14 @@ const IndexPageGuest = ({ onSectionChange, show }, ref) => {
       <div className="IndexGuest__ShippingMethod">
         <ShippingLines activePage={show} disabled={Boolean(shippingErrors)} />
       </div>
-      <div className="IndexGuest__Footer">
-        <Button
-          className="IndexGuest__Billing-btn"
-          onClick={() => onSectionChange('billing')}
-          disabled={!(customer.email_address && state.applicationState.shipping.selected_shipping && !shippingErrors && !customerErrors)}
-          primary
-        >
-          {t('continue_to_billing')}
-        </Button>
-        <div className="IndexGuest__Footer--login">
-          <a href={process.env.LOGIN_URL}>{t('back_to_login')}</a>
-        </div>          
-        <div className="IndexGuest__Rights">{`${t('all_rights_reserved')} ${websiteName}`}</div>
-      </div>
+      <Button
+        className="CheckoutButton"
+        onClick={() => onSectionChange('billing')}
+        disabled={!(customer.email_address && state.applicationState.shipping.selected_shipping && !shippingErrors && !customerErrors)}
+        primary
+      >
+        {t('continue_to_billing')}
+      </Button>
     </div>
   )
 }
