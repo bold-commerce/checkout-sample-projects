@@ -3,8 +3,9 @@ const { defaults } = require('jest-config');
 module.exports = {
   testEnvironment: 'jsdom',
   roots: [
+    '<rootDir>/__tests__',
     '<rootDir>/one_click/src/',
-    '<rootDir>/one_click/__tests__',
+    '<rootDir>/single_page/src/'
   ],
   automock: false,
   resetMocks: false,
@@ -15,8 +16,8 @@ module.exports = {
   ],
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   moduleNameMapper: {
-    '\\.(css|less|scss)$': '<rootDir>/one_click/__mocks__/jest/styleMock.js',
+    '\\.(css|less|scss)$': '<rootDir>/__mocks__/jest/styleMock.js',
   },
-  modulePathIgnorePatterns: ['<rootDir>/one_click/__tests__/utils/'],
+  modulePathIgnorePatterns: ['<rootDir>/__tests__/utils/'],
   transformIgnorePatterns: ['/node_modules/'],
 };

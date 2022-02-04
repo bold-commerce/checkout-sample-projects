@@ -23,8 +23,8 @@ const CheckoutForm = () => {
   const checkInventory = useInventory();
   const logError = useErrorLogging();
   const navigate = useNavigate();
-  const [openSection, setOpenSection] = useState('/');
   const [loading, setLoading] = React.useState(true); // calling React.useState to be able to mock with snapshot tests.
+  const [openSection, setOpenSection] = useState('/');
   const [height, setHeight] = useState(null);
   const mainEl = useRef(null);
   const summaryEl = useRef(null);

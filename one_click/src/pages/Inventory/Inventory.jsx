@@ -71,7 +71,7 @@ export const Inventory = ({}, ref) => {
             </div>
             {invItems}
             <div className="Inventory__footer">
-                <Link className="ReturnLink" to="/">{t('inventory.return_to_cart')}</Link>
+                <Link to="/" className="ReturnLink" >{t('inventory.return_to_cart')}</Link>
                 <Button
                     onClick={handleUpdateQuantities}
                     className="CheckoutButton"

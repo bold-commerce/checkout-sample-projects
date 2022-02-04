@@ -1,7 +1,5 @@
 import { useBillingAddress, useCheckoutStore, useLineItems, usePaymentIframe } from '@boldcommerce/checkout-react-components';
-import {
-  useNavigate,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from '@boldcommerce/stacks-ui';
 import React, { memo, useCallback, useState } from 'react';
 import { useAnalytics, useErrorLogging } from '../../hooks';

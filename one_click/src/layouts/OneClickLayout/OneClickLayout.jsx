@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { MemoryRouter as Router } from "react-router-dom";
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
@@ -18,9 +18,9 @@ const OneClickLayout = ({ orderErrors }) => {
           {t('error.order')}
         </Message>
       }
-      <Router>
+      {/* <Router> */}
         <CheckoutForm />
-      </Router>              
+      {/* </Router> */}
     </div>
   );
 };

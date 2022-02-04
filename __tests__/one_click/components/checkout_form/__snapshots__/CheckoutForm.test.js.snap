@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckoutForm renders CheckoutForm 1`] = `
+<DocumentFragment>
+  <div
+    class="Checkout__Form"
+    style="overflow-y: hidden;"
+  >
+    <div
+      class="FieldSet--LoadingState"
+    >
+      <span
+        class="stx-loading-spinner"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
