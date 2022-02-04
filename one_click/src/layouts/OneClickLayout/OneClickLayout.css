@@ -30,6 +30,10 @@
   height: 16px;
 }
 
+.stx-message {
+  border-radius: 5px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -49,11 +53,10 @@ body {
 
 .Checkout__Main {
   max-width: 480px;
+  max-height:100%;
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: clip;
 }
 
 .Checkout__Form {
@@ -61,8 +64,13 @@ body {
   transition: all 0.6s;
   overflow-x: hidden;
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 4px 0px rgba(0,0,0,0.25);
+  border-radius: 8px;
+  box-shadow: 0px 1px 8px 2px #0000001A;
+}
+
+.Checkout__Form h2 {
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .FieldSet {
@@ -99,7 +107,7 @@ body {
   position: relative;
   padding: 20px 0;
   border-bottom: 1px solid;
-  border-color: rgba(0, 0, 0, 0.4);
+  border-color: #D9D9D9;
 }
 
 body {
@@ -131,11 +139,6 @@ h1.Section__Title {
   padding: 16px 32px;
 }
 
-.IndexGuest .Header,
-.Billing .Header {
-  border: none;
-}
-
 .IndexGuest a {
   color: #0a75c2;
   text-decoration: none;
@@ -162,12 +165,10 @@ h1.Section__Title {
 }
 
 .IndexGuest__Summary {
-  margin: 0 -32px;
   padding: 16px 0;
-  background-color: #fafafa;
   border-width: 1px 0;
   border-style: solid;
-  border-color:rgba(0, 0, 0, 0.4);
+  border-color: #D9D9D9;
 }
 
 .IndexGuest__Title,
@@ -190,20 +191,9 @@ h1.Section__Title {
   cursor: pointer;
 }
 
-.IndexGuest__Summary__Btn svg {
-  overflow: initial;
-  margin: 0 8px;
-  width: 16px;
-  height: 16px;
-}
-
 .IndexGuest__Summary__Btn h2 {
   flex-grow: 1;
   text-align: left;
-}
-
-.IndexGuest__Summary__Btn .stx-price {
-  margin-right: 32px;
 }
 
 .IndexGuest__Title,

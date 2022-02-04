@@ -28,7 +28,7 @@ export const ShippingLines = ({
     return (
       <section className="FieldSet FieldSet--ShippingMethod">
         <div className="FieldSet__Header">
-          <h3 className="FieldSet__Heading">{t('shipping.method')}</h3>
+          <h2 className="FieldSet__Heading">{t('shipping.method')}</h2>
         </div>
         <div className="FieldSet__Content">
           <p>{t('shipping.options_description')}</p>
@@ -40,7 +40,7 @@ export const ShippingLines = ({
   return (
     <section className="FieldSet FieldSet--ShippingMethod">
       <div className="FieldSet__Header">
-        <h3 className="FieldSet__Heading">{t('shipping.method')}</h3>
+        <h2 className="FieldSet__Heading">{t('shipping.method')}</h2>
       </div>
       {
         shippingLinesFetching ? <LoadingState />

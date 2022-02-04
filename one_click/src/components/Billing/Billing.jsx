@@ -16,7 +16,7 @@ const Billing = ({section, onSectionChange}, ref) => {
     <div ref={ref} className={classNames('Sidebar Billing', section === 'billing' ? 'Sidebar--Show' : (section === 'summaryB' ? 'IndexPage--Hide' : 'Sidebar--Hide'))}>
       <Header title={websiteName} />
       
-      <SummaryCondensed onSectionChange={() => onSectionChange('summaryB')}/>
+      <SummaryCondensed handleClick={() => onSectionChange('summaryB')}/>
 
       <div className="Billing__Payment">
         <h2 className="IndexGuest__Title">{t('payment.method')}</h2>

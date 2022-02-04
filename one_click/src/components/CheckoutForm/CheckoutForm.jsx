@@ -172,7 +172,7 @@ const CheckoutForm = ({ banners }) => {
             </>
             : null
           }
-          <div class="CheckoutButton__Desktop__Wrapper" >
+          <div className="CheckoutButton__Desktop__Wrapper" >
             <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
           </div>
         </>

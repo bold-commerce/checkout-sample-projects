@@ -26,7 +26,7 @@ const IndexPageGuest = ({ onSectionChange, show }, ref) => {
   return (
     <div ref={ref} className={classNames('Sidebar IndexGuest', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName} />
-      <SummaryCondensed onSectionChange={() => onSectionChange('summary')}/>
+      <SummaryCondensed handleClick={() => onSectionChange('summary')}/>
       <CustomerInfo />
       <div className="IndexGuest__ShippingAddress">
         <h2 className="IndexGuest__Title">{t('shipping.address')}</h2>

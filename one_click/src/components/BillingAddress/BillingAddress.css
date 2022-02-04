@@ -23,30 +23,20 @@
   cursor: pointer;
 }
 
-.FieldSet--BillingAddress .FieldSet__Content {
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 10px;
+.FieldSet--BillingAddress .FieldSet__Content .stx-checkbox-field__div {
+  display: flex;
 }
 
 .FieldSet--BillingAddress .RadioButton .stx-checkbox-field__checkbox {
   position: relative;
-  left: 0;
-  top: 0;
   margin-right: 10px;
 }
 
 .FieldSet--BillingAddress .RadioButton .stx-checkbox-field__label {
-  position: absolute;
-  left: 0;
   height: 100%;
-  top: 0;
-  padding-left: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   cursor: pointer;
   width: 100%;
+  color: #000;
 }
 
 .Billing__Title {
@@ -54,4 +44,5 @@
   font-weight: bold;
   line-height: 20px;
   color: rgba(0, 0, 0, .9);
+  margin-bottom: 4px;
 }
