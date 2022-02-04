@@ -1,18 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { InventoryItem } from '../../../../one_click/src/components/InventoryItem';
-import { 
-    exampleLineItems as MOCKexampleLineItems,
-    exampleInventory as MOCKinventory
-} from '../../../utils/lineItemHelpers';
+import { exampleInventory as MOCKinventory } from '../../../utils/lineItemHelpers';
+import { exampleUseLineItems as MOCKlineItems } from '../../../utils/hookHelpers';
+
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useLineItems: () => ({
-        data: MOCKexampleLineItems,
-        updateLineItemQuantity: (() => {}),
-        removeLineItems: (() => {})
-    })
+    useLineItems: () => MOCKlineItems
 })).mock('react-router', () => ({
     ...jest.requireActual('react-router'),
     useLocation: () => ({

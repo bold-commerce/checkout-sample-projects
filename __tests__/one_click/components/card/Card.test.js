@@ -33,7 +33,7 @@ describe('Card', () => {
         expect(asFragment()).toMatchSnapshot();
     });
 
-    test('renders Card component with action', () => {
+    test('renders Card component with action label', () => {
         const action = { label: "Action Label" };
         
         const { asFragment } = render(
@@ -48,4 +48,23 @@ describe('Card', () => {
         );
         expect(asFragment()).toMatchSnapshot();
     });
-})
+
+    test('renders Card component with action label and onClick', () => {
+        const action = { 
+            label: "Action Label",
+            onClick: () => {}
+        };
+        
+        const { asFragment } = render(
+            <Card 
+                title={null} 
+                description={null} 
+                component={null} 
+                overview={null} 
+                action={action} 
+                children={null}
+            />
+        );
+        expect(asFragment()).toMatchSnapshot();
+    });
+});

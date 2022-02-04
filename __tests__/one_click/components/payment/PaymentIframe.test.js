@@ -3,33 +3,18 @@ import { render } from '@testing-library/react';
 import { PaymentIframe } from '../../../../one_click/src/components/Payment'
 import { MemoryRouter } from "react-router";
 import {
-    caProvinces as MOCKprovinces,
-    countries as MOCKcountries
-} from '../../../utils/addressHelpers';
+    exampleUseBillingSameAsShipping as MOCKbillingSameAsShipping,
+    exampleUsePaymentMethod as MOCKpaymentMethod,
+    exampleUsePaymentIframe as MOCKpaymentIframe,
+    exampleUseCountryInfo as MOCKcountryInfo
+} from '../../../utils/hookHelpers';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    usePaymentMethod: () => ({ showPaymentMethod: true }),
-    usePaymentIframe: () => ({
-        data: {
-            url: 'test.url',
-            loadingStatus: 'fulfilled',
-            paymentIframeOnLoaded: (() => {})
-        }
-    }),
-    useCountryInfo: () => ({
-        data: {
-            countries: MOCKcountries,
-            provinceLabel: "province",
-            provinces: MOCKprovinces,
-            showPostalCode: true,
-            showProvince: true
-        }
-    }),
-    useBillingSameAsShipping: () => ({
-        data: true,
-        setBillingSameAsShipping: (() => {})
-    })
+    useBillingSameAsShipping: () => MOCKbillingSameAsShipping,
+    usePaymentMethod: () => MOCKpaymentMethod,
+    usePaymentIframe: () => MOCKpaymentIframe,
+    useCountryInfo: () => MOCKcountryInfo,
 }))
 
 describe('PaymentIframe', () => {

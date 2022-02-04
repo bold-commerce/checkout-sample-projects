@@ -1,67 +1,28 @@
 import React from "react";
 import { render } from '@testing-library/react';
 import { Billing } from '../../../../one_click/src/components/Billing'
-import { exampleLineItems as MOCKexampleLineItems } from '../../../utils/lineItemHelpers';
-import { testApplicationState as MOCKapplicationState } from '../../../utils/applicationStateHelper';
-import { exampleShippingState as MOCKexampleShippingState } from '../../../utils/shippingLinesHelper';
 import {
-    exampleAddress as MOCKexampleAddress,
-    countries as MOCKcountries,
-    caProvinces as MOCKprovinces
-} from '../../../utils/addressHelpers';
+    exampleUseCheckoutStore as MOCKcheckoutStore,
+    exampleUseLineItems as MOCKlineItems,
+    exampleUseShippingLines as MOCKshippingLines,
+    exampleUseBillingSameAsShipping as MOCKbillingSameAsShipping,
+    exampleUseBillingAddress as MOCKbillingAddress,
+    exampleUsePaymentIframe as MOCKpaymentIframe,
+    exampleUseDiscount as MOCKdiscount,
+    exampleUseCountryInfo as MOCKcountryInfo
+} from '../../../utils/hookHelpers';
 import '../../../../one_click/src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useCheckoutStore: () => ({
-        state: {
-            orderInfo: {
-                billingSameAsShipping:true,
-                orderStatus: ""
-            },
-            errors: { order: null },
-            loadingStatus: { isLoading: false },
-            applicationState: MOCKapplicationState,
-            orderTotals: {
-                taxesTotal: 1200,
-                subTotal: 23000,
-                total: 24200
-            }
-        }
-    }),
-    useLineItems: () => ({
-        data: MOCKexampleLineItems
-    }),
-    useShippingLines: () => ({
-        data: MOCKexampleShippingState
-    }),
-    useBillingAddress: () => ({
-        data: MOCKexampleAddress
-    }),
-    usePaymentIframe: () => ({
-        data: {
-            url: 'test.url',
-            loadingStatus: 'fulfilled',
-            paymentIframeOnLoaded: (() => {})
-        }
-    }),
-    useDiscount: () => ({
-        data: '?',
-        applyDiscount : (() => {})
-    }),
-    useBillingSameAsShipping: () => ({
-        data: true,
-        setBillingSameAsShipping: (() => {})
-    }),
-    useCountryInfo: () => ({
-        data: {
-            countries: MOCKcountries,
-            provinceLabel: "province",
-            provinces: MOCKprovinces,
-            showPostalCode: true,
-            showProvince: true
-        }
-    })
+    useCheckoutStore: () =>  MOCKcheckoutStore,
+    useLineItems: () => MOCKlineItems,
+    useShippingLines: () => MOCKshippingLines,
+    useBillingAddress: () => MOCKbillingAddress,
+    usePaymentIframe: () => MOCKpaymentIframe,
+    useDiscount: () => MOCKdiscount,
+    useBillingSameAsShipping: () => MOCKbillingSameAsShipping,
+    useCountryInfo: () => MOCKcountryInfo
 })).mock('react', () => ({
     ...jest.requireActual('react'),
     useContext: () => ({
@@ -76,7 +37,6 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
         navigate: (() => {})
     })
 }));
-
 
 describe('Billing', () => {
   test('render Billing component set to show', () => {

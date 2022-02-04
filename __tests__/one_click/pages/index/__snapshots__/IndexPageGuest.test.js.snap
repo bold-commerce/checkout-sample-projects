@@ -163,7 +163,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="first_name"
                 placeholder="First name"
                 type="text"
-                value=""
+                value="John"
               />
             </div>
           </div>
@@ -180,7 +180,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="last_name"
                 placeholder="Last name"
                 type="text"
-                value=""
+                value="Doe"
               />
             </div>
           </div>
@@ -200,7 +200,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="business_name"
                 placeholder="Company (optional)"
                 type="text"
-                value=""
+                value="Bold Commerce"
               />
             </div>
           </div>
@@ -221,7 +221,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="address_line_1"
                 placeholder="Address"
                 type="text"
-                value=""
+                value="123 Fake Street"
               />
             </div>
           </div>
@@ -238,7 +238,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="address_line_2"
                 placeholder="Apt, suite, etc."
                 type="text"
-                value=""
+                value="Unit 12"
               />
             </div>
           </div>
@@ -259,7 +259,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="city"
                 placeholder="City"
                 type="text"
-                value=""
+                value="Winnipeg"
               />
             </div>
           </div>
@@ -313,7 +313,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
             </div>
           </div>
           <div
-            class="stx-field stx-field--with-select SelectField Field--Province Field--Hidden"
+            class="stx-field stx-field--with-select SelectField Field--Province"
           >
             <div
               class="stx-select stx-select--with-placeholder"
@@ -413,7 +413,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
             </div>
           </div>
           <div
-            class="stx-field stx-field--with-input Field Field--Postal_Code Field--Hidden"
+            class="stx-field stx-field--with-input Field Field--Postal_Code"
           >
             <div
               class="stx-input"
@@ -425,7 +425,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="postal"
                 placeholder="Postal code"
                 type="text"
-                value=""
+                value="R3A1B3"
               />
             </div>
           </div>
@@ -446,7 +446,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
                 name="phone_number"
                 placeholder="Phone (optional)"
                 type="tel"
-                value=""
+                value="204-123-4567"
               />
             </div>
           </div>
@@ -470,7 +470,98 @@ exports[`IndexPageGuest renders IndexPageGuest component 1`] = `
         </div>
         <div
           class="FieldSet__Content"
-        />
+        >
+          <div
+            class="RadioButton"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField13"
+                    name="shipping-method"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField13"
+                >
+                  Standard Shipping
+                </label>
+              </div>
+            </div>
+            <div
+              class="stx-price ShippingMethod__Price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $20.00 CAD
+              </p>
+            </div>
+          </div>
+          <div
+            class="RadioButton"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField14"
+                    name="shipping-method"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField14"
+                >
+                  Expedited Shipping
+                </label>
+              </div>
+            </div>
+            <div
+              class="stx-price ShippingMethod__Price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $40.00 CAD
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
     <div
@@ -610,7 +701,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
           <input
             autocomplete="email"
             class="stx-input__input-element"
-            id="stxField13"
+            id="stxField15"
             name="email"
             placeholder="Email address"
             type="email"
@@ -628,7 +719,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
           >
             <input
               class="stx-checkbox__input"
-              id="stxField14"
+              id="stxField16"
               type="checkbox"
             />
             <span
@@ -637,7 +728,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
           </span>
           <label
             class="stx-checkbox-field__label"
-            for="stxField14"
+            for="stxField16"
           >
             Subscribe to our newsletter
           </label>
@@ -667,11 +758,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="given-name"
                 class="stx-input__input-element"
-                id="stxField15"
+                id="stxField17"
                 name="first_name"
                 placeholder="First name"
                 type="text"
-                value=""
+                value="John"
               />
             </div>
           </div>
@@ -684,11 +775,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="family-name"
                 class="stx-input__input-element"
-                id="stxField16"
+                id="stxField18"
                 name="last_name"
                 placeholder="Last name"
                 type="text"
-                value=""
+                value="Doe"
               />
             </div>
           </div>
@@ -704,11 +795,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
             >
               <input
                 class="stx-input__input-element"
-                id="stxField17"
+                id="stxField19"
                 name="business_name"
                 placeholder="Company (optional)"
                 type="text"
-                value=""
+                value="Bold Commerce"
               />
             </div>
           </div>
@@ -725,11 +816,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="address_line1"
                 class="stx-input__input-element"
-                id="stxField18"
+                id="stxField20"
                 name="address_line_1"
                 placeholder="Address"
                 type="text"
-                value=""
+                value="123 Fake Street"
               />
             </div>
           </div>
@@ -742,11 +833,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="address_line2"
                 class="stx-input__input-element"
-                id="stxField19"
+                id="stxField21"
                 name="address_line_2"
                 placeholder="Apt, suite, etc."
                 type="text"
-                value=""
+                value="Unit 12"
               />
             </div>
           </div>
@@ -763,11 +854,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="address-level2"
                 class="stx-input__input-element"
-                id="stxField20"
+                id="stxField22"
                 name="city"
                 placeholder="City"
                 type="text"
-                value=""
+                value="Winnipeg"
               />
             </div>
           </div>
@@ -784,7 +875,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <select
                 autocomplete="country"
                 class="stx-select__select-element"
-                id="stxField21"
+                id="stxField23"
                 name="country"
               >
                 <option
@@ -821,7 +912,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
             </div>
           </div>
           <div
-            class="stx-field stx-field--with-select SelectField Field--Province Field--Hidden"
+            class="stx-field stx-field--with-select SelectField Field--Province"
           >
             <div
               class="stx-select stx-select--with-placeholder"
@@ -829,7 +920,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <select
                 autocomplete="address-level1"
                 class="stx-select__select-element"
-                id="stxField22"
+                id="stxField24"
                 name="province"
               >
                 <option
@@ -921,7 +1012,7 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
             </div>
           </div>
           <div
-            class="stx-field stx-field--with-input Field Field--Postal_Code Field--Hidden"
+            class="stx-field stx-field--with-input Field Field--Postal_Code"
           >
             <div
               class="stx-input"
@@ -929,11 +1020,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="postal-code"
                 class="stx-input__input-element"
-                id="stxField23"
+                id="stxField25"
                 name="postal"
                 placeholder="Postal code"
                 type="text"
-                value=""
+                value="R3A1B3"
               />
             </div>
           </div>
@@ -950,11 +1041,11 @@ exports[`IndexPageGuest renders IndexPageGuest component 2`] = `
               <input
                 autocomplete="tel"
                 class="stx-input__input-element"
-                id="stxField24"
+                id="stxField26"
                 name="phone_number"
                 placeholder="Phone (optional)"
                 type="tel"
-                value=""
+                value="204-123-4567"
               />
             </div>
           </div>

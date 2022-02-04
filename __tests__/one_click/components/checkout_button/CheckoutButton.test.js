@@ -1,29 +1,20 @@
 import React from "react";
 import { render } from '@testing-library/react';
 import { CheckoutButton } from '../../../../one_click/src/components/CheckoutButton'
-import { exampleLineItems as MOCKexampleLineItems } from '../../../utils/lineItemHelpers';
-import { testApplicationState as MOCKapplicationState } from '../../../utils/applicationStateHelper';
+import { 
+    exampleUseCheckoutStore as MOCKcheckoutStore,
+    exampleUsePaymentIframe as MOCKpaymentIframe,
+    exampleUseLineItems as MOCKlineItems
+} from '../../../utils/hookHelpers';
 import '../../../../one_click/src/i18n/config';
 import { MemoryRouter } from "react-router-dom";
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useCheckoutStore: () => ({
-        state: {
-            orderInfo: {
-                billingSameAsShipping:true,
-                orderStatus: ""
-            },
-            errors: { order: null },
-            loadingStatus: { isLoading: false },
-            applicationState: MOCKapplicationState
-        }
-    }),
-    usePaymentIframe: () => ({ }),
-    useLineItems: () => ({
-        lineItems: MOCKexampleLineItems
-    })
-}))
+    useCheckoutStore: () => MOCKcheckoutStore,
+    usePaymentIframe: () => MOCKpaymentIframe,
+    useLineItems: () => MOCKlineItems
+}));
 
 describe('CheckoutButton', () => {
     test('renders CheckoutButton component', () => {

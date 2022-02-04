@@ -1,24 +1,13 @@
 import React from "react";
 import { render } from '@testing-library/react';
 import { BillingAddress } from '../../../../one_click/src/components/BillingAddress/BillingAddress';
-import {
-    exampleAddress as MOCKexampleAddress,
-    countries as MOCKcountries,
-    caProvinces as MOCKprovinces
-} from '../../../utils/addressHelpers';
+import { exampleAddress as MOCKexampleAddress } from '../../../utils/addressHelpers';
+import { exampleUseCountryInfo as MOCKcountryInfo } from "../../../utils/hookHelpers";
 import '../../../../one_click/src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useCountryInfo: () => ({
-        data: {
-            countries: MOCKcountries,
-            provinceLabel: "province",
-            provinces: MOCKprovinces,
-            showPostalCode: true,
-            showProvince: true
-        }
-    })
+    useCountryInfo: () => MOCKcountryInfo
 }))
 
 describe('BillingAddress', () => {
@@ -26,13 +15,12 @@ describe('BillingAddress', () => {
         const { asFragment } = render(
             <BillingAddress
                 billingAddress={MOCKexampleAddress}
-                billingSameAsShipping={false}
             />
         );
         expect(asFragment()).toMatchSnapshot();
     })
 
-    test('render BillingAddress component with differnt billing address', () => {
+    test('render BillingAddress component with different billing address', () => {
         const { asFragment } = render(
             <BillingAddress
                 billingAddress={MOCKexampleAddress}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BillingAddress render BillingAddress component with differnt billing address 1`] = `
+exports[`BillingAddress render BillingAddress component with different billing address 1`] = `
 <DocumentFragment>
   <section
     class="FieldSet FieldSet--BillingAddress"

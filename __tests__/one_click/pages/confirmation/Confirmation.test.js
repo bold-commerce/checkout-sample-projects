@@ -1,14 +1,12 @@
 import React from 'react';
 import { Confirmation } from '../../../../one_click/src/pages/Confirmation';
-import { testApplicationState as MOCKtestApplicationState } from '../../../utils/applicationStateHelper';
+import { exampleUseCheckoutStore as MOCKcheckoutStore } from '../../../utils/hookHelpers';
 import { render } from '@testing-library/react';
 import '../../../../one_click/src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
-    useCheckoutStore: () => ({
-        state: { applicationState: MOCKtestApplicationState }
-    })
+    useCheckoutStore: () => MOCKcheckoutStore
 })).mock('React', () => ({
     ...jest.requireActual('React'),
     useContext: () => ({

@@ -26,7 +26,7 @@ exports[`Card renders Card component 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Card renders Card component with action 1`] = `
+exports[`Card renders Card component with action label 1`] = `
 <DocumentFragment>
   <div
     class="Card"
@@ -44,6 +44,38 @@ exports[`Card renders Card component with action 1`] = `
       class="Card__Action"
     >
       Action Label
+    </div>
+    <div
+      class="Card__Content"
+    >
+      <div />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card renders Card component with action label and onClick 1`] = `
+<DocumentFragment>
+  <div
+    class="Card"
+  >
+    <div
+      class="Card__Title"
+    />
+    <div
+      class="Card__Overview"
+    />
+    <div
+      class="Card__Description"
+    />
+    <div
+      class="Card__Action"
+    >
+      <button
+        type="button"
+      >
+        Action Label
+      </button>
     </div>
     <div
       class="Card__Content"
