@@ -11,7 +11,7 @@ This is a collection of pre-built checkout templates using the [checkout-react-c
 4. Populate the `.env` file with your inventory url, and login url. See [ENV Configuration](#env-configuration) for more information.
 5. In `server/index.js`, locate the `exampleBody` variable. Change the `platform_id` to be a `platform_id` that exists in your product catalog for the store that Checkout is integrated with.
 6. Run `yarn` or `npm install`.
-7. Run `yarn dev` or `npm run dev` to start both the Node.js server and the webpack watcher.
+7. Run `yarn start` or `npm run start` to run webpack-dev-server on port 8080
 
 ## Production Build
 - Run `yarn build` or `npm run build`
@@ -20,20 +20,36 @@ This is a collection of pre-built checkout templates using the [checkout-react-c
 ## ENV Configuration
 * INVENTORY_URL
   * This is a custom endpoint that the React app will make a request to in order to fetch inventory information about the current order. This check happens at the beginning of the checkout and before processing the order. The response of this custom endpoint should be in the following format:
+
   ```json
-  //TODO: Verify all return types of the variant api
     {
-      "123456789": {
+      "{VARIANT_ID}": {
         "product_id": "123456789",
         "quantity": 99,
         "allow_backorder": true,
-        "inventory_tracker": "none", // none, variant, product
-        "sku": "ABC123",
+        "inventory_tracker": "none",
+        "tracking_level": "variant"
       }
     }
   ```
+  * Needs to be an object with the key being the variant id
+  * **product_id:** The id of the product that the variant is associated with.
+  * **quantity:** The stock available for the specific variant.
+  * **allow_backorder:** If the variant is allowed to be oversold.
+  * **inventory_tracker:** Possible values are `none` or `platform`. If `none`, then the variant does not track inventory
+  * **tracking_level:** If the product tracks inventory at the product or variant level.
+
 * LOGIN_URL
-* API_BASE
+  * The url that the user should be redirected to when they click the login link in the checkout.
+* LOGOUT_URL
+  * The url that the user should be redirected to when they click the logout link in the checkout.
+* CONTACT_URL
+  * The url that the user should be redirected to when they click the contact us link in the checkout
+
+## Integrating with a backend
+* In order to use the frontend, you need to populate the `CheckoutProvider` with information that you recieve from the [Bold Commerce Order Init endpoint](https://developer.boldcommerce.com/default/documentation/orders#/Orders/post-init)
+* You will need to create a backend application that will integrate a platforms shopping cart and make a request to the above API. The information received can then be passed to the `CheckoutProvider`.
+* There are example backend applications for [Shopify](https://github.com/bold-commerce/headless-checkout-shopify) and [Bigcommerce](https://github.com/bold-commerce/headless-checkout-bigcommerce) that you can use instead if you'd like.
 
 ## Analytics
 To add analytics tracking to the app, you can edit the custom hook called `useAnalytics` that can be found in `client/hooks/useAnalytics.js`.

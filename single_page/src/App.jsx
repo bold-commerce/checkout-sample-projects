@@ -12,7 +12,7 @@ const App = () => {
         publicOrderId={window.checkout.publicOrderId}
         token={window.checkout.jwtToken}
         storeIdentifier={window.checkout.storeIdentifier}
-        apiBase={process.env.API_BASE}
+        apiBase={process.env.API_BASE || 'https://api.boldcommerce.com/checkout/storefront'}
       >
         <SinglePageLayout />
       </CheckoutProvider>
