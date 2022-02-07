@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DiscountForm renders DiscountForm component 1`] = `
+<DocumentFragment>
+  <div
+    class="SummaryBlock Summary__DiscountForm"
+  >
+    <div
+      class="DiscountForm"
+    >
+      <div
+        class="stx-field stx-field--is-disabled stx-field--with-input"
+      >
+        <div
+          class="stx-input stx-input--is-disabled"
+        >
+          <input
+            aria-disabled="true"
+            class="stx-input__input-element"
+            disabled=""
+            id="stxField1"
+            placeholder="Enter discount code"
+            type="text"
+            value="discount_code"
+          />
+        </div>
+      </div>
+      <button
+        aria-busy="false"
+        aria-disabled="true"
+        class="stx-button stx-button--primary stx-button--is-disabled"
+        disabled=""
+      >
+        <span
+          class="stx-button__text"
+        >
+          Apply
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

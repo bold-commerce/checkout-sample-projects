@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState renders EmptyState component 1`] = `
+<DocumentFragment>
+  <svg
+    fill="none"
+    height="29"
+    viewBox="0 0 28 29"
+    width="28"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#C4C4C4"
+      height="5"
+      rx="2.5"
+      width="28"
+    />
+    <rect
+      fill="#C4C4C4"
+      height="5"
+      rx="2.5"
+      width="28"
+      y="8"
+    />
+    <rect
+      fill="#C4C4C4"
+      height="5"
+      rx="2.5"
+      width="28"
+      y="16"
+    />
+    <rect
+      fill="#C4C4C4"
+      height="5"
+      rx="2.5"
+      width="28"
+      y="24"
+    />
+    <circle
+      cx="2.5"
+      cy="10.5"
+      fill="white"
+      r="1.5"
+    />
+    <circle
+      cx="2.5"
+      cy="2.5"
+      fill="white"
+      r="1.5"
+    />
+    <circle
+      cx="2.5"
+      cy="18.5"
+      fill="white"
+      r="1.5"
+    />
+    <circle
+      cx="2.5"
+      cy="26.5"
+      fill="white"
+      r="1.5"
+    />
+  </svg>
+</DocumentFragment>
+`;

@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineItemQuantity renders LineItemQuantity component 1`] = `
+<DocumentFragment>
+  <div
+    class="LineItem__LineItemQuantityWrapper"
+  >
+    <div
+      class="LineItemQuantity__Decrement"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="true"
+        class="stx-button stx-button--is-disabled"
+        disabled=""
+      >
+        <span
+          class="stx-button__text"
+        >
+          -
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+    <div
+      class="LineItemQuantity"
+    >
+      <div
+        class="stx-input"
+      >
+        <input
+          class="stx-input__input-element"
+          type="number"
+          value="1"
+        />
+      </div>
+    </div>
+    <div
+      class="LineItemQuantity__Increment"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button"
+      >
+        <span
+          class="stx-button__text"
+        >
+          +
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LineItemQuantity renders LineItemQuantity component as read only 1`] = `
+<DocumentFragment>
+  <div
+    class="LineItem__LineItemQuantityWrapper"
+  >
+    <div
+      class="LineItemQuantity__Decrement"
+    />
+    <div
+      class="LineItemQuantity LineItemQuantity--read-only"
+    >
+      <span
+        class="LineItemQuantity__ReadOnlyValue"
+      >
+        1
+      </span>
+    </div>
+    <div
+      class="LineItemQuantity__Increment"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LineItemQuantity renders LineItemQuantity component loading 1`] = `
+<DocumentFragment>
+  <div
+    class="LineItem__LineItemQuantityWrapper"
+  >
+    <div
+      class="LineItemQuantity__Decrement"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button"
+      >
+        <span
+          class="stx-button__text"
+        >
+          -
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+    <div
+      class="LineItemQuantity"
+    >
+      <div
+        class="stx-input"
+      >
+        <input
+          class="stx-input__input-element"
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      class="LineItemQuantity__Increment"
+    >
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button"
+      >
+        <span
+          class="stx-button__text"
+        >
+          +
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

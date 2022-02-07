@@ -1,0 +1,407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineItems renders LineItems component 1`] = `
+<DocumentFragment>
+  <div
+    class="LineItemList"
+  >
+    <div
+      class="LineItem"
+    >
+      <div
+        class="LineItem__ImageDescriptionWrapper"
+      >
+        <div
+          class="LineItem__ProductImageWrapper"
+        >
+          <div
+            class="stx-image"
+          >
+            <div
+              class="stx-image--content"
+            >
+              <div
+                class="stx-image--holder"
+              >
+                <img
+                  alt="Size Large / Colour Blue"
+                  class="stx-image--image"
+                  src=""
+                  title="Size Large / Colour Blue"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="LineItem__ProductDetails"
+        >
+          <div
+            class="stx-details stx-details--left"
+          >
+            <div
+              class="stx-details__title"
+            >
+              Size Large / Colour Blue
+            </div>
+            <div
+              class="stx-details__description"
+            />
+          </div>
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button stx-button--secondary"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Remove
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="LineItem__QuantityPriceWrapper"
+      >
+        <div
+          class="LineItem__LineItemQuantityWrapper"
+        >
+          <div
+            class="LineItemQuantity__Decrement"
+          >
+            <button
+              aria-busy="false"
+              aria-disabled="true"
+              class="stx-button stx-button--is-disabled"
+              disabled=""
+            >
+              <span
+                class="stx-button__text"
+              >
+                -
+              </span>
+              <span
+                class="stx-loading-spinner stx-button__spinner"
+              />
+            </button>
+          </div>
+          <div
+            class="LineItemQuantity"
+          >
+            <div
+              class="stx-input"
+            >
+              <input
+                aria-readonly="false"
+                class="stx-input__input-element"
+                type="number"
+                value="1"
+              />
+            </div>
+          </div>
+          <div
+            class="LineItemQuantity__Increment"
+          >
+            <button
+              aria-busy="false"
+              aria-disabled="false"
+              class="stx-button"
+            >
+              <span
+                class="stx-button__text"
+              >
+                +
+              </span>
+              <span
+                class="stx-loading-spinner stx-button__spinner"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="LineItem__ProductPrice"
+        >
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $14.00 CAD
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="LineItem"
+    >
+      <div
+        class="LineItem__ImageDescriptionWrapper"
+      >
+        <div
+          class="LineItem__ProductImageWrapper"
+        >
+          <div
+            class="stx-image"
+          >
+            <div
+              class="stx-image--content"
+            >
+              <div
+                class="stx-image--holder"
+              >
+                <img
+                  alt="Number Two"
+                  class="stx-image--image"
+                  src=""
+                  title="Number Two"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="LineItem__ProductDetails"
+        >
+          <div
+            class="stx-details stx-details--left"
+          >
+            <div
+              class="stx-details__title"
+            >
+              Number Two
+            </div>
+            <div
+              class="stx-details__description"
+            />
+          </div>
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button stx-button--secondary"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Remove
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="LineItem__QuantityPriceWrapper"
+      >
+        <div
+          class="LineItem__LineItemQuantityWrapper"
+        >
+          <div
+            class="LineItemQuantity__Decrement"
+          >
+            <button
+              aria-busy="false"
+              aria-disabled="false"
+              class="stx-button"
+            >
+              <span
+                class="stx-button__text"
+              >
+                -
+              </span>
+              <span
+                class="stx-loading-spinner stx-button__spinner"
+              />
+            </button>
+          </div>
+          <div
+            class="LineItemQuantity"
+          >
+            <div
+              class="stx-input"
+            >
+              <input
+                aria-readonly="false"
+                class="stx-input__input-element"
+                type="number"
+                value="2"
+              />
+            </div>
+          </div>
+          <div
+            class="LineItemQuantity__Increment"
+          >
+            <button
+              aria-busy="false"
+              aria-disabled="false"
+              class="stx-button"
+            >
+              <span
+                class="stx-button__text"
+              >
+                +
+              </span>
+              <span
+                class="stx-loading-spinner stx-button__spinner"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="LineItem__ProductPrice"
+        >
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $32.00 CAD
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="LineItem"
+    >
+      <div
+        class="LineItem__ImageDescriptionWrapper"
+      >
+        <div
+          class="LineItem__ProductImageWrapper"
+        >
+          <div
+            class="stx-image"
+          >
+            <div
+              class="stx-image--content"
+            >
+              <div
+                class="stx-image--holder"
+              >
+                <img
+                  alt="Default Title"
+                  class="stx-image--image"
+                  src=""
+                  title="Default Title"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="LineItem__ProductDetails"
+        >
+          <div
+            class="stx-details stx-details--left"
+          >
+            <div
+              class="stx-details__title"
+            >
+              Default Title
+            </div>
+            <div
+              class="stx-details__description"
+            />
+          </div>
+          <button
+            aria-busy="false"
+            aria-disabled="false"
+            class="stx-button stx-button--secondary"
+          >
+            <span
+              class="stx-button__text"
+            >
+              Remove
+            </span>
+            <span
+              class="stx-loading-spinner stx-button__spinner"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="LineItem__QuantityPriceWrapper"
+      >
+        <div
+          class="LineItem__LineItemQuantityWrapper"
+        >
+          <div
+            class="LineItemQuantity__Decrement"
+          >
+            <button
+              aria-busy="false"
+              aria-disabled="false"
+              class="stx-button"
+            >
+              <span
+                class="stx-button__text"
+              >
+                -
+              </span>
+              <span
+                class="stx-loading-spinner stx-button__spinner"
+              />
+            </button>
+          </div>
+          <div
+            class="LineItemQuantity"
+          >
+            <div
+              class="stx-input"
+            >
+              <input
+                aria-readonly="false"
+                class="stx-input__input-element"
+                type="number"
+                value="3"
+              />
+            </div>
+          </div>
+          <div
+            class="LineItemQuantity__Increment"
+          >
+            <button
+              aria-busy="false"
+              aria-disabled="false"
+              class="stx-button"
+            >
+              <span
+                class="stx-button__text"
+              >
+                +
+              </span>
+              <span
+                class="stx-loading-spinner stx-button__spinner"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="LineItem__ProductPrice"
+        >
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $123.00 CAD
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

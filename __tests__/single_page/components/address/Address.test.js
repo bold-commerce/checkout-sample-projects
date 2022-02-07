@@ -1,9 +1,7 @@
 import React from 'react';
 import Address from '../../../../single_page/src/components/Address/Address'
 import { render } from '@testing-library/react';
-import {
-  addressErrors, caProvinces, countries, emptyAddress, exampleAddress,
-} from '../../../utils/addressHelpers';
+import { addressErrors, caProvinces, countries, emptyAddress, exampleAddress } from '../../../utils/addressHelpers';
 import '../../../../single_page/src/i18n/config';
 
 describe('Address', () => {

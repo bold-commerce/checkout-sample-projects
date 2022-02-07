@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Customer renders Customer component 1`] = `
+<DocumentFragment>
+  <section
+    class="FieldSet FieldSet--CustomerInformation"
+  >
+    <div
+      class="FieldSet__Header"
+    >
+      <h3
+        class="FieldSet__Heading"
+      >
+        Customer information
+      </h3>
+    </div>
+    <div
+      class="FieldSet__Content"
+    >
+      <div
+        class="stx-field stx-field--with-input InputField Field--Email"
+      >
+        <div
+          class="stx-input"
+        >
+          <input
+            autocomplete="email"
+            class="stx-input__input-element"
+            id="stxField1"
+            name="email"
+            placeholder="Email"
+            type="email"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

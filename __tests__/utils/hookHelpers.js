@@ -10,6 +10,10 @@ export const exampleUseBillingAddress = { data: exampleAddress }
 export const exampleUseCustomer = { data: { platform_id: 123 }}
 export const exampleUseLineItems = { data: exampleLineItems }
 
+export const exampleUseErrors = {
+  data: { order: [{ message: 'Testing order errors' }] }
+}
+
 export const exampleUseLoadingStatus = {
   shippingAddressLoadingStatus: 'complete',
   shippingLinesLoadingStatus: 'complete'
@@ -23,12 +27,6 @@ export const exampleUseShippingAddress = {
 export const exampleUseBillingSameAsShipping = {
   data: false,
   setBillingSameAsShipping: () => {}
-}
-
-export const exampleUseDiscount = {
-  data: 'discount_code',
-  removeDiscount: () => {},
-  applyDiscount: () => {}
 }
 
 export const exampleUsePaymentIframe = {
@@ -47,6 +45,17 @@ export const exampleUseCountryInfo = {
     showPostalCode: true,
     showProvince: true
   }
+}
+
+export const exampleUseDiscount = {
+  data: {
+    discounts: {},
+    discountApplied: true,
+    discountCode: 'discount_code',
+    discountTotal: 1337
+  },
+  removeDiscount: () => {},
+  applyDiscount: () => {}
 }
 
 export const exampleUseCheckoutStore = {
