@@ -16,7 +16,10 @@ export const exampleUseErrors = {
 
 export const exampleUseLoadingStatus = {
   shippingAddressLoadingStatus: 'complete',
-  shippingLinesLoadingStatus: 'complete'
+  shippingLinesLoadingStatus: 'complete',
+  data: {
+    shippingAddress: 'done'
+  }
 }
 
 export const exampleUseShippingAddress = {
@@ -32,9 +35,10 @@ export const exampleUseBillingSameAsShipping = {
 export const exampleUsePaymentIframe = {
   data: {
     url: 'test.url',
+    height: '21'
+  },
     loadingStatus: 'fulfilled',
     paymentIframeOnLoaded: () => {}
-  }
 }
 
 export const exampleUseCountryInfo = {
@@ -56,6 +60,23 @@ export const exampleUseDiscount = {
   },
   removeDiscount: () => {},
   applyDiscount: () => {}
+}
+
+export const exampleUseBreakdown = {
+  data: {
+    subTotal: 1919,
+    shippingTotal: 210,
+    taxesTotal: 1111,
+    total: 3240,
+    payments: [
+      {
+        id: 123,
+        friendly_brand: 'visa',
+        lineText: 'test card',
+        value: 100
+      }
+    ]
+  }
 }
 
 export const exampleUseCheckoutStore = {

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderSummaryLine renders OrderSummaryLine component 1`] = `
+<DocumentFragment>
+  <div
+    class="OrderSummaryItem"
+  >
+    <span
+      class="OrderSummaryItem__Title"
+    >
+      Test Item
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OrderSummaryLine renders OrderSummaryLine component with amount 1`] = `
+<DocumentFragment>
+  <div
+    class="OrderSummaryItem"
+  >
+    <span
+      class="OrderSummaryItem__Title"
+    >
+      Test Item
+    </span>
+    <span
+      class="OrderSummaryItem__Amount"
+    >
+      (
+      <div
+        class="stx-price stx-price--alight-center"
+      >
+        <p
+          aria-label="Product price"
+          class="stx-price__amount"
+        >
+          $19.19 CAD
+        </p>
+      </div>
+      )
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`OrderSummaryLine renders OrderSummaryLine component with lines 1`] = `
+<DocumentFragment>
+  <div
+    class="OrderSummaryItem OrderSummaryItem--removable"
+  >
+    <span
+      class="OrderSummaryItem__Title"
+    >
+      Test Item
+    </span>
+    <div
+      class="OrderSummaryItem__Description"
+    >
+      <span
+        class="OrderSummaryItem__Label"
+      >
+        Test Card
+      </span>
+      <span
+        class="OrderSummaryItem__Amount"
+      >
+        (
+        <div
+          class="stx-price stx-price--alight-center"
+        >
+          <p
+            aria-label="Product price"
+            class="stx-price__amount"
+          >
+            $19.19 CAD
+          </p>
+        </div>
+        )
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

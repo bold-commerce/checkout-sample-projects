@@ -1,0 +1,624 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingAddress renders ShippingAddress component 1`] = `
+<DocumentFragment>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            class="stx-radio__input"
+            id="stxField1"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField1"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        123 Fake Street,
+        Unit 12,
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            class="stx-radio__input"
+            id="stxField2"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField2"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        456 Test Drive,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            class="stx-radio__input"
+            id="stxField3"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField3"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        789 Fake Crescent,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__NewAddressContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+        >
+          <input
+            aria-checked="true"
+            checked=""
+            class="stx-radio__input"
+            id="stxField4"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField4"
+        >
+          Add a new address
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddress renders ShippingAddress component disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio--is-disabled stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            aria-disabled="true"
+            class="stx-radio__input"
+            disabled=""
+            id="stxField9"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField9"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        123 Fake Street,
+        Unit 12,
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio--is-disabled stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            aria-disabled="true"
+            class="stx-radio__input"
+            disabled=""
+            id="stxField10"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField10"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        456 Test Drive,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio--is-disabled stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            aria-disabled="true"
+            class="stx-radio__input"
+            disabled=""
+            id="stxField11"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField11"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        789 Fake Crescent,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__NewAddressContainer"
+  >
+    <div
+      class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio--is-disabled stx-radio--is-checked stx-radio-field__radio"
+        >
+          <input
+            aria-checked="true"
+            aria-disabled="true"
+            checked=""
+            class="stx-radio__input"
+            disabled=""
+            id="stxField12"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField12"
+        >
+          Add a new address
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ShippingAddress renders ShippingAddress component with selected address 1`] = `
+<DocumentFragment>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            class="stx-radio__input"
+            id="stxField5"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField5"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        123 Fake Street,
+        Unit 12,
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+        >
+          <input
+            aria-checked="true"
+            checked=""
+            class="stx-radio__input"
+            id="stxField6"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField6"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        456 Test Drive,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__AddressInfoContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            class="stx-radio__input"
+            id="stxField7"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField7"
+        >
+          <div
+            class="CheckoutStep__FieldSetInfoContainer"
+          >
+            <span
+              class="CheckoutStep__FieldSetInfo"
+            >
+              John Doe
+            </span>
+            <span
+              class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+            >
+              
+        789 Fake Crescent,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    class="RadioButton RadioButton__NewAddressContainer"
+  >
+    <div
+      class="stx-field stx-field--with-radio-field RadioField"
+    >
+      <div
+        class="stx-radio-field"
+      >
+        <span
+          class="stx-radio stx-radio-field__radio"
+        >
+          <input
+            aria-checked="false"
+            class="stx-radio__input"
+            id="stxField8"
+            name="shipping-address"
+            role="radio"
+            type="radio"
+            value=""
+          />
+          <span
+            class="stx-radio__box"
+          />
+        </span>
+        <label
+          class="stx-radio-field__label"
+          for="stxField8"
+        >
+          Add a new address
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderSummaryCollapseButton renders OrderSummaryCollapseButton component 1`] = `
+<DocumentFragment>
+  <button
+    aria-controls="OrderSummary"
+    class="CollapseButton"
+    type="button"
+  >
+    <span
+      class="CollapseButton__title"
+    >
+      <svg
+        fill="none"
+        height="13"
+        viewBox="0 0 17 13"
+        width="17"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15.2153 11.9455C15.5183 12.338 16.0448 12.3778 16.3912 12.0344C16.7375 11.6909 16.7727 11.0942 16.4696 10.7017L8.96544 0.711341C8.63343 0.281291 8.04315 0.281276 7.71113 0.711309L0.206129 10.7016C-0.0969428 11.0942 -0.0618533 11.6908 0.284508 12.0343C0.630869 12.3778 1.15734 12.338 1.46041 11.9455L8.33824 2.76748L15.2153 11.9455Z"
+          fill="#A1A1A1"
+        />
+      </svg>
+      View order summary
+    </span>
+    <span
+      class="CollapseButton__description"
+    >
+      (6 items)
+      <div
+        class="stx-price stx-price--alight-center"
+      >
+        <p
+          aria-label="Product price"
+          class="stx-price__amount"
+        >
+          $32.40 CAD
+        </p>
+      </div>
+    </span>
+  </button>
+</DocumentFragment>
+`;

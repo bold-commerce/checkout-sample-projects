@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingLineList renders ShippingLineList component 1`] = `
+<DocumentFragment>
+  <div
+    class="FieldSet__Content"
+  >
+    <div
+      class="RadioButton"
+    >
+      <div
+        class="stx-field stx-field--with-radio-field RadioField"
+      >
+        <div
+          class="stx-radio-field"
+        >
+          <span
+            class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+          >
+            <input
+              aria-checked="true"
+              checked=""
+              class="stx-radio__input"
+              id="stxField1"
+              name="shipping-method"
+              role="radio"
+              type="radio"
+              value=""
+            />
+            <span
+              class="stx-radio__box"
+            />
+          </span>
+          <label
+            class="stx-radio-field__label"
+            for="stxField1"
+          >
+            Standard Shipping
+          </label>
+        </div>
+      </div>
+      <div
+        class="stx-price ShippingMethod__Price stx-price--alight-center"
+      >
+        <p
+          aria-label="Product price"
+          class="stx-price__amount"
+        >
+          $20.00 CAD
+        </p>
+      </div>
+    </div>
+    <div
+      class="RadioButton"
+    >
+      <div
+        class="stx-field stx-field--with-radio-field RadioField"
+      >
+        <div
+          class="stx-radio-field"
+        >
+          <span
+            class="stx-radio stx-radio-field__radio"
+          >
+            <input
+              aria-checked="false"
+              class="stx-radio__input"
+              id="stxField2"
+              name="shipping-method"
+              role="radio"
+              type="radio"
+              value=""
+            />
+            <span
+              class="stx-radio__box"
+            />
+          </span>
+          <label
+            class="stx-radio-field__label"
+            for="stxField2"
+          >
+            Expedited Shipping
+          </label>
+        </div>
+      </div>
+      <div
+        class="stx-price ShippingMethod__Price stx-price--alight-center"
+      >
+        <p
+          aria-label="Product price"
+          class="stx-price__amount"
+        >
+          $40.00 CAD
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ShippingLineList renders ShippingLineList component disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="FieldSet__Content"
+  >
+    <div
+      class="RadioButton"
+    >
+      <div
+        class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+      >
+        <div
+          class="stx-radio-field"
+        >
+          <span
+            class="stx-radio stx-radio--is-disabled stx-radio--is-checked stx-radio-field__radio"
+          >
+            <input
+              aria-checked="true"
+              aria-disabled="true"
+              checked=""
+              class="stx-radio__input"
+              disabled=""
+              id="stxField3"
+              name="shipping-method"
+              role="radio"
+              type="radio"
+              value=""
+            />
+            <span
+              class="stx-radio__box"
+            />
+          </span>
+          <label
+            class="stx-radio-field__label"
+            for="stxField3"
+          >
+            Standard Shipping
+          </label>
+        </div>
+      </div>
+      <div
+        class="stx-price ShippingMethod__Price stx-price--alight-center"
+      >
+        <p
+          aria-label="Product price"
+          class="stx-price__amount"
+        >
+          $20.00 CAD
+        </p>
+      </div>
+    </div>
+    <div
+      class="RadioButton"
+    >
+      <div
+        class="stx-field stx-field--is-disabled stx-field--with-radio-field RadioField"
+      >
+        <div
+          class="stx-radio-field"
+        >
+          <span
+            class="stx-radio stx-radio--is-disabled stx-radio-field__radio"
+          >
+            <input
+              aria-checked="false"
+              aria-disabled="true"
+              class="stx-radio__input"
+              disabled=""
+              id="stxField4"
+              name="shipping-method"
+              role="radio"
+              type="radio"
+              value=""
+            />
+            <span
+              class="stx-radio__box"
+            />
+          </span>
+          <label
+            class="stx-radio-field__label"
+            for="stxField4"
+          >
+            Expedited Shipping
+          </label>
+        </div>
+      </div>
+      <div
+        class="stx-price ShippingMethod__Price stx-price--alight-center"
+      >
+        <p
+          aria-label="Product price"
+          class="stx-price__amount"
+        >
+          $40.00 CAD
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -4,7 +4,7 @@ import { Price } from '@boldcommerce/stacks-ui';
 import ChevronIcon from './ChevronIcon';
 import { useTranslation } from 'react-i18next';
 
-const OrderSummaryCollapseButton = ({ onClick, summaryOpen }) => {
+const OrderSummaryCollapseButton = ({ onClick }) => {
   const { data: lineItems } = useLineItems();
   const { data } = useBreakdown();
   const { t } = useTranslation();

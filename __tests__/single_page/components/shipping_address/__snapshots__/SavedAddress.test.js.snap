@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedAddress renders SavedAddress component 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutStep__FieldSetInfoContainer"
+  >
+    <span
+      class="CheckoutStep__FieldSetInfo"
+    >
+      John Doe
+    </span>
+    <span
+      class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+    >
+      
+        123 Fake Street,
+        Unit 12,
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+    </span>
+  </div>
+</DocumentFragment>
+`;
