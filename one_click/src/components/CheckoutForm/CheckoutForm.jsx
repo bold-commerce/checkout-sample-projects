@@ -35,6 +35,7 @@ const CheckoutForm = ({ banners }) => {
   const confirmationEl = useRef(null);
   const inventoryEl = useRef(null);
   const checkoutButtonEl = useRef(null);
+  const checkoutFormEl = useRef(null);
 
   const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
   const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
@@ -52,8 +53,7 @@ const CheckoutForm = ({ banners }) => {
   
   useEffect(() => {
     if (banners) {
-      const checkoutDiv = document.querySelector('[bold-one-click-form]');
-      setModalHeight( `${checkoutDiv.clientHeight - checkoutDiv.offsetTop}px`)
+      setModalHeight( `${checkoutFormEl.clientHeight - checkoutFormEl.offsetTop}px`)
     } else {
       setModalHeight('100%')
     }
@@ -74,6 +74,8 @@ const CheckoutForm = ({ banners }) => {
       navigate('/');
     } else if (orderStatus === 'processing') {
       navigate('/processing');
+    } else if (orderStatus === 'error') {
+      navigate('/')
     } else if (orderStatus === 'completed') {
       navigate(`/confirmation?public_order_id=${state.publicOrderId}`);
     }
@@ -127,7 +129,7 @@ const CheckoutForm = ({ banners }) => {
   } : { height: modalHeight }
 
   return (
-    <div className="Checkout__Form" style={style} bold-one-click-form="true">
+    <div className="Checkout__Form" style={style} bold-one-click-form="true" ref={checkoutFormEl}>
       { (loading && <LoadingState/>) || 
         <>
           <Routes location={location}>
