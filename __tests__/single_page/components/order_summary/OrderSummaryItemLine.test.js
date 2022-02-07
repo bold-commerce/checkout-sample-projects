@@ -10,7 +10,7 @@ describe('OrderSummaryItemLine', () => {
         description={'Test description'}
         amount={1919}
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -22,7 +22,7 @@ describe('OrderSummaryItemLine', () => {
         amount={1919}
         onRemove={() => {}}
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });

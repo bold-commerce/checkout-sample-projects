@@ -5,7 +5,18 @@ exports[`OneClickLayout renders OneClickLayout component 1`] = `
   <div
     class="Checkout__Main"
   >
- 
+    <div
+      class="Checkout__Form"
+      style="overflow-y: hidden;"
+    >
+      <div
+        class="FieldSet--LoadingState"
+      >
+        <span
+          class="stx-loading-spinner"
+        />
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;

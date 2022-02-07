@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import LineItemInventoryAdjustment from '../../../../single_page/src/components/LineItems/components/LineItemInventoryAdjustment';
 import {
@@ -19,7 +19,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
   useCheckoutStore: () => MOCKcheckoutStore,
   useCountryInfo: () => MOCKcountryInfo,
   useLineItems: () => MOCKlineItems
-}))
+}));
 
 describe('LineItemInventoryAdjustment', () => {
   test('renders LineItemInventoryAdjustment component', () => {
@@ -28,10 +28,10 @@ describe('LineItemInventoryAdjustment', () => {
         originalQuantity={2}
         quantity={1}
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   test('renders LineItemInventoryAdjustment component sold out', () => {
     const { asFragment } = render(
@@ -39,10 +39,11 @@ describe('LineItemInventoryAdjustment', () => {
         originalQuantity={2}
         quantity={0}
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
+
   test('renders LineItemInventoryAdjustment component that is read only', () => {
     const { asFragment } = render(
       <LineItemInventoryAdjustment
@@ -50,8 +51,8 @@ describe('LineItemInventoryAdjustment', () => {
         quantity={1}
         readOnly
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
-  })
-})
+  });
+});

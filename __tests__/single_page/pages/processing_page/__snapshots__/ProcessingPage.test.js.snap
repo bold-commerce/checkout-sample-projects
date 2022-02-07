@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProcessingPage renders ProcessingPage page 1`] = `
+<DocumentFragment>
+  <div
+    class="Checkout__Processing"
+  >
+    <span
+      class="stx-loading-spinner"
+    />
+    <h1>
+      Processing order...
+    </h1>
+    <p>
+      This may take a few moments. Please remain on the the page until the process is complete.
+    </p>
+  </div>
+</DocumentFragment>
+`;

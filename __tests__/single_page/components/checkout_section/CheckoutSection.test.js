@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { CheckoutSection } from '../../../../single_page/src/components/CheckoutSection';
 import {
@@ -18,18 +18,14 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
   useCheckoutStore: () => MOCKcheckoutStore,
   useCountryInfo: () => MOCKcountryInfo,
   useLineItems: () => MOCKlineItems
-}))
+}));
 
 describe('CheckoutSection', () => {
   test('renders CheckoutSection component without children', () => {
-    const { asFragment } = render(
-      <CheckoutSection 
-        title="Test Title"
-      />
-    )
+    const { asFragment } = render( <CheckoutSection title="Test Title" /> );
 
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   test('renders CheckoutSection component with children', () => {
     const { asFragment } = render(
@@ -46,5 +42,5 @@ describe('CheckoutSection', () => {
     )
 
     expect(asFragment()).toMatchSnapshot();
-  })
-})
+  });
+});

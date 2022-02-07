@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import OrderSummaryItem from "../../../../single_page/src/components/OrderSummary/components/OrderSummaryItem";
 import OrderSummaryItemLine from "../../../../single_page/src/components/OrderSummary/components/OrderSummaryItemLine";
@@ -6,10 +6,7 @@ import '../../../../single_page/src/i18n/config';
 
 describe('OrderSummaryLine', () => {
   test('renders OrderSummaryLine component', () => {
-    const { asFragment } = render (
-      <OrderSummaryItem
-        title={'Test Item'}
-      />)
+    const { asFragment } = render ( <OrderSummaryItem title={'Test Item'} /> );
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -19,7 +16,8 @@ describe('OrderSummaryLine', () => {
       <OrderSummaryItem
         title={'Test Item'}
         amount={1919}
-      />)
+      />
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -35,7 +33,8 @@ describe('OrderSummaryLine', () => {
             key={'lock'}
           />
         }
-      />)
+      />
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });

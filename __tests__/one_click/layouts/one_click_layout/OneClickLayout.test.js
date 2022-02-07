@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { OneClickLayout } from '../../../../one_click/src/layouts/OneClickLayout'
 import ResizeObserver from "../../../../__mocks__/ResizeObserver";

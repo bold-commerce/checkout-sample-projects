@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import CheckoutForm from '../../../../one_click/src/components/CheckoutForm/CheckoutForm'
 import ResizeObserver from "../../../../__mocks__/ResizeObserver";
 import { render, waitFor } from '@testing-library/react';

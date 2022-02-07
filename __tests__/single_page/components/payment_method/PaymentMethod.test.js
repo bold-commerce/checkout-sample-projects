@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { PaymentMethod } from '../../../../single_page/src/components/PaymentMethod';
 import {

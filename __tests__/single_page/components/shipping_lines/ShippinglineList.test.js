@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { ShippingLineList } from "../../../../single_page/src/components/ShippingLines/components";
 import { exampleShippingLines as MOCKshippingLines } from '../../../utils/shippingLinesHelper';
@@ -11,10 +11,10 @@ describe('ShippingLineList', () => {
         shippingLines={MOCKshippingLines}
         selectedShippingLine={0}
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
-  })
+  });
 
   test('renders ShippingLineList component disabled', () => {
     const { asFragment } = render(
@@ -23,7 +23,7 @@ describe('ShippingLineList', () => {
         selectedShippingLine={0}
         disabled
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });

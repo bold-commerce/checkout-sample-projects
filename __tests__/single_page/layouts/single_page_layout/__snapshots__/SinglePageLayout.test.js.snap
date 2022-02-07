@@ -1,0 +1,1840 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SinglePageLayout renders SinglePageLayout layout 1`] = `
+<DocumentFragment>
+  <div
+    class="Checkout"
+  >
+    <div
+      class="Checkout__Main"
+      role="main"
+    >
+      <div
+        class="stx-message stx-message--with-alert"
+        role="alert"
+      >
+        Testing order errors
+      </div>
+      <section
+        class="FieldSet FieldSet--CustomerInformation"
+      >
+        <div
+          class="FieldSet__Header"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Customer information
+          </h3>
+        </div>
+        <div
+          class="FieldSet__Content"
+        >
+          <div
+            class="stx-field stx-field--with-input InputField Field--Email"
+          >
+            <div
+              class="stx-input"
+            >
+              <input
+                autocomplete="email"
+                class="stx-input__input-element"
+                id="stxField1"
+                name="email"
+                placeholder="Email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="FieldSet FieldSet--ShippingAddress"
+      >
+        <div
+          class="FieldSet__Header"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Shipping address
+          </h3>
+        </div>
+        <div
+          class="FieldSet__Content"
+        >
+          <div
+            class="RadioButton RadioButton__AddressInfoContainer"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField2"
+                    name="shipping-address"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField2"
+                >
+                  <div
+                    class="CheckoutStep__FieldSetInfoContainer"
+                  >
+                    <span
+                      class="CheckoutStep__FieldSetInfo"
+                    >
+                      John Doe
+                    </span>
+                    <span
+                      class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+                    >
+                      
+        123 Fake Street,
+        Unit 12,
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="RadioButton RadioButton__AddressInfoContainer"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField3"
+                    name="shipping-address"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField3"
+                >
+                  <div
+                    class="CheckoutStep__FieldSetInfoContainer"
+                  >
+                    <span
+                      class="CheckoutStep__FieldSetInfo"
+                    >
+                      John Doe
+                    </span>
+                    <span
+                      class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+                    >
+                      
+        456 Test Drive,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="RadioButton RadioButton__AddressInfoContainer"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField4"
+                    name="shipping-address"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField4"
+                >
+                  <div
+                    class="CheckoutStep__FieldSetInfoContainer"
+                  >
+                    <span
+                      class="CheckoutStep__FieldSetInfo"
+                    >
+                      John Doe
+                    </span>
+                    <span
+                      class="CheckoutStep__FieldSetInfo CheckoutStep__FieldSetInfo--Secondary"
+                    >
+                      
+        789 Fake Crescent,
+        
+        Winnipeg,
+        Manitoba,
+        R3A1B3,
+        Canada,
+        204-123-4567
+        
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="RadioButton RadioButton__NewAddressContainer"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="true"
+                    aria-disabled="false"
+                    checked=""
+                    class="stx-radio__input"
+                    id="stxField5"
+                    name="shipping-address"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField5"
+                >
+                  Add a new address
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            class="FieldSet--Address FieldSet--AddressNew"
+          >
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--FirstName"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="given-name"
+                    class="stx-input__input-element"
+                    id="stxField6"
+                    name="first_name"
+                    placeholder="First name (optional)"
+                    type="text"
+                    value="John"
+                  />
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-input Field Field--LastName"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="family-name"
+                    class="stx-input__input-element"
+                    id="stxField7"
+                    name="last_name"
+                    placeholder="Last name (optional)"
+                    type="text"
+                    value="Doe"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--Company"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    class="stx-input__input-element"
+                    id="stxField8"
+                    name="business_name"
+                    placeholder="address_business_name_optional"
+                    type="text"
+                    value="Bold Commerce"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--Address"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="address_line1"
+                    class="stx-input__input-element"
+                    id="stxField9"
+                    name="address_line_1"
+                    placeholder="Address (optional)"
+                    type="text"
+                    value="123 Fake Street"
+                  />
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-input Field Field--Address2"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="address_line2"
+                    class="stx-input__input-element"
+                    id="stxField10"
+                    name="address_line_2"
+                    placeholder="Apt, suite, etc."
+                    type="text"
+                    value="Unit 12"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--City"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="address-level2"
+                    class="stx-input__input-element"
+                    id="stxField11"
+                    name="city"
+                    placeholder="City (optional)"
+                    type="text"
+                    value="Winnipeg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-select SelectField Field--Country"
+              >
+                <div
+                  class="stx-select stx-select--with-placeholder"
+                >
+                  <select
+                    autocomplete="country"
+                    class="stx-select__select-element"
+                    id="stxField12"
+                    name="country"
+                  >
+                    <option
+                      hidden=""
+                      value="___PLACEHOLDER___"
+                    >
+                      Select a country
+                    </option>
+                    <option
+                      value="CA"
+                    >
+                      Canada
+                    </option>
+                    <option
+                      value="US"
+                    >
+                      United States
+                    </option>
+                  </select>
+                  <span
+                    class="stx-select__icon"
+                  >
+                    <svg
+                      class="stx-select-icon__icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="stx-select-icon__path"
+                        d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                        fill="#6B6B6B"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-select SelectField Field--Province"
+              >
+                <div
+                  class="stx-select stx-select--with-placeholder"
+                >
+                  <select
+                    autocomplete="address-level1"
+                    class="stx-select__select-element"
+                    id="stxField13"
+                    name="province"
+                  >
+                    <option
+                      hidden=""
+                      value="___PLACEHOLDER___"
+                    >
+                      Select a province
+                    </option>
+                    <option
+                      value="AB"
+                    >
+                      Alberta
+                    </option>
+                    <option
+                      value="BC"
+                    >
+                      British Columbia
+                    </option>
+                    <option
+                      value="MB"
+                    >
+                      Manitoba
+                    </option>
+                    <option
+                      value="NB"
+                    >
+                      New Brunswick
+                    </option>
+                    <option
+                      value="NL"
+                    >
+                      Newfoundland and Labrador
+                    </option>
+                    <option
+                      value="NT"
+                    >
+                      Northwest Territories
+                    </option>
+                    <option
+                      value="NS"
+                    >
+                      Nova Scotia
+                    </option>
+                    <option
+                      value="NU"
+                    >
+                      Nunavut
+                    </option>
+                    <option
+                      value="ON"
+                    >
+                      Ontario
+                    </option>
+                    <option
+                      value="PE"
+                    >
+                      Prince Edward Island
+                    </option>
+                    <option
+                      value="QC"
+                    >
+                      Quebec
+                    </option>
+                    <option
+                      value="SK"
+                    >
+                      Saskatchewan
+                    </option>
+                    <option
+                      value="YT"
+                    >
+                      Yukon Territory
+                    </option>
+                  </select>
+                  <span
+                    class="stx-select__icon"
+                  >
+                    <svg
+                      class="stx-select-icon__icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="stx-select-icon__path"
+                        d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                        fill="#6B6B6B"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-input Field Field--Postal_Code"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="postal-code"
+                    class="stx-input__input-element"
+                    id="stxField14"
+                    name="postal"
+                    placeholder="Postal code"
+                    type="text"
+                    value="R3A1B3"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--Phone"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="tel"
+                    class="stx-input__input-element"
+                    id="stxField15"
+                    name="phone_number"
+                    placeholder="Phone (optional)"
+                    type="tel"
+                    value="204-123-4567"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="FieldSet FieldSet--BillingAddress"
+      >
+        <div
+          class="FieldSet__Header"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Billing address
+          </h3>
+        </div>
+        <div
+          class="FieldSet__Content"
+        >
+          <div
+            class="stx-field stx-field--with-radio-field RadioButton"
+          >
+            <div
+              class="stx-radio-field"
+            >
+              <span
+                class="stx-radio stx-radio-field__radio"
+              >
+                <input
+                  aria-checked="false"
+                  aria-disabled="false"
+                  class="stx-radio__input"
+                  id="stxField16"
+                  name="billing-address"
+                  role="radio"
+                  type="radio"
+                  value="SAME_AS_SHIPPING_ADDRESS"
+                />
+                <span
+                  class="stx-radio__box"
+                />
+              </span>
+              <label
+                class="stx-radio-field__label"
+                for="stxField16"
+              >
+                Same as shipping address
+              </label>
+            </div>
+          </div>
+          <div
+            class="stx-field stx-field--with-radio-field RadioButton"
+          >
+            <div
+              class="stx-radio-field"
+            >
+              <span
+                class="stx-radio stx-radio--is-checked stx-radio-field__radio"
+              >
+                <input
+                  aria-checked="true"
+                  aria-disabled="false"
+                  checked=""
+                  class="stx-radio__input"
+                  id="stxField17"
+                  name="billing-address"
+                  role="radio"
+                  type="radio"
+                  value="DIFFERENT_BILLING_ADDRESS"
+                />
+                <span
+                  class="stx-radio__box"
+                />
+              </span>
+              <label
+                class="stx-radio-field__label"
+                for="stxField17"
+              >
+                Use a different billing address
+              </label>
+            </div>
+          </div>
+          <div
+            class="FieldSet--Address"
+          >
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--FirstName"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="given-name"
+                    class="stx-input__input-element"
+                    id="stxField18"
+                    name="first_name"
+                    placeholder="First name (optional)"
+                    type="text"
+                    value="John"
+                  />
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-input Field Field--LastName"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="family-name"
+                    class="stx-input__input-element"
+                    id="stxField19"
+                    name="last_name"
+                    placeholder="Last name (optional)"
+                    type="text"
+                    value="Doe"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--Company"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    class="stx-input__input-element"
+                    id="stxField20"
+                    name="business_name"
+                    placeholder="address_business_name_optional"
+                    type="text"
+                    value="Bold Commerce"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--Address"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="address_line1"
+                    class="stx-input__input-element"
+                    id="stxField21"
+                    name="address_line_1"
+                    placeholder="Address (optional)"
+                    type="text"
+                    value="123 Fake Street"
+                  />
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-input Field Field--Address2"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="address_line2"
+                    class="stx-input__input-element"
+                    id="stxField22"
+                    name="address_line_2"
+                    placeholder="Apt, suite, etc."
+                    type="text"
+                    value="Unit 12"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--City"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="address-level2"
+                    class="stx-input__input-element"
+                    id="stxField23"
+                    name="city"
+                    placeholder="City (optional)"
+                    type="text"
+                    value="Winnipeg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-select SelectField Field--Country"
+              >
+                <div
+                  class="stx-select stx-select--with-placeholder"
+                >
+                  <select
+                    autocomplete="country"
+                    class="stx-select__select-element"
+                    id="stxField24"
+                    name="country"
+                  >
+                    <option
+                      hidden=""
+                      value="___PLACEHOLDER___"
+                    >
+                      Select a country
+                    </option>
+                    <option
+                      value="CA"
+                    >
+                      Canada
+                    </option>
+                    <option
+                      value="US"
+                    >
+                      United States
+                    </option>
+                  </select>
+                  <span
+                    class="stx-select__icon"
+                  >
+                    <svg
+                      class="stx-select-icon__icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="stx-select-icon__path"
+                        d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                        fill="#6B6B6B"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-select SelectField Field--Province"
+              >
+                <div
+                  class="stx-select stx-select--with-placeholder"
+                >
+                  <select
+                    autocomplete="address-level1"
+                    class="stx-select__select-element"
+                    id="stxField25"
+                    name="province"
+                  >
+                    <option
+                      hidden=""
+                      value="___PLACEHOLDER___"
+                    >
+                      Select a province
+                    </option>
+                    <option
+                      value="AB"
+                    >
+                      Alberta
+                    </option>
+                    <option
+                      value="BC"
+                    >
+                      British Columbia
+                    </option>
+                    <option
+                      value="MB"
+                    >
+                      Manitoba
+                    </option>
+                    <option
+                      value="NB"
+                    >
+                      New Brunswick
+                    </option>
+                    <option
+                      value="NL"
+                    >
+                      Newfoundland and Labrador
+                    </option>
+                    <option
+                      value="NT"
+                    >
+                      Northwest Territories
+                    </option>
+                    <option
+                      value="NS"
+                    >
+                      Nova Scotia
+                    </option>
+                    <option
+                      value="NU"
+                    >
+                      Nunavut
+                    </option>
+                    <option
+                      value="ON"
+                    >
+                      Ontario
+                    </option>
+                    <option
+                      value="PE"
+                    >
+                      Prince Edward Island
+                    </option>
+                    <option
+                      value="QC"
+                    >
+                      Quebec
+                    </option>
+                    <option
+                      value="SK"
+                    >
+                      Saskatchewan
+                    </option>
+                    <option
+                      value="YT"
+                    >
+                      Yukon Territory
+                    </option>
+                  </select>
+                  <span
+                    class="stx-select__icon"
+                  >
+                    <svg
+                      class="stx-select-icon__icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="stx-select-icon__path"
+                        d="M3.75261265,6.34153452 C3.38894463,5.92588561 2.75718344,5.88374677 2.34153452,6.24741478 C1.92588561,6.6110828 1.88374677,7.24284399 2.24741478,7.65849291 L11.2524148,18.2364929 C11.6508167,18.6918404 12.3591606,18.6918563 12.757583,18.2365268 L21.763583,7.6585268 C22.1272697,7.24289426 22.0851593,6.61113117 21.6695268,6.24744443 C21.2538943,5.8837577 20.6221312,5.9258681 20.2584444,6.34150064 L12.0050479,16.0594019 L3.75261265,6.34153452 Z"
+                        fill="#6B6B6B"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="stx-field stx-field--with-input Field Field--Postal_Code"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="postal-code"
+                    class="stx-input__input-element"
+                    id="stxField26"
+                    name="postal"
+                    placeholder="Postal code"
+                    type="text"
+                    value="R3A1B3"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="FieldGroup"
+            >
+              <div
+                class="stx-field stx-field--with-input Field Field--Phone"
+              >
+                <div
+                  class="stx-input"
+                >
+                  <input
+                    autocomplete="tel"
+                    class="stx-input__input-element"
+                    id="stxField27"
+                    name="phone_number"
+                    placeholder="Phone (optional)"
+                    type="tel"
+                    value="204-123-4567"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="FieldSet FieldSet--ShippingMethod"
+      >
+        <div
+          class="FieldSet__Header"
+        >
+          <h2
+            class="FieldSet__Heading"
+          >
+            Shipping method
+          </h2>
+        </div>
+        <div
+          class="FieldSet__Content"
+        >
+          <div
+            class="RadioButton"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField28"
+                    name="shipping-method"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField28"
+                >
+                  Standard Shipping
+                </label>
+              </div>
+            </div>
+            <div
+              class="stx-price ShippingMethod__Price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $20.00 CAD
+              </p>
+            </div>
+          </div>
+          <div
+            class="RadioButton"
+          >
+            <div
+              class="stx-field stx-field--with-radio-field RadioField"
+            >
+              <div
+                class="stx-radio-field"
+              >
+                <span
+                  class="stx-radio stx-radio-field__radio"
+                >
+                  <input
+                    aria-checked="false"
+                    aria-disabled="false"
+                    class="stx-radio__input"
+                    id="stxField29"
+                    name="shipping-method"
+                    role="radio"
+                    type="radio"
+                    value=""
+                  />
+                  <span
+                    class="stx-radio__box"
+                  />
+                </span>
+                <label
+                  class="stx-radio-field__label"
+                  for="stxField29"
+                >
+                  Expedited Shipping
+                </label>
+              </div>
+            </div>
+            <div
+              class="stx-price ShippingMethod__Price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $40.00 CAD
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="FieldSet FieldSet--PaymentMethod"
+      >
+        <div
+          class="FieldSet__Header"
+        >
+          <h3
+            class="FieldSet__Heading"
+          >
+            Payment method
+          </h3>
+        </div>
+        <div
+          class="FieldSet__Content"
+        >
+          <iframe
+            class="PaymentMethod__Iframe"
+            data-bold-pigi-iframe="true"
+            src="test.url"
+            style="height: 21px;"
+            title="payments"
+          />
+        </div>
+      </section>
+      <button
+        aria-busy="false"
+        aria-disabled="false"
+        class="stx-button Checkout__ConfirmButton"
+        type="button"
+      >
+        <span
+          class="stx-button__text"
+        >
+          Confirm Order
+        </span>
+        <span
+          class="stx-loading-spinner stx-button__spinner"
+        />
+      </button>
+    </div>
+    <div
+      class="Checkout__Sidebar Checkout__Sidebar--Closed"
+      role="complementary"
+    >
+      <button
+        aria-controls="OrderSummary"
+        class="CollapseButton"
+        type="button"
+      >
+        <span
+          class="CollapseButton__title"
+        >
+          <svg
+            fill="none"
+            height="13"
+            viewBox="0 0 17 13"
+            width="17"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.2153 11.9455C15.5183 12.338 16.0448 12.3778 16.3912 12.0344C16.7375 11.6909 16.7727 11.0942 16.4696 10.7017L8.96544 0.711341C8.63343 0.281291 8.04315 0.281276 7.71113 0.711309L0.206129 10.7016C-0.0969428 11.0942 -0.0618533 11.6908 0.284508 12.0343C0.630869 12.3778 1.15734 12.338 1.46041 11.9455L8.33824 2.76748L15.2153 11.9455Z"
+              fill="#A1A1A1"
+            />
+          </svg>
+          View order summary
+        </span>
+        <span
+          class="CollapseButton__description"
+        >
+          (6 items)
+          <div
+            class="stx-price stx-price--alight-center"
+          >
+            <p
+              aria-label="Product price"
+              class="stx-price__amount"
+            >
+              $32.40 CAD
+            </p>
+          </div>
+        </span>
+      </button>
+      <div
+        class="OrderSummary"
+        id="OrderSummary"
+      >
+        <section
+          class="FieldSet FieldSet--OrderSummary"
+        >
+          <div
+            class="FieldSet__Header"
+          >
+            <h3
+              class="FieldSet__Heading"
+            >
+              Order Summary
+            </h3>
+          </div>
+          <div
+            class="FieldSet__Content"
+          >
+            <div
+              class="LineItemList"
+            >
+              <div
+                class="LineItem"
+              >
+                <div
+                  class="LineItem__ImageDescriptionWrapper"
+                >
+                  <div
+                    class="LineItem__ProductImageWrapper"
+                  >
+                    <div
+                      class="stx-image"
+                    >
+                      <div
+                        class="stx-image--content"
+                      >
+                        <div
+                          class="stx-image--holder"
+                        >
+                          <img
+                            alt="Size Large / Colour Blue"
+                            class="stx-image--image"
+                            src=""
+                            title="Size Large / Colour Blue"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="LineItem__ProductDetails"
+                  >
+                    <div
+                      class="stx-details stx-details--left"
+                    >
+                      <div
+                        class="stx-details__title"
+                      >
+                        Size Large / Colour Blue
+                      </div>
+                      <div
+                        class="stx-details__description"
+                      />
+                    </div>
+                    <button
+                      aria-busy="false"
+                      aria-disabled="false"
+                      class="stx-button stx-button--secondary"
+                    >
+                      <span
+                        class="stx-button__text"
+                      >
+                        Remove
+                      </span>
+                      <span
+                        class="stx-loading-spinner stx-button__spinner"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="LineItem__QuantityPriceWrapper"
+                >
+                  <div
+                    class="LineItem__LineItemQuantityWrapper"
+                  >
+                    <div
+                      class="LineItemQuantity__Decrement"
+                    >
+                      <button
+                        aria-busy="false"
+                        aria-disabled="true"
+                        class="stx-button stx-button--is-disabled"
+                        disabled=""
+                      >
+                        <span
+                          class="stx-button__text"
+                        >
+                          -
+                        </span>
+                        <span
+                          class="stx-loading-spinner stx-button__spinner"
+                        />
+                      </button>
+                    </div>
+                    <div
+                      class="LineItemQuantity"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          aria-readonly="false"
+                          class="stx-input__input-element"
+                          type="number"
+                          value="1"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="LineItemQuantity__Increment"
+                    >
+                      <button
+                        aria-busy="false"
+                        aria-disabled="false"
+                        class="stx-button"
+                      >
+                        <span
+                          class="stx-button__text"
+                        >
+                          +
+                        </span>
+                        <span
+                          class="stx-loading-spinner stx-button__spinner"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="LineItem__ProductPrice"
+                  >
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $14.00 CAD
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="LineItem"
+              >
+                <div
+                  class="LineItem__ImageDescriptionWrapper"
+                >
+                  <div
+                    class="LineItem__ProductImageWrapper"
+                  >
+                    <div
+                      class="stx-image"
+                    >
+                      <div
+                        class="stx-image--content"
+                      >
+                        <div
+                          class="stx-image--holder"
+                        >
+                          <img
+                            alt="Number Two"
+                            class="stx-image--image"
+                            src=""
+                            title="Number Two"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="LineItem__ProductDetails"
+                  >
+                    <div
+                      class="stx-details stx-details--left"
+                    >
+                      <div
+                        class="stx-details__title"
+                      >
+                        Number Two
+                      </div>
+                      <div
+                        class="stx-details__description"
+                      />
+                    </div>
+                    <button
+                      aria-busy="false"
+                      aria-disabled="false"
+                      class="stx-button stx-button--secondary"
+                    >
+                      <span
+                        class="stx-button__text"
+                      >
+                        Remove
+                      </span>
+                      <span
+                        class="stx-loading-spinner stx-button__spinner"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="LineItem__QuantityPriceWrapper"
+                >
+                  <div
+                    class="LineItem__LineItemQuantityWrapper"
+                  >
+                    <div
+                      class="LineItemQuantity__Decrement"
+                    >
+                      <button
+                        aria-busy="false"
+                        aria-disabled="false"
+                        class="stx-button"
+                      >
+                        <span
+                          class="stx-button__text"
+                        >
+                          -
+                        </span>
+                        <span
+                          class="stx-loading-spinner stx-button__spinner"
+                        />
+                      </button>
+                    </div>
+                    <div
+                      class="LineItemQuantity"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          aria-readonly="false"
+                          class="stx-input__input-element"
+                          type="number"
+                          value="2"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="LineItemQuantity__Increment"
+                    >
+                      <button
+                        aria-busy="false"
+                        aria-disabled="false"
+                        class="stx-button"
+                      >
+                        <span
+                          class="stx-button__text"
+                        >
+                          +
+                        </span>
+                        <span
+                          class="stx-loading-spinner stx-button__spinner"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="LineItem__ProductPrice"
+                  >
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $32.00 CAD
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="LineItem"
+              >
+                <div
+                  class="LineItem__ImageDescriptionWrapper"
+                >
+                  <div
+                    class="LineItem__ProductImageWrapper"
+                  >
+                    <div
+                      class="stx-image"
+                    >
+                      <div
+                        class="stx-image--content"
+                      >
+                        <div
+                          class="stx-image--holder"
+                        >
+                          <img
+                            alt="Default Title"
+                            class="stx-image--image"
+                            src=""
+                            title="Default Title"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="LineItem__ProductDetails"
+                  >
+                    <div
+                      class="stx-details stx-details--left"
+                    >
+                      <div
+                        class="stx-details__title"
+                      >
+                        Default Title
+                      </div>
+                      <div
+                        class="stx-details__description"
+                      />
+                    </div>
+                    <button
+                      aria-busy="false"
+                      aria-disabled="false"
+                      class="stx-button stx-button--secondary"
+                    >
+                      <span
+                        class="stx-button__text"
+                      >
+                        Remove
+                      </span>
+                      <span
+                        class="stx-loading-spinner stx-button__spinner"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="LineItem__QuantityPriceWrapper"
+                >
+                  <div
+                    class="LineItem__LineItemQuantityWrapper"
+                  >
+                    <div
+                      class="LineItemQuantity__Decrement"
+                    >
+                      <button
+                        aria-busy="false"
+                        aria-disabled="false"
+                        class="stx-button"
+                      >
+                        <span
+                          class="stx-button__text"
+                        >
+                          -
+                        </span>
+                        <span
+                          class="stx-loading-spinner stx-button__spinner"
+                        />
+                      </button>
+                    </div>
+                    <div
+                      class="LineItemQuantity"
+                    >
+                      <div
+                        class="stx-input"
+                      >
+                        <input
+                          aria-readonly="false"
+                          class="stx-input__input-element"
+                          type="number"
+                          value="3"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="LineItemQuantity__Increment"
+                    >
+                      <button
+                        aria-busy="false"
+                        aria-disabled="false"
+                        class="stx-button"
+                      >
+                        <span
+                          class="stx-button__text"
+                        >
+                          +
+                        </span>
+                        <span
+                          class="stx-loading-spinner stx-button__spinner"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="LineItem__ProductPrice"
+                  >
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $123.00 CAD
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="SummaryBlock Summary__DiscountForm"
+            >
+              <div
+                class="DiscountForm"
+              >
+                <div
+                  class="stx-field stx-field--is-disabled stx-field--with-input"
+                >
+                  <div
+                    class="stx-input stx-input--is-disabled"
+                  >
+                    <input
+                      aria-disabled="true"
+                      class="stx-input__input-element"
+                      disabled=""
+                      id="stxField30"
+                      placeholder="Enter discount code"
+                      type="text"
+                      value="discount_code"
+                    />
+                  </div>
+                </div>
+                <button
+                  aria-busy="false"
+                  aria-disabled="true"
+                  class="stx-button stx-button--primary stx-button--is-disabled"
+                  disabled=""
+                >
+                  <span
+                    class="stx-button__text"
+                  >
+                    Apply
+                  </span>
+                  <span
+                    class="stx-loading-spinner stx-button__spinner"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="OrderSummary__Breakdown"
+            >
+              <div
+                class="Breakdown__Section"
+              >
+                <div
+                  class="OrderSummaryItem"
+                >
+                  <span
+                    class="OrderSummaryItem__Title"
+                  >
+                    Subtotal
+                  </span>
+                  <span
+                    class="OrderSummaryItem__Amount"
+                  >
+                    (
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $19.19 CAD
+                      </p>
+                    </div>
+                    )
+                  </span>
+                </div>
+                <div
+                  class="OrderSummaryItem OrderSummaryItem--removable"
+                >
+                  <span
+                    class="OrderSummaryItem__Title"
+                  >
+                    Discount
+                  </span>
+                  <div
+                    class="OrderSummaryItem__Description"
+                  >
+                    <button
+                      class="OrderSummaryItem__Action"
+                      type="button"
+                    >
+                      <svg
+                        fill="none"
+                        height="12"
+                        viewBox="0 0 13 12"
+                        width="13"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.14551 12C9.45922 12 12.1455 9.31371 12.1455 6C12.1455 2.68629 9.45922 0 6.14551 0C2.8318 0 0.145508 2.68629 0.145508 6C0.145508 9.31371 2.8318 12 6.14551 12ZM9.30831 2.80811C9.50357 3.00338 9.50357 3.31996 9.30831 3.51522L6.83789 5.98564L9.32005 8.4678C9.51531 8.66306 9.51531 8.97964 9.32005 9.17491C9.12479 9.37017 8.80821 9.37017 8.61294 9.17491L6.13078 6.69275L3.65707 9.16646C3.4618 9.36172 3.14522 9.36172 2.94996 9.16646C2.7547 8.9712 2.7547 8.65462 2.94996 8.45936L5.42368 5.98564L2.95104 3.513C2.75577 3.31774 2.75577 3.00116 2.95104 2.80589C3.1463 2.61063 3.46288 2.61063 3.65814 2.80589L6.13078 5.27853L8.6012 2.80811C8.79646 2.61285 9.11305 2.61285 9.30831 2.80811Z"
+                          fill="#666666"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    <span
+                      class="OrderSummaryItem__Label"
+                    >
+                      Discount code: discount_code
+                    </span>
+                    <span
+                      class="OrderSummaryItem__Amount"
+                    >
+                      (
+                      <div
+                        class="stx-price stx-price--alight-center"
+                      >
+                        <p
+                          aria-label="Product price"
+                          class="stx-price__amount"
+                        >
+                          $-13.37 CAD
+                        </p>
+                      </div>
+                      )
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="OrderSummaryItem"
+                >
+                  <span
+                    class="OrderSummaryItem__Title"
+                  >
+                    Shipping
+                  </span>
+                  <span
+                    class="OrderSummaryItem__Amount"
+                  >
+                    (
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $2.10 CAD
+                      </p>
+                    </div>
+                    )
+                  </span>
+                </div>
+                <div
+                  class="OrderSummaryItem"
+                >
+                  <span
+                    class="OrderSummaryItem__Title"
+                  >
+                    Taxes
+                  </span>
+                  <span
+                    class="OrderSummaryItem__Amount"
+                  >
+                    (
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $11.11 CAD
+                      </p>
+                    </div>
+                    )
+                  </span>
+                </div>
+              </div>
+              <div
+                class="Breakdown__Section Breakdown__Section--Total"
+              >
+                <div
+                  class="OrderSummaryItem"
+                >
+                  <span
+                    class="OrderSummaryItem__Title"
+                  >
+                    Total
+                  </span>
+                  <span
+                    class="OrderSummaryItem__Amount"
+                  >
+                    (
+                    <div
+                      class="stx-price stx-price--alight-center"
+                    >
+                      <p
+                        aria-label="Product price"
+                        class="stx-price__amount"
+                      >
+                        $32.40 CAD
+                      </p>
+                    </div>
+                    )
+                  </span>
+                </div>
+              </div>
+              <div
+                class="Breakdown__Section"
+              >
+                <div
+                  class="OrderSummaryItem OrderSummaryItem--removable"
+                >
+                  <span
+                    class="OrderSummaryItem__Title"
+                  >
+                    Payment
+                  </span>
+                  <div
+                    class="OrderSummaryItem__Description"
+                  >
+                    <span
+                      class="OrderSummaryItem__Label"
+                    >
+                      <span
+                        class="RedactedCard"
+                      >
+                        <span
+                          class="RedactedCard__Brand"
+                        >
+                          visa
+                        </span>
+                        <span
+                          class="RedactedCard__Number"
+                        >
+                           •••• •••• •••• test card
+                        </span>
+                      </span>
+                    </span>
+                    <span
+                      class="OrderSummaryItem__Amount"
+                    >
+                      (
+                      <div
+                        class="stx-price stx-price--alight-center"
+                      >
+                        <p
+                          aria-label="Product price"
+                          class="stx-price__amount"
+                        >
+                          $1.00 CAD
+                        </p>
+                      </div>
+                      )
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

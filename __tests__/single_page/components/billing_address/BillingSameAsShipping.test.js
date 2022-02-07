@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { BillingSameAsShipping } from "../../../../single_page/src/components/BillingAddress";
 import '../../../../single_page/src/i18n/config'

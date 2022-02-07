@@ -97,6 +97,7 @@ exports[`Billing render Billing component set to show 1`] = `
             <iframe
               data-bold-pigi-iframe="true"
               src="test.url"
+              style="height: 21px;"
               title="payments"
             />
           </div>
@@ -628,6 +629,7 @@ exports[`Billing render Billing component with another component set to show 1`]
             <iframe
               data-bold-pigi-iframe="true"
               src="test.url"
+              style="height: 21px;"
               title="payments"
             />
           </div>
@@ -1159,6 +1161,7 @@ exports[`Billing render Billing component with the summary set to show 1`] = `
             <iframe
               data-bold-pigi-iframe="true"
               src="test.url"
+              style="height: 21px;"
               title="payments"
             />
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { ShippingLines } from "../../../../single_page/src/components/ShippingLines";
 import {
@@ -18,7 +18,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('ShippingLines', () => {
   test('renders ShippingLines component', () => {
-    const { asFragment } = render(<ShippingLines/>)
+    const { asFragment } = render( <ShippingLines/> );
 
     expect(asFragment()).toMatchSnapshot();
   });

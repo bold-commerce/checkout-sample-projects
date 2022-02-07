@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { Discount } from '../../../../one_click/src/components/Discount/Discount';
 import '../../../../one_click/src/i18n/config';

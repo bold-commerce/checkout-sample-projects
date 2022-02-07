@@ -18,12 +18,8 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     })
 })).mock('react-router', () => ({
     ...jest.requireActual('react-router'),
-    useLocation: () => ({
-        pathname: '/inventory',
-        state: MOCKinventory
-    }),
-    useNavigate: () => ({
-        navigate: (() => {})
+    useLocation: jest.fn().mockImplementation(() => {
+      return { state: [] }
     })
 })).mock('React', () => ({
     ...jest.requireActual('React'),

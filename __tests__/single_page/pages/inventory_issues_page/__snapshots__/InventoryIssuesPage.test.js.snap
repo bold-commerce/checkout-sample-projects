@@ -1,0 +1,422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InventoryIssuesPage renders InventoryIssuesPage page 1`] = `
+<DocumentFragment>
+  <div
+    class="Checkout__InventoryIssues"
+    role="main"
+  >
+    <section
+      class="FieldSet InventoryIssues__Section"
+    >
+      <div
+        class="FieldSet__Header"
+      >
+        <h3
+          class="FieldSet__Heading"
+        >
+          Inventory issues
+        </h3>
+      </div>
+      <div
+        class="FieldSet__Content"
+      >
+        <p>
+          Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience.
+        </p>
+      </div>
+    </section>
+    <div
+      class="InventoryIssues__List"
+    >
+      <div
+        class="LineItem"
+      >
+        <div
+          class="LineItem__ImageDescriptionWrapper"
+        >
+          <div
+            class="LineItem__ProductImageWrapper"
+          >
+            <div
+              class="stx-image"
+            >
+              <div
+                class="stx-image--content"
+              >
+                <div
+                  class="stx-image--holder"
+                >
+                  <img
+                    alt="Size Large / Colour Blue"
+                    class="stx-image--image"
+                    src=""
+                    title="Size Large / Colour Blue"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="LineItem__ProductDetails"
+          >
+            <div
+              class="stx-details stx-details--left"
+            >
+              <div
+                class="stx-details__title"
+              >
+                Size Large / Colour Blue
+              </div>
+              <div
+                class="stx-details__description"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="LineItem__QuantityPriceWrapper"
+        >
+          <div
+            class="LineItem__QuantityAdjustmentWrapper"
+          >
+            <div
+              class="LineItem__LineItemQuantityWrapper"
+            >
+              <div
+                class="LineItemQuantity__Decrement"
+              />
+              <div
+                class="LineItemQuantity LineItemQuantity--read-only"
+              >
+                <span
+                  class="LineItemQuantity__ReadOnlyValue"
+                >
+                  1
+                </span>
+              </div>
+              <div
+                class="LineItemQuantity__Increment"
+              />
+            </div>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7239 7.99998L8.19526 2.47138C7.93491 2.21103 7.93491 1.78892 8.19526 1.52858C8.45561 1.26823 8.87772 1.26823 9.13807 1.52858L15.1381 7.52858C15.3984 7.78893 15.3984 8.21103 15.1381 8.47138L9.13807 14.4714C8.87772 14.7317 8.45561 14.7317 8.19526 14.4714C7.93491 14.211 7.93491 13.7889 8.19526 13.5286L13.7239 7.99998Z"
+                fill="black"
+                fill-opacity="0.65"
+              />
+              <path
+                d="M13.3332 7.33331C13.7014 7.33331 13.9998 7.63179 13.9998 7.99998C13.9998 8.36817 13.7014 8.66665 13.3332 8.66665H1.33317C0.964981 8.66665 0.666504 8.36817 0.666504 7.99998C0.666504 7.63179 0.964981 7.33331 1.33317 7.33331L13.3332 7.33331Z"
+                fill="black"
+                fill-opacity="0.65"
+              />
+            </svg>
+            <div
+              class="LineItem__LineItemQuantityWrapper"
+            >
+              <div
+                class="LineItemQuantity__Decrement"
+              />
+              <div
+                class="LineItemQuantity LineItemQuantity--read-only"
+              >
+                <span
+                  class="LineItemQuantity__ReadOnlyValue"
+                >
+                  1
+                </span>
+              </div>
+              <div
+                class="LineItemQuantity__Increment"
+              />
+            </div>
+          </div>
+          <div
+            class="LineItem__ProductPrice"
+          >
+            <div
+              class="stx-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $14.00 CAD
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="LineItem"
+      >
+        <div
+          class="LineItem__ImageDescriptionWrapper"
+        >
+          <div
+            class="LineItem__ProductImageWrapper"
+          >
+            <div
+              class="stx-image"
+            >
+              <div
+                class="stx-image--content"
+              >
+                <div
+                  class="stx-image--holder"
+                >
+                  <img
+                    alt="Number Two"
+                    class="stx-image--image"
+                    src=""
+                    title="Number Two"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="LineItem__ProductDetails"
+          >
+            <div
+              class="stx-details stx-details--left"
+            >
+              <div
+                class="stx-details__title"
+              >
+                Number Two
+              </div>
+              <div
+                class="stx-details__description"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="LineItem__QuantityPriceWrapper"
+        >
+          <div
+            class="LineItem__QuantityAdjustmentWrapper"
+          >
+            <div
+              class="LineItem__LineItemQuantityWrapper"
+            >
+              <div
+                class="LineItemQuantity__Decrement"
+              />
+              <div
+                class="LineItemQuantity LineItemQuantity--read-only"
+              >
+                <span
+                  class="LineItemQuantity__ReadOnlyValue"
+                >
+                  2
+                </span>
+              </div>
+              <div
+                class="LineItemQuantity__Increment"
+              />
+            </div>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7239 7.99998L8.19526 2.47138C7.93491 2.21103 7.93491 1.78892 8.19526 1.52858C8.45561 1.26823 8.87772 1.26823 9.13807 1.52858L15.1381 7.52858C15.3984 7.78893 15.3984 8.21103 15.1381 8.47138L9.13807 14.4714C8.87772 14.7317 8.45561 14.7317 8.19526 14.4714C7.93491 14.211 7.93491 13.7889 8.19526 13.5286L13.7239 7.99998Z"
+                fill="black"
+                fill-opacity="0.65"
+              />
+              <path
+                d="M13.3332 7.33331C13.7014 7.33331 13.9998 7.63179 13.9998 7.99998C13.9998 8.36817 13.7014 8.66665 13.3332 8.66665H1.33317C0.964981 8.66665 0.666504 8.36817 0.666504 7.99998C0.666504 7.63179 0.964981 7.33331 1.33317 7.33331L13.3332 7.33331Z"
+                fill="black"
+                fill-opacity="0.65"
+              />
+            </svg>
+            <div
+              class="LineItem__LineItemQuantityWrapper"
+            >
+              <div
+                class="LineItemQuantity__Decrement"
+              />
+              <div
+                class="LineItemQuantity LineItemQuantity--read-only"
+              >
+                <span
+                  class="LineItemQuantity__ReadOnlyValue"
+                >
+                  2
+                </span>
+              </div>
+              <div
+                class="LineItemQuantity__Increment"
+              />
+            </div>
+          </div>
+          <div
+            class="LineItem__ProductPrice"
+          >
+            <div
+              class="stx-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $32.00 CAD
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="LineItem"
+      >
+        <div
+          class="LineItem__ImageDescriptionWrapper"
+        >
+          <div
+            class="LineItem__ProductImageWrapper"
+          >
+            <div
+              class="stx-image"
+            >
+              <div
+                class="stx-image--content"
+              >
+                <div
+                  class="stx-image--holder"
+                >
+                  <img
+                    alt="Default Title"
+                    class="stx-image--image"
+                    src=""
+                    title="Default Title"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="LineItem__ProductDetails"
+          >
+            <div
+              class="stx-details stx-details--left"
+            >
+              <div
+                class="stx-details__title"
+              >
+                Default Title
+              </div>
+              <div
+                class="stx-details__description"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="LineItem__QuantityPriceWrapper"
+        >
+          <div
+            class="LineItem__QuantityAdjustmentWrapper"
+          >
+            <div
+              class="LineItem__LineItemQuantityWrapper"
+            >
+              <div
+                class="LineItemQuantity__Decrement"
+              />
+              <div
+                class="LineItemQuantity LineItemQuantity--read-only"
+              >
+                <span
+                  class="LineItemQuantity__ReadOnlyValue"
+                >
+                  3
+                </span>
+              </div>
+              <div
+                class="LineItemQuantity__Increment"
+              />
+            </div>
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7239 7.99998L8.19526 2.47138C7.93491 2.21103 7.93491 1.78892 8.19526 1.52858C8.45561 1.26823 8.87772 1.26823 9.13807 1.52858L15.1381 7.52858C15.3984 7.78893 15.3984 8.21103 15.1381 8.47138L9.13807 14.4714C8.87772 14.7317 8.45561 14.7317 8.19526 14.4714C7.93491 14.211 7.93491 13.7889 8.19526 13.5286L13.7239 7.99998Z"
+                fill="black"
+                fill-opacity="0.65"
+              />
+              <path
+                d="M13.3332 7.33331C13.7014 7.33331 13.9998 7.63179 13.9998 7.99998C13.9998 8.36817 13.7014 8.66665 13.3332 8.66665H1.33317C0.964981 8.66665 0.666504 8.36817 0.666504 7.99998C0.666504 7.63179 0.964981 7.33331 1.33317 7.33331L13.3332 7.33331Z"
+                fill="black"
+                fill-opacity="0.65"
+              />
+            </svg>
+            <div
+              class="LineItem__LineItemQuantityWrapper"
+            >
+              <div
+                class="LineItemQuantity__Decrement"
+              />
+              <div
+                class="LineItemQuantity LineItemQuantity--read-only"
+              >
+                <span
+                  class="LineItemQuantity__ReadOnlyValue"
+                >
+                  3
+                </span>
+              </div>
+              <div
+                class="LineItemQuantity__Increment"
+              />
+            </div>
+          </div>
+          <div
+            class="LineItem__ProductPrice"
+          >
+            <div
+              class="stx-price stx-price--alight-center"
+            >
+              <p
+                aria-label="Product price"
+                class="stx-price__amount"
+              >
+                $123.00 CAD
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      aria-busy="false"
+      aria-disabled="false"
+      class="stx-button Checkout__ConfirmButton"
+      type="button"
+    >
+      <span
+        class="stx-button__text"
+      >
+        Continue with changes
+      </span>
+      <span
+        class="stx-loading-spinner stx-button__spinner"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

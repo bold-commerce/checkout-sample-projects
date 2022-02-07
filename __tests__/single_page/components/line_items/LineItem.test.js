@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { LineItem } from '../../../../single_page/src/components/LineItems';
 import {
@@ -19,7 +19,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
   useCheckoutStore: () => MOCKcheckoutStore,
   useCountryInfo: () => MOCKcountryInfo,
   useLineItems: () => MOCKlineItems,
-}))
+}));
 
 describe('', () => {
   test('renders  component', () => {
@@ -30,9 +30,8 @@ describe('', () => {
         onChange={() => {}}
         totalPrice={1991}
       />
-
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
-  })
-})
+  });
+});

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import { SavedAddressList } from '../../../../single_page/src/components/ShippingAddress';
 import { exampleSavedAddresses as MOCKaddresses } from '../../../utils/addressHelpers';
@@ -9,7 +9,8 @@ describe('ShippingAddress', () => {
     const { asFragment } = render(
       <SavedAddressList 
         savedAddresses={MOCKaddresses}
-      /> );
+      /> 
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -19,7 +20,8 @@ describe('ShippingAddress', () => {
       <SavedAddressList 
         savedAddresses={MOCKaddresses}
         selectedAddress={2}
-      /> );
+      />
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -29,7 +31,8 @@ describe('ShippingAddress', () => {
       <SavedAddressList 
         savedAddresses={MOCKaddresses}
         disabled
-      /> );
+      />
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });

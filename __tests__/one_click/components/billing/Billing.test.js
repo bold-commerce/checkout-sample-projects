@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from '@testing-library/react';
 import { Billing } from '../../../../one_click/src/components/Billing'
 import {

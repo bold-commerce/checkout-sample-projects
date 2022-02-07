@@ -14,6 +14,7 @@ exports[`Payment renders PaymentMethod component showing payment method 1`] = `
         <iframe
           data-bold-pigi-iframe="true"
           src="test.url"
+          style="height: 21px;"
           title="payments"
         />
       </div>
@@ -423,6 +424,7 @@ exports[`Payment renders PaymentMethod component without showing payment method 
         <iframe
           data-bold-pigi-iframe="true"
           src="test.url"
+          style="height: 21px;"
           title="payments"
         />
       </div>

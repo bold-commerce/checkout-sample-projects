@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { render } from "@testing-library/react";
 import ShippingAddress from "../../../../single_page/src/components/ShippingAddress/ShippingAddress";
 import {
@@ -18,10 +18,8 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('ShippingAddress', () => {
   test('renders ShippingAddress component', () => {
-    const { asFragment } = render(
-      <ShippingAddress />
-    )
+    const { asFragment } = render( <ShippingAddress /> );
 
     expect(asFragment()).toMatchSnapshot();
   })
-})
+});

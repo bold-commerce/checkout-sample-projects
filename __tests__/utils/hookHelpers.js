@@ -35,7 +35,7 @@ export const exampleUseBillingSameAsShipping = {
 export const exampleUsePaymentIframe = {
   data: {
     url: 'test.url',
-    height: '21'
+    height: 21
   },
     loadingStatus: 'fulfilled',
     paymentIframeOnLoaded: () => {}

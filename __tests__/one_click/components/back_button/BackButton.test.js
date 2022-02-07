@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import BackButton from '../../../../one_click/src/components/BackButton/BackButton';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from "react-router";

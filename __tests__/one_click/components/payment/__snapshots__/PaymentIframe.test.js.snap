@@ -5,6 +5,7 @@ exports[`PaymentIframe renders PaymentIframe component 1`] = `
   <iframe
     data-bold-pigi-iframe="true"
     src="test.url"
+    style="height: 21px;"
     title="payments"
   />
 </DocumentFragment>
