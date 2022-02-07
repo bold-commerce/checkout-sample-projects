@@ -28,7 +28,7 @@ export const noTrackingInventoryHandler = [
     return res(ctx.json({
       '123': {
         product_id: '116',
-        quantity: 10,
+        quantity: -10,
         allow_backorder: false,
         inventory_tracker: 'none',
         tracking_level: 'product',
@@ -36,7 +36,7 @@ export const noTrackingInventoryHandler = [
       },
       '456': {
         product_id: '116',
-        quantity: 10,
+        quantity: -10,
         allow_backorder: false,
         inventory_tracker: 'none',
         tracking_level: 'product',

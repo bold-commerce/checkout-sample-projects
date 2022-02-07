@@ -14,7 +14,7 @@ const useInventory = () => {
       const inventoryItem = inventory[variantId];
       const productId = inventoryItem.product_id;
 
-      if (!inventoryItem.allow_backorder) {
+      if (!inventoryItem.allow_backorder && inventoryItem.inventory_tracker !== 'none') {
         if (inventoryItem.tracking_level !== 'product' && inventoryItem.quantity < lineItem.product_data.quantity) {
           inventoryIssues = true;
         } else if (inventoryItem.tracking_level === 'product') {

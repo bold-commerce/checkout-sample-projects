@@ -41,7 +41,7 @@ const CheckoutForm = () => {
     try{
       const inventory = await checkInventory(lineItems);
       if (inventory) {
-        navigate('/inventory', inventory)
+        navigate('/inventory', { state: inventory });
       }
     } catch (e) {
       logError('check_inventory', e);
