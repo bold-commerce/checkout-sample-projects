@@ -12,13 +12,10 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
 
 describe('BillingAddress', () => {
     test('render BillingAddress component with the same billing address', () => {
-        const { asFragment } = render(
-            <BillingAddress
-                billingAddress={MOCKexampleAddress}
-            />
-        );
+        const { asFragment } = render( <BillingAddress billingAddress={MOCKexampleAddress} /> );
+
         expect(asFragment()).toMatchSnapshot();
-    })
+    });
 
     test('render BillingAddress component with different billing address', () => {
         const { asFragment } = render(
@@ -28,5 +25,5 @@ describe('BillingAddress', () => {
             />
         );
         expect(asFragment()).toMatchSnapshot();
-    })
-})
+    });
+});

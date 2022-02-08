@@ -6,11 +6,7 @@ import '../../../../single_page/src/i18n/config';
 
 describe('ShippingAddress', () => {
   test('renders ShippingAddress component', () => {
-    const { asFragment } = render(
-      <SavedAddressList 
-        savedAddresses={MOCKaddresses}
-      /> 
-    );
+    const { asFragment } = render( <SavedAddressList savedAddresses={MOCKaddresses} /> );
 
     expect(asFragment()).toMatchSnapshot();
   });

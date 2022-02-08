@@ -6,21 +6,22 @@ import '../../../../single_page/src/i18n/config';
 
 describe('Address', () => {
     test('renders Address component', () => {
-        const { asFragment } = render(
-            <Address 
-                address={emptyAddress}
-                onChange={null}
-                errors={null}
-                countries={countries}
-                provinces={caProvinces}
-                showPostalCode
-                showProvince
-                provinceLabel="Province"
-                submit={null}
-                requiredAddressFields={null}
-            />,
-        );
-        expect(asFragment()).toMatchSnapshot();
+      const { asFragment } = render(
+        <Address 
+          address={emptyAddress}
+          onChange={null}
+          errors={null}
+          countries={countries}
+          provinces={caProvinces}
+          showPostalCode
+          showProvince
+          provinceLabel="Province"
+          submit={null}
+          requiredAddressFields={null}
+        />
+      );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders Address component with errors', () => {
@@ -36,8 +37,9 @@ describe('Address', () => {
         provinceLabel="Province"
         submit={null}
         requiredAddressFields={null}
-      />,
+      />
     );
+
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -54,8 +56,9 @@ describe('Address', () => {
         provinceLabel="Province"
         submit={null}
         requiredAddressFields={null}
-      />,
+      />
     );
+
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -81,8 +84,9 @@ describe('Address', () => {
         provinceLabel="Province"
         submit={null}
         requiredAddressFields={requiredFields}
-      />,
+      />
     );
+
     expect(asFragment()).toMatchSnapshot();
   });
 });

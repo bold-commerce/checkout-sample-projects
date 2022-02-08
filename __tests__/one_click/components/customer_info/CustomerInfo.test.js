@@ -15,8 +15,8 @@ describe('CustomerInfo', () => {
     const { asFragment } = render(
       <CustomerInfo />,
       {wrapper: MemoryRouter}
-      );
+    );
 
-    expect(asFragment()).toMatchSnapshot()
+    expect(asFragment()).toMatchSnapshot();
   });
-})
+});

@@ -17,7 +17,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
   usePaymentIframe : () => MOCKpaymentIframe,
   useCheckoutStore: () => MOCKcheckoutStore,
   useCountryInfo: () => MOCKcountryInfo,
-  useLineItems: () => MOCKlineItems
+  useLineItems: () => MOCKlineItems,
 }));
 
 describe('CheckoutSection', () => {
@@ -39,7 +39,7 @@ describe('CheckoutSection', () => {
           </>
         }
       />
-    )
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });

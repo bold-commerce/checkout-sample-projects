@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { LineItem } from '../../../../one_click/src/components/LineItems';
-import '../../../../one_click/src/i18n/config'
+import '../../../../one_click/src/i18n/config';
 
 describe('LineItem', () => {
   test('renders LineItem component with editable quantity', () => {

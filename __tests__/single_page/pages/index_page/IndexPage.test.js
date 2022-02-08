@@ -36,7 +36,6 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
   useCustomer: () => MOCKcustomer,
   useDiscount: () => MOCKdiscount,
   useErrors: () => MOCKerrors,
-
 }))
 
 describe('IndexPage', () => {
@@ -47,5 +46,5 @@ describe('IndexPage', () => {
     );
 
     expect(asFragment()).toMatchSnapshot();
-  })
-})
+  });
+});

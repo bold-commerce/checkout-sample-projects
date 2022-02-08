@@ -21,7 +21,7 @@ describe('SummaryLine', () => {
                 title='test title'
                 value={1111}
                 items={
-                    <SummaryItem tite='test item' value={123} />
+                    <SummaryItem title='test item' value={123} />
                 }
             /> 
         )
@@ -35,9 +35,9 @@ describe('SummaryLine', () => {
                 value={1111}
                 items={
                     <SummaryItem 
-                    tite='test item'
-                    value={123}
-                    removeItem={() => {}}
+                        title='test item'
+                        value={123}
+                        removeItem={() => {}}
                     />
                 }
             />

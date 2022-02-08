@@ -1,6 +1,6 @@
 import React from 'react';
-import { IndexPage } from '../../../../one_click/src/pages/IndexPage';
 import { render } from '@testing-library/react';
+import { IndexPage } from '../../../../one_click/src/pages/IndexPage';
 import {
     exampleUseBillingSameAsShipping as MOCKbillingSameAsShipping,
     exampleUseShippingAddress as MOCKshippingAddress,
@@ -13,6 +13,8 @@ import {
     exampleUseDiscount as MOCKdiscount,
 } from '../../../utils/hookHelpers';
 import '../../../../one_click/src/i18n/config';
+import { AppContext } from '../../../../one_click/src/context/AppContext';
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
@@ -25,26 +27,17 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useCountryInfo: () => MOCKcountryInfo,
     useLineItems: () => MOCKlineItems,
     useDiscount: () => MOCKdiscount,
-})).mock('react', () => ({
-    ...jest.requireActual('react'),
-    useContext: () => ({
-        websiteName: 'TestSite'
-    })
-})).mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
-    useLocation: () => ({
-        pathname: '/' 
-    }),
-    useNavigate: () => ({
-        navigate: (() => {})
-    })
 }));
 
 describe('IndexPage', () => {
     test('renders IndexPage component', () => {
         const { asFragment } = render(
-            <IndexPage />
+            <AppContext.Provider value={{ websiteName: "app.test" }}>
+                <IndexPage />
+            </AppContext.Provider>,
+            {wrapper: MemoryRouter}
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 });

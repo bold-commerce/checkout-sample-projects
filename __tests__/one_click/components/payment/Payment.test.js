@@ -14,19 +14,21 @@ import '../../../../one_click/src/i18n/config';
 
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
+    useBillingSameAsShipping: () => MOCKbillingSameAsShipping,
+    useBillingAddress: () => MOCKbillingAddress,
     usePaymentIframe: () => MOCKpaymentIframe,
+    useShippingLines: () => MOCKshippingLines,
     useCountryInfo: () => MOCKcountryInfo,
     useDiscount: () => MOCKdiscount,
-    useBillingAddress: () => MOCKbillingAddress,
-    useShippingLines: () => MOCKshippingLines,
-    useBillingSameAsShipping: () => MOCKbillingSameAsShipping,
 }));
 
 describe('Payment', () => {
     test('renders PaymentMethod component showing payment method', () => {
         const { asFragment } = render(
             <PaymentMethod showPaymentMethod />,
-            {wrapper: MemoryRouter} );
+            {wrapper: MemoryRouter} 
+        );
+
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -34,7 +36,8 @@ describe('Payment', () => {
         const { asFragment } = render(
             <PaymentMethod showPaymentMethod={false} />,
                 {wrapper: MemoryRouter}
-             );
+        );
+
         expect(asFragment()).toMatchSnapshot();
     });
 });

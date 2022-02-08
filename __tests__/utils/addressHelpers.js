@@ -317,4 +317,4 @@ export const exampleCountryInfo = {
     showProvince: true,
     showPostalCode: true,
     provinceLabel: 'MB',
-}
+};

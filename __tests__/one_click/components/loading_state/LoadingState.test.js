@@ -6,5 +6,5 @@ describe('LoadingState', () => {
     test('renders LoadingState component', () => {
         const { asFragment } = render( <LoadingState /> );
         expect(asFragment()).toMatchSnapshot();
-    })
-})
+    });
+});

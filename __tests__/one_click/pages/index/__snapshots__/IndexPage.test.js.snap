@@ -11,7 +11,7 @@ exports[`IndexPage renders IndexPage component 1`] = `
       <h1
         class="Header__Title"
       >
-        TestSite
+        app.test
       </h1>
       <button
         aria-label="Close"

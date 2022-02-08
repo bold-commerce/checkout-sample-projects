@@ -24,6 +24,7 @@ describe('NewShippingAddress', () => {
                     defaultAddress={null}
                 />
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -36,6 +37,7 @@ describe('NewShippingAddress', () => {
                     defaultAddress={null}
                 />
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -48,6 +50,7 @@ describe('NewShippingAddress', () => {
                     defaultAddress={exampleAddress}
                 />
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -60,6 +63,7 @@ describe('NewShippingAddress', () => {
                     defaultAddress={exampleAddress}
                 />
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -72,6 +76,7 @@ describe('NewShippingAddress', () => {
                     defaultAddress={exampleAddress}
                 />
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 });

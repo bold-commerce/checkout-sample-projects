@@ -17,19 +17,10 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     usePaymentIframe: () => MOCKpaymentIframe,
     useLineItems: () => MOCKlineItems,
     useDiscount: () => MOCKdiscount,
-})).mock('react', () => ({
-    ...jest.requireActual('react'),
-    useContext: () => ({
-        setShowCheckout: (() => {})
-    })
 })).mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
-    useLocation: () => ({
-        pathname: '/' 
-    }),
-    useNavigate: () => ({
-        navigate: (() => {})
-    })
+    useLocation: () => ({ pathname: '/' }),
+    useNavigate: () => ({ pathname: '/' })
 }));
 
 describe('Summary', () => {

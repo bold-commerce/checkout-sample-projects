@@ -15,7 +15,7 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     usePaymentMethod: () => MOCKpaymentMethod,
     usePaymentIframe: () => MOCKpaymentIframe,
     useCountryInfo: () => MOCKcountryInfo,
-}))
+}));
 
 describe('PaymentIframe', () => {
     test('renders PaymentIframe component', () => {
@@ -23,6 +23,7 @@ describe('PaymentIframe', () => {
             <PaymentIframe />,
             {wrapper: MemoryRouter}
         );
+
         expect(asFragment()).toMatchSnapshot();
     });
 });

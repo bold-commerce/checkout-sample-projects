@@ -64,7 +64,9 @@ exports[`SummaryLine renders SummaryLine component with items 1`] = `
       >
         <div
           class="summary-child-title"
-        />
+        >
+          test item
+        </div>
         <div
           class="stx-price summary-child-value stx-price--alight-center"
         >
@@ -146,6 +148,7 @@ exports[`SummaryLine renders SummaryLine component with removable items 1`] = `
         <div
           class="summary-child-title"
         >
+          test item
           <button
             aria-label="remove item"
             class="summary-child-remove"
