@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useLineItems } from '@boldcommerce/checkout-react-components';
 import { CheckoutSection, LineItem } from '../../components';
 import { useErrorLogging } from '../../hooks'; 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../../../../one_click/src/components/Card'
 import { render } from '@testing-library/react';
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Card', () => {
     test('renders Card component', () => {

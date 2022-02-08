@@ -8,8 +8,8 @@ import '../../../../single_page/src/i18n/config';
 jest.mock('@boldcommerce/checkout-react-components', () => ({
   ...jest.requireActual('@boldcommerce/checkout-react-components'),
   useLineItems: () => MOCKlineItems,
-})).mock('react-router', () => ({
-  ...jest.requireActual('react-router'),
+})).mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
   useLocation: jest.fn().mockImplementation(() => {
     return { state: [] }
   }),

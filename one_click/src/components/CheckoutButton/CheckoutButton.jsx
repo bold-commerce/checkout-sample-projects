@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { Button, Message } from '@boldcommerce/stacks-ui';
 import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/checkout-react-components';
 import { useAnalytics, useErrorLogging, useInventory, useMountedState } from '../../hooks';

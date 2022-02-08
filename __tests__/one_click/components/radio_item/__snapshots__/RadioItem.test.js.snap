@@ -44,6 +44,7 @@ exports[`RadioItem renders RadioItem component with children 1`] = `
     >
       <div
         class="FieldSet--LoadingState"
+        role="alert"
       >
         <span
           class="stx-loading-spinner"

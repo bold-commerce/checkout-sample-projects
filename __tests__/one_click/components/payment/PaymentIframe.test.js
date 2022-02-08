@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { PaymentIframe } from '../../../../one_click/src/components/Payment'
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from 'react-router-dom';
 import {
     exampleUseBillingSameAsShipping as MOCKbillingSameAsShipping,
     exampleUsePaymentMethod as MOCKpaymentMethod,

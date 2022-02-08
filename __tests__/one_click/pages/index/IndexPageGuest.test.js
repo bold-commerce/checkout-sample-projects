@@ -32,8 +32,8 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useContext: () => ({
         websiteName: 'TestSite'
     })
-})).mock('react-router', () => ({
-    ...jest.requireActual('react-router'),
+})).mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useLocation: () => ({
         pathname: '/' 
     })

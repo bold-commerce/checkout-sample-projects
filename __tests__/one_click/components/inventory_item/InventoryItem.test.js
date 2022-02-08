@@ -8,8 +8,8 @@ import { exampleUseLineItems as MOCKlineItems } from '../../../utils/hookHelpers
 jest.mock('@boldcommerce/checkout-react-components', () => ({
     ...jest.requireActual('@boldcommerce/checkout-react-components'),
     useLineItems: () => MOCKlineItems
-})).mock('react-router', () => ({
-    ...jest.requireActual('react-router'),
+})).mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
     useLocation: () => ({
         state: MOCKinventory
     })

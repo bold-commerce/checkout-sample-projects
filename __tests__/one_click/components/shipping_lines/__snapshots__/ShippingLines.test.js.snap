@@ -267,6 +267,7 @@ exports[`ShippingLines renders ShippingLines component while shipping lines are 
     </div>
     <div
       class="FieldSet--LoadingState"
+      role="alert"
     >
       <span
         class="stx-loading-spinner"

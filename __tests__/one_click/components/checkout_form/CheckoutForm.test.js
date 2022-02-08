@@ -1,7 +1,7 @@
 import React from 'react';
 import CheckoutForm from '../../../../one_click/src/components/CheckoutForm/CheckoutForm'
 import ResizeObserver from "../../../../__mocks__/ResizeObserver";
-import { render, waitFor } from '@testing-library/react';
+import { render, waitForElementToBeRemoved } from '@testing-library/react';
 import {
     exampleUseBillingSameAsShipping as MOCKbillingSameAsShipping,
     exampleUseShippingAddress as MOCKshippingAddress,
@@ -33,42 +33,20 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useDiscount: () => MOCKdiscount,
 })).mock('react', () => ({
     ...jest.requireActual('react'),
-    useContext: () => ({
-        websiteName: 'TestSite'
-    }),
-})).mock('react-router', () => ({
-    ...jest.requireActual('react-router'),
-    useLocation: () => ({
-        pathname: '/' 
-    }),
-    useNavigate: () => ({
-        navigate: (() => {})
-    }),
-    Routes: () => ({
-        useRoutes: () => {
-        <route 
-        key='key'
-        name='screen name'
-        path='/'
-        />
-    }})
-})).mock('../../../../one_click/src/hooks', () => ({
-    ...jest.requireActual('../../../../one_click/src/hooks'),
-    useInventory: () => ({
-        checkInventory: (() => {})
-    })
+    useContext: () => ({ websiteName: 'TestSite' }),
+})).mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useLocation: () => ({ pathname: '/' }),
+    useNavigate: () => ({ pathname: '/' }),
+    Routes: () => '/'
 }));
 
 describe('CheckoutForm', () => {
     test('renders CheckoutForm', async () => {
-        // React.useState = jest.fn().mockReturnValue([false, (i) => {}])
+        const { getByRole, asFragment } = render( <CheckoutForm /> );
 
-        const { asFragment } = render(
-            <CheckoutForm />
-        );
+        await waitForElementToBeRemoved(() => getByRole('alert'));
 
-        await waitFor(() => {
-            expect(asFragment()).toMatchSnapshot();
-        });
+        expect(asFragment()).toMatchSnapshot();
     });
 });

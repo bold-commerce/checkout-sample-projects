@@ -18,9 +18,9 @@ const OneClickLayout = ({ orderErrors }) => {
           {t('error.order')}
         </Message>
       }
-      {/* <Router> */}
+      <Router>
         <CheckoutForm />
-      {/* </Router> */}
+      </Router>
     </div>
   );
 };

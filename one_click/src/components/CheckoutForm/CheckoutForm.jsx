@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState }  from 'react';
 import { Route, Routes } from "react-router-dom";
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useCheckoutStore, useCustomer, useLineItems } from '@boldcommerce/checkout-react-components';
 import { Summary } from '../Summary';
 import { Shipping } from '../Shipping';

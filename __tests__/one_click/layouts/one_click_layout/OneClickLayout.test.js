@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitForElementToBeRemoved } from '@testing-library/react';
 import { OneClickLayout } from '../../../../one_click/src/layouts/OneClickLayout'
+import { AppContext } from '../../../../one_click/src/context/AppContext';
 import ResizeObserver from "../../../../__mocks__/ResizeObserver";
 import {
     exampleUseBillingSameAsShipping as MOCKbillingSameAsShipping,
@@ -32,29 +33,22 @@ jest.mock('@boldcommerce/checkout-react-components', () => ({
     useLineItems: () => MOCKlineItems,
     useCustomer: () => MOCKcustomer,
     useDiscount: () => MOCKdiscount,
-})).mock('react', () => ({
-    ...jest.requireActual('react'),
-    useContext: () => ({
-        websiteName: 'TestSite'
-    })
-})).mock('react-router', () => ({
-    ...jest.requireActual('react-router'),
-    useLocation: () => ({
-        pathname: '/' 
-    }),
+})).mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useLocation: () => ({ pathname: '/' }),
     useNavigate: () => {}
-})).mock('../../../../one_click/src/hooks', () => ({
-    ...jest.requireActual('../../../../one_click/src/hooks'),
-    useInventory: () => ({
-        checkInventory: () => {}
-    })
 }));
 
 describe('OneClickLayout', () => {
     test('renders OneClickLayout component', async () => {
-        const { asFragment } = render( <OneClickLayout /> );
-        await waitFor(() => {
-            expect(asFragment()).toMatchSnapshot();
-        });
+        const { getByRole, asFragment } = render(
+            <AppContext.Provider value={{ websiteName: "app.test" }}>
+                <OneClickLayout /> 
+            </AppContext.Provider>
+        );
+
+        await waitForElementToBeRemoved(() => getByRole('alert'));
+
+        expect(asFragment()).toMatchSnapshot();    
     });
 });

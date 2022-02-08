@@ -4,6 +4,7 @@ exports[`LoadingState renders LoadingState component 1`] = `
 <DocumentFragment>
   <div
     class="FieldSet--LoadingState"
+    role="alert"
   >
     <span
       class="stx-loading-spinner"

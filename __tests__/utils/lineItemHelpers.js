@@ -91,25 +91,25 @@ export const exampleLineItem = exampleLineItems[0];
 export const exampleInventory = {
     1: {
         platform_id: 2,
-        quantity: 3,
-        allow_backorder: true,
-        inventory_tracker: 'none',
+        quantity: 1,
+        allow_backorder: false,
+        inventory_tracker: 'platform',
         tracking_level: 'none',
         sku: 'skusku'
     },
     3: {
         platform_id: 4,
-        quantity: 31,
-        allow_backorder: true,
-        inventory_tracker: 'none',
+        quantity: 1,
+        allow_backorder: false,
+        inventory_tracker: 'platform',
         tracking_level: 'none',
         sku: 'skutwo'
     },
     5: {
         platform_id: 6,
-        quantity: 13,
-        allow_backorder: true,
-        inventory_tracker: 'none',
+        quantity: 0,
+        allow_backorder: false,
+        inventory_tracker: 'platform',
         tracking_level: 'none',
         sku: 'skudew'
     }    

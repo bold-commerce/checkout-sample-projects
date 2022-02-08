@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
 import { InventoryItem } from "../../components/InventoryItem";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { Button } from "@boldcommerce/stacks-ui"
-import { Link } from "react-router-dom";
 import { useLineItems } from "@boldcommerce/checkout-react-components";
 import { useVariants } from "../../hooks";
 import { AppContext } from '../../context/AppContext';
