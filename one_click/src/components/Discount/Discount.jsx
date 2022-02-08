@@ -95,6 +95,7 @@ export const Discount = ({
           aria-invalid={status.errors ? true : null }
         />
         <Button
+          className="DiscountButton"
           aria-label='apply discount'
           primary={discountApplied || discount.length > 0}
           disabled={discount.length === 0 || loading}

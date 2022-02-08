@@ -50,3 +50,20 @@
 .DiscountForm__Message {
   grid-column: span 2;
 }
+
+button.DiscountButton.stx-button--is-disabled,
+button.DiscountButton.stx-button--is-disabled:hover {
+  border: 1px solid #000000A6;
+  background-color: white;
+  color: #000000A6;
+}
+
+button.DiscountButton,
+button.DiscountButton:hover {
+  color: white;
+  background-color: #0a75c2;    
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #0000001a;
+  border: 1px solid #0000001A;
+}
