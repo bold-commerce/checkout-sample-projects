@@ -11,6 +11,7 @@ import { useAnalytics, useErrorLogging } from '../../hooks';
 import './Summary.scss';
 import { useTranslation } from 'react-i18next';
 import Button from '@boldcommerce/stacks-ui/lib/components/button/Button';
+import { LineItems } from '../LineItems';
 
 const Summary = ({ section, onSectionChange }, ref) => {
   const { data: shipping } = useShippingLines();
@@ -68,7 +69,8 @@ const Summary = ({ section, onSectionChange }, ref) => {
   return(
     <div ref={ref} className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
       <Header title={t('summary.title')} />
-      <BackButton onClick={() => onSectionChange(backLocation)} />
+      <BackButton onClick={() => onSectionChange(backLocation)} /> 
+      <LineItems />
       <section className="Summary__OrderSummary">
         <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">
           <SummaryLine
