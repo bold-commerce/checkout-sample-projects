@@ -27,13 +27,13 @@ button.CheckoutButton__Hide {
   padding: 0px 32px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   button.CheckoutButton__Desktop {
     display: none;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 770px) {
   button.CheckoutButton__Mobile {
     display: none;
   }

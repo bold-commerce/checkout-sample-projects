@@ -9,6 +9,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   color: rgba(0, 0, 0, 0.9);
 }
+
+/* Mobile */
+@media only screen and (max-width: 769px){
+  .OneClick--Modal {
+    animation: 1s ease 0s 1 slideUp;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 770px) and (max-width: 1199px){
+  .OneClick--Modal {
+    padding: 40px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1200px){
+  .OneClick--Modal {
+    padding: 40px;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+/* mobile 0-770px
+tablet 770-1200px
+desktop 1200px + */
