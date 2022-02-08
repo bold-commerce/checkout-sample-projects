@@ -2,7 +2,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Plus from '../Icons/Plus'
-import { InputField, Button, Message } from '@boldcommerce/stacks-ui';
+import { Button, Message } from '@boldcommerce/stacks-ui';
+import { InputField } from '../InputField';
 import { useDiscount } from '@boldcommerce/checkout-react-components';
 import './Discount.css';
 import { useAnalytics, useErrorLogging } from '../../hooks';
