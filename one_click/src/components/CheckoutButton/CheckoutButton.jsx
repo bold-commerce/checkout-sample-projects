@@ -6,6 +6,7 @@ import { useCheckoutStore, usePaymentIframe, useLineItems } from '@boldcommerce/
 import { useAnalytics, useErrorLogging, useInventory, useMountedState } from '../../hooks';
 import './CheckoutButton.css';
 import { useTranslation } from 'react-i18next';
+import { isEmpty } from '../../utils';
 
 const CheckoutButton = ({ disabled, onClick, loading, className, errorMessage, innerRef }) => {
   const { t } = useTranslation();
@@ -58,7 +59,9 @@ const CheckoutButtonContainer = ({ className }, ref) => {
           setLoading(false);
       } else {
         setLoading(false);
-        navigate('/inventory', inventoryIssues);
+        if(!isEmpty(inventoryIssues)){
+          navigate('/inventory', inventoryIssues);
+        }
       }
     } catch(e) {  
       if(isMounted())

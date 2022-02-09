@@ -19,7 +19,7 @@ export const productInventoryHandler = [
         tracking_level: 'product',
         sku: 'ABC-456'
       }
-    }));
+    }), ctx.status(200));
   }),
 ];
 
@@ -42,7 +42,7 @@ export const noTrackingInventoryHandler = [
         tracking_level: 'product',
         sku: 'ABC-456'
       }
-    }));
+    }), ctx.status(200));
   }),
 ];
 
@@ -65,7 +65,7 @@ export const allowBackorderInventoryHandler = [
         tracking_level: 'product',
         sku: 'ABC-456'
       }
-    }));
+    }), ctx.status(200));
   }),
 ];
 
@@ -88,6 +88,12 @@ export const variantInventoryHandler = [
         tracking_level: 'variant',
         sku: 'ABC-456'
       }
-    }));
+    }), ctx.status(200));
   }),
+];
+
+export const failedServerRequestInventoryHandler = [
+  rest.get('https://test.com/inventory', (req, res, ctx) => {
+    ctx.status(500);
+  })
 ];

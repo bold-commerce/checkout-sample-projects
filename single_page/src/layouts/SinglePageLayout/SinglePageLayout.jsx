@@ -8,6 +8,7 @@ import { ConfirmationPage } from '../../pages/ConfirmationPage';
 import './SinglePageLayout.css';
 import { InventoryIssuesPage } from '../../pages/InventoryIssuesPage';
 import { useCallback } from 'react/cjs/react.development';
+import { isEmpty } from '../../../utils';
 
 const SinglePageLayout = () => {
   const { state } = useCheckoutStore();
@@ -18,7 +19,7 @@ const SinglePageLayout = () => {
   const checkInventory = useCallback(async() => {
     const inventory_issues = await validateInventory(state.applicationState.line_items);
 
-    if (inventory_issues) {
+    if (inventory_issues && !isEmpty(inventory_issues)) {
       navigate('/inventory_issues', { state: inventory_issues })
     }
   }, []);
