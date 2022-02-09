@@ -25,8 +25,9 @@ const CheckoutForm = ({ banners }) => {
   const navigate = useNavigate();
   const [openSection, setOpenSection] = useState('/');
   const [modalHeight, setModalHeight] = useState('100%')
-  const [loading, setLoading] = React.useState(true); // calling React.useState to be able to mock with snapshot tests.
+  const [loading, setLoading] = useState(true); // calling React.useState to be able to mock with snapshot tests.
   const [height, setHeight] = useState(null);
+  const [overflow, setOverflow] = useState(null)
   const mainEl = useRef(null);
   const summaryEl = useRef(null);
   const shippingEl = useRef(null);
@@ -123,10 +124,29 @@ const CheckoutForm = ({ banners }) => {
     }
   }, [openSection, mainEl?.current]);
 
+  useEffect(() => {
+    const resize = new ResizeObserver(() => {
+      if(height > window.innerHeight)
+        setOverflow("scroll");
+      else {
+        setOverflow('hidden');
+      }
+    });
+
+    if(checkoutFormEl.current){
+      resize.observe(checkoutFormEl.current);
+    }
+    else {
+      resizeObserver.disconnect();
+    }
+  }, [height])
+
   const style = window.innerWidth > 768 ? {
     height: height? `${height}px` : null,
-    overflowY: height > window.innerHeight ? 'scroll' : 'hidden',
-  } : { height: modalHeight }
+    overflowY: overflow,
+  } : { 
+    height: modalHeight 
+  }
 
   return (
     <div className="Checkout__Form" style={style} bold-one-click-form="true" ref={checkoutFormEl}>
