@@ -25,7 +25,7 @@ const CheckoutForm = ({ banners }) => {
   const navigate = useNavigate();
   const [openSection, setOpenSection] = useState('/');
   const [modalHeight, setModalHeight] = useState('100%')
-  const [loading, setLoading] = useState(true); // calling React.useState to be able to mock with snapshot tests.
+  const [loading, setLoading] = useState(true);
   const [height, setHeight] = useState(null);
   const [overflow, setOverflow] = useState(null)
   const mainEl = useRef(null);
@@ -51,7 +51,7 @@ const CheckoutForm = ({ banners }) => {
       logError('check_inventory', e);
     }
   }
-  
+
   useEffect(() => {
     if (banners) {
       setModalHeight( `${checkoutFormEl.clientHeight - checkoutFormEl.offsetTop}px`)
@@ -177,6 +177,5 @@ const CheckoutForm = ({ banners }) => {
       }
     </div>
   )};
-
 
 export default CheckoutForm;
