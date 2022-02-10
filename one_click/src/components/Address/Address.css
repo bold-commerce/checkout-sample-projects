@@ -25,6 +25,7 @@
 
 .FieldSet--Address .stx-field__message {
   white-space: nowrap;
+  font-size: 12px;
 }
 
 .FieldSet--Address .stx-input.stx-input--alert {

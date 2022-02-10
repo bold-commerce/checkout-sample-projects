@@ -11,6 +11,7 @@ import { PaymentMethod } from '../../components/Payment';
 import { CheckoutButton } from '../../components/CheckoutButton';
 import { useAnalytics } from '../../hooks';
 import { useTranslation } from 'react-i18next';
+import { SummaryCondensed } from '../../components/Summary';
 
 const IndexPage = ({ onSectionChange, show }, ref) => {
   const { state } = useCheckoutStore();
@@ -48,12 +49,7 @@ const IndexPage = ({ onSectionChange, show }, ref) => {
     <div ref={ref} className={classNames('Sidebar IndexPage', show ? 'Sidebar--Show' : 'IndexPage--Hide')}>
       <Header title={websiteName}/>
       <LineItems />
-      <Card
-        title={t('summary.title')}
-        handleClick={() => onSectionChange('summary')}
-        component={"/summary"}
-        overview={<Price amount={order_total} moneyFormatString={t('currency_format')} />}
-      />
+      <SummaryCondensed handleClick={() => onSectionChange('summary')}/>
       { customer?.email_address && (
         <Card
           description={customer.email_address}

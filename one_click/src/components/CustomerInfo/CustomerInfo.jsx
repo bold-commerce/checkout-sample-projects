@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useAnalytics, useErrorLogging } from "../../hooks";
-import { InputField, CheckboxField } from "@boldcommerce/stacks-ui/lib";
+import { CheckboxField } from "@boldcommerce/stacks-ui/lib";
 import { useCustomer } from "@boldcommerce/checkout-react-components";
-import { Link } from "react-router-dom";
+import { InputField } from '../InputField';
 import { useTranslation } from "react-i18next";
 
 const CustomerInfo = () => {
@@ -32,6 +32,7 @@ const CustomerInfo = () => {
       <h2 className="IndexGuest__Title">{t('customer.info')}</h2>
       <div className="IndexGuest__Login">{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
       <InputField
+        className="IndexGuest__Email"
         type="email"
         name="email"
         autoComplete="email"

@@ -1,0 +1,41 @@
+.SelectField {
+  position: relative;
+  outline: 1px solid #D9D9D9;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #0000001A inset;
+
+  &--disabled {
+    opacity: 0.4;
+  }
+
+  &__Select {
+    width: 100%;
+    min-height: 44px;
+    padding: 20px 10px 5px 10px;
+    color: rgba(0,0,0,0.9);
+    font-size: 14px;
+    border: none;
+  }
+
+  &__Select:focus + &__Label,
+  &__Select:not([valueattr=""]) + &__Label,
+  &__Select:-webkit-autofill + &__Label {
+    top: 12px;
+    font-size: 12px;
+  }
+
+  &__Label {
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+  }
+
+  &--alert {
+    outline-color: red;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { useShippingLines, useDiscount, useCheckoutStore } from '@boldcommerce/checkout-react-components';
+import { useShippingLines, useDiscount, useCheckoutStore, useCustomer } from '@boldcommerce/checkout-react-components';
 import { Price } from '@boldcommerce/stacks-ui';
 import SummaryLine from './SummaryLine';
 import SummaryItem from './SummaryItem';
@@ -10,11 +10,14 @@ import { CheckoutButton } from '../CheckoutButton';
 import { useAnalytics, useErrorLogging } from '../../hooks';
 import './Summary.scss';
 import { useTranslation } from 'react-i18next';
+import Button from '@boldcommerce/stacks-ui/lib/components/button/Button';
+import { LineItems } from '../LineItems';
 
 const Summary = ({ section, onSectionChange }, ref) => {
   const { data: shipping } = useShippingLines();
   const { data: discount, removeDiscount } = useDiscount();
   const { state } = useCheckoutStore();
+  const { data: customer } = useCustomer();
   const orderTotals =  state.orderTotals;
   const taxes = state.applicationState.taxes;
   const trackEvent = useAnalytics();
@@ -66,7 +69,8 @@ const Summary = ({ section, onSectionChange }, ref) => {
   return(
     <div ref={ref} className={classNames('Sidebar Summary', show ? 'Sidebar--Show' : 'Sidebar--Hide')}>
       <Header title={t('summary.title')} />
-      <BackButton onClick={() => onSectionChange(backLocation)} />
+      <BackButton onClick={() => onSectionChange(backLocation)} /> 
+      <LineItems />
       <section className="Summary__OrderSummary">
         <div className="Summary__Lines SummaryBlock" data-allow-multiple id="accordianGroup">
           <SummaryLine
@@ -94,7 +98,16 @@ const Summary = ({ section, onSectionChange }, ref) => {
           <Price className="summary-total-price" amount={orderTotals.total} moneyFormatString={t('currency_format')} />
         </div>
       </section>
-      <CheckoutButton className="CheckoutButton CheckoutButton__Mobile" />
+      { customer.platform_id ?
+        <CheckoutButton className="CheckoutButton CheckoutButton__Mobile" /> :
+        <Button
+          className="CheckoutButton"
+          onClick={() => onSectionChange(backLocation)}
+          primary
+        >
+          {t('continue_checkout_out')}
+        </Button>
+      }
     </div>
   );
 };

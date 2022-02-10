@@ -16,20 +16,18 @@ const Billing = ({section, onSectionChange}, ref) => {
     <div ref={ref} className={classNames('Sidebar Billing', section === 'billing' ? 'Sidebar--Show' : (section === 'summaryB' ? 'IndexPage--Hide' : 'Sidebar--Hide'))}>
       <Header title={websiteName} />
       
-      <SummaryCondensed onSectionChange={() => onSectionChange('summaryB')}/>
+      <SummaryCondensed handleClick={() => onSectionChange('summaryB')}/>
 
       <div className="Billing__Payment">
         <h2 className="IndexGuest__Title">{t('payment.method')}</h2>
         <PaymentMethod/>
       </div>
 
-      <div className="IndexGuest-__Footer">
-        <CheckoutButton className="CheckoutButton Billing__Checkout__Btn" />
-        <div className="IndexGuest__Footer--login">
-          <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>{t('back_to_shipping')}</button>
-        </div>          
-        <div className="IndexGuest__Rights">{`${t('all_rights_reserved')} ${websiteName}`}</div>
-      </div>
+      <CheckoutButton className="CheckoutButton Billing__Checkout__Btn" />
+      <div className="IndexGuest__Footer--login">
+        <button className="link-btn" type="button" onClick={() => onSectionChange('/')}>{t('back_to_shipping')}</button>
+      </div>          
+        
     </div>
   )
 }

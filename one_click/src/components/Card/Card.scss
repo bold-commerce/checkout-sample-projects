@@ -24,7 +24,6 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 20px;
-    text-decoration-line: underline;
 
     a, span {
       color: var(--color-primary);    
@@ -97,7 +96,7 @@
 
   &:not(.Card--Payment){
     border-bottom: 1px solid;
-    border-color: rgba(0, 0, 0, 0.4);
+    border-color: #D9D9D9;
   }
 
   &--Payment .Card__Content {

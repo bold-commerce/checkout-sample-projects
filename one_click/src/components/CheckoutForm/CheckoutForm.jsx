@@ -38,7 +38,7 @@ const CheckoutForm = ({ banners }) => {
   const checkoutButtonEl = useRef(null);
   const checkoutFormEl = useRef(null);
 
-  const showCheckoutButton = openSection === 'summary' || (openSection === '/' && customer.platform_id);
+  const showCheckoutButton = (openSection === 'summary' || openSection === '/') && customer.platform_id;
   const renderSidebar = openSection === '/' || openSection.indexOf('/') === -1;
   
   const getInventory = async () => {
@@ -54,7 +54,7 @@ const CheckoutForm = ({ banners }) => {
 
   useEffect(() => {
     if (banners) {
-      setModalHeight( `${checkoutFormEl.clientHeight - checkoutFormEl.offsetTop}px`)
+      setModalHeight( `${checkoutFormEl.current.clientHeight - checkoutFormEl.current.offsetTop}px`)
     } else {
       setModalHeight('100%')
     }
@@ -126,7 +126,7 @@ const CheckoutForm = ({ banners }) => {
 
   useEffect(() => {
     const resize = new ResizeObserver(() => {
-      if(height > window.innerHeight)
+      if(height > checkoutFormEl.current.clientHeight)
         setOverflow("scroll");
       else {
         setOverflow('hidden');
@@ -141,7 +141,7 @@ const CheckoutForm = ({ banners }) => {
     }
   }, [height])
 
-  const style = window.innerWidth > 768 ? {
+  const style = window.innerWidth > 769 ? {
     height: height? `${height}px` : null,
     overflowY: overflow,
   } : { 
@@ -172,7 +172,9 @@ const CheckoutForm = ({ banners }) => {
             </>
             : null
           }
-          <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
+          <div className="CheckoutButton__Desktop__Wrapper" >
+            <CheckoutButton ref={checkoutButtonEl} className={(classNames("CheckoutButton", "CheckoutButton__Desktop", showCheckoutButton ? "CheckoutButton__Show" : "CheckoutButton__Hide"))} />
+          </div>
         </>
       }
     </div>

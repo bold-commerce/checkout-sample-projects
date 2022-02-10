@@ -24,17 +24,22 @@
 }
 
 .ConfirmationPage p {
-    margin-top: 8px;
+    margin: 4px 0px;
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
     color: rgba(0, 0, 0, .65);
 }
 
+.ConfirmationPage p:first-child {
+    margin-top: 0px;
+}
+
 .confirmation-order,
 .confirmation-information {
     color: rgba(0, 0, 0, 0.9);
     border: 1px solid #d9d9d9;
+    border-radius: 4px;
     padding: 16px;
 }
 
@@ -45,9 +50,19 @@
     color: rgba(0, 0, 0, .65);
 }
 
-.confirmation-continue-button {
-    width: 100%;
-    margin: 0;
-    color: white;
-    background-color: #0a75c2;
+button.confirmation-continue-button {
+    width: 100%; 
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px #0000001A;
+    border: 1px solid #000000A6;
+}
+
+.confirmation-help p {
+    font-size: 14px;
+}
+
+.confirmation-help p a,
+.confirmation-help p a:hover{
+    color: #0a75c2
 }
