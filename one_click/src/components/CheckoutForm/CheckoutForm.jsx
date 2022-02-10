@@ -54,7 +54,7 @@ const CheckoutForm = ({ banners }) => {
 
   useEffect(() => {
     if (banners) {
-      setModalHeight( `${checkoutFormEl.clientHeight - checkoutFormEl.offsetTop}px`)
+      setModalHeight( `${checkoutFormEl.current.clientHeight - checkoutFormEl.current.offsetTop}px`)
     } else {
       setModalHeight('100%')
     }

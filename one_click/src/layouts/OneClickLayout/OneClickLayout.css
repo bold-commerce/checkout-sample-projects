@@ -60,6 +60,7 @@ body {
 .Checkout__Form {
   position: relative;
   transition: all 0.6s;
+  height: 100%;
   overflow-x: hidden;
   background: #fff;
   box-shadow: 0px 1px 8px 2px #0000001A;
@@ -157,9 +158,12 @@ h1.Section__Title {
 
 .IndexGuest__Customer,
 .IndexGuest__ShippingAddress,
-.IndexGuest__ShippingMethod,
 .IndexGuest__Payment{
-  padding: 16px 0;
+  padding: 8px 0;
+}
+
+.IndexGuest__ShippingMethod{
+  padding: 8px 0px 0px 0px;
 }
 
 .IndexGuest__Summary {

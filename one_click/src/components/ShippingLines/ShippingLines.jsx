@@ -26,7 +26,7 @@ export const ShippingLines = ({
 
   if (!showShippingLines) {
     return (
-      <section className="FieldSet FieldSet--ShippingMethod">
+      <section className="FieldSet--ShippingMethod">
         <div className="FieldSet__Header">
           <h2 className="FieldSet__Heading">{t('shipping.method')}</h2>
         </div>
@@ -38,7 +38,7 @@ export const ShippingLines = ({
   }
 
   return (
-    <section className="FieldSet FieldSet--ShippingMethod">
+    <section className="FieldSet--ShippingMethod">
       <div className="FieldSet__Header">
         <h2 className="FieldSet__Heading">{t('shipping.method')}</h2>
       </div>
