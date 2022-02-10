@@ -126,7 +126,7 @@ const CheckoutForm = ({ banners }) => {
 
   useEffect(() => {
     const resize = new ResizeObserver(() => {
-      if(height > window.innerHeight)
+      if(height > checkoutFormEl.current.clientHeight)
         setOverflow("scroll");
       else {
         setOverflow('hidden');
@@ -141,7 +141,7 @@ const CheckoutForm = ({ banners }) => {
     }
   }, [height])
 
-  const style = window.innerWidth > 768 ? {
+  const style = window.innerWidth > 769 ? {
     height: height? `${height}px` : null,
     overflowY: overflow,
   } : { 
