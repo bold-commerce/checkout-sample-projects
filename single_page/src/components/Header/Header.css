@@ -21,6 +21,10 @@
   grid-column: span 2;
 }
 
+.Header .SelectField__Select {
+  padding: 5px 10px;
+}
+
 @media screen and (max-width: 1199px) {
   .Header {
     row-gap: 16px;

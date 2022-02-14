@@ -33,6 +33,7 @@
   "complete_order": "Complete Order",
   "confirmation": {
     "contact_us": "Contact us",
+    "continue_shopping": "Continue shopping",
     "need_help": "Need help? ",
     "order_accepted": "We’ve accepted your order, and we’re getting it ready. A confirmation email has been sent to your email address.",
     "order_confirmed": "Your order is confirmed",
@@ -56,6 +57,9 @@
     "continue": "Continue with changes",
     "issues": "Inventory issues",
     "issues_description": "Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience."
+  },
+  "languages": {
+    "en": "English",
   },
   "line_item": {
     "remove": "Remove",
