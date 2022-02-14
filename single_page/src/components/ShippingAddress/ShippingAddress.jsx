@@ -8,7 +8,8 @@ import { useAnalytics, useErrorLogging } from '../../hooks';
 import { useTranslation } from 'react-i18next';
 
 const ShippingAddress = ({ applicationLoading }) => {
-  const { data: shippingAddress, submitShippingAddress } = useShippingAddress(['first_name', 'last_name']);
+  const requiredAddressFields = ['first_name', 'last_name', 'address_line_1', 'city'];
+  const { data: shippingAddress, submitShippingAddress } = useShippingAddress(requiredAddressFields);
   const { data: savedAddresses } = useSavedAddresses();
   const { data: loadingStatus } = useLoadingStatus();
   const setting = loadingStatus.shippingAddress === 'setting';
@@ -20,6 +21,7 @@ const ShippingAddress = ({ applicationLoading }) => {
       savedAddresses={savedAddresses}
       setting={setting}
       applicationLoading={applicationLoading}
+      requiredAddressFields={requiredAddressFields}
     />
   );
 };

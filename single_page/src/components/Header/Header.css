@@ -1,0 +1,36 @@
+.Header {
+  display: grid;
+  row-gap: 32px;
+}
+
+.Header__Title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(0, 0, 0, 0.9); 
+  grid-column: 1;
+}
+
+.Header__LanguageSelect {
+  grid-column: 2
+}
+
+.Header__Logo {
+  width: 100%;
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 1199px) {
+  .Header {
+    row-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+
+  .Header__LanguageSelect {
+    grid-column: span 2;
+    grid-row: 1;
+  }
+}

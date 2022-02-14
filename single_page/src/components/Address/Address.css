@@ -38,8 +38,8 @@
   margin-bottom: 0.25rem;
 }
 
-.FieldSet--Address .stx-field.Field--FirstName,
-.FieldSet--Address .stx-field.Field--LastName {
+.Field--FirstName,
+.Field--LastName {
   flex: 1;
 }
 
@@ -60,19 +60,24 @@
   flex: 1;
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 769px) {
   .FieldSet--Address .FieldGroup {
     flex-direction: column;
     margin: 0;
   }
 }
 
-.stx-field--alert .stx-field__message {
+.Field .stx-field__message {
   margin: 0 5px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
+}
+
+.InputField--alert + .stx-field__message,
+.SelectField--alert + .stx-field__message{
+  color: red;
 }
 
 div.Field--Hidden {

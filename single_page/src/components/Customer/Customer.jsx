@@ -1,6 +1,7 @@
 import React, { memo, useCallback, useState } from 'react';
 import { useCustomer } from '@boldcommerce/checkout-react-components';
-import { InputField } from '@boldcommerce/stacks-ui';
+import { CheckboxField } from "@boldcommerce/stacks-ui/lib";
+import { InputField } from '../InputField';
 import { CheckoutSection } from '../CheckoutSection';
 import './Customer.css';
 import { useAnalytics, useErrorLogging } from '../../hooks';
@@ -17,14 +18,14 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
   const logError = useErrorLogging();
   const [email, setEmail] = useState(customer?.email_address);
   const [errors, setErrors] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [ acceptsMarketing, setAcceptsMarketing ] = useState(false)
   const { t } = useTranslation();
 
   const handleSubmit = useCallback(async () => {
-    setLoading(true);
     try {
       await submitCustomer({
         email_address: email,
+        accepts_marketing: acceptsMarketing
       });
       trackEvent('set_customer');
       setErrors(null);
@@ -32,16 +33,16 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
       setErrors(e.body.errors);
       logError('customer', e);
     }
-    setLoading(false);
-  }, [email]);
+  }, [email, acceptsMarketing]);
 
   return (
     <CheckoutSection
       className="FieldSet--CustomerInformation"
       title={t('customer.info')}
     >
+      <div>{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
       <InputField
-        className="InputField Field--Email"
+        className="Field--Email"
         placeholder={t('customer.email')}
         type="email"
         name="email"
@@ -52,6 +53,11 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
         onChange={(e) => setEmail(e.target.value)}
         disabled={customer.isAuthenticated}
         onBlur={handleSubmit}
+      />
+      <CheckboxField
+        label={t('customer.subscribe')}
+        checked={acceptsMarketing}
+        onChange={() => setAcceptsMarketing(!acceptsMarketing)}
       />
     </CheckoutSection>
   );

@@ -1,5 +1,6 @@
 import { useDiscount } from '@boldcommerce/checkout-react-components';
-import { Button, InputField } from '@boldcommerce/stacks-ui';
+import { Button } from '@boldcommerce/stacks-ui';
+import { InputField } from '../InputField';
 import React, { memo, useCallback, useState } from 'react';
 import { useAnalytics, useErrorLogging } from '../../hooks';
 import './DiscountForm.css';
@@ -61,6 +62,7 @@ const MemoizedDiscountForm = memo(({
           disabled={discountApplied || loading}
         />
         <Button
+          className="DiscountButton"
           primary={discountApplied || discount.length > 0}
           disabled={discount.length === 0 || discountApplied || loading}
           onClick={handleApply}

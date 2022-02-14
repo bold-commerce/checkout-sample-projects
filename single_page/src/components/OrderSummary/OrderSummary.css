@@ -6,11 +6,7 @@
 }
 
 .OrderSummaryItem__Title {
-  color: #737373;
-}
-
-.OrderSummaryItem__Amount {
-  color: #3A3A3A;
+  color: #595959;
 }
 
 .OrderSummaryItem--removable {
@@ -24,34 +20,30 @@
 
 .OrderSummaryItem__Label {
   flex: 1;
-  color: #737373;
 }
 
 .OrderSummaryItem__Amount {
   display: flex;
-  color: #3A3A3A;
   align-items: center;
 }
 
 .OrderSummaryItem__Amount .stx-price__amount {
-  font-size: inherit;
-  color: inherit;
+  font-size: 14px;
+  color: #1A1A1A;
 }
 
 .Breakdown__Section {
   gap: 10px;
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.Breakdown__Section.Breakdown__Section--Total .OrderSummaryItem__Title {
-  font-size: 16px;
-}
-
-.Breakdown__Section.Breakdown__Section--Total .OrderSummaryItem__Amount {
-  font-size: 24px;
+.Breakdown__Section--Total .OrderSummaryItem__Title,
+.Breakdown__Section--Total .OrderSummaryItem__Amount .stx-price__amount {
+  font-size: 18px;
+  color: #1A1A1A
 }
 
 .OrderSummaryItem__Action {
@@ -63,4 +55,21 @@
   cursor: pointer;
   justify-content: center;
   margin-right: 5px;
+}
+
+@media only screen and (max-width: 769px) {
+  .Breakdown__Section--Total {
+    border: none;
+  }
+  
+  .FieldSet--OrderSummary {
+    height: 100%;
+    overflow:hidden;
+    transition: 0.4s all ease-in;
+    padding: 0px 32px;
+  }
+
+  .FieldSet--OrderSummary--Closed {
+    height: 0px;
+  }
 }

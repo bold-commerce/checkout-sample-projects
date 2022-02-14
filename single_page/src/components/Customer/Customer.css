@@ -1,10 +1,16 @@
 .FieldSet--CustomerInformation {
-  margin: 2rem 0;
   padding: 0;
+  font-size: 14px;
 }
 
 .FieldSet--CustomerInformation .FieldSet__Header {
   margin-bottom: 10px;
+}
+
+.FieldSet--CustomerInformation .FieldSet__Content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .Field--Email {
@@ -25,10 +31,19 @@
   margin: 0 5px;
 }
 
-.FieldSet--CustomerInformation .stx-field--alert .stx-field__message {
+.FieldSet--CustomerInformation .stx-field__message {
   margin: 0 5px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
+}
+
+.FieldSet--CustomerInformation .InputField--alert + .stx-field__message {
+  color: red;
+}
+
+.FieldSet--CustomerInformation .stx-checkbox-field__checkbox {
+  width: 16px;
+  height: 16px;
 }

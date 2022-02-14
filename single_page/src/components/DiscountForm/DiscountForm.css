@@ -1,40 +1,39 @@
 .DiscountForm {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
   padding: 20px 0;
   border-top: 1px solid rgba(0,0,0,0.1);
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .DiscountForm .stx-field {
-  flex: 2;
   margin: 0;
-}
-
-.DiscountForm button.stx-button .stx-button__text {
-  text-transform: capitalize;
-}
-
-.DiscountForm button.stx-button {
-  flex: 0.5;
-  height: 42px;
 }
 
 .Summary__DiscountForm .DiscountForm__error {
   color: #FF1A2D;
 }
 
-@media screen and (max-width: 599px) {
+button.DiscountButton, 
+button.DiscountButton:hover {
+  color: white;
+  background-color: #0a75c2;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #0000001a;
+  border: 1px solid #0000001A;
+}
+
+button.DiscountButton.stx-button--is-disabled,
+button.DiscountButton.stx-button--is-disabled:hover {
+  border: 1px solid #000000A6;
+  background-color: white;
+  color: #000000A6;
+}
+
+@media only screen and (max-width: 1199px){
   .DiscountForm {
-    flex-direction: column;
-  }
-
-  .DiscountForm .stx-field {
-    flex: 1;
-    margin: 0 0.25rem 10px 0.25rem;
-
-  }
-
-  .DiscountForm button.stx-button {
-    flex: 1
+    gap: 8px;
   }
 }

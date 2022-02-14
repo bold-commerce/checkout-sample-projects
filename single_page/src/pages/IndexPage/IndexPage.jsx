@@ -3,6 +3,8 @@ import { useShippingAddress, useCheckoutStore } from '@boldcommerce/checkout-rea
 import { useAnalytics, useErrorLogging } from '../../hooks';
 import { OrderErrors, Customer, ShippingAddress, BillingAddress, ShippingLines, PaymentMethod, CheckoutButton, OrderSummary } from '../../components';
 import classNames from 'classnames';
+import Header from '../../components/Header/Header';
+import { useTranslation } from 'react-i18next';
 
 const IndexPage = () => {
   const { state } = useCheckoutStore();
@@ -11,6 +13,7 @@ const IndexPage = () => {
   const logError = useErrorLogging();
   const [loading, setLoading] = useState(false);
   const [summaryOpen, setSummaryOpen] = useState(false);
+  const { t } = useTranslation();
 
   const setDefaultAddress = useCallback(async () => {
     setLoading(true);
@@ -35,19 +38,21 @@ const IndexPage = () => {
   return (
     <>
       <div className="Checkout__Main" role="main">
+        <Header/>
+        <OrderSummary summaryOpen={summaryOpen} onCollapse={() => setSummaryOpen((prevState) => !prevState)}/>
         <OrderErrors />
         <Customer />
         <ShippingAddress applicationLoading={loading} />
         <BillingAddress applicationLoading={loading} />
         <ShippingLines applicationLoading={loading} />
         <PaymentMethod applicationLoading={loading} />
-        <CheckoutButton />
-      </div>
-      <div
-        className={classNames('Checkout__Sidebar', summaryOpen ? 'Checkout__Sidebar--Open' : 'Checkout__Sidebar--Closed' )}
-        role="complementary"
-      >
-        <OrderSummary readOnly={false} summaryOpen={summaryOpen} onCollapse={() => setSummaryOpen((prevState) => !prevState)} />
+        <div className="Checkout__Navigation">
+          <CheckoutButton />
+          <a className="Checkout__ReturnLink" href={process.env.CART_URL}>{t('return_to_cart')}</a>
+        </div>
+        <div className="Checkout__Footer">
+          <p class="Checkout__Rights">{`All rights reserved ${t('website_name')}`}</p>
+        </div>
       </div>
     </>
   );

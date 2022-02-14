@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { InputField, SelectField } from '@boldcommerce/stacks-ui/';
+import { InputField } from '../InputField';
+import { SelectField } from '../SelectField';
 import './Address.css';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
@@ -99,7 +100,7 @@ const Address = ({
       </div>
       <div className="FieldGroup">
         <InputField
-          placeholder={hasRequiredFields && requiredAddressFields.includes('business_name') ? t('address.business_name') : t('address_business_name_optional')}
+          placeholder={hasRequiredFields && requiredAddressFields.includes('business_name') ? t('address.business_name') : t('address.business_name_optional')}
           type="text"
           name="business_name"
           className="Field Field--Company"
@@ -119,8 +120,8 @@ const Address = ({
           autoComplete="address_line1"
           className="Field Field--Address"
           value={address?.address_line_1 ?? ''}
-          messageType={errors && errorMap?.address && 'alert' || ''}
-          messageText={errors && errorMap?.address && t('address.address_line_1_hint') || ''}
+          messageType={errors && errorMap?.address_line_1 && 'alert' || ''}
+          messageText={errors && errorMap?.address_line_1 && t('address.address_line_1_hint') || ''}
           onChange={(e) => onChange({
             address_line_1: e.target.value,
           })}
@@ -157,7 +158,7 @@ const Address = ({
           placeholder={t('address.country_hint')}
           name="country"
           autoComplete="country"
-          className="SelectField Field--Country"
+          className="Field Field--Country"
           value={address?.country_code ?? ''}
           messageType={errors && errorMap?.country && 'alert' || ''}
           messageText={errors && errorMap?.country && t('address.country_hint') || ''}
@@ -171,10 +172,10 @@ const Address = ({
           placeholder={provincePlaceholder}
           name="province"
           autoComplete="address-level1"
-          className={classNames("SelectField Field--Province", !(address?.country_code && showProvince) && 'Field--Hidden')}
+          className={classNames("Field Field--Province", !(address?.country_code && showProvince) && 'Field--Hidden')}
           value={address?.province_code ?? ''}
           messageType={errors && errorMap?.province && 'alert' || ''}
-          messageText={errors && errorMap?.province && 'Select a province or state' || ''}
+          messageText={errors && errorMap?.province && provincePlaceholder || ''}
           onChange={(e) => onChange({
             province_code: e.target.value,
           })}

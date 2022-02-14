@@ -1,2 +1,2 @@
 export { default as LineItem } from './LineItem';
-export { default as LineItemQuantity } from './LineItemQuantity';
+export { default as Product } from './Product';

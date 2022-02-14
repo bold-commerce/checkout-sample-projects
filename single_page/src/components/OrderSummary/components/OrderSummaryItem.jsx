@@ -14,7 +14,7 @@ const OrderSummaryItem = ({
     <div className={classNames('OrderSummaryItem', lines ? 'OrderSummaryItem--removable' : '')}>
       <span className="OrderSummaryItem__Title">{title}</span>
       { lines ? lines : (
-        amount > 0 && <span className="OrderSummaryItem__Amount">(<Price amount={amount} moneyFormatString={t('currency_format')}/>)</span>
+        amount > 0 && <span className="OrderSummaryItem__Amount"><Price amount={amount} moneyFormatString={t('currency_format')}/></span>
       )}
     </div>
   );

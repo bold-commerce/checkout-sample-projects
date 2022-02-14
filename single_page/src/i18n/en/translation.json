@@ -30,6 +30,7 @@
     "same_as_shipping": "Same as shipping address",
     "different_from_shipping": "Use a different billing address"
   },
+  "complete_order": "Complete Order",
   "confirmation": {
     "contact_us": "Contact us",
     "need_help": "Need help? ",
@@ -37,11 +38,13 @@
     "order_confirmed": "Your order is confirmed",
     "thank_you": "Thank you"
   },
-  "confirm_order": "Confirm Order",
   "currency_format": "${{amount}} CAD",
   "customer" : {
+    "already_have_account": "Already have an account? ",
     "email": "Email",
-    "info": "Customer information"
+    "info": "Customer information",
+    "login": "Log in",
+    "subscribe": "Subscribe to our newsletter"
   },
   "discount": {
     "apply": "Apply",
@@ -58,7 +61,6 @@
     "remove": "Remove",
     "sold_out": "Sold out"
   },
-  "order_summary": "Order Summary",
   "payment": {
     "empty": "To view payment options, complete filling in your address",
     "method": "Payment method",
@@ -68,6 +70,7 @@
     "description": "This may take a few moments. Please remain on the the page until the process is complete.",
     "order": "Processing order..."
   },
+  "return_to_cart": "Return to cart",
   "shipping": {
     "address": "Shipping address",
     "add_new_address": "Add a new address",
@@ -82,5 +85,6 @@
     "title": "Summary",
     "total": "Total",
     "view_order": "View order summary"
-  }
+  },
+  "website_name": "websitename"
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { CheckoutSection } from '../CheckoutSection';
 import { LineItems } from '../LineItems';
@@ -6,23 +6,22 @@ import { DiscountForm } from '../DiscountForm';
 import { OrderSummaryBreakdown, OrderSummaryCollapseButton } from '.';
 import './OrderSummary.css';
 import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
 
 const OrderSummary = ({ readOnly, summaryOpen, onCollapse }) => {
   const { t } = useTranslation();
   return (
-    <>
+    <div className="OrderSummary">
       <OrderSummaryCollapseButton onClick={onCollapse} summaryOpen={summaryOpen} />
-      <div id="OrderSummary" className="OrderSummary">
-        <CheckoutSection
-          className="FieldSet--OrderSummary"
-          title={t('order_summary')}
-        >
-          <LineItems readOnly={readOnly} />
-          { !readOnly && <DiscountForm /> }
-          <OrderSummaryBreakdown />
-        </CheckoutSection>
-      </div>
-    </>
+      <CheckoutSection
+        className={classNames(["FieldSet--OrderSummary", summaryOpen ? "FieldSet--OrderSummary--Open" : "FieldSet--OrderSummary--Closed"])}
+        title={t('summary.title')}
+      >
+        <LineItems readOnly={readOnly} />
+        { !readOnly && <DiscountForm /> }
+        <OrderSummaryBreakdown />
+      </CheckoutSection>
+    </div>
   );
 };
 

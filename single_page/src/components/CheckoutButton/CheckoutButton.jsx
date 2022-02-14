@@ -86,7 +86,7 @@ const MemoizedCheckoutButton = memo(({
       loading={loading || processing}
       disabled={!hasBillingAddress || processing || appLoading}
     >
-      {t('confirm_order')}
+      {t('complete_order')}
     </Button>
   );
 });

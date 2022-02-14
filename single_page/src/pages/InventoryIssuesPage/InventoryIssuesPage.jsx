@@ -18,6 +18,7 @@ const InventoryIssuesPage = () => {
 
   // Only run this when the component mounts since we don't want the list of items to change as it adjusts quantities
   const updatedLineItems = useMemo(() => {
+    console.log("inventory", inventoryIssues);
     let inventoryMap = inventoryIssues.reduce((acc,curr)=> (acc[curr.platform_id]=curr.inventory_quantity,acc),{});
     const adjustedLineItems = lineItems.map((lineItem) => {
       const variantInventory = inventoryMap[lineItem.product_data.variant_id];
