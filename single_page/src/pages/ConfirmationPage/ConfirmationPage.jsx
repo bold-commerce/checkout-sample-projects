@@ -1,10 +1,11 @@
 import React from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import { OrderSummary, CheckoutSection } from '../../components';
+import { CheckoutSection, Header } from '../../components';
 import './ConfirmationPage.css';
 import { ConfirmationList, ConfirmationListItem } from './components';
 import { RedactedCreditCard } from './components/RedactedCreditCard';
 import { useTranslation } from 'react-i18next';
+import { Button } from '@boldcommerce/stacks-ui/lib';
 
 const ConfirmationPage = () => {
   const { state } = useCheckoutStore();
@@ -14,6 +15,10 @@ const ConfirmationPage = () => {
   const shippingMethod = state.applicationState.shipping.selected_shipping.description;
   const payments = state.applicationState.payments;
   const { t } = useTranslation();
+
+  const continueShopping = () => {
+
+  };
 
   const paymentList = payments.map((payment) => {
     return (
@@ -26,6 +31,7 @@ const ConfirmationPage = () => {
   return (
     <>
       <div className="Checkout__Confirmation" role="main">
+        <Header/>
         <h1 className="FieldSet__Heading">{`${t('confirmation.thank_you')}, ${customer.first_name || shippingAddress.first_name}!`}</h1>
         <CheckoutSection
           className="Confirmation__Section"
@@ -35,7 +41,7 @@ const ConfirmationPage = () => {
         </CheckoutSection>
         <CheckoutSection
           className="Confirmation__Section"
-          title={t('confirmation.order_confirmed')}
+          title={t('customer.info')}
         >
           <ConfirmationList>
             <ConfirmationListItem title={t('shipping.address')}>
@@ -76,7 +82,15 @@ const ConfirmationPage = () => {
             </ConfirmationListItem>
           </ConfirmationList>
         </CheckoutSection>
+        <div className="Checkout__Continue">
+          <Button className='Checkout__Continue--Button' onClick={continueShopping} > 
+              {t('confirmation.continue_shopping')}
+          </Button>
+        </div>
         <p className="Checkout__ContactUs">{t('confirmation.need_help')}<a href={`https://${state.initialData.shop_name}${process.env.CONTACT_URL}`}>{t('confirmation.contact_us')}</a></p>
+        <div className="Checkout__Footer">
+          <p className="Checkout__Rights">{`All rights reserved ${t('website_name')}`}</p>
+        </div>
       </div>
     </>
   )

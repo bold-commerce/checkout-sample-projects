@@ -1,9 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useShippingAddress, useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { useAnalytics, useErrorLogging } from '../../hooks';
-import { OrderErrors, Customer, ShippingAddress, BillingAddress, ShippingLines, PaymentMethod, CheckoutButton, OrderSummary } from '../../components';
-import classNames from 'classnames';
-import Header from '../../components/Header/Header';
+import { OrderErrors, Customer, ShippingAddress, BillingAddress, ShippingLines, PaymentMethod, CheckoutButton, OrderSummary, Header } from '../../components';
 import { useTranslation } from 'react-i18next';
 
 const IndexPage = () => {
@@ -51,7 +49,7 @@ const IndexPage = () => {
           <a className="Checkout__ReturnLink" href={process.env.CART_URL}>{t('return_to_cart')}</a>
         </div>
         <div className="Checkout__Footer">
-          <p class="Checkout__Rights">{`All rights reserved ${t('website_name')}`}</p>
+          <p className="Checkout__Rights">{`All rights reserved ${t('website_name')}`}</p>
         </div>
       </div>
     </>

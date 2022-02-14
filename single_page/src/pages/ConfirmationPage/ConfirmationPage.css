@@ -1,12 +1,15 @@
 .Checkout__Confirmation {
   flex: 1;
   padding: 35px;
+  display: grid;
+  gap: 32px;
+  max-width: 500px;
 }
 
 .FieldSet.Confirmation__Section {
   padding: 16px;
-  border: 1px solid rgba(0,0,0,0.2);
-  margin: 16px 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
 }
 
 .Confirmation__List {
@@ -16,8 +19,9 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.FieldSet.Confirmation__Section .FieldSet__Heading {
-  font-size: 18px;
+.Checkout__Confirmation .FieldSet__Heading {
+  font-size: 20px;
+  font-weight: normal;
   line-height: 20px;
 }
 
@@ -39,8 +43,15 @@
   color: rgba(0, 0, 0, 0.65);
 }
 
-.Checkout__ContactUs a {
-  color: #0A75C2;
+.Checkout__Continue--Button {
+  width: 100%;
+  margin: 0;
+  color: white;
+  background-color: #0a75c2;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: none;
 }
 
 .Payment__List {

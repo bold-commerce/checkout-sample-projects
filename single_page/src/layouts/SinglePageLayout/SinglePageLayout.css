@@ -32,13 +32,14 @@ html, body, #root, .Checkout {
 .Checkout {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 0 auto;
   position: relative;
   max-width: 1500px;
 }
 
 .Checkout__Main {
-  flex: 1;
+  flex: 1; 
   display: grid;
   grid-template-columns: 61fr 39fr;
   grid-template-rows: repeat(8, auto);
@@ -71,7 +72,7 @@ html, body, #root, .Checkout {
   row-gap: 32px;
 }
 
-.Checkout__Main a {
+.Checkout a {
   color: #0a75c2;
   text-decoration: none;
   font-size: 14px;
