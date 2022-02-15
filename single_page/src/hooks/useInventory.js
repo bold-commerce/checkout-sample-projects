@@ -13,7 +13,8 @@ const useInventory = () => {
       const variants = lineItems.map((lineItem) => lineItem.product_data.variant_id).join(',');
       const response = await fetch(`${process.env.INVENTORY_URL}?variants=${variants}`);
 
-      if(!response.success){
+      if(response.status !== 200){
+        inventoryIssues = true;
         setOrderError();
       } else {
         inventory = await response.json();
