@@ -2,7 +2,16 @@ import '@testing-library/jest-dom';
 import { renderHook } from '@testing-library/react-hooks'
 import { useInventory } from '../../src/hooks';
 import {setupServer} from 'msw/node';
-import { allowBackorderInventoryHandler, noTrackingInventoryHandler, productInventoryHandler, variantInventoryHandler } from '../../__mocks__/api/inventoryHandler';
+import { allowBackorderInventoryHandler, noTrackingInventoryHandler, productInventoryHandler, variantInventoryHandler, failedServerRequestInventoryHandler } from '../../__mocks__/api/inventoryHandler';
+
+const MOCKerrors = {
+  data: { order: [{ message: 'Testing order errors' }] },
+  setOrderError: () => {}
+}
+
+jest.mock('@boldcommerce/checkout-react-components', () => ({
+  useErrors: () => MOCKerrors
+}));
 
 process.env.INVENTORY_URL = 'https://test.com/inventory';
 const server = setupServer(...productInventoryHandler);
@@ -186,4 +195,14 @@ describe('tests useInventory', () => {
   
     expect(data).toEqual(expected);
   });
+
+  test('handles inventory validation with failed server request', async() => {
+    server.use(...failedServerRequestInventoryHandler);
+    const { result } = renderHook(() => useInventory());
+
+    const data = await result.current();
+  
+    const expected = {};
+    expect(data).toEqual(expected);
+  })
 });

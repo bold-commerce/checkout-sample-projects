@@ -13,6 +13,7 @@ import { CheckoutButton } from '../CheckoutButton';
 import classNames from 'classnames';
 import { LoadingState } from '../LoadingState';
 import { IndexPageGuest, IndexPage } from '../../pages/IndexPage';
+import { isEmpty } from '../../utils';
 
 const CheckoutForm = ({ banners }) => {
   const { data: lineItems } = useLineItems();
@@ -44,7 +45,7 @@ const CheckoutForm = ({ banners }) => {
   const getInventory = async () => {
     try{
       const inventory = await checkInventory(lineItems);
-      if (inventory) {
+      if (inventory && !isEmpty(inventory)) {
         navigate('/inventory', { state: inventory });
       }
     } catch (e) {
