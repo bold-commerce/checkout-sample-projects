@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Product from './Product';
 import { Price } from '@boldcommerce/stacks-ui';
 import { useTranslation } from 'react-i18next';
+import { Product } from '../..';
 
 const LineItem = ({
   title,

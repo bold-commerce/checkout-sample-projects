@@ -3,7 +3,6 @@
   padding: 35px;
   display: grid;
   gap: 32px;
-  max-width: 500px;
 }
 
 .FieldSet.Confirmation__Section {
@@ -19,7 +18,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.Checkout__Confirmation .FieldSet__Heading {
+.Checkout__ThankYou {
   font-size: 20px;
   font-weight: normal;
   line-height: 20px;
@@ -64,4 +63,10 @@
 
 .Confirmation__ListItem p:last-child {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .Checkout__Confirmation {
+    max-width: 500px;
+  }
 }

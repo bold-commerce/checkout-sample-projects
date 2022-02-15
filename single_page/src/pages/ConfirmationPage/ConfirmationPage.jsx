@@ -32,7 +32,7 @@ const ConfirmationPage = () => {
     <>
       <div className="Checkout__Confirmation" role="main">
         <Header/>
-        <h1 className="FieldSet__Heading">{`${t('confirmation.thank_you')}, ${customer.first_name || shippingAddress.first_name}!`}</h1>
+        <h1 className="Checkout__ThankYou">{`${t('confirmation.thank_you')}, ${customer.first_name || shippingAddress.first_name}!`}</h1>
         <CheckoutSection
           className="Confirmation__Section"
           title={t('confirmation.order_confirmed')}

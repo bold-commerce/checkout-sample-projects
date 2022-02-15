@@ -1,6 +1,6 @@
 import { Price } from '@boldcommerce/stacks-ui';
 import React from 'react';
-import RemoveIcon from './RemoveIcon';
+import { RemoveIcon } from '../../Icons';
 import { useTranslation } from 'react-i18next';
 
 const OrderSummaryItemLine = ({ description, amount, onRemove }) => {

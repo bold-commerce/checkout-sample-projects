@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLineItems, useBreakdown } from '@boldcommerce/checkout-react-components';
 import { Price } from '@boldcommerce/stacks-ui';
-import ChevronIcon from './ChevronIcon';
+import { ChevronIcon } from '../../Icons';
 import { useTranslation } from 'react-i18next';
 
 const OrderSummaryCollapseButton = ({ onClick, summaryOpen }) => {
