@@ -38,28 +38,39 @@ html, body, #root, .Checkout {
   max-width: 1500px;
 }
 
-.Checkout__Main {
+.Checkout__Layout {
   flex: 1; 
   display: grid;
   grid-template-columns: 61fr 39fr;
-  grid-template-rows: repeat(8, auto);
   row-gap: 32px;
 }
 
-.Checkout__Main > * {
+.Checkout__Main {
+  grid-template-rows: repeat(8, auto);
+}
+
+.Checkout__InventoryIssues {
+  grid-template-rows: repeat(5, auto);
+}
+
+.Checkout__Confirmation {
+  grid-template-rows: repeat(6, auto);
+}
+
+.Checkout__Layout > * {
   grid-column: 1;
   padding: 0px 32px;
 }
 
-.Checkout__Main > *:first-child {
-  padding-top: 32px;
+.Checkout__Layout > *:first-child {
+  padding-top: 80px;
 }
 
-.Checkout__Main > *:last-child {
-  padding-bottom: 32px;
+.Checkout__Layout > *:last-child {
+  padding-bottom: 80px;
 }
 
-.Checkout__Main .OrderSummary {
+.Checkout__Layout .OrderSummary {
   grid-column: 2;
   grid-row: 1/-1;
   border-left: 1px solid #d9d9d9;
@@ -70,6 +81,7 @@ html, body, #root, .Checkout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 32px;
+  align-items: center;
 }
 
 .Checkout a {
@@ -80,13 +92,15 @@ html, body, #root, .Checkout {
   font-weight: 400;
 }
 
-.Checkout__Navigation .Checkout__ReturnLink {
+.Checkout__Navigation .Checkout__ReturnLink,
+.Checkout__Navigation .Checkout__ContactUs {
   grid-row-start: 1;
   grid-column-start: 1;
   align-self: center;
 }
 
-.Checkout__Navigation .Checkout__ConfirmButton {
+.Checkout__Navigation .Checkout__ConfirmButton,
+.Checkout__Navigation .Checkout__ContinueButton {
   grid-row-start: 1;
   grid-column-start: 2;
   justify-self: end;
@@ -105,7 +119,7 @@ html, body, #root, .Checkout {
 
 .FieldSet__Heading {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: bold;
 }
 
@@ -126,11 +140,12 @@ html, body, #root, .Checkout {
   display: none;
 }
 
-button.Checkout__ConfirmButton {
+button.Checkout__ConfirmButton,
+button.Checkout__ContinueButton {
   margin: 0;
   color: white;
   background-color: #0a75c2;    
-  padding: 8px;
+  padding: 8px 30px;
   border-radius: 4px;
   box-shadow: 0px 1px 2px 0px #0000001a;
   border: 1px solid #0000001A;
@@ -142,17 +157,19 @@ button.Checkout__ConfirmButton:disabled {
 }
 
 @media only screen and (min-width: 770px){
-  .Checkout__Main .OrderSummary {
-    padding: 32px;
+  .Checkout__Layout .OrderSummary {
+    padding: 80px 32px;
   }
 }
 
 @media only screen and (max-width: 1199px){
-  .Checkout__Navigation .Checkout__ReturnLink {
+  .Checkout__Navigation .Checkout__ReturnLink,
+  .Checkout__Navigation .Checkout__ContactUs {
     grid-row-start: 2;
   }
 
-  .Checkout__Navigation .Checkout__ConfirmButton {
+  .Checkout__Navigation .Checkout__ConfirmButton,
+  .Checkout__Navigation .Checkout__ContinueButton {
     grid-column-start: span 2;
     justify-self: stretch;
   }
@@ -163,11 +180,15 @@ button.Checkout__ConfirmButton:disabled {
     flex-direction: column;
   }
 
-  .Checkout__Main {
+  .Checkout__Layout {
     grid-template-columns: 1fr;
   }
 
-  .Checkout__Main .OrderSummary {
+  .Checkout__Layout > *:first-child {
+    padding-top: 16px;
+  }
+
+  .Checkout__Layout .OrderSummary {
     grid-row: 2;
     grid-column: 1;
   }

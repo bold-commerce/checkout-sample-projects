@@ -1,6 +1,7 @@
 import { Message } from '@boldcommerce/stacks-ui';
 import React, { useEffect } from 'react';
 import { useErrors } from '@boldcommerce/checkout-react-components';
+import './OrderErrors.css';
 
 const OrderErrors = () => {
   const { data } = useErrors();
@@ -12,7 +13,9 @@ const OrderErrors = () => {
 
   if (data.order && data.order.length > 0) {
     return (
-      <Message type="alert">{ data.order[0].message }</Message>
+      <div className="OrderErrors">
+        <Message type="alert">{ data.order[0].message }</Message>
+      </div>
     );
   } else {
     return null;

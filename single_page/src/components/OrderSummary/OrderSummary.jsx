@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { CheckoutSection } from '../CheckoutSection';
 import { LineItems } from '../LineItems';
@@ -8,11 +8,12 @@ import './OrderSummary.css';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 
-const OrderSummary = ({ readOnly, summaryOpen, onCollapse }) => {
+const OrderSummary = ({ readOnly }) => {
   const { t } = useTranslation();
+  const [summaryOpen, setSummaryOpen] = useState(false);
   return (
     <div className="OrderSummary">
-      <OrderSummaryCollapseButton onClick={onCollapse} summaryOpen={summaryOpen} />
+      <OrderSummaryCollapseButton onClick={() => setSummaryOpen((prevState) => !prevState)} summaryOpen={summaryOpen} />
       <CheckoutSection
         className={classNames(["FieldSet--OrderSummary", summaryOpen ? "FieldSet--OrderSummary--Open" : "FieldSet--OrderSummary--Closed"])}
         title={t('summary.title')}

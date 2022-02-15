@@ -2,14 +2,7 @@
   padding: 16px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  margin: 32px 0px;
-}
-
-.Checkout__InventoryIssues {
-  width: 100%;
-  padding: 35px;
-  margin: 0 auto;
-  max-width: 800px;
+  margin: 0px 32px;
 }
 
 .Checkout__ConfirmButton {
@@ -23,10 +16,6 @@
 
 .InventoryIssues__Section .FieldSet__Heading {
   font-weight: normal;
-}
-
-.InventoryIssues__List {
-  margin: 32px 0px;
 }
 
 .InventoryIssues__List__Header {

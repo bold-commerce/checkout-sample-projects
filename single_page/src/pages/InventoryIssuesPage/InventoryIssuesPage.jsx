@@ -61,8 +61,9 @@ const InventoryIssuesPage = () => {
   }, [lineItems]);
 
   return (
-    <div className="Checkout__InventoryIssues" role="main">
+    <div className="Checkout__Layout Checkout__InventoryIssues" role="main">
       <Header />
+      <OrderSummary readOnly/>
       <CheckoutSection
         className="InventoryIssues__Section"
         title={t('inventory.issues')}

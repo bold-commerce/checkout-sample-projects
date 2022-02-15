@@ -10,7 +10,6 @@ const IndexPage = () => {
   const trackEvent = useAnalytics();
   const logError = useErrorLogging();
   const [loading, setLoading] = useState(false);
-  const [summaryOpen, setSummaryOpen] = useState(false);
   const { t } = useTranslation();
 
   const setDefaultAddress = useCallback(async () => {
@@ -35,9 +34,9 @@ const IndexPage = () => {
 
   return (
     <>
-      <div className="Checkout__Main" role="main">
+      <div className="Checkout__Layout Checkout__Main" role="main">
         <Header/>
-        <OrderSummary summaryOpen={summaryOpen} onCollapse={() => setSummaryOpen((prevState) => !prevState)}/>
+        <OrderSummary />
         <OrderErrors />
         <Customer />
         <ShippingAddress applicationLoading={loading} />

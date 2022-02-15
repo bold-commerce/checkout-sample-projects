@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import { CheckoutSection, Header } from '../../components';
+import { CheckoutSection, Header, OrderSummary } from '../../components';
 import './ConfirmationPage.css';
 import { ConfirmationList, ConfirmationListItem } from './components';
 import { RedactedCreditCard } from './components/RedactedCreditCard';
@@ -30,8 +30,9 @@ const ConfirmationPage = () => {
 
   return (
     <>
-      <div className="Checkout__Confirmation" role="main">
+      <div className="Checkout__Layout Checkout__Confirmation" role="main">
         <Header/>
+        <OrderSummary readOnly/>
         <h1 className="Checkout__ThankYou">{`${t('confirmation.thank_you')}, ${customer.first_name || shippingAddress.first_name}!`}</h1>
         <CheckoutSection
           className="Confirmation__Section"
@@ -82,13 +83,13 @@ const ConfirmationPage = () => {
             </ConfirmationListItem>
           </ConfirmationList>
         </CheckoutSection>
-        <div className="Checkout__Continue">
-          <Button className='Checkout__Continue--Button' onClick={continueShopping} > 
-              {t('confirmation.continue_shopping')}
+        <div className="Checkout__Navigation">
+          <Button className='Checkout__ContinueButton' onClick={continueShopping} > 
+            {t('confirmation.continue_shopping')}
           </Button>
+          <p className="Checkout__ContactUs">{t('confirmation.need_help')}<a href={`https://${state.initialData.shop_name}${process.env.CONTACT_URL}`}>{t('confirmation.contact_us')}</a></p>
         </div>
-        <p className="Checkout__ContactUs">{t('confirmation.need_help')}<a href={`https://${state.initialData.shop_name}${process.env.CONTACT_URL}`}>{t('confirmation.contact_us')}</a></p>
-        <div className="Checkout__Footer">
+       <div className="Checkout__Footer">
           <p className="Checkout__Rights">{`All rights reserved ${t('website_name')}`}</p>
         </div>
       </div>
