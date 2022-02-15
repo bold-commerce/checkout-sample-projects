@@ -45,6 +45,8 @@
     "email": "Email",
     "info": "Customer information",
     "login": "Log in",
+    "logout": "Log out",
+    "not_you": "Not you? ",
     "subscribe": "Subscribe to our newsletter"
   },
   "discount": {
@@ -56,7 +58,9 @@
   "inventory": {
     "continue": "Continue with changes",
     "issues": "Inventory issues",
-    "issues_description": "Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience."
+    "issues_description": "Some Products became unavailable and your cart has been updated, We're sorry for the inconvenience.",
+    "product_name": "Product name",
+    "quantity": "Quantity"
   },
   "languages": {
     "en": "English"

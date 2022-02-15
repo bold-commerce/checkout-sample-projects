@@ -3,14 +3,16 @@
   font-size: 14px;
 }
 
-.FieldSet--CustomerInformation .FieldSet__Header {
-  margin-bottom: 10px;
-}
-
 .FieldSet--CustomerInformation .FieldSet__Content{
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+}
+
+.FieldSet--CustomerEmail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .Field--Email {

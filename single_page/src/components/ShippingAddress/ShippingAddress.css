@@ -7,7 +7,9 @@
 }
 
 .FieldSet--ShippingAddress .RadioButton {
-  border: 1px solid #D9D9D9;
+  border-width: 1px 1px 0px 1px;
+  border-color: #D9D9D9;
+  border-style: solid;
   margin-bottom: 0;
   min-height: 60px;
   padding: 10px 20px;
@@ -20,6 +22,17 @@
   justify-content: space-between;
   cursor: pointer;
   position: relative;
+}
+
+.FieldSet--ShippingAddress .RadioButton:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.FieldSet--ShippingAddress .RadioButton:last-child {
+  border-width: 1px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .FieldSet--ShippingAddress .RadioButton .stx-radio-field__label {

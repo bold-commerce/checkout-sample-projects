@@ -72,8 +72,8 @@ const InventoryIssuesPage = () => {
       </CheckoutSection>
       <div className="InventoryIssues__List">
         <div className="InventoryIssues__List__Header">
-          <h3>Product name</h3>
-          <h3>Quantity</h3>
+          <h3>{t('inventory.product_name')}</h3>
+          <h3>{t('inventory.quantity')}</h3>
         </div>
         {lineItemList}
       </div>

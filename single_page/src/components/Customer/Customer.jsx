@@ -20,6 +20,7 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
   const [errors, setErrors] = useState(null);
   const [ acceptsMarketing, setAcceptsMarketing ] = useState(false)
   const { t } = useTranslation();
+  console.log("customer", customer);
 
   const handleSubmit = useCallback(async () => {
     try {
@@ -40,20 +41,28 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
       className="FieldSet--CustomerInformation"
       title={t('customer.info')}
     >
-      <div>{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
-      <InputField
-        className="Field--Email"
-        placeholder={t('customer.email')}
-        type="email"
-        name="email"
-        autoComplete="email"
-        messageType={errors && 'alert'}
-        messageText={errors && errors[0].message}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        disabled={customer.isAuthenticated}
-        onBlur={handleSubmit}
-      />
+      {customer?.email_address ?
+      <div className="FieldSet--CustomerEmail">
+        <div>{customer.email_address}</div>
+        <div>{t('customer.not_you')}<a href={process.env.LOGIN_URL}>{t('customer.logout')}</a></div>
+      </div> :
+      <>
+        <div>{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
+        <InputField
+          className="Field--Email"
+          placeholder={t('customer.email')}
+          type="email"
+          name="email"
+          autoComplete="email"
+          messageType={errors && 'alert'}
+          messageText={errors && errors[0].message}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={customer.isAuthenticated}
+          onBlur={handleSubmit}
+        />
+      </>
+      }
       <CheckboxField
         label={t('customer.subscribe')}
         checked={acceptsMarketing}
