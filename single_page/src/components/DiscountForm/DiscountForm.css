@@ -4,6 +4,7 @@
   gap: 16px;
   padding: 20px 0;
   border-top: 1px solid rgba(0,0,0,0.1);
+  align-items: flex-start;
 }
 
 .DiscountForm .stx-field {

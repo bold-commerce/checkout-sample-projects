@@ -53,6 +53,7 @@ const MemoizedDiscountForm = memo(({
     <div className="SummaryBlock Summary__DiscountForm">
       <div className="DiscountForm">
         <InputField
+          className="Field"
           type="text"
           placeholder={t('discount.enter_code')}
           value={discount}
