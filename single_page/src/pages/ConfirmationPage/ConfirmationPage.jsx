@@ -17,7 +17,7 @@ const ConfirmationPage = () => {
   const { t } = useTranslation();
 
   const continueShopping = () => {
-
+    location.href = `https://${state.initialData.shop_name}`;
   };
 
   const paymentList = payments.map((payment) => {
