@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
 import { useInventory } from '../../hooks';
@@ -7,7 +7,6 @@ import { ProcessingPage } from '../../pages/ProcessingPage';
 import { ConfirmationPage } from '../../pages/ConfirmationPage';
 import './SinglePageLayout.css';
 import { InventoryIssuesPage } from '../../pages/InventoryIssuesPage';
-import { useCallback } from 'react/cjs/react.development';
 
 const SinglePageLayout = () => {
   const { state } = useCheckoutStore();
