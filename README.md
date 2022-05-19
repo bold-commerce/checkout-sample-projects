@@ -1,62 +1,52 @@
-# Checkout Sample Projects
-This is a collection of pre-built checkout templates using the [checkout-react-components](https://www.npmjs.com/package/@boldcommerce/checkout-react-components) library. This is a list of the examples included in this project:
-* [Single Page Checkout](single_page)
-  * This is a single page checkout template that has the order breakdown listed in a sidebar on desktop
-* [One Click Checkout](one_click)
-  * This is a one click checkout template that displays the condensed checkout within a modal.
+# Single Page Checkout Template
+This project is intended to demonstrate the abilities of a headless checkout using the Bold Checkout APIs. It includes everything you need to create a single-page checkout, which is reached from the store’s cart page.
+
+## About
+This project uses the following resources and toolkits:
+* [React](https://reactjs.org/)
+* including [stacks-ui](https://www.npmjs.com/package/@boldcommerce/stacks-ui) component library
+* [checkout-react-components](https://www.npmjs.com/package/@boldcommerce/checkout-react-components) component library
+* [Webpack](https://webpack.js.org/)
+
+## Prerequisites
+* Create a store containing at least one product.
+* Install Bold Commerce on your store. See [Getting Started with Bold Checkout](https://developer.boldcommerce.com/default/guides/checkout/checkout-getting-started) for more information.
+* Have a backend application running that intializes the order via the init endpoint 
 
 ## Getting Started
-1. Clone this project locally
-3. Duplicate `.env.example` and rename it to `.env`.
-4. Populate the `.env` file with your inventory url, and login url. See [ENV Configuration](#env-configuration) for more information.
-5. In `server/index.js`, locate the `exampleBody` variable. Change the `platform_id` to be a `platform_id` that exists in your product catalog for the store that Checkout is integrated with.
-6. Run `yarn` or `npm install`.
-7. Run `yarn start` or `npm run start` to run webpack-dev-server on port 8080
+1. Clone this project into your local environment
+2. Run `yarn install`
+2. Either run `yarn start` or `yarn build` and make sure the javascript files are available by a url
+3. Add the javascript to the checkout page that is hosted by your backend application
+4. Make sure the checkout page is injecting a window variable with the following data
+```javascript
+window.shopAlias = '{{shopAlias}}';
+window.shopName = '{{shopName}}';
+window.shopIdentifier = '{{shopIdentifier}}';
+window.returnUrl = '{{returnUrl}}';
+window.loginUrl = '{{{loginUrl}}}';
+window.headerLogoUrl = '{{headerLogoUrl}}';
+window.environment = {
+  type: 'production',
+};
+window.initializedOrder = {
+  data: {{{checkout}}} // All data that is returned via the checkout init endpoint
+};
+window.platformType = 'bigcommerce'
+window.google_analytics_tracking_id = '{{gaTracking}}';
+window.facebook_analytics_tracking_id = '{{fbTracking}}';
+```
 
 ## Production Build
-- Run `yarn build` or `npm run build`
-- Run `yarn start` or `npm run start`. This will run the node server on port 3000.
-
-## ENV Configuration
-* INVENTORY_URL
-  * This is a custom endpoint that the React app will make a request to in order to fetch inventory information about the current order. This check happens at the beginning of the checkout and before processing the order. The response of this custom endpoint should be in the following format:
-
-  ```json
-    {
-      "{VARIANT_ID}": {
-        "product_id": "123456789",
-        "quantity": 99,
-        "allow_backorder": true,
-        "inventory_tracker": "none",
-        "tracking_level": "variant"
-      }
-    }
-  ```
-  * Needs to be an object with the key being the variant id
-  * **product_id:** The id of the product that the variant is associated with.
-  * **quantity:** The stock available for the specific variant.
-  * **allow_backorder:** If the variant is allowed to be oversold.
-  * **inventory_tracker:** Possible values are `none` or `platform`. If `none`, then the variant does not track inventory
-  * **tracking_level:** If the product tracks inventory at the product or variant level.
-
-* LOGIN_URL
-  * The url that the user should be redirected to when they click the login link in the checkout.
-* LOGOUT_URL
-  * The url that the user should be redirected to when they click the logout link in the checkout.
-* CONTACT_URL
-  * The url that the user should be redirected to when they click the contact us link in the checkout
-
-## Integrating with a backend
-* In order to use the frontend, you need to populate the `CheckoutProvider` with information that you recieve from the [Bold Commerce Order Init endpoint](https://developer.boldcommerce.com/default/documentation/orders#/Orders/post-init)
-* You will need to create a backend application that will integrate a platforms shopping cart and make a request to the above API. The information received can then be passed to the `CheckoutProvider`.
-* There are example backend applications for [Shopify](https://github.com/bold-commerce/headless-checkout-shopify) and [Bigcommerce](https://github.com/bold-commerce/headless-checkout-bigcommerce) that you can use instead if you'd like.
+- Run `yarn start` or `npm run start`. This will run webpack dev server on port 8080 (https://localhost:8080). You may need to navigate to this url in your browser and allow the browser to navigate to the insecure url.
+- Run `yarn build` or `npm run build`. This will run the node server on port 3000.
 
 ## Analytics
-To add analytics tracking to the app, you can edit the custom hook called `useAnalytics` that can be found in `client/hooks/useAnalytics.js`.
+To add analytics tracking to the app, you can edit the custom hook called `useAnalytics` that can be found in `src/hooks/useAnalytics.js`.
 
 **Usage**:
 ```javascript
-import { useAnalytics } from './client/hooks/useAnalytics.js' // Change this to the correct path to the hooks folder
+import { useAnalytics } from './src/hooks/useAnalytics.js' // Change this to the correct path to the hooks folder
 
 const CustomComponent = () => {
   const trackEvent = useAnalytics();
@@ -66,11 +56,11 @@ const CustomComponent = () => {
 ```
 
 ## Error Logging
-To add error logging to the app, you can edit the custom hook called `useErrorLogging` that can be found in `client/hooks/useErrorLogging.js`
+To add error logging to the app, you can edit the custom hook called `useErrorLogging` that can be found in `src/hooks/useErrorLogging.js`
 
 **Usage**
 ```javascript
-import { useErrorLogging } from './client/hooks/useErrorLogging.js'; // Change this to the correct path to the hooks folder
+import { useErrorLogging } from './src/hooks/useErrorLogging.js'; // Change this to the correct path to the hooks folder
 
 const CustomComponent = () => {
   const logError = useErrorLogging();
@@ -78,3 +68,15 @@ const CustomComponent = () => {
   logError('type', new Error('error message'));
 }
 ```
+
+## Currency Formatting
+The currency can be customized using the `currency_format` variable in the `i18n/en/translations.json` file. The available `amount` options are as follows:
+* `amount`
+* `amount_no_decimals`
+* `amount_with_comma_separator`
+* `amount_no_decimals_with_comma_separator`
+* `amount_with_space_separator`
+* `amount_no_decimals_with_space_separator`
+* `amount_with_apostrophe_separator`
+
+For step-by-step instructions on implementing a basic headless checkout example, refer to the [Build a Headless Checkout](https://developer.boldcommerce.com/default/guides/checkout/checkout-headless-guide) tutorial.
