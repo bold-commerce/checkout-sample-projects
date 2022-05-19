@@ -1,4 +1,4 @@
-import Price from '@boldcommerce/stacks-ui/lib/components/price/Price';
+import { Price } from '@boldcommerce/stacks-ui';
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';

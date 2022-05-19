@@ -35,24 +35,7 @@ const MemoizedCheckoutButton = memo(({
   const handleProcessPayment = useCallback(async () => {
     trackEvent('click_complete_order');
     setLoading(true);
-    try {
-      await processOrder();
-    } catch(e) {
-      console.log({ e });
-    }
-    // try {
-    //   const inventoryIssues = await validateInventory();
-    //   if (inventoryIssues) {
-    //     setLoading(false);
-    //     navigate('/inventory_issues', { state: inventoryIssues });
-    //   } else {
-    //     setLoading(false);
-    //     await processOrder();
-    //   }
-    // } catch(e) {
-    //   logError('process_order', e);
-    //   setLoading(false);
-    // }
+    await processOrder();
     setLoading(false);
   }, [logError, trackEvent, processOrder]);
 

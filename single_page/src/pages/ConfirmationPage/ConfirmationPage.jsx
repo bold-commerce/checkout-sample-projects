@@ -5,7 +5,7 @@ import './ConfirmationPage.css';
 import { ConfirmationList, ConfirmationListItem } from './components';
 import { RedactedCreditCard } from './components/RedactedCreditCard';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@boldcommerce/stacks-ui/lib';
+import { Button } from '@boldcommerce/stacks-ui';
 
 const ConfirmationPage = () => {
   const { state } = useCheckoutStore();

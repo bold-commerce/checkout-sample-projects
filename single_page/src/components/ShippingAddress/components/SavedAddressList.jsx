@@ -1,4 +1,4 @@
-import RadioField from '@boldcommerce/stacks-ui/lib/components/radiofield/RadioField';
+import { RadioField } from '@boldcommerce/stacks-ui';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import SavedAddress from './SavedAddress';
 import { useTranslation } from 'react-i18next';

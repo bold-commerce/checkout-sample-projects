@@ -1,6 +1,6 @@
 import React, { memo, useCallback, useState } from 'react';
 import { useCustomer } from '@boldcommerce/checkout-react-components';
-import { CheckboxField } from "@boldcommerce/stacks-ui/lib";
+import { CheckboxField } from "@boldcommerce/stacks-ui";
 import { InputField } from '../InputField';
 import { CheckoutSection } from '../CheckoutSection';
 import './Customer.css';
@@ -20,7 +20,6 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
   const [errors, setErrors] = useState(null);
   const [ acceptsMarketing, setAcceptsMarketing ] = useState(false)
   const { t } = useTranslation();
-  console.log("customer", customer);
 
   const handleSubmit = useCallback(async () => {
     try {
