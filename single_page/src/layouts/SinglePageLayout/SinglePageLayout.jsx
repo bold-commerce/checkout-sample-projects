@@ -1,30 +1,15 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { useCheckoutStore } from '@boldcommerce/checkout-react-components';
-import { useInventory } from '../../hooks';
 import { IndexPage } from '../../pages/IndexPage';
 import { ProcessingPage } from '../../pages/ProcessingPage';
 import { ConfirmationPage } from '../../pages/ConfirmationPage';
 import './SinglePageLayout.css';
-import { InventoryIssuesPage } from '../../pages/InventoryIssuesPage';
 
 const SinglePageLayout = () => {
   const { state } = useCheckoutStore();
   const navigate = useNavigate();
-  const validateInventory = useInventory();
   const orderStatus = state.orderInfo.orderStatus;
-
-  const checkInventory = useCallback(async() => {
-    const inventory_issues = await validateInventory(state.applicationState.line_items);
-
-    if (inventory_issues) {
-      navigate('/inventory_issues', { state: inventory_issues })
-    }
-  }, []);
-
-  useEffect(() => {
-    checkInventory();
-  }, [])
 
   useEffect(() => {
     if (orderStatus === 'error') {
@@ -42,7 +27,6 @@ const SinglePageLayout = () => {
         <Route path="/" element={<IndexPage />} />
         <Route path="/processing" element={<ProcessingPage />} />
         <Route path="/confirmation" element={<ConfirmationPage />} />
-        <Route path="/inventory_issues" element={<InventoryIssuesPage />} />
       </Routes>
     </div>
   );

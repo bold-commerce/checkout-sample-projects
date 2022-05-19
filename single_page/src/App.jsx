@@ -7,12 +7,12 @@ const App = () => {
   return (
     <BrowserRouter basename='/checkout'>
       <CheckoutProvider
-        applicationState={window.checkout.applicationState}
-        initialData={window.checkout.initialData}
-        publicOrderId={window.checkout.publicOrderId}
-        token={window.checkout.jwtToken}
-        storeIdentifier={window.checkout.storeIdentifier}
-        apiBase={process.env.API_BASE || 'https://api.boldcommerce.com/checkout/storefront'}
+        applicationState={window.initializedOrder.data.application_state}
+        initialData={window.initializedOrder.data.initial_data}
+        publicOrderId={window.initializedOrder.data.public_order_id}
+        token={window.initializedOrder.data.jwt_token}
+        storeIdentifier={window.shopIdentifier}
+        apiBase={'https://api.boldcommerce.com/checkout/storefront'}
       >
         <SinglePageLayout />
       </CheckoutProvider>

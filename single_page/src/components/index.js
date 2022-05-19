@@ -6,7 +6,6 @@ export * from './Customer';
 export * from './DiscountForm';
 export * from './EmptyState';
 export * from './Header';
-export * from './InventoryItem';
 export * from './LineItems';
 export * from './LoadingState';
 export * from './OrderErrors';

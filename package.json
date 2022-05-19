@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "test": "jest"
+    "start": "webpack-dev-server --config webpack.dev.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

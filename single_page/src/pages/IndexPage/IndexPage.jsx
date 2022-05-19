@@ -45,7 +45,7 @@ const IndexPage = () => {
         <PaymentMethod applicationLoading={loading} />
         <div className="Checkout__Navigation">
           <CheckoutButton />
-          <a className="Checkout__ReturnLink" href={process.env.CART_URL}>{t('return_to_cart')}</a>
+          <a className="Checkout__ReturnLink" href={window.returnUrl}>{t('return_to_cart')}</a>
         </div>
         <div className="Checkout__Footer">
           <p className="Checkout__Rights">{`All rights reserved ${t('website_name')}`}</p>

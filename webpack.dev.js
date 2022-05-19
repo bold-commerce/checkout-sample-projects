@@ -9,6 +9,7 @@ module.exports = merge(common, {
     poll: 1000
   },
   devServer: {
+    https: true,
     static: {
       directory: path.join(__dirname, 'public'),
     },

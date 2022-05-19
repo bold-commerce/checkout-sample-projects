@@ -44,10 +44,10 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
       {customer?.email_address ?
       <div className="FieldSet--CustomerEmail">
         <div>{customer.email_address}</div>
-        <div>{t('customer.not_you')}<a href={process.env.LOGIN_URL}>{t('customer.logout')}</a></div>
+        <div>{t('customer.not_you')}<a href={window.loginUrl}>{t('customer.logout')}</a></div>
       </div> :
       <>
-        <div>{t('customer.already_have_account')}<a href={process.env.LOGIN_URL}>{t('customer.login')}</a></div>
+        <div>{t('customer.already_have_account')}<a href={window.loginUrl}>{t('customer.login')}</a></div>
         <InputField
           className="Field--Email"
           placeholder={t('customer.email')}
