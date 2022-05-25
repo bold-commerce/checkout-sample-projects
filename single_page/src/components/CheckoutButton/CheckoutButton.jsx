@@ -19,7 +19,7 @@ const CheckoutButton = () => {
     <MemoizedCheckoutButton
       processOrder={processPaymentIframe}
       processing={processing}
-      hasBillingAddress={!!billingAddress.country_code}
+      hasBillingAddress={!!billingAddress?.country_code}
       lineItems={lineItems}
       appLoading={state.loadingStatus.isLoading}
     />

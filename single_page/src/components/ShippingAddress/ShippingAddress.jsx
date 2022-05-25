@@ -53,7 +53,7 @@ const MemoizedShippingAddress = memo(({
 
   useEffect(() => {
     setAddress(shippingAddress);
-  }, [shippingAddress.id]);
+  }, [shippingAddress?.id]);
 
   const updateSelectedShippingAddress = useCallback(async (currentAddress) => {
     setAddress(currentAddress);
