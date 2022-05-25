@@ -20,7 +20,6 @@ const MemoizedCustomer = memo(({ customer, submitCustomer }) => {
   const [errors, setErrors] = useState(null);
   const [ acceptsMarketing, setAcceptsMarketing ] = useState(false)
   const { t } = useTranslation();
-  console.log("customer", customer);
 
   const handleSubmit = useCallback(async () => {
     try {
