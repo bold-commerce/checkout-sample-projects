@@ -63,8 +63,8 @@ const MemoizedOrderSummaryBreakdown = memo(({
 
   const paymentLines = payments.map((payment) => (
     <OrderSummaryItemLine
-      description={<RedactedCreditCard brand={payment.friendly_brand} lineText={payment.lineText} />}
-      amount={payment.value}
+      description={<RedactedCreditCard brand={payment.brand ? payment.brand : payment.friendly_brand} lineText={payment.display_string ? payment.display_string : payment.lineText} />}
+      amount={payment.value ? payment.value : payment.amount}
       key={payment.id}
     />
   ));

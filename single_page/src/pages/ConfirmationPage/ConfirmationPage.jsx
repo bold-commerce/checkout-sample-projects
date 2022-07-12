@@ -23,7 +23,7 @@ const ConfirmationPage = () => {
   const paymentList = payments.map((payment) => {
     return (
       <li className="Payment__ListItem" key={payment.id}>
-        <RedactedCreditCard brand={payment.friendly_brand} lineText={payment.lineText} />
+        <RedactedCreditCard brand={payment.brand ? payment.brand : payment.friendly_brand} lineText={payment.display_string ? payment.display_string : payment.lineText} />
       </li>
     )
   });
